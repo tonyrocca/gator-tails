@@ -1,5 +1,7 @@
 # Gator Tails Power Rankings
 
+Live site: https://gator-tails.vercel.app · Repo: https://github.com/tonyrocca/gator-tails
+
 Mobile-first, tap-through power rankings for the Gator Tails ESPN league (id 2016920614). Clean baby-gator look. Same format as the old Word doc: memo bars (Dean of the Year / Dean of the Week), the table (rank + movement, team + owner nickname, record, points), charts, quick hits, one slide per team with Thoughts and a meme, then a shareable PNG of the board.
 
 ## Layout
