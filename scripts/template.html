@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<title>__TITLE__</title>
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__DESC__">
+<meta name="theme-color" content="#f7f5ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f5ef;--card:#ffffff;--ink:#1d3b2a;--mute:#6b7a70;--line:#e4e0d4;--green:#2f8f4e;--green2:#cfe9b0;--orange:#f4a640;--red:#d9534f;--gold:#e0b100;--font:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:#e9e6dc;color:var(--ink);font-family:var(--font);overflow:hidden;overscroll-behavior:none}
+#app{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#phone{position:relative;width:100%;height:100%;max-width:440px;overflow:hidden;background:var(--bg)}
+@media (min-width:700px){#phone{height:min(920px,96vh);border-radius:32px;border:1px solid #d8d3c4;box-shadow:0 20px 60px rgba(29,59,42,.18)}}
+#bars{position:absolute;top:calc(10px + env(safe-area-inset-top));left:14px;right:14px;display:flex;gap:3px;z-index:20}
+#bars b{flex:1;height:3px;background:rgba(29,59,42,.14);border-radius:2px}
+#bars b.done{background:var(--green)} #bars b.cur{background:var(--ink)}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;cursor:pointer;padding:calc(30px + env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));z-index:5}
+.slide.on{display:flex}
+.slide>*{animation:up .35s ease-out both}
+.slide>*:nth-child(2){animation-delay:.05s}.slide>*:nth-child(3){animation-delay:.1s}.slide>*:nth-child(4){animation-delay:.15s}.slide>*:nth-child(5){animation-delay:.2s}
+@keyframes up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+h1{font-size:44px;font-weight:900;line-height:1;letter-spacing:-.02em}
+h2{font-size:26px;font-weight:900;line-height:1.1;letter-spacing:-.01em}
+p{font-size:15px;line-height:1.5}
+.mute{color:var(--mute)}.grow{flex:1}
+.hint{font-size:12px;color:var(--mute);text-align:center;margin-top:12px}
+.gator{width:150px;height:auto;display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 1px 2px rgba(29,59,42,.05)}
+.memo{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;background:var(--green2);border-radius:12px;padding:10px 12px}
+.memo .l{flex:none;width:86px;font-size:11px;font-weight:900;line-height:1.2;text-transform:uppercase;letter-spacing:.04em}
+.memo .l small{display:block;font-weight:700;color:var(--green);font-size:11px;margin-top:2px}
+.memo .t{font-size:13px;line-height:1.35}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:6px 6px 8px;border-bottom:2px solid var(--line)}
+td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.r{width:56px;white-space:nowrap}.rk{font-weight:900;font-size:17px}
+.mv{font-size:11px;font-weight:700;margin-left:3px}.mv.up{color:var(--green)}.mv.dn{color:var(--red)}.mv.z{color:var(--mute)}
+td.t .n{font-weight:700;line-height:1.15}td.t .o{font-size:11.5px;color:var(--mute);font-style:italic}
+td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.num small{display:block;font-size:11px;color:var(--mute)}
+.flag{display:inline-block;background:var(--orange);color:#fff;font-size:9.5px;font-weight:900;padding:2px 6px;border-radius:6px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
+.gr{display:inline-block;min-width:30px;text-align:center;background:var(--ink);color:#fff;font-weight:900;font-size:12px;border-radius:7px;padding:3px 6px}
+.gr.a{background:var(--green)}.gr.b{background:#3b7dd8}.gr.c{background:var(--orange)}.gr.d{background:var(--red)}
+.bars{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.bar{display:flex;align-items:center;gap:8px;font-size:12px}
+.bar .lab{width:92px;flex:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+.bar .trk{flex:1;height:14px;background:#eeeae0;border-radius:7px;overflow:hidden}
+.bar .fil{height:100%;background:var(--green);border-radius:7px}
+.bar .fil.me{background:var(--orange)}
+.bar .val{width:44px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;font-size:12px}
+.hits{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.hit{display:flex;gap:10px;align-items:flex-start}
+.hit .k{flex:none;width:78px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--green);padding-top:2px}
+.hit .v{font-size:13.5px;line-height:1.4}
+.head{display:flex;align-items:center;gap:12px;margin-top:6px}
+.bigrank{font-size:56px;font-weight:900;line-height:.9;letter-spacing:-.04em;flex:none;width:70px}
+.head .n{font-size:22px;font-weight:900;line-height:1.05}
+.head .o{font-size:13px;color:var(--mute);font-style:italic;margin-top:2px}
+.stats{display:flex;gap:6px;margin-top:10px}
+.st{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 8px;text-align:center}
+.st .v{font-weight:900;font-size:18px;line-height:1}.st .l{font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.thoughts{margin-top:10px;font-size:14px;line-height:1.5}
+.meme{margin-top:12px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.meme img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain}
+.meme .tx{position:absolute;left:6px;right:6px;text-align:center;color:#fff;font-family:Impact,"Arial Black",sans-serif;font-size:22px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 6px #000}
+.meme .tx.top{top:8px}.meme .tx.bot{bottom:8px}
+.cap{font-size:12px;color:var(--mute);margin-top:6px;font-style:italic;text-align:center}
+.btn{display:block;width:100%;padding:15px;border:0;border-radius:14px;background:var(--ink);color:#fff;font-family:var(--font);font-size:16px;font-weight:900;letter-spacing:.02em;cursor:pointer;position:relative;z-index:30}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);margin-top:8px;font-weight:700}
+#modal{position:absolute;inset:0;z-index:50;background:rgba(29,59,42,.92);display:none;flex-direction:column;padding:calc(20px + env(safe-area-inset-top)) 18px calc(18px + env(safe-area-inset-bottom));overflow:auto}
+#modal.on{display:flex}
+#modal img{width:100%;border-radius:14px;display:block}
+#modal .x{position:absolute;top:calc(12px + env(safe-area-inset-top));right:16px;font-size:26px;color:#fff;background:none;border:0;cursor:pointer;font-weight:700}
+.small{font-size:12px;color:#dfe8e0;text-align:center;margin:10px 0}
+.foot{font-size:11px;color:var(--mute);text-align:center;margin-top:12px}
+@media (max-height:720px){.thoughts{font-size:13px}h1{font-size:38px}}
+</style>
+</head>
+<body>
+<div id="app"><div id="phone">
+  <div id="bars"></div>
+  <div id="slides"></div>
+  <div id="modal"><button class="x" id="close">✕</button><div style="height:22px"></div><img id="shot" alt="Power rankings"><div class="small">Press and hold to save, or Share.</div><button class="btn" id="share2" style="background:#fff;color:var(--ink)">SHARE</button><a class="btn alt" id="dl" download="gator-tails-power-rankings.png" style="text-align:center;text-decoration:none;background:transparent;color:#fff;border-color:rgba(255,255,255,.4)">DOWNLOAD PNG</a></div>
+</div></div>
+<canvas id="cv" width="1080" height="1920" style="display:none"></canvas>
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const T = Object.fromEntries(D.computed.teams.map(t => [t.id, t]));
+const E = D.edition, PREV = D.prev || {};
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const gcls = g => ({A:'a',B:'b',C:'c'}[(g||'')[0]] || 'd');
+const fmt = n => (Math.round(n * 100) / 100).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+const GATOR = `<svg class="gator" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg"><path d="M46 112 C20 118 6 128 10 142 C28 132 44 128 62 126 Z" fill="#4caf6d"/><ellipse cx="106" cy="108" rx="58" ry="38" fill="#4caf6d"/><ellipse cx="110" cy="120" rx="40" ry="20" fill="#cfe9b0"/><path d="M62 78 l7 -13 l7 13 M80 66 l7 -13 l7 13 M98 62 l7 -13 l7 13" fill="#2f8f4e"/><ellipse cx="118" cy="72" rx="46" ry="34" fill="#4caf6d"/><ellipse cx="152" cy="84" rx="32" ry="17" fill="#4caf6d"/><ellipse cx="152" cy="90" rx="28" ry="9" fill="#cfe9b0"/><circle cx="172" cy="78" r="2.6" fill="#1d3b2a"/><circle cx="163" cy="76" r="2" fill="#1d3b2a"/><path d="M136 96 l4 7 l4 -7 Z M150 97 l4 7 l4 -7 Z M164 96 l4 6 l4 -6 Z" fill="#fff"/><circle cx="110" cy="56" r="14" fill="#fff"/><circle cx="134" cy="56" r="14" fill="#fff"/><circle cx="112" cy="58" r="6.5" fill="#1d3b2a"/><circle cx="136" cy="58" r="6.5" fill="#1d3b2a"/><circle cx="114.5" cy="55.5" r="2.2" fill="#fff"/><circle cx="138.5" cy="55.5" r="2.2" fill="#fff"/><circle cx="98" cy="76" r="5" fill="#ff9aa2" opacity=".75"/><ellipse cx="78" cy="140" rx="15" ry="8" fill="#3d9c5a"/><ellipse cx="132" cy="142" rx="15" ry="8" fill="#3d9c5a"/></svg>`;
+const week = E.week || 0;
+const board = [...E.rankings].sort((a, b) => a.rank - b.rank);
+const mv = r => { const p = PREV[r.team]; if (!p) return '<span class="mv z">–</span>'; const d = p - r.rank; return d > 0 ? `<span class="mv up">▲${d}</span>` : d < 0 ? `<span class="mv dn">▼${-d}</span>` : '<span class="mv z">=</span>'; };
+const rec = t => `${t.record.w} - ${t.record.l}`;
+const pts = t => week ? fmt(t.record.pf) : 'proj ' + Math.round(t.startPts).toLocaleString();
+const ptsLabel = week ? 'Pts YTD' : 'Proj';
+const topId = week ? (D.computed.leagueFacts.topScorerLastWeek || [])[0] : null;
+
+const slides = [];
+// 0 cover
+slides.push(`<div class="slide"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR}</div><div style="text-align:center;margin-top:10px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:6px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:8px">${esc(E.subtitle)} · ${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
+// 1 memo + board
+const memo = `<div class="memo"><div class="l">${esc(E.memo.yearLabel)}</div><div class="t">${esc(E.memo.yearText)}</div></div><div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>`;
+const rows = board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td><td class="num"><span class="gr ${gcls(r.grade)}">${esc(r.grade)}</span></td></tr>`; }).join('');
+slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · the board</div>${E.intro ? `<p style="margin:6px 0 12px;font-size:13.5px">${E.intro.map(esc).join('<br><br>')}</p>` : ''}${memo}<div class="card" style="padding:6px 8px"><table><thead><tr><th>Rank</th><th>Team · owner</th><th style="text-align:right">Record · ${ptsLabel}</th><th style="text-align:right">Grade</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
+// 2 charts
+const byPts = [...D.computed.teams].sort((a, b) => (week ? b.record.pf - a.record.pf : b.startPts - a.startPts));
+const maxP = Math.max(...byPts.map(t => week ? t.record.pf : t.startPts));
+const bars = byPts.map(t => `<div class="bar"><div class="lab">${esc(t.manager.nick)}</div><div class="trk"><div class="fil ${t.id === 1 ? 'me' : ''}" style="width:${((week ? t.record.pf : t.startPts) / maxP * 100).toFixed(1)}%"></div></div><div class="val">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div></div>`).join('');
+let chart2 = '';
+if (week) {
+  const stand = [...D.computed.teams].sort((a, b) => a.standing - b.standing);
+  chart2 = `<div class="card" style="margin-top:10px"><div class="eyebrow">Standings</div><table style="margin-top:4px;font-size:12.5px"><thead><tr><th>#</th><th>Team</th><th style="text-align:right">W-L</th><th style="text-align:right">PF</th><th style="text-align:right">PA</th></tr></thead><tbody>${stand.map(t => `<tr><td class="r"><span class="rk" style="font-size:14px">${t.standing}</span></td><td class="t"><div class="n" style="font-size:12.5px">${esc(t.name)}</div></td><td class="num">${rec(t)}</td><td class="num">${Math.round(t.record.pf)}</td><td class="num">${Math.round(t.record.pa)}</td></tr>`).join('')}</tbody></table></div>`;
+} else {
+  const byG = [...D.computed.teams].sort((a, b) => a.modelRank - b.modelRank);
+  chart2 = `<div class="card" style="margin-top:10px"><div class="eyebrow">Draft, by the numbers</div><p class="mute" style="font-size:12px;margin-top:4px">Model = 65% projected starters, 20% bench, 15% value vs ADP (QBs excluded, ADP is wrong about QBs in this league). Tony's grade above is the model plus vibes.</p><div class="bars">${byG.map(t => `<div class="bar"><div class="lab">${esc(t.manager.nick)}</div><div class="trk"><div class="fil" style="width:${(t.benchPts / 1100 * 100).toFixed(1)}%;background:#9fcf7a"></div></div><div class="val">${Math.round(t.benchPts)}</div></div>`).join('')}</div><div class="mute" style="font-size:11px;margin-top:6px">Bench depth, projected points of top 5 bench guys</div></div>`;
+}
+slides.push(`<div class="slide"><div class="eyebrow">Numbers</div><div class="card" style="margin-top:6px"><h2 style="font-size:18px">${week ? 'Points for, season' : 'Projected starting lineup'}</h2><div class="bars">${bars}</div>${week ? '' : '<div class="mute" style="font-size:11px;margin-top:6px">ESPN projections, best lineup: QB, 2 RB, 2 WR, TE, FLEX, OP, K. Orange is Tony.</div>'}</div>${chart2}</div>`);
+// 3 quick hits
+if (E.quickHits && E.quickHits.length) slides.push(`<div class="slide"><div class="eyebrow">Quick hits</div><h2 style="margin-top:6px">${esc(E.quickHitsTitle || (week ? 'This week' : 'Draft notes'))}</h2><div class="card" style="margin-top:10px"><div class="hits">${E.quickHits.map(h => `<div class="hit"><div class="k">${esc(h.label)}</div><div class="v">${esc(h.text)}</div></div>`).join('')}</div></div></div>`);
+// team slides 10..1
+for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
+  const t = T[r.team];
+  const meme = r.meme && r.meme.img ? `<div class="meme"><img src="${esc(r.meme.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${r.meme.top ? `<div class="tx top">${esc(r.meme.top)}</div>` : ''}${r.meme.bottom ? `<div class="tx bot">${esc(r.meme.bottom)}</div>` : ''}</div>${r.meme.caption ? `<div class="cap">${esc(r.meme.caption)}</div>` : ''}` : '';
+  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div><div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div></div><p class="thoughts">${esc(r.thoughts)}</p>${meme}</div>`);
+}
+// final board + share
+slides.push(`<div class="slide"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.title)}</div><h2 style="margin-top:4px">Power Rankings</h2><div class="card" style="padding:6px 8px;margin-top:10px"><table><tbody>${board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('')}</tbody></table></div><div class="grow"></div><button class="btn" id="share" style="margin-top:14px">SHARE THE BOARD</button><div class="foot">${esc(E.outro)}</div></div>`);
+
+const S = document.getElementById('slides'); S.innerHTML = slides.join('');
+const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></b>').join('');
+let i = 0; const all = [...S.children], barEls = [...B.children];
+function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) s.scrollTop = 0; }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} }
+let swiped = false, sx = 0, sy = 0;
+S.addEventListener('click', e => { if (swiped || e.target.closest('button,a')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
+document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
+document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(i + (dx < 0 ? 1 : -1)); setTimeout(() => swiped = false, 400); } });
+show(parseInt(location.hash.slice(1)) || 0);
+
+// share card
+async function drawCard() {
+  try { await document.fonts.load('900 60px Rubik'); await document.fonts.load('500 30px Rubik'); await document.fonts.load('700 30px Rubik'); } catch (e) {}
+  const c = document.getElementById('cv'), x = c.getContext('2d'), W = c.width, H = c.height;
+  x.fillStyle = '#f7f5ef'; x.fillRect(0, 0, W, H);
+  // gator
+  const img = new Image(); img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(GATOR.replace('class="gator"', 'width="300" height="225"'));
+  await new Promise(r => { img.onload = r; img.onerror = r; });
+  try { x.drawImage(img, W - 360, 60, 300, 225); } catch (e) {}
+  x.fillStyle = '#2f8f4e'; x.font = '700 30px Rubik, sans-serif'; x.textAlign = 'left'; x.fillText((D.computed.league + '  ·  ' + E.season).toUpperCase(), 70, 150);
+  x.fillStyle = '#1d3b2a'; x.font = '900 96px Rubik, sans-serif'; x.fillText(E.title, 70, 250); x.fillText('Power Rankings', 70, 350);
+  x.fillStyle = '#6b7a70'; x.font = '500 30px Rubik, sans-serif'; x.fillText(E.subtitle + '  ·  ' + E.date, 70, 405);
+  let y = 470; const rowH = 122;
+  for (const r of board) {
+    const t = T[r.team];
+    x.fillStyle = '#ffffff'; x.strokeStyle = '#e4e0d4'; x.lineWidth = 2; x.beginPath(); x.roundRect(70, y, W - 140, rowH - 14, 20); x.fill(); x.stroke();
+    x.fillStyle = r.rank === 1 ? '#2f8f4e' : '#1d3b2a'; x.font = '900 60px Rubik, sans-serif'; x.textAlign = 'center'; x.fillText(String(r.rank), 135, y + 74);
+    const p = PREV[r.team]; if (p) { const d = p - r.rank; x.font = '700 24px Rubik, sans-serif'; x.fillStyle = d > 0 ? '#2f8f4e' : d < 0 ? '#d9534f' : '#6b7a70'; x.fillText(d > 0 ? '▲' + d : d < 0 ? '▼' + (-d) : '=', 135, y + 100); }
+    x.textAlign = 'left'; x.fillStyle = '#1d3b2a'; x.font = '700 40px Rubik, sans-serif';
+    let name = t.name; while (x.measureText(name).width > 560) name = name.slice(0, -2) + '…';
+    x.fillText(name, 200, y + 52);
+    x.fillStyle = '#6b7a70'; x.font = 'italic 500 26px Rubik, sans-serif'; x.fillText(t.manager.nick, 200, y + 90);
+    x.textAlign = 'right'; x.fillStyle = '#1d3b2a'; x.font = '700 34px Rubik, sans-serif'; x.fillText(rec(t), W - 110, y + 52);
+    x.fillStyle = '#6b7a70'; x.font = '500 26px Rubik, sans-serif'; x.fillText((week ? '' : 'proj ') + Math.round(week ? t.record.pf : t.startPts).toLocaleString(), W - 110, y + 90);
+    y += rowH;
+  }
+  x.fillStyle = '#6b7a70'; x.font = '500 26px Rubik, sans-serif'; x.textAlign = 'center'; x.fillText((E.outro || '') + (D.site ? '   ·   ' + D.site : ''), W / 2, H - 60);
+  return new Promise(res => c.toBlob(res, 'image/png'));
+}
+let blob = null;
+async function openShare() {
+  if (!blob) blob = await drawCard();
+  const file = new File([blob], 'gator-tails-power-rankings.png', {type: 'image/png'});
+  if (navigator.canShare && navigator.canShare({files: [file]})) { try { await navigator.share({files: [file], title: D.computed.league + ' Power Rankings'}); return; } catch (e) { if (e.name === 'AbortError') return; } }
+  const url = URL.createObjectURL(blob); document.getElementById('shot').src = url; document.getElementById('dl').href = url; document.getElementById('modal').classList.add('on');
+}
+document.getElementById('share').onclick = openShare; document.getElementById('share2').onclick = openShare;
+document.getElementById('close').onclick = () => document.getElementById('modal').classList.remove('on');
+</script>
+</body>
+</html>

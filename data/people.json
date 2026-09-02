@@ -1,0 +1,63 @@
+{
+  "_readme": "One entry per ESPN team id. `nick` is what shows under the team name (from Tony's old rankings). `notes` is free text for inside jokes / context per edition.",
+  "1": {
+    "first": "Tony",
+    "last": "Rocca",
+    "nick": "Tony",
+    "notes": "Runs the rankings. Most waiver moves in the league two years running (37 in 2024, 29 in 2025). 9-5 last year, 3 seed, flamed out to 6th."
+  },
+  "2": {
+    "first": "Daniel",
+    "last": "Succop",
+    "nick": "D",
+    "notes": "REIGNING CHAMP (2025). Most points in the league in 2025 (2035.9), 9-5, 2 seed, 31 waiver moves. Renamed TD Twisters -> Soppin Wet."
+  },
+  "3": {
+    "first": "Ian",
+    "last": "Sekol",
+    "nick": "EN",
+    "notes": "10-4 two years in a row, 3rd then 2nd. Never won it. Made 7 waiver moves all of 2025. Logo is a SpongeBob stink gif."
+  },
+  "4": {
+    "first": "Nicky",
+    "last": "Wilson",
+    "nick": "Nokia Wolson",
+    "notes": "7-7 in 2025, 5 seed, made the playoffs with FIVE waiver moves all year. Was 'Beginner's Luck' in 2024 (9th). Drafted two kickers in 2026."
+  },
+  "5": {
+    "first": "Nick",
+    "last": "Fallows",
+    "nick": "Nfatboy",
+    "notes": "2024 champ. 2025: 6-8, 8th, made THREE waiver moves all season. Only guy who trades (4 in 2024)."
+  },
+  "6": {
+    "first": "Reece",
+    "last": "Cooke",
+    "nick": "REEEEECE",
+    "notes": "Mr. Middle: 7th then 5th. Team name 'Your meat too much', abbrev WWJD. Logo is a personal photo hosted on postimg."
+  },
+  "7": {
+    "first": "Jackson",
+    "last": "Wille",
+    "nick": "J Will",
+    "notes": "5-9 both years (8th, 9th). Logo is a Magic 8-Ball. Drafted the Jaylen Waddle that Ryan's team is named after."
+  },
+  "8": {
+    "first": "Parker",
+    "last": "Shama",
+    "nick": "Big Sham",
+    "notes": "4-10 last year with the fewest points in the league (1456). Username ravens69420. Took Josh Allen at 1.04."
+  },
+  "10": {
+    "first": "Dean",
+    "last": "Smith",
+    "nick": "Deanus",
+    "notes": "3-11 dead last in 2024 as 'Dont truzz u', rebounded to 7-7 / 4th in 2025. Team abbrev RBK."
+  },
+  "11": {
+    "first": "Ryan",
+    "last": "Seeberger",
+    "nick": "Seeberger",
+    "notes": "1 seed in 2024 (lost final) then dead last in 2025 as 'Colorado Kool-aid'. Team is 'She's Jay-len on my Waddle', named after Jaylen Waddle only, who he did NOT draft (J Will has him). Nobody knows why Jay-len has a hyphen."
+  }
+}

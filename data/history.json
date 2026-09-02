@@ -1,0 +1,253 @@
+{
+ "2024": {
+  "champion": 5,
+  "teams": [
+   {
+    "id": 1,
+    "name": "T Roc",
+    "w": 5,
+    "l": 9,
+    "pf": 1556.5,
+    "pa": 1703.6,
+    "seed": 8,
+    "rank": 6,
+    "acq": 37,
+    "trades": 0
+   },
+   {
+    "id": 2,
+    "name": "TD Twisters",
+    "w": 8,
+    "l": 6,
+    "pf": 1793.7,
+    "pa": 1587.3,
+    "seed": 4,
+    "rank": 4,
+    "acq": 32,
+    "trades": 0
+   },
+   {
+    "id": 3,
+    "name": "Ball Sniffers",
+    "w": 10,
+    "l": 4,
+    "pf": 1779.9,
+    "pa": 1628.3,
+    "seed": 2,
+    "rank": 3,
+    "acq": 13,
+    "trades": 0
+   },
+   {
+    "id": 4,
+    "name": "Beginner's Luck",
+    "w": 6,
+    "l": 8,
+    "pf": 1644.3,
+    "pa": 1635.5,
+    "seed": 7,
+    "rank": 9,
+    "acq": 16,
+    "trades": 1
+   },
+   {
+    "id": 5,
+    "name": "Fatboy Fallows",
+    "w": 9,
+    "l": 5,
+    "pf": 1770.0,
+    "pa": 1573.6,
+    "seed": 3,
+    "rank": 1,
+    "acq": 21,
+    "trades": 4
+   },
+   {
+    "id": 6,
+    "name": "Your meat too much",
+    "w": 6,
+    "l": 8,
+    "pf": 1759.8,
+    "pa": 1683.0,
+    "seed": 6,
+    "rank": 7,
+    "acq": 21,
+    "trades": 0
+   },
+   {
+    "id": 7,
+    "name": "The Slice Masters",
+    "w": 5,
+    "l": 9,
+    "pf": 1546.2,
+    "pa": 1761.4,
+    "seed": 9,
+    "rank": 8,
+    "acq": 10,
+    "trades": 0
+   },
+   {
+    "id": 8,
+    "name": "Big Sham",
+    "w": 8,
+    "l": 6,
+    "pf": 1698.3,
+    "pa": 1774.2,
+    "seed": 5,
+    "rank": 5,
+    "acq": 9,
+    "trades": 1
+   },
+   {
+    "id": 10,
+    "name": "Dont truzz u",
+    "w": 3,
+    "l": 11,
+    "pf": 1498.1,
+    "pa": 1824.1,
+    "seed": 10,
+    "rank": 10,
+    "acq": 20,
+    "trades": 2
+   },
+   {
+    "id": 11,
+    "name": "Butt crack face mask",
+    "w": 10,
+    "l": 4,
+    "pf": 1792.0,
+    "pa": 1667.7,
+    "seed": 1,
+    "rank": 2,
+    "acq": 17,
+    "trades": 0
+   }
+  ]
+ },
+ "2025": {
+  "champion": 2,
+  "teams": [
+   {
+    "id": 1,
+    "name": "T Roc",
+    "w": 9,
+    "l": 5,
+    "pf": 1932.4,
+    "pa": 1761.4,
+    "seed": 3,
+    "rank": 6,
+    "acq": 29,
+    "trades": 0
+   },
+   {
+    "id": 2,
+    "name": "Soppin Wet",
+    "w": 9,
+    "l": 5,
+    "pf": 2035.9,
+    "pa": 1868.0,
+    "seed": 2,
+    "rank": 3,
+    "acq": 31,
+    "trades": 0
+   },
+   {
+    "id": 3,
+    "name": "Ball Sniffers",
+    "w": 10,
+    "l": 4,
+    "pf": 1942.9,
+    "pa": 1691.7,
+    "seed": 1,
+    "rank": 2,
+    "acq": 7,
+    "trades": 0
+   },
+   {
+    "id": 4,
+    "name": "Coke Drinkers",
+    "w": 7,
+    "l": 7,
+    "pf": 1907.5,
+    "pa": 1773.6,
+    "seed": 5,
+    "rank": 1,
+    "acq": 5,
+    "trades": 0
+   },
+   {
+    "id": 5,
+    "name": "Fatboy Fallows",
+    "w": 6,
+    "l": 8,
+    "pf": 1812.8,
+    "pa": 1902.3,
+    "seed": 7,
+    "rank": 8,
+    "acq": 3,
+    "trades": 1
+   },
+   {
+    "id": 6,
+    "name": "Your meat too much",
+    "w": 8,
+    "l": 6,
+    "pf": 1930.2,
+    "pa": 1788.0,
+    "seed": 4,
+    "rank": 5,
+    "acq": 19,
+    "trades": 0
+   },
+   {
+    "id": 7,
+    "name": "The Slice Masters",
+    "w": 5,
+    "l": 9,
+    "pf": 1676.6,
+    "pa": 1884.3,
+    "seed": 9,
+    "rank": 9,
+    "acq": 11,
+    "trades": 0
+   },
+   {
+    "id": 8,
+    "name": "Big Sham",
+    "w": 4,
+    "l": 10,
+    "pf": 1456.0,
+    "pa": 1767.6,
+    "seed": 10,
+    "rank": 7,
+    "acq": 9,
+    "trades": 0
+   },
+   {
+    "id": 10,
+    "name": "Mutant Ninja Tweakers",
+    "w": 7,
+    "l": 7,
+    "pf": 1840.8,
+    "pa": 1932.4,
+    "seed": 6,
+    "rank": 4,
+    "acq": 12,
+    "trades": 1
+   },
+   {
+    "id": 11,
+    "name": "Colorado Kool-aid",
+    "w": 5,
+    "l": 9,
+    "pf": 1801.9,
+    "pa": 1967.7,
+    "seed": 8,
+    "rank": 10,
+    "acq": 14,
+    "trades": 0
+   }
+  ]
+ },
+ "_note": "ESPN's rankCalculatedFinal for 2025 is unreliable (it listed Coke Drinkers 1st). Per Tony: Soppin Wet (Daniel) won 2025. Fatboy Fallows (Nick) won 2024."
+}
