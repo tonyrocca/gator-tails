@@ -20,7 +20,7 @@ Mobile-first, tap-through power rankings for the Gator Tails ESPN league (id 201
 2. `python3 scripts/compute.py 2026` – recompute metrics. Prints a summary table + per-team steals/reaches/QBs.
 3. Copy the last edition file to `editions/2026-NN-week-N.json` (zero-padded so files sort), set `week`, `title`, `date`, update the `memo` bars, and rewrite `quickHits` and `rankings` (order, `thoughts`, `meme`). Records, points YTD, standings and top scorer come from the data automatically once `week` > 0. Team ids: 1 Tony, 2 Daniel, 3 Ian, 4 Nicky, 5 Nick, 6 Reece, 7 Jackson, 8 Parker, 10 Dean, 11 Ryan.
 4. `python3 scripts/build.py editions/<id>.json --site=gator-tails.vercel.app`
-5. Deploy `site/` (Vercel static). Share the URL; the last slide has a Share button that produces a 1080x1920 PNG via the native share sheet (or long-press to save).
+5. Commit and push to `main`. Vercel is connected to the GitHub repo and deploys `site/` automatically (root `vercel.json` sets outputDirectory). Share https://gator-tails.vercel.app; the last slide has a Share button that produces a 1080x1920 PNG via the native share sheet (or long-press to save).
 
 Or just tell Claude: "new Gator Tails rankings for week N, here's the context: ..." and it runs the steps above.
 
