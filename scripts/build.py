@@ -12,6 +12,12 @@ E = json.load(open(ed_path))
 eds = sorted((ROOT / "editions").glob("*.json"))
 idx = next((k for k, e in enumerate(eds) if e.name == Path(ed_path).name), None)
 prev = {}
+# full rank history across all editions up to this one (for the week-over-week chart)
+hist_eds = eds[: (idx + 1)] if idx is not None else [Path(ed_path)]
+history, labels = {}, []
+for p_ in hist_eds:
+    J = json.load(open(p_)); labels.append(J.get("title", J["id"]).replace("Week ", "W"))
+    for r in J.get("rankings", []): history.setdefault(str(r["team"]), []).append(r["rank"])
 if idx:
     P = json.load(open(eds[idx - 1]))
     prev = {str(r["team"]): r["rank"] for r in P.get("rankings", [])}
@@ -24,7 +30,7 @@ KEEP = ("id", "name", "abbrev", "logo", "manager", "draftSlot", "startPts", "ben
 slim = {"season": C["season"], "league": C["league"], "teams": [{k: t[k] for k in KEEP if k in t} for t in C["teams"]], "leagueFacts": C["leagueFacts"]}
 desc = " · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …"
 html = (tpl.replace("__TITLE__", title).replace("__DESC__", desc)
-        .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "site": site_url}, separators=(",", ":")).replace("</", "<\\/")))
+        .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "history": history, "historyLabels": labels, "site": site_url}, separators=(",", ":")).replace("</", "<\\/")))
 out = ROOT / "site"; out.mkdir(exist_ok=True)
 (out / "index.html").write_text(html)
 (out / E["id"]).mkdir(exist_ok=True); (out / E["id"] / "index.html").write_text(html)
