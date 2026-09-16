@@ -33,7 +33,7 @@ p{font-size:15px;line-height:1.5}
 .hint{font-size:12px;color:var(--mute);text-align:center;margin-top:12px}
 .gator{width:150px;height:auto;display:block}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 1px 2px rgba(29,59,42,.05)}
-.memo{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;background:var(--green2);border-radius:12px;padding:10px 12px}
+.memo{display:flex;gap:10px;align-items:flex-start;margin-bottom:6px;background:var(--green2);border-radius:12px;padding:10px 12px}
 .memo .l{flex:none;width:86px;font-size:11px;font-weight:900;line-height:1.2;text-transform:uppercase;letter-spacing:.04em}
 .memo .l small{display:block;font-weight:700;color:var(--green);font-size:11px;margin-top:2px}
 .memo .t{font-size:13px;line-height:1.35;flex:1;min-width:0}
@@ -67,11 +67,11 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .bigrank{font-size:56px;font-weight:900;line-height:.9;letter-spacing:-.04em;flex:none;width:70px}
 .head .n{font-size:22px;font-weight:900;line-height:1.05}
 .head .o{font-size:13px;color:var(--mute);font-style:italic;margin-top:2px}
-.stats{display:flex;gap:6px;margin-top:10px}
+.stats{display:flex;gap:6px;margin-top:8px}
 .st{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 8px;text-align:center}
 .st .v{font-weight:900;font-size:18px;line-height:1}.st .l{font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
-.thoughts{margin-top:10px;font-size:14px;line-height:1.5}
-.meme{margin-top:12px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.thoughts{margin-top:8px;font-size:14px;line-height:1.5}
+.meme{margin-top:10px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
 .meme img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain}
 .meme .tx{position:absolute;left:6px;right:6px;text-align:center;color:#fff;font-family:Impact,"Arial Black",sans-serif;font-size:22px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 6px #000}
 .meme .tx.top{top:8px}.meme .tx.bot{bottom:8px}
@@ -116,7 +116,7 @@ const topId = week ? (D.computed.leagueFacts.topScorerLastWeek || [])[0] : null;
 
 const slides = [];
 // 0 cover
-slides.push(`<div class="slide"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR}</div><div style="text-align:center;margin-top:10px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:6px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:8px">${esc(E.subtitle)} · ${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
+slides.push(`<div class="slide cover"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR.replace('class="gator"', 'class="gator" style="width:210px"')}</div><div style="text-align:center;margin-top:4px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:4px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:6px">${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
 // 1 memo + board
 const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.yearTracker.map(x => `<div class="${x.me ? 'me' : ''}"><b>${x.rank}</b><span>${esc(x.name)}</span><em>${esc(x.yds)}</em></div>`).join('')}</div>` : '';
 const memo = `<div class="memo"><div class="l">${esc(E.memo.yearLabel)}</div><div class="t">${esc(E.memo.yearText)}${tracker}</div></div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
@@ -154,7 +154,7 @@ for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
   const t = T[r.team];
   const media = (m) => {
     if (!m) return '';
-    const cap = m.caption ? `<div class="cap">${esc(m.caption)}</div>` : '';
+    const cap = '';
     if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt" data-src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1&autoplay=1${st}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer"><div class="play">▶</div></div>${cap}`; }
     if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
     return '';
