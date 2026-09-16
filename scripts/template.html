@@ -36,7 +36,11 @@ p{font-size:15px;line-height:1.5}
 .memo{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;background:var(--green2);border-radius:12px;padding:10px 12px}
 .memo .l{flex:none;width:86px;font-size:11px;font-weight:900;line-height:1.2;text-transform:uppercase;letter-spacing:.04em}
 .memo .l small{display:block;font-weight:700;color:var(--green);font-size:11px;margin-top:2px}
-.memo .t{font-size:13px;line-height:1.35}
+.memo .t{font-size:13px;line-height:1.35;flex:1;min-width:0}
+.trk2{margin-top:8px;display:flex;flex-direction:column;gap:3px;font-size:12px}
+.trk2>div{display:flex;gap:6px;align-items:center;background:rgba(255,255,255,.55);border-radius:8px;padding:4px 8px}
+.trk2>div.me{background:var(--orange);color:#fff}
+.trk2 b{width:18px}.trk2 span{flex:1;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trk2 i{font-size:11px;opacity:.75;font-style:normal}.trk2 em{font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 th{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:6px 6px 8px;border-bottom:2px solid var(--line)}
 td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -72,7 +76,8 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .meme .tx{position:absolute;left:6px;right:6px;text-align:center;color:#fff;font-family:Impact,"Arial Black",sans-serif;font-size:22px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 6px #000}
 .meme .tx.top{top:8px}.meme .tx.bot{bottom:8px}
 .yt{margin-top:12px;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
-.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt iframe,.yt img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.yt .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(29,59,42,.9);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
 .cap{font-size:12px;color:var(--mute);margin-top:6px;font-style:italic;text-align:center}
 .btn{display:block;width:100%;padding:15px;border:0;border-radius:14px;background:var(--ink);color:#fff;font-family:var(--font);font-size:16px;font-weight:900;letter-spacing:.02em;cursor:pointer;position:relative;z-index:30}
 .btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);margin-top:8px;font-weight:700}
@@ -113,7 +118,8 @@ const slides = [];
 // 0 cover
 slides.push(`<div class="slide"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR}</div><div style="text-align:center;margin-top:10px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:6px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:8px">${esc(E.subtitle)} · ${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
 // 1 memo + board
-const memo = `<div class="memo"><div class="l">${esc(E.memo.yearLabel)}</div><div class="t">${esc(E.memo.yearText)}</div></div><div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>`;
+const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.yearTracker.map(x => `<div class="${x.me ? 'me' : ''}"><b>${x.rank}</b><span>${esc(x.name)}</span><i>${esc(x.who || '')}</i><em>${esc(x.yds)}</em></div>`).join('')}</div>` : '';
+const memo = `<div class="memo"><div class="l">${esc(E.memo.yearLabel)}</div><div class="t">${esc(E.memo.yearText)}${tracker}</div></div><div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>`;
 const rows = board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td><td class="num"><span class="gr ${gcls(r.grade)}">${esc(r.grade)}</span></td></tr>`; }).join('');
 slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · the board</div>${E.intro ? `<p style="margin:6px 0 12px;font-size:13.5px">${E.intro.map(esc).join('<br><br>')}</p>` : ''}${memo}<div class="card" style="padding:6px 8px"><table><thead><tr><th>Rank</th><th>Team · owner</th><th style="text-align:right">Record · ${ptsLabel}</th><th style="text-align:right">Grade</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
 // 2 charts
@@ -137,7 +143,7 @@ for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
   const media = (m) => {
     if (!m) return '';
     const cap = m.caption ? `<div class="cap">${esc(m.caption)}</div>` : '';
-    if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1${st}" title="video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${cap}`; }
+    if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt" data-src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1&autoplay=1${st}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer"><div class="play">▶</div></div>${cap}`; }
     if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
     return '';
   };
@@ -152,7 +158,7 @@ const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></
 let i = 0; const all = [...S.children], barEls = [...B.children];
 function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) s.scrollTop = 0; }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} }
 let swiped = false, sx = 0, sy = 0;
-S.addEventListener('click', e => { if (swiped || e.target.closest('button,a,.yt')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
+S.addEventListener('click', e => { const y = e.target.closest('.yt'); if (y) { if (!y.querySelector('iframe')) { y.innerHTML = `<iframe src="${y.dataset.src}" title="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>`; } return; } if (swiped || e.target.closest('button,a')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
 document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
 document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
 document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(i + (dx < 0 ? 1 : -1)); setTimeout(() => swiped = false, 400); } });
