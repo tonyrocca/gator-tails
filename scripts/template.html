@@ -37,13 +37,13 @@ p{font-size:15px;line-height:1.5}
 .memo .l{flex:none;width:86px;font-size:11px;font-weight:900;line-height:1.2;text-transform:uppercase;letter-spacing:.04em}
 .memo .l small{display:block;font-weight:700;color:var(--green);font-size:11px;margin-top:2px}
 .memo .t{font-size:13px;line-height:1.35;flex:1;min-width:0}
-.trk2{margin-top:8px;display:flex;flex-direction:column;gap:3px;font-size:12px}
+.trk2{margin-top:2px;width:100%;display:flex;flex-direction:column;gap:3px;font-size:12px}
 .trk2>div{display:flex;gap:6px;align-items:center;background:rgba(255,255,255,.55);border-radius:8px;padding:4px 8px}
 .trk2>div.me{background:var(--orange);color:#fff}
 .trk2 b{width:18px}.trk2 span{flex:1;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.trk2 i{font-size:11px;opacity:.75;font-style:normal}.trk2 em{font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
 table{width:100%;border-collapse:collapse;font-size:13.5px}
 th{font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:6px 6px 8px;border-bottom:2px solid var(--line)}
-td{padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+td{padding:7px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
 tr:last-child td{border-bottom:0}
 td.r{width:56px;white-space:nowrap}.rk{font-weight:900;font-size:17px}
 .mv{font-size:11px;font-weight:700;margin-left:3px}.mv.up{color:var(--green)}.mv.dn{color:var(--red)}.mv.z{color:var(--mute)}
@@ -119,9 +119,9 @@ const slides = [];
 slides.push(`<div class="slide cover"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR.replace('class="gator"', 'class="gator" style="width:210px"')}</div><div style="text-align:center;margin-top:4px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:4px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:6px">${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
 // 1 memo + board
 const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.yearTracker.map(x => `<div class="${x.me ? 'me' : ''}"><b>${x.rank}</b><span>${esc(x.name)}</span><em>${esc(x.yds)}</em></div>`).join('')}</div>` : '';
-const memo = `<div class="memo"><div class="l">${esc(E.memo.yearLabel)}</div><div class="t">${esc(E.memo.yearText)}${tracker}</div></div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
+const memo = `<div class="memo" style="flex-direction:column;gap:4px"><div class="l" style="width:auto">${esc(E.memo.yearLabel)}</div>${E.memo.yearText ? `<div class="t">${esc(E.memo.yearText)}</div>` : ''}${tracker}</div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
 const rows = board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('');
-slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · the board</div>${E.intro ? `<p style="margin:6px 0 12px;font-size:13.5px">${E.intro.map(esc).join('<br><br>')}</p>` : ''}${memo}<div class="card" style="padding:6px 8px"><table><thead><tr><th>Rank</th><th>Team · owner</th><th style="text-align:right">Record · ${ptsLabel}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
+slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · the board</div>${E.intro ? `<p style="margin:6px 0 12px;font-size:13.5px">${E.intro.map(esc).join('<br><br>')}</p>` : ''}${memo}<div class="card" style="padding:2px 4px"><table><thead><tr><th>Rank</th><th>Team · owner</th><th style="text-align:right">Record · ${ptsLabel}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
 // 2 charts
 const byPts = [...D.computed.teams].sort((a, b) => (week ? b.record.pf - a.record.pf : b.startPts - a.startPts));
 const maxP = Math.max(...byPts.map(t => week ? t.record.pf : t.startPts));
@@ -146,7 +146,7 @@ if (HL.length > 1) {
   const labels = HL.map((l, k) => `<text x="${xs(k)}" y="${Hh - 6}" font-size="11" font-weight="700" fill="#6b7a70" text-anchor="middle">${esc(l)}</text>`).join('');
   bump = `<div class="card" style="margin-top:6px"><h2 style="font-size:18px">Rank, week over week</h2><svg viewBox="0 0 ${W} ${Hh}" width="100%" style="display:block;margin-top:6px;overflow:visible">${grid}${lines}${labels}</svg></div>`;
 }
-slides.push(`<div class="slide"><div class="eyebrow">Numbers</div>${bump}<div class="card" style="margin-top:10px"><h2 style="font-size:18px">${week ? 'Points for, season' : 'Projected starting lineup'}</h2><div class="bars">${bars}</div>${week ? '' : '<div class="mute" style="font-size:11px;margin-top:6px">ESPN projections, best lineup: QB, 2 RB, 2 WR, TE, FLEX, OP, K. Orange is Tony.</div>'}</div>${chart2}</div>`);
+slides.push(`<div class="slide"><div class="eyebrow">Numbers</div><div class="card" style="margin-top:10px"><h2 style="font-size:18px">${week ? 'Points for, season' : 'Projected starting lineup'}</h2><div class="bars">${bars}</div>${week ? '' : '<div class="mute" style="font-size:11px;margin-top:6px">ESPN projections, best lineup: QB, 2 RB, 2 WR, TE, FLEX, OP, K. Orange is Tony.</div>'}</div>${chart2}</div>`);
 // 3 quick hits
 if (E.quickHits && E.quickHits.length) slides.push(`<div class="slide"><div class="eyebrow">Quick hits</div><h2 style="margin-top:6px">${esc(E.quickHitsTitle || (week ? 'This week' : 'Draft notes'))}</h2><div class="card" style="margin-top:10px"><div class="hits">${E.quickHits.map(h => `<div class="hit"><div class="k">${esc(h.label)}</div><div class="v">${esc(h.text)}</div></div>`).join('')}</div></div></div>`);
 // team slides 10..1
@@ -165,6 +165,7 @@ for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
 // final board + share
 slides.push(`<div class="slide"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.title)}</div><h2 style="margin-top:4px">Power Rankings</h2><div class="card" style="padding:6px 8px;margin-top:10px"><table><tbody>${board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('')}</tbody></table></div><div class="grow"></div><button class="btn" id="share" style="margin-top:14px">SHARE THE BOARD</button><div class="foot">${esc(E.outro)}</div></div>`);
 
+if (bump) slides.push(`<div class="slide"><div class="eyebrow">Movement</div>${bump}</div>`);
 const S = document.getElementById('slides'); S.innerHTML = slides.join('');
 const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></b>').join('');
 let i = 0; const all = [...S.children], barEls = [...B.children];
