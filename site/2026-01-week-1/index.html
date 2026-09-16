@@ -20,7 +20,7 @@ html,body{height:100%;background:#e9e6dc;color:var(--ink);font-family:var(--font
 #bars{position:absolute;top:calc(10px + env(safe-area-inset-top));left:14px;right:14px;display:flex;gap:3px;z-index:20}
 #bars b{flex:1;height:3px;background:rgba(29,59,42,.14);border-radius:2px}
 #bars b.done{background:var(--green)} #bars b.cur{background:var(--ink)}
-.slide{position:absolute;inset:0;display:none;flex-direction:column;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;cursor:pointer;padding:calc(30px + env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));z-index:5}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;touch-action:pan-y;cursor:pointer;padding:calc(30px + env(safe-area-inset-top)) 18px calc(20px + env(safe-area-inset-bottom));z-index:5}
 .slide.on{display:flex}
 .slide>*{animation:up .35s ease-out both}
 .slide>*:nth-child(2){animation-delay:.05s}.slide>*:nth-child(3){animation-delay:.1s}.slide>*:nth-child(4){animation-delay:.15s}.slide>*:nth-child(5){animation-delay:.2s}
@@ -72,7 +72,8 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .st .v{font-weight:900;font-size:18px;line-height:1}.st .l{font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
 .thoughts{margin-top:8px;font-size:14px;line-height:1.5}
 .meme{margin-top:10px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
-.meme img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain}
+.meme img{display:block;width:100%;height:auto;max-height:min(52svh,440px);object-fit:contain}
+@supports not (height:1svh){.meme img{max-height:min(48vh,440px)}}
 .meme .tx{position:absolute;left:6px;right:6px;text-align:center;color:#fff;font-family:Impact,"Arial Black",sans-serif;font-size:22px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 6px #000}
 .meme .tx.top{top:8px}.meme .tx.bot{bottom:8px}
 .yt{margin-top:12px;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
