@@ -78,6 +78,12 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .yt{margin-top:12px;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
 .yt iframe,.yt img{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
 .yt .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;background:rgba(29,59,42,.9);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center;padding-left:5px;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+.cd{margin-top:12px;text-align:center;background:var(--ink);color:#fff;border:0}
+.cdn{display:flex;justify-content:center;gap:10px}
+.cdn span{flex:1;max-width:80px}
+.cdn b{display:block;font-size:34px;font-weight:900;line-height:1;font-variant-numeric:tabular-nums;color:var(--orange)}
+.cdn i{display:block;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:4px;color:#cfe9b0;font-style:normal}
+.cdl{font-size:12px;color:#cfe9b0;margin-top:10px}
 .cap{font-size:12px;color:var(--mute);margin-top:6px;font-style:italic;text-align:center}
 .btn{display:block;width:100%;padding:15px;border:0;border-radius:14px;background:var(--ink);color:#fff;font-family:var(--font);font-size:16px;font-weight:900;letter-spacing:.02em;cursor:pointer;position:relative;z-index:30}
 .btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);margin-top:8px;font-weight:700}
@@ -150,15 +156,15 @@ slides.push(`<div class="slide"><div class="eyebrow">Numbers</div><div class="ca
 // 3 quick hits
 if (E.quickHits && E.quickHits.length) slides.push(`<div class="slide"><div class="eyebrow">Quick hits</div><h2 style="margin-top:6px">${esc(E.quickHitsTitle || (week ? 'This week' : 'Draft notes'))}</h2><div class="card" style="margin-top:10px"><div class="hits">${E.quickHits.map(h => `<div class="hit"><div class="k">${esc(h.label)}</div><div class="v">${esc(h.text)}</div></div>`).join('')}</div></div></div>`);
 // team slides 10..1
+  const media = (m) => {
+  if (!m) return '';
+  const cap = '';
+  if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt" data-src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1&autoplay=1${st}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer"><div class="play">▶</div></div>${cap}`; }
+  if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
+  return '';
+};
 for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
   const t = T[r.team];
-  const media = (m) => {
-    if (!m) return '';
-    const cap = '';
-    if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt" data-src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1&autoplay=1${st}"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer"><div class="play">▶</div></div>${cap}`; }
-    if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
-    return '';
-  };
   const meme = [r.meme, ...(r.media || [])].map(media).join('');
   slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div>${week ? `<div class="st"><div class="v">${(() => { const w = (t.weekly || []).find(x => x.wk === week); return w ? w.pts.toFixed(1) : '–'; })()}</div><div class="l">Week ${week}</div></div>` : `<div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div>`}</div><p class="thoughts">${esc(r.thoughts)}</p>${meme}</div>`);
 }
@@ -166,6 +172,7 @@ for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
 slides.push(`<div class="slide"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.title)}</div><h2 style="margin-top:4px">Power Rankings</h2><div class="card" style="padding:6px 8px;margin-top:10px"><table><tbody>${board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('')}</tbody></table></div><div class="grow"></div><button class="btn" id="share" style="margin-top:14px">SHARE THE BOARD</button><div class="foot">${esc(E.outro)}</div></div>`);
 
 if (bump) slides.push(`<div class="slide"><div class="eyebrow">Movement</div>${bump}</div>`);
+if (E.extra) { const x = E.extra; slides.push(`<div class="slide"><div class="eyebrow">${esc(x.eyebrow || 'One more thing')}</div><h2 style="margin-top:6px">${esc(x.title)}</h2>${x.body ? `<p class="thoughts">${esc(x.body)}</p>` : ''}${x.countdownTo ? `<div class="card cd" data-to="${esc(x.countdownTo)}"><div class="cdn"><span><b>--</b><i>days</i></span><span><b>--</b><i>hrs</i></span><span><b>--</b><i>min</i></span><span><b>--</b><i>sec</i></span></div><div class="cdl">${esc(x.countdownLabel || '')}</div></div>` : ''}${(x.media || []).map(media).join('')}</div>`); }
 const S = document.getElementById('slides'); S.innerHTML = slides.join('');
 const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></b>').join('');
 let i = 0; const all = [...S.children], barEls = [...B.children];
@@ -176,6 +183,7 @@ document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key 
 document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
 document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(i + (dx < 0 ? 1 : -1)); setTimeout(() => swiped = false, 400); } });
 show(parseInt(location.hash.slice(1)) || 0);
+(function tick() { document.querySelectorAll('.cd').forEach(el => { const ms = new Date(el.dataset.to) - Date.now(); const b = el.querySelectorAll('b'); if (ms <= 0) { b.forEach(x => x.textContent = '00'); el.querySelector('.cdl').textContent = "TIME'S UP. DEAN IS A COWARD."; return; } const s = Math.floor(ms / 1000); const v = [Math.floor(s / 86400), Math.floor(s / 3600) % 24, Math.floor(s / 60) % 60, s % 60]; b.forEach((x, i) => x.textContent = String(v[i]).padStart(2, '0')); }); setTimeout(tick, 1000); })();
 
 // share card
 async function drawCard() {

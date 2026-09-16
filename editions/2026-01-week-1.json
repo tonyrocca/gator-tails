@@ -147,5 +147,17 @@
       ]
     }
   ],
-  "outro": "Week 2 rankings drop Tuesday. Dean, send the Dean of the Week."
+  "outro": "Week 2 rankings drop Tuesday. Dean, send the Dean of the Week.",
+  "extra": {
+    "eyebrow": "Wait, there's more",
+    "title": "Dean owes the chat two drink videos",
+    "body": "League rule: you start a guy who scores 0, you send a drink video. Deanus started TWO. Darnold: 0.0. Kyler: -3.1, which is less than zero, Dean. That's two videos and we have received zero. Clock's running until kickoff Thursday night.",
+    "media": [
+      {
+        "youtube": "VGPmNwuVji8"
+      }
+    ],
+    "countdownTo": "2026-09-17T19:00:00-05:00",
+    "countdownLabel": "until Dean is officially a coward (Thu 7:00pm CT)"
+  }
 }
