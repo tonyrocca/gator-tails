@@ -71,6 +71,8 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .meme img{display:block;width:100%;height:auto;max-height:68vh;object-fit:contain}
 .meme .tx{position:absolute;left:6px;right:6px;text-align:center;color:#fff;font-family:Impact,"Arial Black",sans-serif;font-size:22px;line-height:1.05;text-transform:uppercase;letter-spacing:.01em;text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,0 0 6px #000}
 .meme .tx.top{top:8px}.meme .tx.bot{bottom:8px}
+.yt{margin-top:12px;position:relative;width:100%;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .cap{font-size:12px;color:var(--mute);margin-top:6px;font-style:italic;text-align:center}
 .btn{display:block;width:100%;padding:15px;border:0;border-radius:14px;background:var(--ink);color:#fff;font-family:var(--font);font-size:16px;font-weight:900;letter-spacing:.02em;cursor:pointer;position:relative;z-index:30}
 .btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line);margin-top:8px;font-weight:700}
@@ -132,7 +134,14 @@ if (E.quickHits && E.quickHits.length) slides.push(`<div class="slide"><div clas
 // team slides 10..1
 for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
   const t = T[r.team];
-  const meme = r.meme && r.meme.img ? `<div class="meme"><img src="${esc(r.meme.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${r.meme.top ? `<div class="tx top">${esc(r.meme.top)}</div>` : ''}${r.meme.bottom ? `<div class="tx bot">${esc(r.meme.bottom)}</div>` : ''}</div>${r.meme.caption ? `<div class="cap">${esc(r.meme.caption)}</div>` : ''}` : '';
+  const media = (m) => {
+    if (!m) return '';
+    const cap = m.caption ? `<div class="cap">${esc(m.caption)}</div>` : '';
+    if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt"><iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1${st}" title="video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>${cap}`; }
+    if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
+    return '';
+  };
+  const meme = [r.meme, ...(r.media || [])].map(media).join('');
   slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div><div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div></div><p class="thoughts">${esc(r.thoughts)}</p>${meme}</div>`);
 }
 // final board + share
@@ -143,7 +152,7 @@ const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></
 let i = 0; const all = [...S.children], barEls = [...B.children];
 function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) s.scrollTop = 0; }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} }
 let swiped = false, sx = 0, sy = 0;
-S.addEventListener('click', e => { if (swiped || e.target.closest('button,a')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
+S.addEventListener('click', e => { if (swiped || e.target.closest('button,a,.yt')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
 document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
 document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
 document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(i + (dx < 0 ? 1 : -1)); setTimeout(() => swiped = false, 400); } });
