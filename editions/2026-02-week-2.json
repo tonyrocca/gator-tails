@@ -1,0 +1,99 @@
+{
+  "id": "2026-02-week-2",
+  "season": "2026",
+  "week": 2,
+  "title": "Week 2",
+  "subtitle": "Power Rankings",
+  "date": "Sept 23, 2026",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {
+        "rank": 1,
+        "name": "Kenneth Walker III",
+        "yds": 290
+      },
+      {
+        "rank": 2,
+        "name": "Derrick Henry",
+        "yds": 212
+      },
+      {
+        "rank": 3,
+        "name": "Jahmyr Gibbs",
+        "yds": 208
+      },
+      {
+        "rank": 7,
+        "name": "Bijan Robinson",
+        "yds": 155,
+        "me": true
+      }
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "rankings": [
+    {
+      "rank": 10,
+      "team": 10,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 9,
+      "team": 4,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 8,
+      "team": 7,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 7,
+      "team": 3,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 6,
+      "team": 5,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 5,
+      "team": 1,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 4,
+      "team": 6,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 3,
+      "team": 11,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 2,
+      "team": 8,
+      "thoughts": "",
+      "media": []
+    },
+    {
+      "rank": 1,
+      "team": 2,
+      "thoughts": "",
+      "media": []
+    }
+  ],
+  "outro": "Week 3 rankings drop Tuesday."
+}
