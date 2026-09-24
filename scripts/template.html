@@ -134,7 +134,7 @@ const topId = week ? (D.computed.leagueFacts.topScorerLastWeek || [])[0] : null;
 
 const slides = [];
 // 0 cover
-slides.push(`<div class="slide cover"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR.replace('class="gator"', 'class="gator" style="width:210px"')}</div><div style="text-align:center;margin-top:4px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:4px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:6px">${esc(E.date)}</p></div><div class="grow"></div><div class="hint">tap to flip through · tap left to go back</div></div>`);
+slides.push(`<div class="slide cover"><div class="grow"></div><div style="display:flex;justify-content:center">${GATOR.replace('class="gator"', 'class="gator" style="width:210px"')}</div><div style="text-align:center;margin-top:4px"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.season)}</div><h1 style="margin-top:4px">${esc(E.title)}<br>Power Rankings</h1><p class="mute" style="margin-top:6px">${esc(E.date)}</p></div><div class="grow"></div></div>`);
 // 1 memo + board
 const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.yearTracker.map(x => `<div class="${x.me ? 'me' : ''}"><b>${x.rank}</b><span>${esc(x.name)}</span><em>${esc(x.yds)}</em></div>`).join('')}</div>` : '';
 const memo = `<div class="memo" style="flex-direction:column;gap:4px"><div class="l" style="width:auto">${esc(E.memo.yearLabel)}</div>${E.memo.yearText ? `<div class="t">${esc(E.memo.yearText)}</div>` : ''}${tracker}</div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
