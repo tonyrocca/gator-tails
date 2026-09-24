@@ -80,6 +80,15 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .win>*:not(.rain){position:relative;z-index:1}
 .quote{margin-top:12px;padding:12px 14px 12px 16px;border-left:4px solid var(--green);background:var(--card);border-radius:0 12px 12px 0;font-size:15px;line-height:1.45;font-style:italic}
 .quote .who{margin-top:8px;font-size:12.5px;font-style:normal;font-weight:700;color:var(--mute)}
+.rg{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+.rg-row{display:flex;align-items:center;gap:4px;padding:4px 6px;border-radius:10px}
+.rg-row:nth-child(even){background:#f4f1e8}
+.rg-head{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);background:none}
+.rg-name{flex:1;min-width:0;font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rg-c{width:34px;text-align:center;flex:none}
+.chip{display:inline-block;width:28px;height:28px;line-height:28px;border-radius:50%;background:#e9e6dc;color:var(--ink);font-weight:800;font-size:13px}
+.chip.up{background:var(--green2);color:var(--ink)}.chip.dn{background:#f8d7d5;color:#8a2a26}.chip.now{background:var(--ink);color:#fff}
+.rg-mv{width:44px;text-align:right;font-weight:900;font-size:13px;flex:none;color:var(--mute)}.rg-mv.up{color:var(--green)}.rg-mv.dn{color:var(--red)}
 .fact{margin-top:10px;background:var(--green2);border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.4}
 .thoughts{margin-top:8px;font-size:14px;line-height:1.5}
 .meme{margin-top:10px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
@@ -158,30 +167,12 @@ if (week) {
 const H = D.history || {}, HL = D.historyLabels || [];
 let bump = '';
 if (HL.length > 1) {
-  const W = 340, Hh = 300, padL = 26, padR = 96, padT = 16, padB = 26, n = HL.length;
-  const xs = k => padL + k * (W - padL - padR) / (n - 1), ys = r => padT + (r - 1) * (Hh - padT - padB) / 9;
-  const cols = ['#2f8f4e','#f4a640','#3b7dd8','#d9534f','#7b2cff','#1d3b2a','#e0b100','#00a5a5','#c2185b','#8d6e63'];
-  const ids = Object.keys(H);
-  const lines = ids.map((id, i) => { const rk = H[id]; const d = rk.map((r, k) => (k ? 'L' : 'M') + xs(k) + ' ' + ys(r)).join(' '); const last = rk[rk.length - 1], prevr = rk.length > 1 ? rk[rk.length - 2] : last, mvv = prevr - last; const col = id == '1' ? '#f4a640' : cols[i % cols.length]; return `<path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round" opacity=".9"/>${rk.map((r, k) => `<circle cx="${xs(k)}" cy="${ys(r)}" r="4.5" fill="${col}" stroke="#fff" stroke-width="1.5"/>`).join('')}<text x="${xs(n - 1) + 9}" y="${ys(last) + 4}" font-size="11" font-weight="700" fill="${col}">${esc(T[id].manager.nick)} <tspan fill="${mvv > 0 ? '#2f8f4e' : mvv < 0 ? '#d9534f' : '#6b7a70'}">${mvv > 0 ? '▲' + mvv : mvv < 0 ? '▼' + (-mvv) : '='}</tspan></text>`; }).join('');
-  const grid = [1,2,3,4,5,6,7,8,9,10].map(r => `<text x="${padL - 8}" y="${ys(r) + 4}" font-size="10" fill="#9aa59e" text-anchor="end">${r}</text><line x1="${padL}" x2="${xs(n - 1)}" y1="${ys(r)}" y2="${ys(r)}" stroke="#eeeae0"/>`).join('');
-  const labels = HL.map((l, k) => `<text x="${xs(k)}" y="${Hh - 6}" font-size="11" font-weight="700" fill="#6b7a70" text-anchor="middle">${esc(l)}</text>`).join('');
-  bump = `<div class="card" style="margin-top:6px"><h2 style="font-size:18px">Rank, week over week</h2><svg viewBox="0 0 ${W} ${Hh}" width="100%" style="display:block;margin-top:6px;overflow:visible">${grid}${lines}${labels}</svg></div>`;
-}
-slides.push(`<div class="slide"><div class="eyebrow">Numbers</div><div class="card" style="margin-top:10px"><h2 style="font-size:18px">${week ? 'Points for, season' : 'Projected starting lineup'}</h2><div class="bars">${bars}</div>${week ? '' : '<div class="mute" style="font-size:11px;margin-top:6px">ESPN projections, best lineup: QB, 2 RB, 2 WR, TE, FLEX, OP, K. Orange is Tony.</div>'}</div>${chart2}</div>`);
-// 3 quick hits
-if (E.quickHits && E.quickHits.length) slides.push(`<div class="slide"><div class="eyebrow">Quick hits</div><h2 style="margin-top:6px">${esc(E.quickHitsTitle || (week ? 'This week' : 'Draft notes'))}</h2><div class="card" style="margin-top:10px"><div class="hits">${E.quickHits.map(h => `<div class="hit"><div class="k">${esc(h.label)}</div><div class="v">${esc(h.text)}</div></div>`).join('')}</div></div></div>`);
-// team slides 10..1
-  const media = (m) => {
-  if (!m) return '';
-  const cap = '';
-  if (m.youtube) { const id = String(m.youtube).replace(/.*(?:v=|youtu\.be\/|shorts\/|embed\/)([\w-]{11}).*/, '$1'); const st = m.start ? `&start=${parseInt(m.start)}` : ''; return `<div class="yt" ${m.autoplay ? 'data-autoplay="1"' : ''} data-id="${id}" data-start="${parseInt(m.start || 0)}" data-thumb="https://i.ytimg.com/vi/${id}/hqdefault.jpg"><img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" referrerpolicy="no-referrer"><div class="play">▶</div></div>${cap}`; }
-  if (m.img) return `<div class="meme"><img src="${esc(m.img)}" alt="" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'">${m.top ? `<div class="tx top">${esc(m.top)}</div>` : ''}${m.bottom ? `<div class="tx bot">${esc(m.bottom)}</div>` : ''}</div>${cap}`;
-  return '';
-};
-for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
-  const t = T[r.team];
-  const meme = [r.meme, ...(r.media || [])].map(media).join('');
-  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div>${week ? `<div class="st"><div class="v">${(() => { const w = (t.weekly || []).find(x => x.wk === week); return w ? w.pts.toFixed(1) : '–'; })()}</div><div class="l">Week ${week}</div></div>` : `<div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div>`}</div>${r.thoughts ? `<p class="thoughts">${esc(r.thoughts)}</p>` : ''}${r.quote ? `<div class="quote">“${esc(r.quote.text)}”<div class="who">- ${esc(r.quote.who)}</div></div>` : ''}${meme}</div>`);
+  const ids = Object.keys(H).sort((a, b) => H[a][H[a].length - 1] - H[b][H[b].length - 1]);
+  const head = `<div class="rg-row rg-head"><div class="rg-name"></div>${HL.map(l => `<div class="rg-c">${esc(l)}</div>`).join('')}<div class="rg-mv">Move</div></div>`;
+  const rows = ids.map(id => { const rk = H[id]; const last = rk[rk.length - 1], prevr = rk.length > 1 ? rk[rk.length - 2] : last, mvv = prevr - last;
+    const cells = rk.map((r, k) => { const d = k ? rk[k - 1] - r : 0; const cls = k === rk.length - 1 ? 'now' : d > 0 ? 'up' : d < 0 ? 'dn' : ''; return `<div class="rg-c"><span class="chip ${cls}">${r}</span></div>`; }).join('');
+    return `<div class="rg-row"><div class="rg-name">${esc(T[id].manager.nick)}</div>${cells}<div class="rg-mv ${mvv > 0 ? 'up' : mvv < 0 ? 'dn' : ''}">${mvv > 0 ? '▲ ' + mvv : mvv < 0 ? '▼ ' + (-mvv) : '—'}</div></div>`; }).join('');
+  bump = `<div class="card" style="margin-top:10px;padding:10px 8px"><h2 style="font-size:18px;padding-left:6px">Rank by week</h2><div class="rg">${head}${rows}</div><div class="mute" style="font-size:11px;margin-top:8px;padding-left:6px">Green went up that week, red went down. Move = this week vs last week.</div></div>`;
 }
 // final board + share
 slides.push(`<div class="slide"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.title)}</div><h2 style="margin-top:4px">Power Rankings</h2><div class="card" style="padding:6px 8px;margin-top:10px"><table><tbody>${board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('')}</tbody></table></div>${bump}<div class="grow"></div><button class="btn" id="share" style="margin-top:14px">SHARE THE BOARD</button><div class="foot">${esc(E.outro)}</div></div>`);
