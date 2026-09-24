@@ -17,6 +17,7 @@ html,body{height:100%;background:#e9e6dc;color:var(--ink);font-family:var(--font
 #app{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
 #phone{position:relative;width:100%;height:100%;max-width:440px;overflow:hidden;background:var(--bg)}
 @media (min-width:700px){#phone{height:min(920px,96vh);border-radius:32px;border:1px solid #d8d3c4;box-shadow:0 20px 60px rgba(29,59,42,.18)}}
+#topfade{position:absolute;top:0;left:0;right:0;height:calc(28px + env(safe-area-inset-top));z-index:15;pointer-events:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:linear-gradient(rgba(247,245,239,.95),rgba(247,245,239,.6));-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
 #bars{position:absolute;top:calc(10px + env(safe-area-inset-top));left:14px;right:14px;display:flex;gap:3px;z-index:20}
 #bars b{flex:1;height:3px;background:rgba(29,59,42,.14);border-radius:2px}
 #bars b.done{background:var(--green)} #bars b.cur{background:var(--ink)}
@@ -47,9 +48,9 @@ td{padding:7px 4px;border-bottom:1px solid var(--line);vertical-align:middle}
 tr:last-child td{border-bottom:0}
 td.r{width:56px;white-space:nowrap}.rk{font-weight:900;font-size:17px}
 .mv{font-size:11px;font-weight:700;margin-left:3px}.mv.up{color:var(--green)}.mv.dn{color:var(--red)}.mv.z{color:var(--mute)}
-td.t .n{font-weight:700;line-height:1.15}td.t .o{font-size:11.5px;color:var(--mute);font-style:italic}
+td.t .n{font-weight:700;line-height:1.3}td.t .o{font-size:11.5px;color:var(--mute);font-style:italic}
 td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.num small{display:block;font-size:11px;color:var(--mute)}
-.flag{display:inline-block;background:var(--orange);color:#fff;font-size:9.5px;font-weight:900;padding:2px 6px;border-radius:6px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
+.flag{display:inline-block;white-space:nowrap;margin-left:6px;background:var(--orange);color:#fff;font-size:9.5px;font-weight:900;padding:2px 6px;border-radius:6px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
 .gr{display:inline-block;min-width:30px;text-align:center;background:var(--ink);color:#fff;font-weight:900;font-size:12px;border-radius:7px;padding:3px 6px}
 .gr.a{background:var(--green)}.gr.b{background:#3b7dd8}.gr.c{background:var(--orange)}.gr.d{background:var(--red)}
 .bars{display:flex;flex-direction:column;gap:6px;margin-top:8px}
@@ -70,6 +71,13 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .stats{display:flex;gap:6px;margin-top:8px}
 .st{flex:1;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 8px;text-align:center}
 .st .v{font-weight:900;font-size:18px;line-height:1}.st .l{font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.win{background:linear-gradient(#f7f5ef,#e6f2d8);text-align:center}
+.rain{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.rain i{position:absolute;top:-60px;font-style:normal;animation:fall linear infinite;opacity:.9}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.bigpts{font-size:84px;font-weight:900;line-height:1;color:var(--green);margin-top:14px;letter-spacing:-.04em}
+.flagbig{display:inline-block;margin-top:14px;background:var(--orange);color:#fff;font-weight:900;font-size:16px;padding:8px 16px;border-radius:12px;letter-spacing:.06em}
+.win>*:not(.rain){position:relative;z-index:1}
 .fact{margin-top:10px;background:var(--green2);border-radius:12px;padding:9px 12px;font-size:13px;line-height:1.4}
 .thoughts{margin-top:8px;font-size:14px;line-height:1.5}
 .meme{margin-top:10px;position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
@@ -100,7 +108,7 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 </head>
 <body>
 <div id="app"><div id="phone">
-  <div id="bars"></div>
+  <div id="topfade"></div><div id="bars"></div>
   <div id="slides"></div>
   <div id="modal"><button class="x" id="close">✕</button><div style="height:22px"></div><img id="shot" alt="Power rankings"><div class="small">Press and hold to save, or Share.</div><button class="btn" id="share2" style="background:#fff;color:var(--ink)">SHARE</button><a class="btn alt" id="dl" download="gator-tails-power-rankings.png" style="text-align:center;text-decoration:none;background:transparent;color:#fff;border-color:rgba(255,255,255,.4)">DOWNLOAD PNG</a></div>
 </div></div>
@@ -130,6 +138,9 @@ const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.
 const memo = `<div class="memo" style="flex-direction:column;gap:4px"><div class="l" style="width:auto">${esc(E.memo.yearLabel)}</div>${E.memo.yearText ? `<div class="t">${esc(E.memo.yearText)}</div>` : ''}${tracker}</div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
 const rows = board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('');
 slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · the board</div>${E.intro ? `<p style="margin:6px 0 12px;font-size:13.5px">${E.intro.map(esc).join('<br><br>')}</p>` : ''}${memo}<div class="card" style="padding:2px 4px"><table><thead><tr><th>Rank</th><th>Team · owner</th><th style="text-align:right">Record · ${ptsLabel}</th></tr></thead><tbody>${rows}</tbody></table></div></div>`);
+// winner slide (high score of the week)
+if (week && D.computed.leagueFacts.topScorerLastWeek) { const [wid, wpts] = D.computed.leagueFacts.topScorerLastWeek; const wt = T[wid]; const bills = Array.from({length: 26}, (_, k) => `<i style="left:${(k * 37) % 100}%;animation-delay:${(k * .37) % 4}s;animation-duration:${3 + (k % 5) * .6}s;font-size:${22 + (k % 4) * 8}px">${['💵','💸','🤑','💰'][k % 4]}</i>`).join('');
+  slides.push(`<div class="slide win"><div class="rain">${bills}</div><div class="grow"></div><div class="eyebrow" style="color:var(--gold)">High score of the week · $50</div><h1 style="margin-top:8px;font-size:40px">${esc(wt.name)}</h1><div style="font-size:16px;color:var(--mute);font-style:italic;margin-top:4px">${esc(wt.manager.nick)}</div><div class="bigpts">${Number(wpts).toFixed(1)}</div><div class="flagbig">${esc(E.topScorerLabel)}</div><div class="grow"></div></div>`); }
 // 2 charts
 const byPts = [...D.computed.teams].sort((a, b) => (week ? b.record.pf - a.record.pf : b.startPts - a.startPts));
 const maxP = Math.max(...byPts.map(t => week ? t.record.pf : t.startPts));
@@ -142,7 +153,7 @@ if (week) {
   const byG = [...D.computed.teams].sort((a, b) => a.modelRank - b.modelRank);
   chart2 = `<div class="card" style="margin-top:10px"><div class="eyebrow">Draft, by the numbers</div><p class="mute" style="font-size:12px;margin-top:4px">Model = 65% projected starters, 20% bench, 15% value vs ADP (QBs excluded, ADP is wrong about QBs in this league). Tony's grade above is the model plus vibes.</p><div class="bars">${byG.map(t => `<div class="bar"><div class="lab">${esc(t.manager.nick)}</div><div class="trk"><div class="fil" style="width:${(t.benchPts / 1100 * 100).toFixed(1)}%;background:#9fcf7a"></div></div><div class="val">${Math.round(t.benchPts)}</div></div>`).join('')}</div><div class="mute" style="font-size:11px;margin-top:6px">Bench depth, projected points of top 5 bench guys</div></div>`;
 }
-const H = D.history || {}, HL = D.historyLabels || [];
+const H = Object.fromEntries(Object.entries(D.history || {}).map(([k, v]) => [k, v.slice(-2)])), HL = (D.historyLabels || []).slice(-2);
 let bump = '';
 if (HL.length > 1) {
   const W = 340, Hh = 300, padL = 26, padR = 96, padT = 16, padB = 26, n = HL.length;
@@ -152,7 +163,7 @@ if (HL.length > 1) {
   const lines = ids.map((id, i) => { const rk = H[id]; const d = rk.map((r, k) => (k ? 'L' : 'M') + xs(k) + ' ' + ys(r)).join(' '); const last = rk[rk.length - 1], first = rk[0], mvv = first - last; const col = id == '1' ? '#f4a640' : cols[i % cols.length]; return `<path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-linecap="round" opacity=".9"/>${rk.map((r, k) => `<circle cx="${xs(k)}" cy="${ys(r)}" r="4.5" fill="${col}" stroke="#fff" stroke-width="1.5"/>`).join('')}<text x="${xs(n - 1) + 9}" y="${ys(last) + 4}" font-size="11" font-weight="700" fill="${col}">${esc(T[id].manager.nick)} <tspan fill="${mvv > 0 ? '#2f8f4e' : mvv < 0 ? '#d9534f' : '#6b7a70'}">${mvv > 0 ? '▲' + mvv : mvv < 0 ? '▼' + (-mvv) : '='}</tspan></text>`; }).join('');
   const grid = [1,2,3,4,5,6,7,8,9,10].map(r => `<text x="${padL - 8}" y="${ys(r) + 4}" font-size="10" fill="#9aa59e" text-anchor="end">${r}</text><line x1="${padL}" x2="${xs(n - 1)}" y1="${ys(r)}" y2="${ys(r)}" stroke="#eeeae0"/>`).join('');
   const labels = HL.map((l, k) => `<text x="${xs(k)}" y="${Hh - 6}" font-size="11" font-weight="700" fill="#6b7a70" text-anchor="middle">${esc(l)}</text>`).join('');
-  bump = `<div class="card" style="margin-top:6px"><h2 style="font-size:18px">Rank, week over week</h2><svg viewBox="0 0 ${W} ${Hh}" width="100%" style="display:block;margin-top:6px;overflow:visible">${grid}${lines}${labels}</svg></div>`;
+  bump = `<div class="card" style="margin-top:6px"><h2 style="font-size:18px">Rank, ${esc(HL[0])} to ${esc(HL[1])}</h2><svg viewBox="0 0 ${W} ${Hh}" width="100%" style="display:block;margin-top:6px;overflow:visible">${grid}${lines}${labels}</svg></div>`;
 }
 slides.push(`<div class="slide"><div class="eyebrow">Numbers</div><div class="card" style="margin-top:10px"><h2 style="font-size:18px">${week ? 'Points for, season' : 'Projected starting lineup'}</h2><div class="bars">${bars}</div>${week ? '' : '<div class="mute" style="font-size:11px;margin-top:6px">ESPN projections, best lineup: QB, 2 RB, 2 WR, TE, FLEX, OP, K. Orange is Tony.</div>'}</div>${chart2}</div>`);
 // 3 quick hits
