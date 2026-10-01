@@ -83,6 +83,25 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .arch a.cur{background:var(--ink);color:#fff;border-color:var(--ink)}
 .arch b{display:block;font-size:16px;font-weight:900}.arch i{font-size:12px;font-style:normal;opacity:.7}
 .arch em{font-style:normal;font-size:12px;font-weight:700;color:var(--green)}.arch a.cur em{color:var(--orange)}
+.dy-bet{margin-top:10px;background:var(--green2);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600}
+.dy-bet b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:2px}
+.dy-hero{display:flex;align-items:center;gap:14px;margin-top:18px}
+.dy-big{font-size:64px;font-weight:900;line-height:.9;letter-spacing:-.03em;color:var(--orange)}
+.dy-big span{font-size:22px;margin-left:4px;color:var(--ink)}
+.dy-sub{font-size:14px;font-weight:600;margin-top:6px;line-height:1.3}
+.dy-card{margin-top:18px;padding:14px}
+.dy-h{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.dy-row{display:flex;align-items:center;gap:10px;padding:8px 6px;border-radius:12px}
+.dy-row+.dy-row{margin-top:4px}
+.dy-row.me{background:#fdf0dc}
+.dy-rk{width:22px;font-weight:900;font-size:16px;text-align:center;color:var(--mute)}
+.dy-row.me .dy-rk{color:var(--orange)}
+.dy-main{flex:1;min-width:0}
+.dy-name{font-weight:800;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dy-trk{height:10px;background:#eeeae0;border-radius:5px;margin-top:5px;overflow:hidden}
+.dy-fil{height:100%;background:var(--green);border-radius:5px}
+.dy-row.me .dy-fil{background:var(--orange)}
+.dy-yds{width:46px;text-align:right;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums}
 .gb{margin-top:10px;display:flex;flex-direction:column;gap:6px}
 .gb>div{border-radius:12px;padding:9px 12px;font-size:13.5px;line-height:1.4}
 .gb b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
@@ -158,7 +177,13 @@ slides.push(`<div class="slide cover"><div class="grow"></div><div style="displa
 const tracker = (E.memo.yearTracker || []).length ? `<div class="trk2">${E.memo.yearTracker.map(x => `<div class="${x.me ? 'me' : ''}"><b>${x.rank}</b><span>${esc(x.name)}</span><em>${esc(x.yds)}</em></div>`).join('')}</div>` : '';
 const memo = `<div class="memo" style="flex-direction:column;gap:4px"><div class="l" style="width:auto">${esc(E.memo.yearLabel)}</div>${E.memo.yearText ? `<div class="t">${esc(E.memo.yearText)}</div>` : ''}${tracker}</div>${E.memo.weekText ? `<div class="memo"><div class="l">${esc(E.memo.weekLabel)}<small>(${esc(E.memo.weekRecord)})</small></div><div class="t">${esc(E.memo.weekText)}</div></div>` : ''}`;
 const rows = board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('');
-slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · ${esc(E.memo.yearLabel)}</div>${memo}</div>`);
+const TR = E.memo.yearTracker || [];
+if (TR.length) {
+  const lead = Math.max(...TR.map(x => +x.yds)), pick = TR.find(x => x.me) || TR[0], gap = lead - pick.yds;
+  const hero = pick.rank === 1 ? `<div class="dy-big">#1</div><div class="dy-sub">${esc(pick.name.split(' ')[0])} leads the NFL</div>` : `<div class="dy-big">${gap}<span>yds</span></div><div class="dy-sub">${esc(pick.name.split(' ')[0])} is ${gap} yards out of 1st (${pick.rank}${['st','nd','rd'][pick.rank-1]||'th'} in the NFL)</div>`;
+  const bars = TR.map(x => `<div class="dy-row ${x.me ? 'me' : ''}"><div class="dy-rk">${x.rank}</div><div class="dy-main"><div class="dy-name">${esc(x.name)}</div><div class="dy-trk"><div class="dy-fil" style="width:${(x.yds / lead * 100).toFixed(1)}%"></div></div></div><div class="dy-yds">${x.yds}</div></div>`).join('');
+  slides.push(`<div class="slide dy"><div class="eyebrow">${esc(E.title)}</div><h1 style="margin-top:4px;font-size:40px">${esc(E.memo.yearLabel)}</h1><div class="dy-bet"><b>The bet</b>${esc(E.memo.yearBet || (pick.name + ' · most rushing yards in the NFL'))}</div><div class="dy-hero">${GATOR.replace('class="gator"', 'class="gator" style="width:92px;flex:none"')}<div>${hero}</div></div><div class="card dy-card"><div class="dy-h">NFL rushing yards</div>${bars}</div><div class="grow"></div></div>`);
+} else slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · ${esc(E.memo.yearLabel)}</div>${memo}</div>`);
 // winner slide (high score of the week)
 if (week && D.computed.leagueFacts.topScorerLastWeek) { const [wid, wpts] = D.computed.leagueFacts.topScorerLastWeek; const wt = T[wid]; const bills = Array.from({length: 26}, (_, k) => `<i style="left:${(k * 37) % 100}%;animation-delay:${(k * .37) % 4}s;animation-duration:${3 + (k % 5) * .6}s;font-size:${22 + (k % 4) * 8}px">${['💵','💸','🤑','💰'][k % 4]}</i>`).join('');
   slides.push(`<div class="slide win"><div class="rain">${bills}</div><div class="grow"></div><div class="eyebrow" style="color:var(--gold)">High score of the week · $50</div><h1 style="margin-top:8px;font-size:40px">${esc(wt.name)}</h1><div style="font-size:16px;color:var(--mute);font-style:italic;margin-top:4px">${esc(wt.manager.nick)}</div><div class="bigpts">${Number(wpts).toFixed(1)}</div><div class="flagbig">${esc(E.topScorerLabel)}</div><div class="grow"></div></div>`); }
