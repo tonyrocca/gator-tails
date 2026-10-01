@@ -27,11 +27,24 @@ title = f"{C['league']} {E['title']} Power Rankings {E['season']}"
 board = sorted(E["rankings"], key=lambda r: r["rank"])
 teams = {t["id"]: t for t in C["teams"]}
 KEEP = ("id", "name", "abbrev", "logo", "manager", "draftSlot", "startPts", "benchPts", "starters", "steals", "reaches", "modelRank", "modelGrade", "history", "qbs", "kickerRound", "record", "weekly", "standing")
+# as-of week: rebuild records/standings/top scorer from weekly results up to this edition's week
+wk = E.get("week", 0) or 0
+for t in C["teams"]:
+    ws = [w for w in t.get("weekly", []) if w["wk"] <= wk]
+    t["weekly"] = ws
+    t["record"] = {"w": sum(1 for w in ws if w["win"]), "l": sum(1 for w in ws if not w["win"]), "pf": round(sum(w["pts"] for w in ws), 2), "pa": round(sum(w["oppPts"] for w in ws), 2)}
+for i, t in enumerate(sorted(C["teams"], key=lambda t: (-t["record"]["w"], -t["record"]["pf"]))): t["standing"] = i + 1
+if wk:
+    lw = [(t["id"], next((w["pts"] for w in t["weekly"] if w["wk"] == wk), 0)) for t in C["teams"]]
+    C["leagueFacts"]["topScorerLastWeek"] = max(lw, key=lambda x: x[1])
+    C["leagueFacts"]["weeksPlayed"] = wk
 slim = {"season": C["season"], "league": C["league"], "teams": [{k: t[k] for k in KEEP if k in t} for t in C["teams"]], "leagueFacts": C["leagueFacts"]}
 desc = " · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …"
 html = (tpl.replace("__TITLE__", title).replace("__DESC__", desc)
-        .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "history": history, "historyLabels": labels, "site": site_url}, separators=(",", ":")).replace("</", "<\\/")))
+        .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "history": history, "historyLabels": labels, "site": site_url,
+    "archive": [{"id": json.load(open(p_))["id"], "title": json.load(open(p_)).get("title"), "date": json.load(open(p_)).get("date")} for p_ in eds],
+    "latest": json.load(open(eds[-1]))["id"]}, separators=(",", ":")).replace("</", "<\\/")))
 out = ROOT / "site"; out.mkdir(exist_ok=True)
-(out / "index.html").write_text(html)
+if E["id"] == json.load(open(eds[-1]))["id"]: (out / "index.html").write_text(html)
 (out / E["id"]).mkdir(exist_ok=True); (out / E["id"] / "index.html").write_text(html)
 print("built", out / "index.html", "and", out / E["id"] / "index.html", f"({len(html)//1024} KB)")
