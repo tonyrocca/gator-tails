@@ -221,19 +221,5 @@
   "benchHeadline": "Man overboard",
   "slots": true,
   "slotLabel": "Spin for your fate",
-  "slotButton": "Push the button",
-  "slotSymbols": [
-    "BUY",
-    "SELL",
-    "HOLD",
-    "START",
-    "BENCH",
-    "TRADE",
-    "DROP",
-    "PRAY",
-    "FADE",
-    "CHUG",
-    "PUNT",
-    "WAIVE"
-  ]
+  "slotButton": "Push the button"
 }
