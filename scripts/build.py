@@ -38,6 +38,34 @@ if wk:
     lw = [(t["id"], next((w["pts"] for w in t["weekly"] if w["wk"] == wk), 0)) for t in C["teams"]]
     C["leagueFacts"]["topScorerLastWeek"] = max(lw, key=lambda x: x[1])
     C["leagueFacts"]["weeksPlayed"] = wk
+# bench report + season high for this edition's week
+bench, season_high = [], 0
+try:
+    BX = json.load(open(ROOT / f"data/box_{E['season']}.json"))
+    FLEX, OP = {"RB", "WR", "TE"}, {"QB", "RB", "WR", "TE"}
+    def optimal(players):
+        pool = sorted(players, key=lambda p: -p["pts"]); used = set(); tot = 0
+        for allowed in [{"QB"}, {"RB"}, {"RB"}, {"WR"}, {"WR"}, {"TE"}, OP, FLEX, {"K"}]:
+            for p in pool:
+                if p["id"] not in used and p["pos"] in allowed: used.add(p["id"]); tot += p["pts"]; break
+        return round(tot, 1)
+    for w in range(1, wk + 1):
+        for g in BX.get(str(w), []):
+            for side in ("home", "away"):
+                season_high = max(season_high, g[side]["pts"] or 0)
+    for g in BX.get(str(wk), []):
+        for side, other in (("home", "away"), ("away", "home")):
+            s_, o_ = g[side], g[other]
+            act = [p for p in s_["players"] if p["slot"] not in ("BN", "IR")]
+            opt = optimal([p for p in s_["players"] if p["slot"] != "IR"])
+            topb = max([p for p in s_["players"] if p["slot"] == "BN"], key=lambda p: p["pts"], default=None)
+            bench.append({"team": s_["team"], "pts": s_["pts"], "opt": opt, "left": round(opt - s_["pts"], 1), "opp": o_["team"], "oppPts": o_["pts"],
+                          "won": s_["pts"] > o_["pts"], "wouldWin": opt > o_["pts"] and s_["pts"] <= o_["pts"], "topBench": topb and {"name": topb["name"], "pts": topb["pts"]}})
+    bench.sort(key=lambda x: -x["left"])
+except Exception as ex:
+    print("bench report skipped:", ex)
+C["leagueFacts"]["benchReport"] = bench
+C["leagueFacts"]["seasonHigh"] = season_high
 slim = {"season": C["season"], "league": C["league"], "teams": [{k: t[k] for k in KEEP if k in t} for t in C["teams"]], "leagueFacts": C["leagueFacts"]}
 desc = " · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …"
 html = (tpl.replace("__TITLE__", title).replace("__DESC__", desc)
