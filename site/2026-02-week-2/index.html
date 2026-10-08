@@ -263,7 +263,7 @@ const SLOT_TIERS = E.slotTiers || [
 const slotHtml = r => { const tier = SLOT_TIERS.find(x => r.rank <= x.upTo) || SLOT_TIERS[SLOT_TIERS.length - 1]; const f = r.fate || {};
   const reels = f.reels || tier.reels, title = f.title || tier.title, text = f.text || tier.text;
   const strip = (fin, j) => { const k = []; for (let n = 0; n < 14 + j * 3; n++) k.push(SLOT_SYMS[(n * 4 + j * 3 + r.rank * 2) % SLOT_SYMS.length]); k.push(fin); return k.map(x => `<i>${x}</i>`).join(''); };
-  return `<div class="slot"><div class="slot-h">${esc(E.slotLabel || 'Spin for your fate')}</div><div class="reels">${reels.map((x, j) => `<div class="reel"><div class="strip">${strip(x, j)}</div></div>`).join('')}</div><button class="spin">${esc(E.slotButton || 'PULL THE LEVER')}</button><div class="fate" hidden><b>${esc(title)}</b>${esc(text)}</div></div>`; };
+  return `<div class="slot"><div class="slot-h">${esc(E.slotLabel || 'Spin for your fate')}</div><div class="reels">${reels.map((x, j) => `<div class="reel"><div class="strip">${strip(x, j)}</div></div>`).join('')}</div><button class="spin">${esc(E.slotButton || 'Push the button')}</button><div class="fate" hidden><b>${esc(title)}</b>${esc(text)}</div></div>`; };
 // team slides 10..1
   const media = (m) => {
   if (!m) return '';
