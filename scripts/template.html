@@ -124,11 +124,12 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .reels{display:flex;gap:8px;justify-content:center}
 .reel{width:30%;max-width:92px;height:76px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:inset 0 6px 10px rgba(0,0,0,.18),inset 0 -6px 10px rgba(0,0,0,.18)}
 .strip{display:flex;flex-direction:column}
-.strip i{display:flex;align-items:center;justify-content:center;height:76px;font-size:42px;font-style:normal;line-height:1}
+.strip i{display:flex;align-items:center;justify-content:center;height:76px;font-size:42px;font-style:normal;font-weight:900;color:var(--ink);line-height:1}
 .spin{margin-top:10px;width:100%;border:0;border-radius:12px;padding:12px;background:var(--orange);color:#fff;font-family:var(--font);font-weight:900;font-size:15px;letter-spacing:.08em;cursor:pointer;position:relative;z-index:30;box-shadow:0 4px 0 rgba(0,0,0,.25)}
 .spin:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
 .fate{margin-top:10px;background:#fff;border-radius:12px;padding:12px 14px;color:var(--ink);font-size:17px;font-weight:700;line-height:1.4;text-align:left;animation:pop .35s ease-out}
 .fate b{display:block;font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.strip i.w1{font-size:22px;letter-spacing:.02em}.strip i.w2{font-size:15px;letter-spacing:0}
 .slot.done .reel{animation:flash .6s ease-out 2}
 @keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
 @keyframes flash{50%{box-shadow:inset 0 0 0 3px var(--gold,#e0b100),0 0 18px var(--gold,#e0b100)}}
@@ -262,7 +263,7 @@ const SLOT_TIERS = E.slotTiers || [
   {upTo: 10, reels: ['💀','💀','💀'], title: 'Ship is sinking', text: 'Abandon ship.'}];
 const slotHtml = r => { const tier = SLOT_TIERS.find(x => r.rank <= x.upTo) || SLOT_TIERS[SLOT_TIERS.length - 1]; const f = r.fate || {};
   const reels = f.reels || tier.reels, title = f.title || tier.title, text = f.text || tier.text;
-  const strip = (fin, j) => { const k = []; for (let n = 0; n < 14 + j * 3; n++) k.push(SLOT_SYMS[(n * 4 + j * 3 + r.rank * 2) % SLOT_SYMS.length]); k.push(fin); return k.map(x => `<i>${x}</i>`).join(''); };
+  const strip = (fin, j) => { const k = []; for (let n = 0; n < 14 + j * 3; n++) k.push(SLOT_SYMS[(n * 4 + j * 3 + r.rank * 2) % SLOT_SYMS.length]); k.push(fin); return k.map(x => `<i class="${String(x).length > 5 ? 'w2' : String(x).length > 2 ? 'w1' : ''}">${esc(x)}</i>`).join(''); };
   return `<div class="slot"><div class="slot-h">${esc(E.slotLabel || 'Spin for your fate')}</div><div class="reels">${reels.map((x, j) => `<div class="reel"><div class="strip">${strip(x, j)}</div></div>`).join('')}</div><button class="spin">${esc(E.slotButton || 'Push the button')}</button><div class="fate" hidden><b>${esc(title)}</b>${esc(text)}</div></div>`; };
 // team slides 10..1
   const media = (m) => {
