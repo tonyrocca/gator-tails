@@ -119,6 +119,19 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .mo-tag{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--orange);color:#fff;padding:3px 7px;border-radius:6px}
 .mo-trk{height:8px;background:#eeeae0;border-radius:4px;margin-top:5px;overflow:hidden}.mo-fil{height:100%;background:var(--green);border-radius:4px}.mo-row.ww .mo-fil{background:var(--orange)}
 .mo-s{font-size:11.5px;color:var(--mute);margin-top:4px}
+.slot{margin-top:12px;background:var(--ink);border-radius:18px;padding:12px 12px 14px;text-align:center;box-shadow:inset 0 0 0 3px var(--gold,#e0b100)}
+.slot-h{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold,#e0b100);margin-bottom:8px}
+.reels{display:flex;gap:8px;justify-content:center}
+.reel{width:30%;max-width:92px;height:76px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:inset 0 6px 10px rgba(0,0,0,.18),inset 0 -6px 10px rgba(0,0,0,.18)}
+.strip{display:flex;flex-direction:column}
+.strip i{display:flex;align-items:center;justify-content:center;height:76px;font-size:42px;font-style:normal;line-height:1}
+.spin{margin-top:10px;width:100%;border:0;border-radius:12px;padding:12px;background:var(--orange);color:#fff;font-family:var(--font);font-weight:900;font-size:15px;letter-spacing:.08em;cursor:pointer;position:relative;z-index:30;box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.spin:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.25)}
+.fate{margin-top:10px;background:#fff;border-radius:12px;padding:12px 14px;color:var(--ink);font-size:17px;font-weight:700;line-height:1.4;text-align:left;animation:pop .35s ease-out}
+.fate b{display:block;font-size:11.5px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:4px}
+.slot.done .reel{animation:flash .6s ease-out 2}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+@keyframes flash{50%{box-shadow:inset 0 0 0 3px var(--gold,#e0b100),0 0 18px var(--gold,#e0b100)}}
 .gb{margin-top:10px;display:flex;flex-direction:column;gap:6px}
 .gb>div{border-radius:12px;padding:9px 12px;font-size:13.5px;line-height:1.4}
 .gb b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
@@ -239,6 +252,18 @@ if (E.benchSlide && (D.computed.leagueFacts.benchReport || []).length) {
   const rows = BR.map(x => `<div class="mo-row ${x.wouldWin ? 'ww' : ''}"><div class="mo-top"><span class="mo-n">${esc(T[x.team].manager.nick)}</span>${x.wouldWin ? '<span class="mo-tag">Would have won</span>' : ''}<span class="mo-v">${x.left.toFixed(1)}</span></div><div class="mo-trk"><div class="mo-fil" style="width:${(x.left / mx * 100).toFixed(1)}%"></div></div>${x.topBench ? `<div class="mo-s">Best on the bench: ${esc(x.topBench.name)} ${x.topBench.pts.toFixed(1)}</div>` : ''}</div>`).join('');
   slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · ${esc(E.benchTitle || 'Points left on the bench')}</div><h2 style="margin-top:6px">${esc(E.benchHeadline || 'Man overboard')}</h2><p class="mute" style="font-size:13px;margin-top:4px">Points left on the bench vs the best possible lineup.</p><div class="card" style="margin-top:10px;padding:10px 12px">${rows}</div></div>`);
 }
+// slot machine (edition.slots): fixed outcome per team, same for everyone
+const SLOT_SYMS = E.slotSymbols || ['⚓','🐊','🥛','🚬','🌊','🦈','💀','🛟','🍀'];
+const SLOT_TIERS = E.slotTiers || [
+  {upTo: 2, reels: ['⚓','⚓','⚓'], title: 'JACKPOT', text: "Smooth sailing. Captain's orders: don't touch a thing."},
+  {upTo: 4, reels: ['🐊','🐊','🥛'], title: 'Fair winds', text: 'Keep the ship pointed this way.'},
+  {upTo: 7, reels: ['🌊','🐊','🦈'], title: 'Choppy water', text: 'One bad Sunday from going under.'},
+  {upTo: 9, reels: ['🦈','🌊','💀'], title: 'Shark sighting', text: 'Start bailing water.'},
+  {upTo: 10, reels: ['💀','💀','💀'], title: 'Ship is sinking', text: 'Abandon ship.'}];
+const slotHtml = r => { const tier = SLOT_TIERS.find(x => r.rank <= x.upTo) || SLOT_TIERS[SLOT_TIERS.length - 1]; const f = r.fate || {};
+  const reels = f.reels || tier.reels, title = f.title || tier.title, text = f.text || tier.text;
+  const strip = (fin, j) => { const k = []; for (let n = 0; n < 14 + j * 3; n++) k.push(SLOT_SYMS[(n * 4 + j * 3 + r.rank * 2) % SLOT_SYMS.length]); k.push(fin); return k.map(x => `<i>${x}</i>`).join(''); };
+  return `<div class="slot"><div class="slot-h">${esc(E.slotLabel || 'Spin for your fate')}</div><div class="reels">${reels.map((x, j) => `<div class="reel"><div class="strip">${strip(x, j)}</div></div>`).join('')}</div><button class="spin">${esc(E.slotButton || 'PULL THE LEVER')}</button><div class="fate" hidden><b>${esc(title)}</b>${esc(text)}</div></div>`; };
 // team slides 10..1
   const media = (m) => {
   if (!m) return '';
@@ -250,7 +275,7 @@ if (E.benchSlide && (D.computed.leagueFacts.benchReport || []).length) {
 for (const r of [...E.rankings].sort((a, b) => b.rank - a.rank)) {
   const t = T[r.team];
   const meme = [r.meme, ...(r.media || [])].map(media).join('');
-  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div>${week ? `<div class="st"><div class="v">${(() => { const w = (t.weekly || []).find(x => x.wk === week); return w ? w.pts.toFixed(1) : '–'; })()}</div><div class="l">Week ${week}</div></div>` : `<div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div>`}</div>${r.thoughts ? `<p class="thoughts">${esc(r.thoughts)}</p>` : ''}${(r.good || r.bad) ? `<div class="gb">${r.good ? `<div class="g"><b>Expert consensus: what's working</b>${esc(r.good)}</div>` : ''}${r.bad ? `<div class="b"><b>Experts are worried about</b>${esc(r.bad)}</div>` : ''}</div>` : ''}${r.quote ? `<div class="quote">“${esc(r.quote.text)}”<div class="who">- ${esc(r.quote.who)}</div></div>` : ''}${meme}${r.takeaway ? `<div class="take"><b>Expert takeaway</b>${esc(r.takeaway)}</div>` : ''}</div>`);
+  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · #${r.rank} ${mv(r)}</div><div class="head"><div class="bigrank">${r.rank}</div><div><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)}</div></div></div><div class="stats"><div class="st"><div class="v">${rec(t)}</div><div class="l">Record</div></div><div class="st"><div class="v">${Math.round(week ? t.record.pf : t.startPts).toLocaleString()}</div><div class="l">${week ? 'Pts YTD' : 'Proj pts'}</div></div>${week ? `<div class="st"><div class="v">${(() => { const w = (t.weekly || []).find(x => x.wk === week); return w ? w.pts.toFixed(1) : '–'; })()}</div><div class="l">Week ${week}</div></div>` : `<div class="st"><div class="v"><span class="gr ${gcls(r.grade)}" style="font-size:15px">${esc(r.grade)}</span></div><div class="l">Draft</div></div>`}</div>${r.thoughts ? `<p class="thoughts">${esc(r.thoughts)}</p>` : ''}${(r.good || r.bad) ? `<div class="gb">${r.good ? `<div class="g"><b>Expert consensus: what's working</b>${esc(r.good)}</div>` : ''}${r.bad ? `<div class="b"><b>Experts are worried about</b>${esc(r.bad)}</div>` : ''}</div>` : ''}${r.quote ? `<div class="quote">“${esc(r.quote.text)}”<div class="who">- ${esc(r.quote.who)}</div></div>` : ''}${E.slots ? slotHtml(r) : ''}${meme}${r.takeaway ? `<div class="take"><b>Expert takeaway</b>${esc(r.takeaway)}</div>` : ''}</div>`);
 }
 // final board + share
 slides.push(`<div class="slide"><div class="eyebrow">${esc(D.computed.league)} · ${esc(E.title)}</div><h2 style="margin-top:4px">Power Rankings</h2><div class="card" style="padding:6px 8px;margin-top:10px"><table><tbody>${board.map(r => { const t = T[r.team]; return `<tr><td class="r"><span class="rk">${r.rank}</span>${mv(r)}</td><td class="t"><div class="n">${esc(t.name)}</div><div class="o">${esc(t.manager.nick)}</div></td><td class="num">${rec(t)}<small>${pts(t)}</small></td></tr>`; }).join('')}</tbody></table></div>${bump}<div class="grow"></div><button class="btn" id="share" style="margin-top:14px">SHARE THE BOARD</button><div class="foot">${esc(E.outro)}</div></div>`);
@@ -259,6 +284,9 @@ if (E.extra && E.extra.interstitial) slides.push(`<div class="slide"><div class=
 if (E.extra) { const x = E.extra; slides.push(`<div class="slide"><div class="eyebrow">${esc(x.eyebrow || 'One more thing')}</div><h2 style="margin-top:6px">${esc(x.title)}</h2>${x.body ? `<p class="thoughts">${esc(x.body)}</p>` : ''}${x.countdownTo ? `<div class="card cd" data-to="${esc(x.countdownTo)}"><div class="cdn"><span><b>--</b><i>days</i></span><span><b>--</b><i>hrs</i></span><span><b>--</b><i>min</i></span><span><b>--</b><i>sec</i></span></div><div class="cdl">${esc(x.countdownLabel || '')}</div></div>` : ''}${(x.media || []).map(media).join('')}</div>`); }
 if ((D.archive || []).length) slides.push(`<div class="slide"><div class="eyebrow">Every week</div><h2 style="margin-top:6px">Rewind the rankings</h2><div class="arch">${[...D.archive].reverse().map(a => { const cur = a.id === E.id, latest = a.id === D.latest; return `<a href="${latest ? '/' : '/' + a.id + '/'}" class="${cur ? 'cur' : ''}"><span><b>${esc(a.title)}</b><i>${esc(a.date || '')}</i></span><em>${cur ? 'You are here' : latest ? 'Current' : 'Open'}</em></a>`; }).join('')}</div>${E.id !== D.latest ? `<a class="btn" href="/" style="margin-top:14px;text-align:center;text-decoration:none">Go to the current week</a>` : ''}</div>`);
 const S = document.getElementById('slides'); S.innerHTML = slides.join('');
+S.addEventListener('click', e => { const b = e.target.closest('.spin'); if (!b) return; const sl = b.closest('.slot'); if (sl.classList.contains('done') || sl.classList.contains('going')) return; sl.classList.add('going'); b.textContent = '...';
+  sl.querySelectorAll('.strip').forEach((st, k) => { const n = st.children.length, h = st.children[0].getBoundingClientRect().height; st.style.transition = 'none'; st.style.transform = 'translateY(0)'; void st.offsetHeight; st.style.transition = `transform ${1.1 + k * .45}s cubic-bezier(.12,.75,.25,1)`; st.style.transform = `translateY(-${(n - 1) * h}px)`; });
+  setTimeout(() => { sl.classList.remove('going'); sl.classList.add('done'); b.hidden = true; const f = sl.querySelector('.fate'); f.hidden = false; if (navigator.vibrate) navigator.vibrate(40); }, 2150); });
 const B = document.getElementById('bars'); B.innerHTML = slides.map(() => '<b></b>').join('');
 let i = 0; const all = [...S.children], barEls = [...B.children];
 let ytReady = null;
@@ -267,7 +295,7 @@ const playYt = y => { if (y.dataset.playing) return; y.dataset.playing = '1'; co
 const stopYt = y => { try { y._p && y._p.destroy(); } catch (e) {} y._p = null; delete y.dataset.playing; y.innerHTML = `<img src="${y.dataset.thumb}" alt=""><div class="play">▶</div>`; };
 function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) { s.scrollTop = 0; s.querySelectorAll('.yt[data-autoplay]').forEach(playYt); } else { s.querySelectorAll('.yt[data-playing]').forEach(stopYt); } }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} }
 let swiped = false, sx = 0, sy = 0;
-S.addEventListener('click', e => { const y = e.target.closest('.yt'); if (y) { playYt(y); return; } if (swiped || e.target.closest('button,a')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
+S.addEventListener('click', e => { const y = e.target.closest('.yt'); if (y) { playYt(y); return; } if (swiped || e.target.closest('button,a,.slot')) return; const r = S.getBoundingClientRect(); show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
 document.addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
 document.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, {passive: true});
 document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { swiped = true; show(i + (dx < 0 ? 1 : -1)); setTimeout(() => swiped = false, 400); } });
