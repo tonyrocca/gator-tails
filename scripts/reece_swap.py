@@ -59,16 +59,41 @@ lab_w[...,0]+=14*em
 warp2=cv2.cvtColor(np.clip(lab_w,0,255).astype(np.uint8),cv2.COLOR_LAB2BGR)
 alpha=cv2.GaussianBlur(mask.astype(np.float32)/255,(0,0),6)[...,None]
 out=(warp2*alpha+dst*(1-alpha)).astype(np.uint8)
-# shirt: erase old text and reprint
-g=cv2.cvtColor(out,cv2.COLOR_BGR2GRAY)
-tm=np.zeros((H,W),np.uint8); tm[595:800,225:680]=255
-txt=((g<120)&(tm>0)).astype(np.uint8)*255
-txt=cv2.dilate(txt,np.ones((7,7),np.uint8))
-out=cv2.inpaint(out,txt,9,cv2.INPAINT_TELEA)
-img=Image.fromarray(cv2.cvtColor(out,cv2.COLOR_BGR2RGB)); d=ImageDraw.Draw(img)
-font=ImageFont.truetype('/System/Library/Fonts/HelveticaNeue.ttc',37,index=1)
-lines=["I start three Browns","and I need help","immediately."]
-for i,l in enumerate(lines):
-    w_=d.textlength(l,font=font); d.text((452-w_/2,612+i*62),l,font=font,fill=(28,28,30))
-img.save(sys.argv[3],quality=90)
+# shirt: erase old print (text = darker than local fabric), refill, re-add fabric grain
+g=cv2.cvtColor(dst,cv2.COLOR_BGR2GRAY).astype(np.float32)
+bg=cv2.medianBlur(cv2.cvtColor(dst,cv2.COLOR_BGR2GRAY),31).astype(np.float32)
+reg=np.zeros((H,W),bool); reg[590:805,225:690]=True
+txt=(((bg-g)>18)&reg).astype(np.uint8)*255
+txt=cv2.dilate(txt,np.ones((9,9),np.uint8))
+out=cv2.inpaint(out,txt,6,cv2.INPAINT_NS)
+# no bright blotches where the old letters were: cap refilled pixels at the surrounding fabric level
+ref=cv2.medianBlur(out,41).astype(np.float32); m3=(txt>0)[...,None]
+out=np.where(m3,np.minimum(out.astype(np.float32),ref+4),out).astype(np.uint8)
+rng=np.random.default_rng(7)
+grain=cv2.GaussianBlur(rng.normal(0,3.2,(H,W)).astype(np.float32),(0,0),0.8)
+tf=cv2.GaussianBlur(txt.astype(np.float32)/255,(0,0),3)
+out=np.clip(out.astype(np.float32)+(grain*tf)[...,None],0,255).astype(np.uint8)
+# render new print at 3x, then warp it onto the fabric
+K=3; lines=["I start three Browns","and I need help","immediately."]
+font=ImageFont.truetype('/System/Library/Fonts/HelveticaNeue.ttc',45*K,index=1)
+lay=Image.new('L',(W*K,H*K),0); d=ImageDraw.Draw(lay)
+def tracked(y,l,cx,tr):
+    w_=sum(d.textlength(ch,font=font) for ch in l)+tr*(len(l)-1); x=cx-w_/2
+    for ch in l: d.text((x,y),ch,font=font,fill=255,stroke_width=K,stroke_fill=255); x+=d.textlength(ch,font=font)+tr
+for i_,l in enumerate(lines): tracked((604+i_*56)*K,l,452*K,-1.2*K)
+tmask=np.asarray(lay.resize((W,H),Image.LANCZOS)).astype(np.float32)/255
+# fabric folds: displace by lighting gradient + slight chest curve
+L=cv2.GaussianBlur(cv2.cvtColor(out,cv2.COLOR_BGR2GRAY).astype(np.float32),(0,0),7)
+gy,gx=np.gradient(L)
+yy2,xx2=np.mgrid[0:H,0:W].astype(np.float32)
+mx=xx2-gx*0.9; my=yy2-gy*0.9+3.0*((xx2-452)/230.0)**2
+tmask=cv2.remap(tmask,mx,my,cv2.INTER_LINEAR)
+tmask=cv2.GaussianBlur(tmask,(0,0),0.45)
+crack=np.clip(1-0.18*np.abs(cv2.GaussianBlur(rng.normal(0,1,(H,W)).astype(np.float32),(0,0),1.0)),0.75,1)
+a=(tmask*0.96*crack)[...,None]
+# ink follows the shirt lighting (darker in folds, a touch lighter in highlights) and keeps the weave
+o=out.astype(np.float32); low=cv2.GaussianBlur(o,(0,0),5); hp=o-low
+ink=low*0.16+hp*0.6+6
+out=np.clip(o*(1-a)+ink*a,0,255).astype(np.uint8)
+cv2.imwrite(sys.argv[3],out,[cv2.IMWRITE_JPEG_QUALITY,90])
 print('ok')
