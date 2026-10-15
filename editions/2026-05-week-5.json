@@ -139,7 +139,11 @@
         "title": "The machine says",
         "text": "Bijan leads the NFL in rushing. The rest of the roster just has to not lose it for him."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/nick-face.jpg"
+        }
+      ]
     },
     {
       "rank": 5,
@@ -193,7 +197,11 @@
         "title": "The machine says",
         "text": "Lost K9 and T-Mac to byes and Lamar sat. One bad week doesn't change anything, still a top 3 team."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/reece-dafoe.jpg"
+        }
+      ]
     },
     {
       "rank": 2,
