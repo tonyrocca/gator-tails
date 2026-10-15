@@ -81,7 +81,12 @@
         "title": "The machine says",
         "text": "Maye dropped 50 and you still lost. Montgomery has 16.6 points in four weeks. Bench him."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/ian-season.jpg",
+          "bottom": "THIS IS WHAT YOUR SEASON FEELS LIKE"
+        }
+      ]
     },
     {
       "rank": 8,
