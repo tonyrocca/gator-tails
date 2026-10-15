@@ -185,7 +185,7 @@
       "thoughts": "",
       "good": "Allen is the top scoring player in the league (157.0) and Love just had his best game (32.6). Two QBs over 110 points.",
       "bad": "WR2 and TE are still the problem. Carnell Tate (1.6) and Jake Ferguson (4.9) started while Swift had 17.3 on the bench.",
-      "takeaway": "Last in points a year ago, 3rd in points now. Big Sham climbed the whole rock with two QBs and zero receivers. Live and die by Josh Allen.",
+      "takeaway": "",
       "fate": {
         "reels": [
           "TWO",
@@ -197,9 +197,8 @@
       },
       "media": [
         {
-          "img": "memes/sham-climb.jpg",
-          "top": "BIG SHAM CLIMBING OUT OF LAST PLACE",
-          "bottom": "STILL NO WR2 AT THE TOP"
+          "img": "memes/sham-climb.jpg?v=2",
+          "top": "BIG SHAM CLIMBING OUT OF LAST PLACE. STILL NO WR2."
         }
       ]
     },
@@ -257,7 +256,7 @@
       "thoughts": "",
       "good": "5-0 and 841.7 points, 53.7 more than anyone. Goff is the 2nd highest scoring QB in the league (151.6) and the Mahomes bye didn't matter because Stroud stepped in for 25.5.",
       "bad": "WR2 is still a weekly guess. Nico (10.6) and Burden (8.9) started while Jameson Williams scored 18.7 on the bench, and he only beat Tony by 6.2.",
-      "takeaway": "5-0. His team is playing so well, this has got to be how he's feeling right now.",
+      "takeaway": "",
       "fate": {
         "reels": [
           "KEEP",
@@ -269,7 +268,8 @@
       },
       "media": [
         {
-          "img": "memes/daniel-5-0.jpg"
+          "img": "memes/daniel-5-0.jpg",
+          "bottom": "MOOD"
         }
       ]
     }
