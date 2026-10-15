@@ -5,7 +5,7 @@
   "title": "Week 5",
   "subtitle": "Power Rankings",
   "date": "Oct 14, 2026",
-  "slots": true,
+  "slots": false,
   "slotLabel": "Bet it all",
   "slotButton": "Push the button",
   "benchSlide": true,
