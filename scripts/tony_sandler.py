@@ -1,44 +1,34 @@
-from PIL import Image, ImageDraw, ImageFilter, ImageStat, ImageChops
-import numpy as np, sys
-K=3
-sand=Image.open(sys.argv[2]).convert('RGB'); sand=sand.resize((sand.width*K,sand.height*K),Image.LANCZOS)
-tony=Image.open(sys.argv[1]).convert('RGB')
-# landmarks
-t_eyes=np.array([(338,352),(466,350)],float); s_eyes=np.array([(210,72.5),(233.8,71)],float)*K
-t_mid=t_eyes.mean(0); s_mid=s_eyes.mean(0)
-sc=np.linalg.norm(s_eyes[1]-s_eyes[0])/np.linalg.norm(t_eyes[1]-t_eyes[0])
-tw,th=int(tony.width*sc),int(tony.height*sc)
-ts=tony.resize((tw,th),Image.LANCZOS)
-off=(int(round(s_mid[0]-t_mid[0]*sc)),int(round(s_mid[1]-t_mid[1]*sc)))
-layer=Image.new('RGB',sand.size); layer.paste(ts,off)
-# face mask (tony coords -> sand coords): brows to chin, inside cheeks
-m=Image.new('L',sand.size,0); md=ImageDraw.Draw(m)
-def T(x,y): return (off[0]+x*sc, off[1]+y*sc)
-x0,y0=T(282,298); x1,y1=T(522,552); md.ellipse([x0,y0,x1,y1],fill=255)
-m=m.filter(ImageFilter.GaussianBlur(5*K))
-# color match tony face to sandler skin
-a=np.asarray(layer).astype(float); b=np.asarray(sand).astype(float); mm=np.asarray(m)>200
-for c in range(3):
-    ta,sb=a[...,c][mm],b[...,c][mm]
-    a[...,c]=(a[...,c]-ta.mean())/(ta.std()+1e-6)*sb.std()*0.85+sb.mean()
-layer=Image.fromarray(np.clip(a,0,255).astype('uint8'))
-out=Image.composite(layer,sand,m)
-# bring back sandler's beard/mustache where his pixels are dark in the lower face
-bm=np.zeros((sand.height,sand.width),float)
-lum=b.mean(2)
-ys,xs=np.mgrid[0:sand.height,0:sand.width]
-cx,cy=223.5*K,103*K
-region=(((xs-cx)/(27*K))**2+((ys-cy)/(17*K))**2)<=1
-mouth=(((xs-224*K)/(11*K))**2+((ys-96*K)/(4.2*K))**2)<=1
-dark=lum<95
-bm[region & dark & ~mouth]=0.9
-beard=Image.fromarray((bm*255).astype('uint8')).filter(ImageFilter.GaussianBlur(1.2*K))
-out=Image.composite(sand,out,beard)
-# rimless glasses
-d=ImageDraw.Draw(out,'RGBA'); g=(205,195,165,150)
-for (ex,ey) in s_eyes:
-    d.rounded_rectangle([ex-9.5*K,ey-6*K,ex+9.5*K,ey+6.5*K],radius=4*K,outline=g,width=max(1,int(0.6*K)),fill=(220,235,255,18))
-d.line([(s_eyes[0][0]+9.5*K,s_eyes[0][1]-1*K),(s_eyes[1][0]-9.5*K,s_eyes[1][1]-1*K)],fill=g,width=max(1,int(0.6*K)))
-out=out.resize((sand.width*2//K,sand.height*2//K),Image.LANCZOS)
-out.save(sys.argv[3],'JPEG',quality=88)
-print('ok',out.size)
+import cv2, numpy as np, sys
+K=4
+tony=cv2.imread(sys.argv[1]); sand0=cv2.imread(sys.argv[2])
+if sand0 is None:
+    from PIL import Image; sand0=cv2.cvtColor(np.array(Image.open(sys.argv[2]).convert('RGB')),cv2.COLOR_RGB2BGR)
+sand=cv2.resize(sand0,None,fx=K,fy=K,interpolation=cv2.INTER_LANCZOS4)
+tp=np.float32([[340,347.5],[467.5,346],[405,470]])
+sp=np.float32([[210,72.5],[233.8,71],[223.75,95]])*K
+M=cv2.getAffineTransform(tp,sp)
+warped=cv2.warpAffine(tony,M,(sand.shape[1],sand.shape[0]),flags=cv2.INTER_LANCZOS4,borderMode=cv2.BORDER_REFLECT)
+hull=np.float32([[298,318],[510,314],[524,420],[492,512],[404,546],[316,514],[284,420]])
+hs=cv2.transform(hull[None],M)[0].astype(np.int32)
+mask=np.zeros(sand.shape[:2],np.uint8); cv2.fillConvexPoly(mask,hs,255)
+mask=cv2.erode(mask,np.ones((5,5),np.uint8))
+x,y,w,h=cv2.boundingRect(hs); center=(x+w//2,y+h//2)
+mode=cv2.MIXED_CLONE if (len(sys.argv)>4 and sys.argv[4]=='mixed') else cv2.NORMAL_CLONE
+out=cv2.seamlessClone(warped,sand,mask,center,mode)
+# restore sandler's mustache/goatee where his pixels are dark around the mouth & chin
+yy,xx=np.mgrid[0:sand.shape[0],0:sand.shape[1]]
+lum=cv2.cvtColor(sand,cv2.COLOR_BGR2GRAY).astype(float)
+reg=((xx-223.5*K)/(26*K))**2+((yy-104*K)/(17.5*K))**2<=1
+mouth=((xx-224.5*K)/(12*K))**2+((yy-95.5*K)/(4.6*K))**2<=1
+a=np.where(reg & ~mouth & (lum<90),0.85,0.0)
+a=cv2.GaussianBlur(a,(0,0),1.3*K)[...,None]
+out=(out*(1-a)+sand*a).astype(np.uint8)
+# thin rimless glasses, drawn faint on an overlay
+ov=out.copy(); gcol=(175,195,210)
+for ex,ey in sp[:2]:
+    cv2.ellipse(ov,(int(ex),int(ey+0.3*K)),(int(9.4*K),int(6.2*K)),0,0,360,gcol,max(1,int(0.45*K)),cv2.LINE_AA)
+cv2.line(ov,(int(sp[0][0]+9.2*K),int(sp[0][1]-0.8*K)),(int(sp[1][0]-9.2*K),int(sp[1][1]-0.8*K)),gcol,max(1,int(0.45*K)),cv2.LINE_AA)
+out=cv2.addWeighted(ov,0.55,out,0.45,0)
+out=cv2.resize(out,None,fx=2/K,fy=2/K,interpolation=cv2.INTER_AREA)
+cv2.imwrite(sys.argv[3],out,[cv2.IMWRITE_JPEG_QUALITY,90])
+print('ok',out.shape)
