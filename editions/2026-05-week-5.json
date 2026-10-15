@@ -128,7 +128,9 @@
       },
       "media": [
         {
-          "img": "memes/ryan-camel.jpg"
+          "img": "https://i.imgflip.com/wxica.jpg",
+          "top": "BEST POSSIBLE LINEUP",
+          "bottom": "STILL 1-4"
         }
       ]
     },
@@ -150,7 +152,9 @@
       },
       "media": [
         {
-          "img": "memes/nick-face.jpg"
+          "img": "https://i.imgflip.com/1nck6k.jpg",
+          "top": "BIJAN LEADS THE NFL",
+          "bottom": "NICK STARTS ROMEO DOUBS"
         }
       ]
     },
@@ -198,7 +202,13 @@
         "title": "The machine says",
         "text": "Allen and Love both went over 32. As long as that keeps up, this team wins."
       },
-      "media": []
+      "media": [
+        {
+          "img": "https://i.imgflip.com/1g8my4.jpg",
+          "top": "JOSH ALLEN OR JORDAN LOVE",
+          "bottom": "WHY NOT BOTH (64.7)"
+        }
+      ]
     },
     {
       "rank": 3,
@@ -218,7 +228,9 @@
       },
       "media": [
         {
-          "img": "memes/reece-dafoe.jpg"
+          "img": "https://i.imgflip.com/gk5el.jpg",
+          "top": "K9 AND T-MAC ON BYE",
+          "bottom": "LAMAR SITS. FIRST L."
         }
       ]
     },
@@ -238,7 +250,13 @@
         "title": "The machine says",
         "text": "RJ Harvey put up 0.7 and cost you the game against D. RB2 is the only hole on this team."
       },
-      "media": []
+      "media": [
+        {
+          "img": "https://i.imgflip.com/2kbn1e.jpg",
+          "top": "RJ HARVEY: 0.7",
+          "bottom": "LOSES BY 6.2"
+        }
+      ]
     },
     {
       "rank": 1,
