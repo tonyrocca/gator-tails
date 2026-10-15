@@ -1,0 +1,224 @@
+{
+  "id": "2026-05-week-5",
+  "season": "2026",
+  "week": 5,
+  "title": "Week 5",
+  "subtitle": "Power Rankings",
+  "date": "Oct 14, 2026",
+  "slots": true,
+  "slotLabel": "Spin for your fate",
+  "slotButton": "Push the button",
+  "benchSlide": true,
+  "benchHeadline": "Left on the bench",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {
+        "rank": 1,
+        "name": "Bijan Robinson",
+        "yds": 580,
+        "me": true
+      },
+      {
+        "rank": 2,
+        "name": "Kenneth Walker III",
+        "yds": 537
+      },
+      {
+        "rank": 3,
+        "name": "James Cook",
+        "yds": 532
+      },
+      {
+        "rank": 4,
+        "name": "Jahmyr Gibbs",
+        "yds": 504
+      }
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "rankings": [
+    {
+      "rank": 10,
+      "team": 10,
+      "thoughts": "",
+      "good": "Pickens just had his best game (28.0) and Brissett came off waivers with 31.6. Lost by 1.4.",
+      "bad": "0-5. Lost by 1.4 with Shough at -4.0 in the QB slot and Blake Corum's 16.2 on the bench. Saquon put up 0.0.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "0",
+          "AND",
+          "5"
+        ],
+        "title": "The machine says",
+        "text": "Lost by 1.4 with Shough at -4. Only Dean."
+      },
+      "media": []
+    },
+    {
+      "rank": 9,
+      "team": 3,
+      "thoughts": "",
+      "good": "Drake Maye put up 50.5, the best game by any player this season, and Kyren is the 5th highest scoring RB in the league (107.3).",
+      "bad": "Lost by 5.3 anyway, and would have won with the right lineup. David Montgomery has 16.6 points in his last four games.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "BENCH",
+          "MONTY",
+          "NOW"
+        ],
+        "title": "The machine says",
+        "text": "Maye dropped 50 and you still lost. Montgomery has 16.6 points in four weeks. Bench him."
+      },
+      "media": []
+    },
+    {
+      "rank": 8,
+      "team": 4,
+      "thoughts": "",
+      "good": "Two straight wins. Puka is back with 27.7 and 37.7, and McBride is the top scoring TE in the league (90.8).",
+      "bad": "The RBs are a mess. Keaton Mitchell (5.9) and Brian Robinson Jr. (1.6) started. Achane is out for the year and Etienne is on IR.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "STILL",
+          "NEED",
+          "AN RB"
+        ],
+        "title": "The machine says",
+        "text": "Two straight wins with Puka back. Find a running back on waivers and this is a playoff team."
+      },
+      "media": []
+    },
+    {
+      "rank": 7,
+      "team": 11,
+      "thoughts": "",
+      "good": "Still 5th in points (732.7) and Stafford went for 37.0. ARSB (104.2) and Olave (98.7) are both top 5 WRs in the league.",
+      "bad": "1-4. Kittle 7.4, Olave 8.6 and Pollard 5.2 in the flex. Left only 0.5 on the bench, so the lineup was right, the guys just didn't show up. Also picked up Aaron Rodgers.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "PRAY",
+          "FOR",
+          "LUCK"
+        ],
+        "title": "The machine says",
+        "text": "Best possible lineup and still lost. Nothing to fix. The dice just have to turn."
+      },
+      "media": []
+    },
+    {
+      "rank": 6,
+      "team": 5,
+      "thoughts": "",
+      "good": "Bijan is the NFL's leading rusher (580 yards) and Nabers has turned it on (23.2, then 29.1). Won 3 of the last 4.",
+      "bad": "Won by 1.4. Bo Nix had 9.0, Doubs had 2.6 and the KC bye took Kelce and Rice. Still only 8th in points.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "IN",
+          "BIJAN",
+          "WE TRUST"
+        ],
+        "title": "The machine says",
+        "text": "Bijan leads the NFL in rushing. The rest of the roster just has to not lose it for him."
+      },
+      "media": []
+    },
+    {
+      "rank": 5,
+      "team": 7,
+      "thoughts": "",
+      "good": "Dropped 184.8, 2nd best score of the week. Daniels came back from the elbow with 33.3, Warren (36.8) and Bucky (31.5) both went off, and Watson has 109.4, 3rd among all WRs.",
+      "bad": "CeeDee had 2.9 and Jeremiyah Love had 2.2. He also picked up Jameis Winston as QB insurance, which tells you how everyone feels about that elbow.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "DANIELS",
+          "IS",
+          "BACK"
+        ],
+        "title": "The machine says",
+        "text": "Daniels is back and this lineup has no holes. Get Love out of the flex until he earns it back."
+      },
+      "media": []
+    },
+    {
+      "rank": 4,
+      "team": 8,
+      "thoughts": "",
+      "good": "Allen is the top scoring player in the league (157.0) and Love just had his best game (32.6). Two QBs over 110 points.",
+      "bad": "WR2 and TE are still the problem. Carnell Tate (1.6) and Jake Ferguson (4.9) started while Swift had 17.3 on the bench.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "TWO",
+          "QBS",
+          "CARRY"
+        ],
+        "title": "The machine says",
+        "text": "Allen and Love both went over 32. As long as that keeps up, this team wins."
+      },
+      "media": []
+    },
+    {
+      "rank": 3,
+      "team": 6,
+      "thoughts": "",
+      "good": "Still 4-1 and Purdy is the 3rd highest scoring QB in the league (147.8). JJ is back with 18.8.",
+      "bad": "First loss and it wasn't close (114.4 to 184.8). The KC and Carolina byes took K9 and T-Mac, Lamar didn't play and Fannin put up 1.4.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "SURVIVE",
+          "THE",
+          "BYES"
+        ],
+        "title": "The machine says",
+        "text": "Lost K9 and T-Mac to byes and Lamar sat. One bad week doesn't change anything, still a top 3 team."
+      },
+      "media": []
+    },
+    {
+      "rank": 2,
+      "team": 1,
+      "thoughts": "",
+      "good": "2nd in the league in points (788.0). Gibbs is the highest scoring non-QB in the league (151.7) and Burrow has gone 25+ three straight weeks.",
+      "bad": "Lost to the unbeaten champ by 6.2 with 30.1 on the bench. Mike Evans scored 26.3 sitting while RJ Harvey put up 0.7 at RB2. Would have won.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "FIX",
+          "THE",
+          "RB2"
+        ],
+        "title": "The machine says",
+        "text": "RJ Harvey put up 0.7 and cost you the game against D. RB2 is the only hole on this team."
+      },
+      "media": []
+    },
+    {
+      "rank": 1,
+      "team": 2,
+      "thoughts": "",
+      "good": "5-0 and 841.7 points, 53.7 more than anyone. Goff is the 2nd highest scoring QB in the league (151.6) and the Mahomes bye didn't matter because Stroud stepped in for 25.5.",
+      "bad": "WR2 is still a weekly guess. Nico (10.6) and Burden (8.9) started while Jameson Williams scored 18.7 on the bench, and he only beat Tony by 6.2.",
+      "takeaway": "",
+      "fate": {
+        "reels": [
+          "KEEP",
+          "IT",
+          "ROLLING"
+        ],
+        "title": "The machine says",
+        "text": "5-0. Same lineup, same result. Don't overthink it."
+      },
+      "media": []
+    }
+  ],
+  "outro": "Week 6 rankings drop Tuesday."
+}
