@@ -290,5 +290,14 @@
     "🃏",
     "🔮",
     "💸"
-  ]
+  ],
+  "easterEgg": {
+    "eyebrow": "Easter egg",
+    "title": "How many people can you recognize in this photo?",
+    "media": [
+      {
+        "img": "memes/fauquier-team.jpg"
+      }
+    ]
+  }
 }
