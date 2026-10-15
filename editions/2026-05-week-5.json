@@ -6,10 +6,10 @@
   "subtitle": "Power Rankings",
   "date": "Oct 14, 2026",
   "slots": true,
-  "slotLabel": "Spin for your fate",
+  "slotLabel": "Bet it all",
   "slotButton": "Push the button",
   "benchSlide": true,
-  "benchHeadline": "Left on the bench",
+  "benchHeadline": "Left on the table",
   "memo": {
     "yearLabel": "Dean of the Year",
     "yearText": "",
@@ -45,7 +45,7 @@
       "thoughts": "",
       "good": "Pickens just had his best game (28.0) and Brissett came off waivers with 31.6. Lost by 1.4.",
       "bad": "0-5. Lost by 1.4 with Shough at -4.0 in the QB slot and Blake Corum's 16.2 on the bench. Saquon put up 0.0.",
-      "takeaway": "",
+      "takeaway": "Here lies Dean's season. Gone but not forgotten. Mostly forgotten.",
       "fate": {
         "reels": [
           "0",
@@ -55,7 +55,11 @@
         "title": "The machine says",
         "text": "Lost by 1.4 with Shough at -4. Only Dean."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/dean-rip.svg"
+        }
+      ]
     },
     {
       "rank": 9,
@@ -81,7 +85,7 @@
       "thoughts": "",
       "good": "Two straight wins. Puka is back with 27.7 and 37.7, and McBride is the top scoring TE in the league (90.8).",
       "bad": "The RBs are a mess. Keaton Mitchell (5.9) and Brian Robinson Jr. (1.6) started. Achane is out for the year and Etienne is on IR.",
-      "takeaway": "",
+      "takeaway": "Ass watch.",
       "fate": {
         "reels": [
           "STILL",
@@ -91,7 +95,11 @@
         "title": "The machine says",
         "text": "Two straight wins with Puka back. Find a running back on waivers and this is a playoff team."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/nicky-squash.jpg"
+        }
+      ]
     },
     {
       "rank": 7,
@@ -109,7 +117,11 @@
         "title": "The machine says",
         "text": "Best possible lineup and still lost. Nothing to fix. The dice just have to turn."
       },
-      "media": []
+      "media": [
+        {
+          "img": "memes/ryan-camel.jpg"
+        }
+      ]
     },
     {
       "rank": 6,
@@ -220,5 +232,24 @@
       "media": []
     }
   ],
-  "outro": "Week 6 rankings drop Tuesday."
+  "outro": "Week 6 rankings drop Tuesday.",
+  "theme": "gems",
+  "coverTitle": "Uncut Gator Tails",
+  "rain": [
+    "💎",
+    "💵",
+    "💎",
+    "💸"
+  ],
+  "slotSymbols": [
+    "💎",
+    "💍",
+    "🎰",
+    "💵",
+    "🏀",
+    "🎲",
+    "🃏",
+    "🔮",
+    "💸"
+  ]
 }

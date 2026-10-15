@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="420" viewBox="0 0 400 420">
+<defs><linearGradient id="st" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9bcc2"/><stop offset="1" stop-color="#7d8189"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2f45"/><stop offset="1" stop-color="#4b4f6b"/></linearGradient></defs>
+<rect width="400" height="420" fill="url(#sky)"/>
+<circle cx="330" cy="64" r="30" fill="#f3f0d8" opacity=".9"/>
+<g fill="#fff" opacity=".7"><circle cx="60" cy="50" r="1.6"/><circle cx="140" cy="30" r="1.2"/><circle cx="250" cy="80" r="1.4"/><circle cx="90" cy="110" r="1"/></g>
+<path d="M0 360 Q100 330 200 350 T400 340 V420 H0 Z" fill="#2f4a2f"/>
+<path d="M92 360 V150 Q92 70 200 70 Q308 70 308 150 V360 Z" fill="url(#st)" stroke="#5d6168" stroke-width="4"/>
+<path d="M150 108 l-8 22 M262 300 l14 18 M110 250 l10 -6" stroke="#5d6168" stroke-width="2.5"/>
+<text x="200" y="138" text-anchor="middle" font-family="Georgia,serif" font-size="46" font-weight="700" fill="#33363c">R.I.P.</text>
+<text x="200" y="176" text-anchor="middle" font-family="Georgia,serif" font-size="17" fill="#33363c">THE TWEAKERS</text>
+<text x="200" y="198" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#33363c">Week 1 – Week 5, 2026</text>
+<line x1="140" y1="212" x2="260" y2="212" stroke="#5d6168" stroke-width="1.5"/>
+<text x="200" y="238" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="14.5" fill="#33363c">0 and 5. Lost by 1.4</text>
+<text x="200" y="258" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="14.5" fill="#33363c">with a quarterback at −4.</text>
+<text x="200" y="288" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#33363c">Survived by 7 running backs</text>
+<text x="200" y="306" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#33363c">and zero drink videos.</text>
+<path d="M120 362 q10 -24 20 0 M260 362 q8 -20 16 0 M196 364 q6 -16 12 0" fill="#3f6b3f"/>
+<g transform="translate(70 330)"><path d="M0 30 V8 Q0 0 8 0 H22 Q30 0 30 8 V30" fill="#e8e3d0"/><circle cx="15" cy="-4" r="7" fill="#ffb347"/></g>
+</svg>
