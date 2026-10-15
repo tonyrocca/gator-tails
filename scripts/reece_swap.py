@@ -5,8 +5,8 @@ src=cv2.imread(sys.argv[1]); dst=cv2.imread(sys.argv[2]); H,W=dst.shape[:2]
 # landmark pairs: Reece selfie -> Monster hat guy (eyes, nose, mouth corners, chin, face edge)
 S=np.float32([[277.5,450],[400,414],[355,500],[321.5,574],[436,539],[377.5,565],[390,685],
               [232,420],[250,520],[280,630],[465,610],[478,480],[470,400],[340,385]])
-D=np.float32([[275,332.5],[409,292.5],[375,405],[362,447],[457,427],[410,437],[415,505],
-              [254,334],[280,398],[335,476],[470,484],[502,405],[510,318],[342,300]])
+D=np.float32([[275,346],[409,306],[375,416],[362,455],[457,436],[410,446],[415,514],
+              [240,348],[276,408],[335,484],[470,492],[502,415],[510,330],[342,312]])
 # frame points so triangles cover the whole image (global affine from eyes + mouth)
 M=cv2.getAffineTransform(S[[0,1,5]],D[[0,1,5]]); Mi=cv2.invertAffineTransform(M)
 fr=np.float32([[0,0],[W-1,0],[W-1,H-1],[0,H-1],[W//2,0],[W-1,H//2],[W//2,H-1],[0,H//2]])
@@ -27,11 +27,18 @@ for t in sub.getTriangleList():
 yy,xx=np.mgrid[0:H,0:W].astype(np.float32)
 def brim(x): return 322+(280-322)*(x-275)/(409-275)
 dist=yy-brim(xx)
-shade=np.clip(0.66+0.34*(dist/70.0),0.66,1.0)[...,None]
+shade=np.clip(0.82+0.18*(dist/60.0),0.82,1.0)[...,None]
 warp=np.clip(warp*shade,0,255).astype(np.uint8)
-warp=cv2.bilateralFilter(warp,7,28,7)
-poly=np.int32([[252,340],[300,318],[410,284],[470,270],[486,300],[490,350],[484,405],[474,450],[466,484],
-               [415,508],[345,482],[300,424],[272,385]])
+sm=cv2.bilateralFilter(warp,9,40,9); warp=cv2.addWeighted(sm,0.7,warp,0.3,0)
+# soften crow's feet and under-eye lines so the grin isn't haggard
+sm2=cv2.bilateralFilter(cv2.bilateralFilter(warp,15,60,15),15,60,15)
+cf=np.zeros((H,W),np.float32)
+for (cx,cy,ax,ay,ang) in [(452,300,30,26,-17),(250,356,22,26,-17),(409,326,34,13,-17),(278,366,30,13,-17)]:
+    cv2.ellipse(cf,(cx,cy),(ax,ay),ang,0,360,1,-1)
+cf=cv2.GaussianBlur(cf,(0,0),7)[...,None]*0.85
+warp=(sm2*cf+warp*(1-cf)).astype(np.uint8)
+poly=np.int32([[250,334],[300,318],[410,284],[470,270],[486,300],[490,350],[484,405],[474,450],[468,490],
+               [415,518],[345,488],[300,430],[270,392]])
 mask=np.zeros((H,W),np.uint8); cv2.fillPoly(mask,[poly],255)
 mask[dist<4]=0
 mask=cv2.erode(mask,np.ones((5,5),np.uint8))
@@ -40,8 +47,15 @@ lab_w=cv2.cvtColor(warp,cv2.COLOR_BGR2LAB).astype(np.float32); lab_d=cv2.cvtColo
 mm=mask>0
 for c in range(3):
     a=lab_w[...,c]; b=lab_d[...,c]
-    k=0.55 if c==0 else 0.85
-    a[:]=(a-a[mm].mean())/(a[mm].std()+1e-6)*(b[mm].std()*k+a[mm].std()*(1-k))+b[mm].mean()+(10 if c==0 else 0)
+    am,asd,bm,bsd=a[mm].mean(),a[mm].std(),b[mm].mean(),b[mm].std()
+    if c==0: tm_,ts=0.55*bm+0.45*am,0.45*bsd+0.55*asd   # brighter, less harsh than the bar lighting
+    else:    tm_,ts=0.5*bm+0.5*am,asd                   # keep some of his skin warmth
+    a[:]=(a-am)/(asd+1e-6)*ts+tm_
+# lift the eye sockets so the eyes read under the brim
+em=np.zeros((H,W),np.float32)
+for (ex,ey) in [(275,346),(409,306)]: cv2.ellipse(em,(ex,ey),(34,20),-17,0,360,1,-1)
+em=cv2.GaussianBlur(em,(0,0),9)
+lab_w[...,0]+=14*em
 warp2=cv2.cvtColor(np.clip(lab_w,0,255).astype(np.uint8),cv2.COLOR_LAB2BGR)
 alpha=cv2.GaussianBlur(mask.astype(np.float32)/255,(0,0),6)[...,None]
 out=(warp2*alpha+dst*(1-alpha)).astype(np.uint8)
