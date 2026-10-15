@@ -33,7 +33,7 @@ txt=cv2.dilate(txt,np.ones((7,7),np.uint8))
 out=cv2.inpaint(out,txt,9,cv2.INPAINT_TELEA)
 img=Image.fromarray(cv2.cvtColor(out,cv2.COLOR_BGR2RGB)); d=ImageDraw.Draw(img)
 font=ImageFont.truetype('/System/Library/Fonts/HelveticaNeue.ttc',37,index=1)
-lines=["I need Deshaun Watson","and two Browns players","immediately."]
+lines=["I start three Browns","and I need help","immediately."]
 for i,l in enumerate(lines):
     w_=d.textlength(l,font=font); d.text((452-w_/2,612+i*62),l,font=font,fill=(28,28,30))
 img.save(sys.argv[3],quality=90)
