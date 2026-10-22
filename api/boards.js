@@ -12,7 +12,7 @@ const tokenName = () => ('BLOB_READ_WRITE_TOKEN' in process.env ? 'BLOB_READ_WRI
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   const tn = tokenName(), token = tn && process.env[tn];
-  if (!token) return res.status(503).json({ error: 'league board not set up', v: 2 });
+  if (!token) return res.status(503).json({ error: 'league board not set up', v: 3, env: process.env.VERCEL_ENV, names: Object.keys(process.env).filter(k => /BLOB|STORE|STORAGE|READ_WRITE/i.test(k)) });
   try {
     if (req.method === 'POST') {
       const b = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
