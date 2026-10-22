@@ -65,13 +65,44 @@ try:
 except Exception as ex:
     print("bench report skipped:", ex)
 C["leagueFacts"]["benchReport"] = bench
+# blind resume (edition.blindResume): anonymous key stats per team, lettered in a fixed shuffled order
+resumes = []
+if E.get("blindResume") and wk:
+    import random
+    ids = sorted(t["id"] for t in C["teams"]); random.Random(E["id"]).shuffle(ids)
+    sc = {w: {t["id"]: next((x["pts"] for x in t["weekly"] if x["wk"] == w), 0) for t in C["teams"]} for w in range(1, wk + 1)}
+    left = {t["id"]: 0.0 for t in C["teams"]}
+    for w in range(1, wk + 1):
+        for g in BX.get(str(w), []):
+            for side in ("home", "away"):
+                s_ = g[side]; left[s_["team"]] += optimal([p for p in s_["players"] if p["slot"] != "IR"]) - s_["pts"]
+    pfr = {t["id"]: k + 1 for k, t in enumerate(sorted(C["teams"], key=lambda t: -t["record"]["pf"]))}
+    ordn = lambda n: f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+    for k, tid in enumerate(ids):
+        t = teams[tid]; ws = t["weekly"]; n = len(ws)
+        W = t["record"]["w"]; L = t["record"]["l"]; pf = t["record"]["pf"]
+        ap = sum(1 for w in ws for o, v in sc[w["wk"]].items() if o != tid and w["pts"] > v); apl = 9 * n - ap
+        l3 = sum(w["pts"] for w in ws[-3:]) / min(3, n); hi = max(w["pts"] for w in ws); lo = min(w["pts"] for w in ws)
+        stk = 0
+        for w in reversed(ws):
+            if w["win"] != ws[-1]["win"]: break
+            stk += 1
+        resumes.append({"letter": "ABCDEFGHIJKLMNOP"[k], "team": tid, "stats": [
+            {"l": "Record", "d": f"{W}-{L}", "v": W},
+            {"l": "Points per week", "d": f"{pf / n:.1f}", "sub": ordn(pfr[tid]), "v": pf},
+            {"l": "All-play record", "d": f"{ap}-{apl}", "v": ap},
+            {"l": "Last 3 weeks", "d": f"{l3:.1f}", "v": round(l3, 2)},
+            {"l": "Best week", "d": f"{hi:.1f}", "v": hi},
+            {"l": "Worst week", "d": f"{lo:.1f}", "v": lo},
+            {"l": "Streak", "d": ("W" if ws[-1]["win"] else "L") + str(stk), "v": stk if ws[-1]["win"] else -stk},
+            {"l": "Bench pts left", "d": f"{left[tid]:.0f}", "v": -round(left[tid], 1)}]})
 C["leagueFacts"]["seasonHigh"] = season_high
 slim = {"season": C["season"], "league": C["league"], "teams": [{k: t[k] for k in KEEP if k in t} for t in C["teams"]], "leagueFacts": C["leagueFacts"]}
-desc = " · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …"
+desc = E.get("ogDesc") or (" · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …")
 html = (tpl.replace("__TITLE__", title).replace("__DESC__", desc)
         .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "history": history, "historyLabels": labels, "site": site_url,
     "archive": [{"id": json.load(open(p_))["id"], "title": json.load(open(p_)).get("title"), "date": json.load(open(p_)).get("date")} for p_ in eds],
-    "latest": json.load(open(eds[-1]))["id"]}, separators=(",", ":")).replace("</", "<\\/")))
+    "latest": json.load(open(eds[-1]))["id"], "resumes": resumes}, separators=(",", ":")).replace("</", "<\\/")))
 out = ROOT / "site"; out.mkdir(exist_ok=True)
 if E["id"] == json.load(open(eds[-1]))["id"]: (out / "index.html").write_text(html)
 (out / E["id"]).mkdir(exist_ok=True); (out / E["id"] / "index.html").write_text(html)

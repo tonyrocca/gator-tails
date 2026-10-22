@@ -16,9 +16,9 @@
    "draftSlot": 1,
    "record": {
     "w": 3,
-    "l": 2,
-    "pf": 788.0,
-    "pa": 790.0
+    "l": 3,
+    "pf": 869.7,
+    "pa": 934.7
    },
    "weekly": [
     {
@@ -55,63 +55,70 @@
      "opp": 2,
      "oppPts": 189.8,
      "win": false
+    },
+    {
+     "wk": 6,
+     "pts": 81.7,
+     "opp": 4,
+     "oppPts": 144.7,
+     "win": false
     }
    ],
    "trans": {
-    "acquisitions": 8,
-    "drops": 7,
+    "acquisitions": 11,
+    "drops": 10,
     "trades": 0,
-    "moveToActive": 13
+    "moveToActive": 21
    },
-   "startPts": 1877.1,
-   "benchPts": 803.4,
-   "lastYearStarterPts": 1809.0,
-   "valueTotal": -61.0,
+   "startPts": 1776.7,
+   "benchPts": 705.6,
+   "lastYearStarterPts": 2116.2,
+   "valueTotal": -28.4,
    "starters": {
     "QB": {
      "name": "Joe Burrow",
      "pos": "QB",
-     "proj": 303.7
+     "proj": 309.1
     },
     "RB1": {
      "name": "Jahmyr Gibbs",
      "pos": "RB",
-     "proj": 312.1
+     "proj": 310.3
     },
     "RB2": {
-     "name": "Rhamondre Stevenson",
+     "name": "Josh Jacobs",
      "pos": "RB",
-     "proj": 157.4
+     "proj": 142.4
     },
     "WR1": {
-     "name": "Zay Flowers",
+     "name": "Drake London",
      "pos": "WR",
-     "proj": 201.1
+     "proj": 187.3
     },
     "WR2": {
-     "name": "Mike Evans",
+     "name": "Zay Flowers",
      "pos": "WR",
-     "proj": 193.0
+     "proj": 185.3
     },
     "TE": {
      "name": "Tyler Warren",
      "pos": "TE",
-     "proj": 144.5
+     "proj": 119.6
     },
     "OP": {
      "name": "Dak Prescott",
      "pos": "QB",
-     "proj": 257.7
+     "proj": 227.0
     },
     "FLEX": {
-     "name": "Drake London",
+     "name": "Parker Washington",
      "pos": "WR",
-     "proj": 184.8
+     "proj": 177.8
     },
     "K": {
-     "name": "Dominic Zvada",
+     "name": "Chris Boswell",
      "pos": "K",
-     "proj": 122.8
+     "proj": 117.9
     }
    },
    "steals": [
@@ -120,89 +127,89 @@
      "pos": "WR",
      "pick": 100,
      "round": 10,
-     "adp": 84.7,
-     "value": 15.3,
-     "proj": 193.0
+     "adp": 79.6,
+     "value": 20.4,
+     "proj": 155.0
     },
     {
-     "name": "Deebo Samuel Sr.",
+     "name": "Parker Washington",
      "pos": "WR",
-     "pick": 141,
-     "round": 15,
-     "adp": 135.3,
-     "value": 5.7,
-     "proj": 110.0
+     "pick": 81,
+     "round": 9,
+     "adp": 69.6,
+     "value": 11.4,
+     "proj": 177.8
     },
     {
-     "name": "Tyler Warren",
-     "pos": "TE",
-     "pick": 61,
-     "round": 7,
-     "adp": 56.5,
-     "value": 4.5,
-     "proj": 144.5
+     "name": "Zay Flowers",
+     "pos": "WR",
+     "pick": 41,
+     "round": 5,
+     "adp": 37.3,
+     "value": 3.7,
+     "proj": 185.3
     }
    ],
    "reaches": [
-    {
-     "name": "DJ Moore",
-     "pos": "WR",
-     "pick": 60,
-     "round": 6,
-     "adp": 89.9,
-     "value": -29.9,
-     "proj": 154.0
-    },
     {
      "name": "Kyle Monangai",
      "pos": "RB",
      "pick": 101,
      "round": 11,
-     "adp": 129.2,
-     "value": -28.2,
-     "proj": 124.2
+     "adp": 132.7,
+     "value": -31.7,
+     "proj": 110.4
+    },
+    {
+     "name": "Rhamondre Stevenson",
+     "pos": "RB",
+     "pick": 80,
+     "round": 8,
+     "adp": 102.1,
+     "value": -22.1,
+     "proj": 125.7
     },
     {
      "name": "Woody Marks",
      "pos": "RB",
      "pick": 130,
      "round": 13,
-     "adp": 157.1,
-     "value": -27.1,
-     "proj": 100.5
+     "adp": 150.8,
+     "value": -20.8,
+     "proj": 96.7
     }
    ],
    "posCounts": {
-    "RB": 5,
+    "RB": 6,
     "QB": 3,
-    "WR": 6,
+    "WR": 5,
     "TE": 2,
     "K": 1
    },
    "questionable": [
-    "DJ Moore",
+    "Tyler Warren",
+    "Mike Evans",
     "Kyle Monangai",
-    "Deebo Samuel Sr."
+    "Deebo Samuel Sr.",
+    "Josh Jacobs"
    ],
-   "rookies": [
-    "Dominic Zvada"
-   ],
+   "rookies": [],
    "qbs": [
     {
      "name": "Joe Burrow",
-     "proj": 303.7,
+     "proj": 309.1,
      "last": 173.1,
      "round": 2
     },
     {
      "name": "Dak Prescott",
-     "proj": 257.7,
+     "proj": 227.0,
      "last": 387.7,
      "round": 4
     },
     {
      "name": "Sam Darnold",
-     "proj": 220.4,
+     "proj": 194.8,
      "last": 276.5,
      "round": 13
     }
@@ -212,7 +219,7 @@
     "pos": "RB",
     "pick": 1
    },
-   "kickerRound": null,
+   "kickerRound": 16,
    "history": {
     "2025": {
      "id": 1,
@@ -244,12 +251,12 @@
      "name": "Jahmyr Gibbs",
      "pos": "RB",
      "team": "DET",
-     "proj": 312.1,
+     "proj": 310.3,
      "last": 364.9,
-     "adp": 1.7,
+     "adp": 1.8,
      "pick": 1,
      "round": 1,
-     "value": -0.7,
+     "value": -0.8,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -257,12 +264,12 @@
      "name": "Joe Burrow",
      "pos": "QB",
      "team": "CIN",
-     "proj": 303.7,
+     "proj": 309.1,
      "last": 173.1,
-     "adp": 54.9,
+     "adp": 56.7,
      "pick": 20,
      "round": 2,
-     "value": -34.9,
+     "value": -36.7,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -270,12 +277,12 @@
      "name": "Drake London",
      "pos": "WR",
      "team": "ATL",
-     "proj": 184.8,
+     "proj": 187.3,
      "last": 199.9,
-     "adp": 23.5,
+     "adp": 24.4,
      "pick": 21,
      "round": 3,
-     "value": -2.5,
+     "value": -3.4,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -283,12 +290,12 @@
      "name": "Dak Prescott",
      "pos": "QB",
      "team": "DAL",
-     "proj": 257.7,
+     "proj": 227.0,
      "last": 387.7,
-     "adp": 87.6,
+     "adp": 96.1,
      "pick": 40,
      "round": 4,
-     "value": -47.6,
+     "value": -56.1,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -296,103 +303,103 @@
      "name": "Zay Flowers",
      "pos": "WR",
      "team": "BAL",
-     "proj": 201.1,
+     "proj": 185.3,
      "last": 237.3,
-     "adp": 36.9,
+     "adp": 37.3,
      "pick": 41,
      "round": 5,
-     "value": 4.1,
+     "value": 3.7,
      "injury": "ACTIVE",
      "starter": true
-    },
-    {
-     "name": "DJ Moore",
-     "pos": "WR",
-     "team": "BUF",
-     "proj": 154.0,
-     "last": 170.1,
-     "adp": 89.9,
-     "pick": 60,
-     "round": 6,
-     "value": -29.9,
-     "injury": "QUESTIONABLE",
-     "starter": false
     },
     {
      "name": "Tyler Warren",
      "pos": "TE",
      "team": "IND",
-     "proj": 144.5,
+     "proj": 119.6,
      "last": 188.5,
-     "adp": 56.5,
+     "adp": 63.0,
      "pick": 61,
      "round": 7,
-     "value": 4.5,
-     "injury": "ACTIVE",
+     "value": -2.0,
+     "injury": "QUESTIONABLE",
      "starter": true
     },
     {
      "name": "Rhamondre Stevenson",
      "pos": "RB",
      "team": "NE",
-     "proj": 157.4,
+     "proj": 125.7,
      "last": 172.8,
-     "adp": 106.3,
+     "adp": 102.1,
      "pick": 80,
      "round": 8,
-     "value": -26.3,
+     "value": -22.1,
      "injury": "ACTIVE",
-     "starter": true
+     "starter": false
     },
     {
      "name": "Parker Washington",
      "pos": "WR",
      "team": "JAX",
-     "proj": 183.1,
+     "proj": 177.8,
      "last": 184.7,
-     "adp": 78.3,
+     "adp": 69.6,
      "pick": 81,
      "round": 9,
-     "value": 2.7,
+     "value": 11.4,
      "injury": "ACTIVE",
-     "starter": false
+     "starter": true
     },
     {
      "name": "Mike Evans",
      "pos": "WR",
      "team": "SF",
-     "proj": 193.0,
+     "proj": 155.0,
      "last": 84.8,
-     "adp": 84.7,
+     "adp": 79.6,
      "pick": 100,
      "round": 10,
-     "value": 15.3,
-     "injury": "ACTIVE",
-     "starter": true
+     "value": 20.4,
+     "injury": "QUESTIONABLE",
+     "starter": false
     },
     {
      "name": "Kyle Monangai",
      "pos": "RB",
      "team": "CHI",
-     "proj": 124.2,
+     "proj": 110.4,
      "last": 146.7,
-     "adp": 129.2,
+     "adp": 132.7,
      "pick": 101,
      "round": 11,
-     "value": -28.2,
-     "injury": "QUESTIONABLE",
+     "value": -31.7,
+     "injury": "OUT",
      "starter": false
+    },
+    {
+     "name": "Josh Jacobs",
+     "pos": "RB",
+     "team": "GB",
+     "proj": 142.4,
+     "last": 233.1,
+     "adp": 110.9,
+     "pick": 107,
+     "round": 11,
+     "value": -3.9,
+     "injury": "DAY_TO_DAY",
+     "starter": true
     },
     {
      "name": "RJ Harvey",
      "pos": "RB",
      "team": "DEN",
-     "proj": 121.7,
+     "proj": 118.5,
      "last": 204.6,
-     "adp": 138.1,
+     "adp": 139.3,
      "pick": 121,
      "round": 13,
-     "value": -17.1,
+     "value": -18.3,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -400,12 +407,12 @@
      "name": "Sam Darnold",
      "pos": "QB",
      "team": "SEA",
-     "proj": 220.4,
+     "proj": 194.8,
      "last": 276.5,
-     "adp": 162.5,
+     "adp": 165.1,
      "pick": 127,
      "round": 13,
-     "value": -35.5,
+     "value": -38.1,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -413,12 +420,12 @@
      "name": "Woody Marks",
      "pos": "RB",
      "team": "HOU",
-     "proj": 100.5,
+     "proj": 96.7,
      "last": 151.1,
-     "adp": 157.1,
+     "adp": 150.8,
      "pick": 130,
      "round": 13,
-     "value": -27.1,
+     "value": -20.8,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -426,514 +433,46 @@
      "name": "Deebo Samuel Sr.",
      "pos": "WR",
      "team": "SF",
-     "proj": 110.0,
+     "proj": 111.6,
      "last": 188.2,
-     "adp": 135.3,
+     "adp": 153.1,
      "pick": 141,
      "round": 15,
-     "value": 5.7,
+     "value": -12.1,
      "injury": "OUT",
      "starter": false
+    },
+    {
+     "name": "Chris Boswell",
+     "pos": "K",
+     "team": "PIT",
+     "proj": 117.9,
+     "last": 147.0,
+     "adp": 163.9,
+     "pick": 160,
+     "round": 16,
+     "value": -3.9,
+     "injury": "ACTIVE",
+     "starter": true
     },
     {
      "name": "Pat Freiermuth",
      "pos": "TE",
      "team": "PIT",
-     "proj": 121.0,
+     "proj": 101.3,
      "last": 113.6,
-     "adp": 164.3,
+     "adp": 157.2,
      "pick": null,
      "round": null,
      "value": null,
      "injury": "ACTIVE",
      "starter": false
-    },
-    {
-     "name": "Dominic Zvada",
-     "pos": "K",
-     "team": "NYG",
-     "proj": 122.8,
-     "last": null,
-     "adp": 167.9,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": true
     }
    ],
-   "score": 1.259,
+   "score": 1.326,
    "modelRank": 1,
    "modelGrade": "A+",
-   "standing": 3
-  },
-  {
-   "id": 6,
-   "name": "Your meat too much",
-   "abbrev": "WWJD",
-   "logo": "https://i.postimg.cc/HLnSb1Nk/IMG-5763.jpg",
-   "manager": {
-    "first": "Reece",
-    "last": "Cooke",
-    "nick": "REEEEECE",
-    "notes": "Mr. Middle: 7th then 5th. Team name 'Your meat too much', abbrev WWJD. Logo is a personal photo hosted on postimg."
-   },
-   "draftSlot": 5,
-   "record": {
-    "w": 4,
-    "l": 1,
-    "pf": 733.0,
-    "pa": 668.2
-   },
-   "weekly": [
-    {
-     "wk": 1,
-     "pts": 160.6,
-     "opp": 4,
-     "oppPts": 153.0,
-     "win": true
-    },
-    {
-     "wk": 2,
-     "pts": 136.2,
-     "opp": 3,
-     "oppPts": 97.6,
-     "win": true
-    },
-    {
-     "wk": 3,
-     "pts": 118.9,
-     "opp": 10,
-     "oppPts": 115.7,
-     "win": true
-    },
-    {
-     "wk": 4,
-     "pts": 202.9,
-     "opp": 5,
-     "oppPts": 117.1,
-     "win": true
-    },
-    {
-     "wk": 5,
-     "pts": 114.4,
-     "opp": 7,
-     "oppPts": 184.8,
-     "win": false
-    }
-   ],
-   "trans": {
-    "acquisitions": 9,
-    "drops": 9,
-    "trades": 0,
-    "moveToActive": 12
-   },
-   "startPts": 1883.5,
-   "benchPts": 793.7,
-   "lastYearStarterPts": 1787.1,
-   "valueTotal": -111.3,
-   "starters": {
-    "QB": {
-     "name": "Brock Purdy",
-     "pos": "QB",
-     "proj": 298.3
-    },
-    "RB1": {
-     "name": "Kenneth Walker III",
-     "pos": "RB",
-     "proj": 283.9
-    },
-    "RB2": {
-     "name": "Breece Hall",
-     "pos": "RB",
-     "proj": 170.6
-    },
-    "WR1": {
-     "name": "Justin Jefferson",
-     "pos": "WR",
-     "proj": 215.3
-    },
-    "WR2": {
-     "name": "Tetairoa McMillan",
-     "pos": "WR",
-     "proj": 207.8
-    },
-    "TE": {
-     "name": "Harold Fannin Jr.",
-     "pos": "TE",
-     "proj": 126.3
-    },
-    "OP": {
-     "name": "Lamar Jackson",
-     "pos": "QB",
-     "proj": 279.0
-    },
-    "FLEX": {
-     "name": "Quinshon Judkins",
-     "pos": "RB",
-     "proj": 167.5
-    },
-    "K": {
-     "name": "Will Reichard",
-     "pos": "K",
-     "proj": 134.8
-    }
-   },
-   "steals": [
-    {
-     "name": "Will Reichard",
-     "pos": "K",
-     "pick": 159,
-     "round": 16,
-     "adp": 127.5,
-     "value": 31.5,
-     "proj": 134.8
-    },
-    {
-     "name": "Tetairoa McMillan",
-     "pos": "WR",
-     "pick": 56,
-     "round": 6,
-     "adp": 37.6,
-     "value": 18.4,
-     "proj": 207.8
-    },
-    {
-     "name": "Denzel Boston",
-     "pos": "WR",
-     "pick": 156,
-     "round": 16,
-     "adp": 139.9,
-     "value": 16.1,
-     "proj": 142.4
-    }
-   ],
-   "reaches": [
-    {
-     "name": "Marvin Harrison Jr.",
-     "pos": "WR",
-     "pick": 76,
-     "round": 8,
-     "adp": 116.5,
-     "value": -40.5,
-     "proj": 41.5
-    },
-    {
-     "name": "J.K. Dobbins",
-     "pos": "RB",
-     "pick": 96,
-     "round": 10,
-     "adp": 134.6,
-     "value": -38.6,
-     "proj": 136.1
-    },
-    {
-     "name": "Zach Charbonnet",
-     "pos": "RB",
-     "pick": 116,
-     "round": 12,
-     "adp": 152.9,
-     "value": -36.9,
-     "proj": 144.2
-    }
-   ],
-   "posCounts": {
-    "QB": 3,
-    "WR": 6,
-    "RB": 6,
-    "TE": 1,
-    "K": 1
-   },
-   "questionable": [
-    "Lamar Jackson",
-    "Breece Hall",
-    "Quinshon Judkins",
-    "Zach Charbonnet",
-    "Denzel Boston",
-    "Will Shipley"
-   ],
-   "rookies": [
-    "Denzel Boston"
-   ],
-   "qbs": [
-    {
-     "name": "Brock Purdy",
-     "proj": 298.3,
-     "last": 210.7,
-     "round": 5
-    },
-    {
-     "name": "Lamar Jackson",
-     "proj": 279.0,
-     "last": 255.9,
-     "round": 1
-    },
-    {
-     "name": "Kyler Murray",
-     "proj": 244.8,
-     "last": 90.3,
-     "round": 8
-    }
-   ],
-   "firstPick": {
-    "name": "Lamar Jackson",
-    "pos": "QB",
-    "pick": 5
-   },
-   "kickerRound": 16,
-   "history": {
-    "2025": {
-     "id": 6,
-     "name": "Your meat too much",
-     "w": 8,
-     "l": 6,
-     "pf": 1930.2,
-     "pa": 1788.0,
-     "seed": 4,
-     "rank": 5,
-     "acq": 19,
-     "trades": 0
-    },
-    "2024": {
-     "id": 6,
-     "name": "Your meat too much",
-     "w": 6,
-     "l": 8,
-     "pf": 1759.8,
-     "pa": 1683.0,
-     "seed": 6,
-     "rank": 7,
-     "acq": 21,
-     "trades": 0
-    }
-   },
-   "roster": [
-    {
-     "name": "Lamar Jackson",
-     "pos": "QB",
-     "team": "BAL",
-     "proj": 279.0,
-     "last": 255.9,
-     "adp": 38.2,
-     "pick": 5,
-     "round": 1,
-     "value": -33.2,
-     "injury": "QUESTIONABLE",
-     "starter": true
-    },
-    {
-     "name": "Justin Jefferson",
-     "pos": "WR",
-     "team": "MIN",
-     "proj": 215.3,
-     "last": 201.5,
-     "adp": 15.4,
-     "pick": 16,
-     "round": 2,
-     "value": 0.6,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Kenneth Walker III",
-     "pos": "RB",
-     "team": "KC",
-     "proj": 283.9,
-     "last": 191.9,
-     "adp": 12.9,
-     "pick": 25,
-     "round": 3,
-     "value": 12.1,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Breece Hall",
-     "pos": "RB",
-     "team": "NYJ",
-     "proj": 170.6,
-     "last": 205.5,
-     "adp": 53.9,
-     "pick": 36,
-     "round": 4,
-     "value": -17.9,
-     "injury": "DOUBTFUL",
-     "starter": true
-    },
-    {
-     "name": "Brock Purdy",
-     "pos": "QB",
-     "team": "SF",
-     "proj": 298.3,
-     "last": 210.7,
-     "adp": 58.7,
-     "pick": 45,
-     "round": 5,
-     "value": -13.7,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Tetairoa McMillan",
-     "pos": "WR",
-     "team": "CAR",
-     "proj": 207.8,
-     "last": 209.4,
-     "adp": 37.6,
-     "pick": 56,
-     "round": 6,
-     "value": 18.4,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Quinshon Judkins",
-     "pos": "RB",
-     "team": "CLE",
-     "proj": 167.5,
-     "last": 169.8,
-     "adp": 67.4,
-     "pick": 65,
-     "round": 7,
-     "value": -2.4,
-     "injury": "QUESTIONABLE",
-     "starter": true
-    },
-    {
-     "name": "Kyler Murray",
-     "pos": "QB",
-     "team": "MIN",
-     "proj": 244.8,
-     "last": 90.3,
-     "adp": 151.8,
-     "pick": 74,
-     "round": 8,
-     "value": -77.8,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Marvin Harrison Jr.",
-     "pos": "WR",
-     "team": "HOU",
-     "proj": 41.5,
-     "last": 127.8,
-     "adp": 116.5,
-     "pick": 76,
-     "round": 8,
-     "value": -40.5,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Harold Fannin Jr.",
-     "pos": "TE",
-     "team": "CLE",
-     "proj": 126.3,
-     "last": 184.4,
-     "adp": 91.1,
-     "pick": 85,
-     "round": 9,
-     "value": -6.1,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "J.K. Dobbins",
-     "pos": "RB",
-     "team": "DEN",
-     "proj": 136.1,
-     "last": 115.9,
-     "adp": 134.6,
-     "pick": 96,
-     "round": 10,
-     "value": -38.6,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Zach Charbonnet",
-     "pos": "RB",
-     "team": "SEA",
-     "proj": 144.2,
-     "last": 181.4,
-     "adp": 152.9,
-     "pick": 116,
-     "round": 12,
-     "value": -36.9,
-     "injury": "OUT",
-     "starter": false
-    },
-    {
-     "name": "Denzel Boston",
-     "pos": "WR",
-     "team": "CLE",
-     "proj": 142.4,
-     "last": null,
-     "adp": 139.9,
-     "pick": 156,
-     "round": 16,
-     "value": 16.1,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Will Reichard",
-     "pos": "K",
-     "team": "MIN",
-     "proj": 134.8,
-     "last": 158.0,
-     "adp": 127.5,
-     "pick": 159,
-     "round": 16,
-     "value": 31.5,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Devaughn Vele",
-     "pos": "WR",
-     "team": "NO",
-     "proj": 95.1,
-     "last": 66.3,
-     "adp": 161.3,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Malik Washington",
-     "pos": "WR",
-     "team": "MIA",
-     "proj": 126.2,
-     "last": 114.7,
-     "adp": 164.8,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Will Shipley",
-     "pos": "RB",
-     "team": "PHI",
-     "proj": 54.1,
-     "last": 15.5,
-     "adp": 169.3,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "DOUBTFUL",
-     "starter": false
-    }
-   ],
-   "score": 1.102,
-   "modelRank": 2,
-   "modelGrade": "A+",
-   "standing": 2
+   "standing": 4
   },
   {
    "id": 2,
@@ -948,10 +487,10 @@
    },
    "draftSlot": 10,
    "record": {
-    "w": 5,
+    "w": 6,
     "l": 0,
-    "pf": 841.7,
-    "pa": 641.9
+    "pf": 1016.8,
+    "pa": 791.3
    },
    "weekly": [
     {
@@ -988,63 +527,70 @@
      "opp": 1,
      "oppPts": 183.6,
      "win": true
+    },
+    {
+     "wk": 6,
+     "pts": 175.1,
+     "opp": 10,
+     "oppPts": 149.4,
+     "win": true
     }
    ],
    "trans": {
     "acquisitions": 12,
     "drops": 11,
     "trades": 0,
-    "moveToActive": 13
+    "moveToActive": 16
    },
-   "startPts": 1865.6,
-   "benchPts": 735.8,
+   "startPts": 1746.0,
+   "benchPts": 762.6,
    "lastYearStarterPts": 2077.7,
-   "valueTotal": -79.6,
+   "valueTotal": -57.2,
    "starters": {
     "QB": {
-     "name": "Patrick Mahomes",
+     "name": "Jared Goff",
      "pos": "QB",
-     "proj": 298.6
+     "proj": 285.3
     },
     "RB1": {
      "name": "James Cook III",
      "pos": "RB",
-     "proj": 211.1
+     "proj": 207.1
     },
     "RB2": {
      "name": "Ashton Jeanty",
      "pos": "RB",
-     "proj": 204.5
+     "proj": 177.6
     },
     "WR1": {
      "name": "Jaxon Smith-Njigba",
      "pos": "WR",
-     "proj": 237.9
+     "proj": 225.9
     },
     "WR2": {
      "name": "Nico Collins",
      "pos": "WR",
-     "proj": 193.0
+     "proj": 177.1
     },
     "TE": {
      "name": "Isaiah Likely",
      "pos": "TE",
-     "proj": 164.2
-    },
-    "OP": {
-     "name": "Jared Goff",
-     "pos": "QB",
-     "proj": 287.1
+     "proj": 157.0
     },
     "FLEX": {
      "name": "Luther Burden III",
      "pos": "WR",
-     "proj": 142.3
+     "proj": 139.2
+    },
+    "OP": {
+     "name": "Patrick Mahomes",
+     "pos": "QB",
+     "proj": 260.6
     },
     "K": {
      "name": "Spencer Shrader",
      "pos": "K",
-     "proj": 126.9
+     "proj": 116.2
     }
    },
    "steals": [
@@ -1053,18 +599,18 @@
      "pos": "TE",
      "pick": 111,
      "round": 12,
-     "adp": 99.4,
-     "value": 11.6,
-     "proj": 164.2
+     "adp": 76.0,
+     "value": 35.0,
+     "proj": 157.0
     },
     {
      "name": "Ashton Jeanty",
      "pos": "RB",
      "pick": 30,
      "round": 3,
-     "adp": 24.8,
-     "value": 5.2,
-     "proj": 204.5
+     "adp": 24.9,
+     "value": 5.1,
+     "proj": 177.6
     },
     {
      "name": "Jaxon Smith-Njigba",
@@ -1073,36 +619,36 @@
      "round": 1,
      "adp": 5.3,
      "value": 4.7,
-     "proj": 237.9
+     "proj": 225.9
     }
    ],
    "reaches": [
-    {
-     "name": "Luther Burden III",
-     "pos": "WR",
-     "pick": 71,
-     "round": 8,
-     "adp": 102.4,
-     "value": -31.4,
-     "proj": 142.3
-    },
     {
      "name": "Jordan Addison",
      "pos": "WR",
      "pick": 110,
      "round": 11,
-     "adp": 140.8,
-     "value": -30.8,
-     "proj": 133.8
+     "adp": 141.6,
+     "value": -31.6,
+     "proj": 129.5
     },
     {
-     "name": "Tucker Kraft",
-     "pos": "TE",
-     "pick": 90,
-     "round": 9,
-     "adp": 110.9,
-     "value": -20.9,
-     "proj": 132.2
+     "name": "Luther Burden III",
+     "pos": "WR",
+     "pick": 71,
+     "round": 8,
+     "adp": 101.9,
+     "value": -30.9,
+     "proj": 139.2
+    },
+    {
+     "name": "Jameson Williams",
+     "pos": "WR",
+     "pick": 70,
+     "round": 7,
+     "adp": 91.2,
+     "value": -21.2,
+     "proj": 129.3
     }
    ],
    "posCounts": {
@@ -1113,7 +659,6 @@
     "K": 1
    },
    "questionable": [
-    "Jordan Addison",
     "Alvin Kamara",
     "Jonah Coleman"
    ],
@@ -1123,20 +668,20 @@
    ],
    "qbs": [
     {
-     "name": "Patrick Mahomes",
-     "proj": 298.6,
-     "last": 336.2,
-     "round": 6
-    },
-    {
      "name": "Jared Goff",
-     "proj": 287.1,
+     "proj": 285.3,
      "last": 376.5,
      "round": 5
     },
     {
+     "name": "Patrick Mahomes",
+     "proj": 260.6,
+     "last": 336.2,
+     "round": 6
+    },
+    {
      "name": "C.J. Stroud",
-     "proj": 228.4,
+     "proj": 247.0,
      "last": 254.9,
      "round": 15
     }
@@ -1178,7 +723,7 @@
      "name": "Jaxon Smith-Njigba",
      "pos": "WR",
      "team": "SEA",
-     "proj": 237.9,
+     "proj": 225.9,
      "last": 357.9,
      "adp": 5.3,
      "pick": 10,
@@ -1191,12 +736,12 @@
      "name": "James Cook III",
      "pos": "RB",
      "team": "BUF",
-     "proj": 211.1,
+     "proj": 207.1,
      "last": 296.2,
-     "adp": 13.3,
+     "adp": 12.9,
      "pick": 11,
      "round": 2,
-     "value": -2.3,
+     "value": -1.9,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1204,12 +749,12 @@
      "name": "Ashton Jeanty",
      "pos": "RB",
      "team": "LV",
-     "proj": 204.5,
+     "proj": 177.6,
      "last": 243.1,
-     "adp": 24.8,
+     "adp": 24.9,
      "pick": 30,
      "round": 3,
-     "value": 5.2,
+     "value": 5.1,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1217,12 +762,12 @@
      "name": "Nico Collins",
      "pos": "WR",
      "team": "HOU",
-     "proj": 193.0,
+     "proj": 177.1,
      "last": 224.2,
-     "adp": 27.7,
+     "adp": 29.9,
      "pick": 31,
      "round": 4,
-     "value": 3.3,
+     "value": 1.1,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1230,12 +775,12 @@
      "name": "Jared Goff",
      "pos": "QB",
      "team": "DET",
-     "proj": 287.1,
+     "proj": 285.3,
      "last": 376.5,
-     "adp": 116.1,
+     "adp": 111.0,
      "pick": 50,
      "round": 5,
-     "value": -66.1,
+     "value": -61.0,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1243,12 +788,12 @@
      "name": "Patrick Mahomes",
      "pos": "QB",
      "team": "KC",
-     "proj": 298.6,
+     "proj": 260.6,
      "last": 336.2,
-     "adp": 76.2,
+     "adp": 80.0,
      "pick": 51,
      "round": 6,
-     "value": -25.2,
+     "value": -29.0,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1256,12 +801,12 @@
      "name": "Jameson Williams",
      "pos": "WR",
      "team": "DET",
-     "proj": 128.7,
+     "proj": 129.3,
      "last": 219.9,
-     "adp": 89.0,
+     "adp": 91.2,
      "pick": 70,
      "round": 7,
-     "value": -19.0,
+     "value": -21.2,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1269,12 +814,12 @@
      "name": "Luther Burden III",
      "pos": "WR",
      "team": "CHI",
-     "proj": 142.3,
+     "proj": 139.2,
      "last": 127.9,
-     "adp": 102.4,
+     "adp": 101.9,
      "pick": 71,
      "round": 8,
-     "value": -31.4,
+     "value": -30.9,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1282,12 +827,12 @@
      "name": "Tucker Kraft",
      "pos": "TE",
      "team": "GB",
-     "proj": 132.2,
+     "proj": 124.9,
      "last": 117.2,
-     "adp": 110.9,
+     "adp": 107.5,
      "pick": 90,
      "round": 9,
-     "value": -20.9,
+     "value": -17.5,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1295,25 +840,25 @@
      "name": "Jordan Addison",
      "pos": "WR",
      "team": "MIN",
-     "proj": 133.8,
+     "proj": 129.5,
      "last": 135.1,
-     "adp": 140.8,
+     "adp": 141.6,
      "pick": 110,
      "round": 11,
-     "value": -30.8,
-     "injury": "QUESTIONABLE",
+     "value": -31.6,
+     "injury": "ACTIVE",
      "starter": false
     },
     {
      "name": "Isaiah Likely",
      "pos": "TE",
      "team": "NYG",
-     "proj": 164.2,
+     "proj": 157.0,
      "last": 59.7,
-     "adp": 99.4,
+     "adp": 76.0,
      "pick": 111,
      "round": 12,
-     "value": 11.6,
+     "value": 35.0,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1321,12 +866,12 @@
      "name": "C.J. Stroud",
      "pos": "QB",
      "team": "HOU",
-     "proj": 228.4,
+     "proj": 247.0,
      "last": 254.9,
-     "adp": 159.4,
+     "adp": 153.2,
      "pick": 150,
      "round": 15,
-     "value": -9.4,
+     "value": -3.2,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1334,9 +879,9 @@
      "name": "Alvin Kamara",
      "pos": "RB",
      "team": "NO",
-     "proj": 96.9,
+     "proj": 84.4,
      "last": 96.7,
-     "adp": 158.8,
+     "adp": 161.4,
      "pick": null,
      "round": null,
      "value": null,
@@ -1349,7 +894,7 @@
      "team": "DEN",
      "proj": 0.0,
      "last": null,
-     "adp": 169.0,
+     "adp": 168.7,
      "pick": null,
      "round": null,
      "value": null,
@@ -1360,9 +905,9 @@
      "name": "Spencer Shrader",
      "pos": "K",
      "team": "IND",
-     "proj": 126.9,
+     "proj": 116.2,
      "last": 56.0,
-     "adp": 130.3,
+     "adp": 112.8,
      "pick": null,
      "round": null,
      "value": null,
@@ -1373,9 +918,9 @@
      "name": "Kimani Vidal",
      "pos": "RB",
      "team": "LAC",
-     "proj": 75.3,
+     "proj": 92.8,
      "last": 117.9,
-     "adp": 169.8,
+     "adp": 169.5,
      "pick": null,
      "round": null,
      "value": null,
@@ -1386,9 +931,9 @@
      "name": "Germie Bernard",
      "pos": "WR",
      "team": "PIT",
-     "proj": 112.7,
+     "proj": 131.9,
      "last": null,
-     "adp": 168.7,
+     "adp": 158.9,
      "pick": null,
      "round": null,
      "value": null,
@@ -1396,10 +941,487 @@
      "starter": false
     }
    ],
-   "score": 0.938,
+   "score": 1.158,
+   "modelRank": 2,
+   "modelGrade": "A+",
+   "standing": 1
+  },
+  {
+   "id": 6,
+   "name": "Your meat too much",
+   "abbrev": "WWJD",
+   "logo": "https://i.postimg.cc/HLnSb1Nk/IMG-5763.jpg",
+   "manager": {
+    "first": "Reece",
+    "last": "Cooke",
+    "nick": "REEEEECE",
+    "notes": "Mr. Middle: 7th then 5th. Team name 'Your meat too much', abbrev WWJD. Logo is a personal photo hosted on postimg."
+   },
+   "draftSlot": 5,
+   "record": {
+    "w": 5,
+    "l": 1,
+    "pf": 852.7,
+    "pa": 784.9
+   },
+   "weekly": [
+    {
+     "wk": 1,
+     "pts": 160.6,
+     "opp": 4,
+     "oppPts": 153.0,
+     "win": true
+    },
+    {
+     "wk": 2,
+     "pts": 136.2,
+     "opp": 3,
+     "oppPts": 97.6,
+     "win": true
+    },
+    {
+     "wk": 3,
+     "pts": 118.9,
+     "opp": 10,
+     "oppPts": 115.7,
+     "win": true
+    },
+    {
+     "wk": 4,
+     "pts": 202.9,
+     "opp": 5,
+     "oppPts": 117.1,
+     "win": true
+    },
+    {
+     "wk": 5,
+     "pts": 114.4,
+     "opp": 7,
+     "oppPts": 184.8,
+     "win": false
+    },
+    {
+     "wk": 6,
+     "pts": 119.7,
+     "opp": 8,
+     "oppPts": 116.7,
+     "win": true
+    }
+   ],
+   "trans": {
+    "acquisitions": 15,
+    "drops": 15,
+    "trades": 0,
+    "moveToActive": 27
+   },
+   "startPts": 1752.7,
+   "benchPts": 752.7,
+   "lastYearStarterPts": 1549.9,
+   "valueTotal": -125.2,
+   "starters": {
+    "QB": {
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "proj": 274.7
+    },
+    "RB1": {
+     "name": "Kenneth Walker III",
+     "pos": "RB",
+     "proj": 259.8
+    },
+    "RB2": {
+     "name": "Breece Hall",
+     "pos": "RB",
+     "proj": 154.4
+    },
+    "WR1": {
+     "name": "Justin Jefferson",
+     "pos": "WR",
+     "proj": 220.0
+    },
+    "WR2": {
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "proj": 192.7
+    },
+    "TE": {
+     "name": "T.J. Hockenson",
+     "pos": "TE",
+     "proj": 126.6
+    },
+    "OP": {
+     "name": "Kyler Murray",
+     "pos": "QB",
+     "proj": 240.6
+    },
+    "FLEX": {
+     "name": "Quinshon Judkins",
+     "pos": "RB",
+     "proj": 149.9
+    },
+    "K": {
+     "name": "Will Reichard",
+     "pos": "K",
+     "proj": 134.0
+    }
+   },
+   "steals": [
+    {
+     "name": "Will Reichard",
+     "pos": "K",
+     "pick": 159,
+     "round": 16,
+     "adp": 119.4,
+     "value": 39.6,
+     "proj": 134.0
+    },
+    {
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "pick": 56,
+     "round": 6,
+     "adp": 39.0,
+     "value": 17.0,
+     "proj": 192.7
+    },
+    {
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "pick": 156,
+     "round": 16,
+     "adp": 139.9,
+     "value": 16.1,
+     "proj": 136.5
+    }
+   ],
+   "reaches": [
+    {
+     "name": "Marvin Harrison Jr.",
+     "pos": "WR",
+     "pick": 76,
+     "round": 8,
+     "adp": 115.4,
+     "value": -39.4,
+     "proj": 77.9
+    },
+    {
+     "name": "J.K. Dobbins",
+     "pos": "RB",
+     "pick": 96,
+     "round": 10,
+     "adp": 130.5,
+     "value": -34.5,
+     "proj": 133.0
+    },
+    {
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "pick": 116,
+     "round": 12,
+     "adp": 149.7,
+     "value": -33.7,
+     "proj": 147.8
+    }
+   ],
+   "posCounts": {
+    "QB": 3,
+    "WR": 5,
+    "RB": 6,
+    "TE": 2,
+    "K": 1
+   },
+   "questionable": [
+    "Lamar Jackson",
+    "Justin Jefferson",
+    "Breece Hall",
+    "Quinshon Judkins",
+    "Zach Charbonnet",
+    "Denzel Boston",
+    "Jordan Mason",
+    "T.J. Hockenson"
+   ],
+   "rookies": [
+    "Denzel Boston"
+   ],
+   "qbs": [
+    {
+     "name": "Brock Purdy",
+     "proj": 274.7,
+     "last": 210.7,
+     "round": 5
+    },
+    {
+     "name": "Kyler Murray",
+     "proj": 240.6,
+     "last": 90.3,
+     "round": 8
+    },
+    {
+     "name": "Lamar Jackson",
+     "proj": 225.3,
+     "last": 255.9,
+     "round": 1
+    }
+   ],
+   "firstPick": {
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "pick": 5
+   },
+   "kickerRound": 16,
+   "history": {
+    "2025": {
+     "id": 6,
+     "name": "Your meat too much",
+     "w": 8,
+     "l": 6,
+     "pf": 1930.2,
+     "pa": 1788.0,
+     "seed": 4,
+     "rank": 5,
+     "acq": 19,
+     "trades": 0
+    },
+    "2024": {
+     "id": 6,
+     "name": "Your meat too much",
+     "w": 6,
+     "l": 8,
+     "pf": 1759.8,
+     "pa": 1683.0,
+     "seed": 6,
+     "rank": 7,
+     "acq": 21,
+     "trades": 0
+    }
+   },
+   "roster": [
+    {
+     "name": "Lamar Jackson",
+     "pos": "QB",
+     "team": "BAL",
+     "proj": 225.3,
+     "last": 255.9,
+     "adp": 42.2,
+     "pick": 5,
+     "round": 1,
+     "value": -37.2,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Justin Jefferson",
+     "pos": "WR",
+     "team": "MIN",
+     "proj": 220.0,
+     "last": 201.5,
+     "adp": 14.9,
+     "pick": 16,
+     "round": 2,
+     "value": 1.1,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Kenneth Walker III",
+     "pos": "RB",
+     "team": "KC",
+     "proj": 259.8,
+     "last": 191.9,
+     "adp": 11.1,
+     "pick": 25,
+     "round": 3,
+     "value": 13.9,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Breece Hall",
+     "pos": "RB",
+     "team": "NYJ",
+     "proj": 154.4,
+     "last": 205.5,
+     "adp": 58.0,
+     "pick": 36,
+     "round": 4,
+     "value": -22.0,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Brock Purdy",
+     "pos": "QB",
+     "team": "SF",
+     "proj": 274.7,
+     "last": 210.7,
+     "adp": 56.7,
+     "pick": 45,
+     "round": 5,
+     "value": -11.7,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Tetairoa McMillan",
+     "pos": "WR",
+     "team": "CAR",
+     "proj": 192.7,
+     "last": 209.4,
+     "adp": 39.0,
+     "pick": 56,
+     "round": 6,
+     "value": 17.0,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Quinshon Judkins",
+     "pos": "RB",
+     "team": "CLE",
+     "proj": 149.9,
+     "last": 169.8,
+     "adp": 77.8,
+     "pick": 65,
+     "round": 7,
+     "value": -12.8,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Kyler Murray",
+     "pos": "QB",
+     "team": "MIN",
+     "proj": 240.6,
+     "last": 90.3,
+     "adp": 149.8,
+     "pick": 74,
+     "round": 8,
+     "value": -75.8,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Marvin Harrison Jr.",
+     "pos": "WR",
+     "team": "HOU",
+     "proj": 77.9,
+     "last": 127.8,
+     "adp": 115.4,
+     "pick": 76,
+     "round": 8,
+     "value": -39.4,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Harold Fannin Jr.",
+     "pos": "TE",
+     "team": "CLE",
+     "proj": 93.1,
+     "last": 184.4,
+     "adp": 99.8,
+     "pick": 85,
+     "round": 9,
+     "value": -14.8,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "J.K. Dobbins",
+     "pos": "RB",
+     "team": "DEN",
+     "proj": 133.0,
+     "last": 115.9,
+     "adp": 130.5,
+     "pick": 96,
+     "round": 10,
+     "value": -34.5,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Zach Charbonnet",
+     "pos": "RB",
+     "team": "SEA",
+     "proj": 147.8,
+     "last": 181.4,
+     "adp": 149.7,
+     "pick": 116,
+     "round": 12,
+     "value": -33.7,
+     "injury": "OUT",
+     "starter": false
+    },
+    {
+     "name": "Jordan Mason",
+     "pos": "RB",
+     "team": "MIN",
+     "proj": 110.1,
+     "last": 126.9,
+     "adp": 160.6,
+     "pick": 134,
+     "round": 14,
+     "value": -26.6,
+     "injury": "INJURY_RESERVE",
+     "starter": false
+    },
+    {
+     "name": "T.J. Hockenson",
+     "pos": "TE",
+     "team": "MIN",
+     "proj": 126.6,
+     "last": 112.8,
+     "adp": 159.1,
+     "pick": 146,
+     "round": 15,
+     "value": -13.1,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Denzel Boston",
+     "pos": "WR",
+     "team": "CLE",
+     "proj": 136.5,
+     "last": null,
+     "adp": 139.9,
+     "pick": 156,
+     "round": 16,
+     "value": 16.1,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Will Reichard",
+     "pos": "K",
+     "team": "MIN",
+     "proj": 134.0,
+     "last": 158.0,
+     "adp": 119.4,
+     "pick": 159,
+     "round": 16,
+     "value": 39.6,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Devaughn Vele",
+     "pos": "WR",
+     "team": "NO",
+     "proj": 93.7,
+     "last": 66.3,
+     "adp": 164.2,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    }
+   ],
+   "score": 0.958,
    "modelRank": 3,
    "modelGrade": "A",
-   "standing": 1
+   "standing": 2
   },
   {
    "id": 11,
@@ -1414,10 +1436,10 @@
    },
    "draftSlot": 9,
    "record": {
-    "w": 1,
+    "w": 2,
     "l": 4,
-    "pf": 732.7,
-    "pa": 788.2
+    "pf": 910.5,
+    "pa": 888.4
    },
    "weekly": [
     {
@@ -1454,63 +1476,70 @@
      "opp": 4,
      "oppPts": 152.5,
      "win": false
+    },
+    {
+     "wk": 6,
+     "pts": 177.8,
+     "opp": 3,
+     "oppPts": 100.2,
+     "win": true
     }
    ],
    "trans": {
-    "acquisitions": 4,
-    "drops": 4,
+    "acquisitions": 5,
+    "drops": 5,
     "trades": 0,
-    "moveToActive": 9
+    "moveToActive": 14
    },
-   "startPts": 1815.2,
-   "benchPts": 743.8,
-   "lastYearStarterPts": 2250.4,
-   "valueTotal": -83.1,
+   "startPts": 1693.1,
+   "benchPts": 653.9,
+   "lastYearStarterPts": 2186.2,
+   "valueTotal": -81.4,
    "starters": {
     "QB": {
      "name": "Matthew Stafford",
      "pos": "QB",
-     "proj": 258.1
+     "proj": 235.2
     },
     "RB1": {
      "name": "Christian McCaffrey",
      "pos": "RB",
-     "proj": 243.5
+     "proj": 221.3
     },
     "RB2": {
      "name": "Bhayshul Tuten",
      "pos": "RB",
-     "proj": 171.9
+     "proj": 155.4
     },
     "WR1": {
      "name": "Amon-Ra St. Brown",
      "pos": "WR",
-     "proj": 235.1
+     "proj": 234.8
     },
     "WR2": {
-     "name": "Chris Olave",
+     "name": "Jalen Coker",
      "pos": "WR",
-     "proj": 196.6
+     "proj": 187.9
     },
     "TE": {
      "name": "George Kittle",
      "pos": "TE",
-     "proj": 165.3
+     "proj": 166.2
     },
     "OP": {
      "name": "Aaron Rodgers",
      "pos": "QB",
-     "proj": 247.4
+     "proj": 222.9
     },
     "FLEX": {
-     "name": "Jalen Coker",
+     "name": "DeVonta Smith",
      "pos": "WR",
-     "proj": 180.2
+     "proj": 171.4
     },
     "K": {
      "name": "Cam Little",
      "pos": "K",
-     "proj": 117.1
+     "proj": 98.0
     }
    },
    "steals": [
@@ -1519,27 +1548,27 @@
      "pos": "TE",
      "pick": 92,
      "round": 10,
-     "adp": 56.0,
-     "value": 36.0,
-     "proj": 165.3
-    },
-    {
-     "name": "Cam Little",
-     "pos": "K",
-     "pick": 151,
-     "round": 16,
-     "adp": 126.6,
-     "value": 24.4,
-     "proj": 117.1
+     "adp": 56.6,
+     "value": 35.4,
+     "proj": 166.2
     },
     {
      "name": "Jalen Coker",
      "pos": "WR",
      "pick": 132,
      "round": 14,
-     "adp": 124.7,
-     "value": 7.3,
-     "proj": 180.2
+     "adp": 110.5,
+     "value": 21.5,
+     "proj": 187.9
+    },
+    {
+     "name": "Cam Little",
+     "pos": "K",
+     "pick": 151,
+     "round": 16,
+     "adp": 130.7,
+     "value": 20.3,
+     "proj": 98.0
     }
    ],
    "reaches": [
@@ -1548,64 +1577,54 @@
      "pos": "RB",
      "pick": 72,
      "round": 8,
-     "adp": 111.5,
-     "value": -39.5,
-     "proj": 94.3
+     "adp": 115.2,
+     "value": -43.2,
+     "proj": 78.6
     },
     {
      "name": "Xavier Worthy",
      "pos": "WR",
      "pick": 109,
      "round": 11,
-     "adp": 140.9,
-     "value": -31.9,
-     "proj": 127.1
+     "adp": 138.7,
+     "value": -29.7,
+     "proj": 121.1
     },
     {
      "name": "Tony Pollard",
      "pos": "RB",
      "pick": 89,
      "round": 9,
-     "adp": 114.4,
-     "value": -25.4,
-     "proj": 156.2
+     "adp": 114.2,
+     "value": -25.2,
+     "proj": 142.0
     }
    ],
    "posCounts": {
     "RB": 4,
-    "WR": 6,
-    "QB": 4,
+    "WR": 7,
+    "QB": 3,
     "TE": 1,
     "K": 1
    },
-   "questionable": [
-    "Chris Olave",
-    "DeVonta Smith",
-    "TreVeyon Henderson"
-   ],
+   "questionable": [],
    "rookies": [],
    "qbs": [
     {
      "name": "Matthew Stafford",
-     "proj": 258.1,
+     "proj": 235.2,
      "last": 460.1,
      "round": 4
     },
     {
      "name": "Aaron Rodgers",
-     "proj": 247.4,
+     "proj": 222.9,
      "last": 285.2,
      "round": null
     },
     {
-     "name": "Justin Herbert",
-     "proj": 169.8,
-     "last": 340.8,
-     "round": 5
-    },
-    {
      "name": "Kirk Cousins",
-     "proj": 93.0,
+     "proj": 75.6,
      "last": 123.7,
      "round": null
     }
@@ -1647,12 +1666,12 @@
      "name": "Christian McCaffrey",
      "pos": "RB",
      "team": "SF",
-     "proj": 243.5,
+     "proj": 221.3,
      "last": 416.6,
-     "adp": 9.4,
+     "adp": 9.1,
      "pick": 9,
      "round": 1,
-     "value": -0.4,
+     "value": -0.1,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1660,12 +1679,12 @@
      "name": "Amon-Ra St. Brown",
      "pos": "WR",
      "team": "DET",
-     "proj": 235.1,
+     "proj": 234.8,
      "last": 324.0,
-     "adp": 9.8,
+     "adp": 10.4,
      "pick": 12,
      "round": 2,
-     "value": 2.2,
+     "value": 1.6,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1673,64 +1692,51 @@
      "name": "Chris Olave",
      "pos": "WR",
      "team": "NO",
-     "proj": 196.6,
+     "proj": 164.2,
      "last": 266.0,
-     "adp": 24.8,
+     "adp": 28.4,
      "pick": 29,
      "round": 3,
-     "value": 4.2,
-     "injury": "QUESTIONABLE",
-     "starter": true
+     "value": 0.6,
+     "injury": "ACTIVE",
+     "starter": false
     },
     {
      "name": "Matthew Stafford",
      "pos": "QB",
      "team": "LAR",
-     "proj": 258.1,
+     "proj": 235.2,
      "last": 460.1,
-     "adp": 115.5,
+     "adp": 113.8,
      "pick": 32,
      "round": 4,
-     "value": -83.5,
+     "value": -81.8,
      "injury": "ACTIVE",
      "starter": true
-    },
-    {
-     "name": "Justin Herbert",
-     "pos": "QB",
-     "team": "LAC",
-     "proj": 169.8,
-     "last": 340.8,
-     "adp": 127.1,
-     "pick": 49,
-     "round": 5,
-     "value": -78.1,
-     "injury": "ACTIVE",
-     "starter": false
     },
     {
      "name": "DeVonta Smith",
      "pos": "WR",
      "team": "PHI",
-     "proj": 176.4,
+     "proj": 171.4,
      "last": 201.8,
-     "adp": 55.2,
+     "adp": 50.7,
      "pick": 52,
      "round": 6,
-     "value": -3.2,
-     "injury": "QUESTIONABLE",
-     "starter": false
+     "value": 1.3,
+     "injury": "ACTIVE",
+     "starter": true
     },
     {
      "name": "Bhayshul Tuten",
      "pos": "RB",
      "team": "JAX",
-     "proj": 171.9,
+     "proj": 155.4,
      "last": 86.6,
-     "adp": 72.5,
+     "adp": 68.4,
      "pick": 69,
      "round": 7,
-     "value": -3.5,
+     "value": 0.6,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1738,25 +1744,25 @@
      "name": "TreVeyon Henderson",
      "pos": "RB",
      "team": "NE",
-     "proj": 94.3,
+     "proj": 78.6,
      "last": 204.2,
-     "adp": 111.5,
+     "adp": 115.2,
      "pick": 72,
      "round": 8,
-     "value": -39.5,
-     "injury": "QUESTIONABLE",
+     "value": -43.2,
+     "injury": "ACTIVE",
      "starter": false
     },
     {
      "name": "Tony Pollard",
      "pos": "RB",
      "team": "TEN",
-     "proj": 156.2,
+     "proj": 142.0,
      "last": 179.8,
-     "adp": 114.4,
+     "adp": 114.2,
      "pick": 89,
      "round": 9,
-     "value": -25.4,
+     "value": -25.2,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1764,12 +1770,12 @@
      "name": "George Kittle",
      "pos": "TE",
      "team": "SF",
-     "proj": 165.3,
+     "proj": 166.2,
      "last": 161.5,
-     "adp": 56.0,
+     "adp": 56.6,
      "pick": 92,
      "round": 10,
-     "value": 36.0,
+     "value": 35.4,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1777,12 +1783,12 @@
      "name": "Xavier Worthy",
      "pos": "WR",
      "team": "KC",
-     "proj": 127.1,
+     "proj": 121.1,
      "last": 109.9,
-     "adp": 140.9,
+     "adp": 138.7,
      "pick": 109,
      "round": 11,
-     "value": -31.9,
+     "value": -29.7,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1790,12 +1796,12 @@
      "name": "Jakobi Meyers",
      "pos": "WR",
      "team": "JAX",
-     "proj": 114.3,
+     "proj": 118.8,
      "last": 173.8,
-     "adp": 134.6,
+     "adp": 135.7,
      "pick": 113,
      "round": 12,
-     "value": -21.6,
+     "value": -22.7,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -1803,12 +1809,12 @@
      "name": "Jalen Coker",
      "pos": "WR",
      "team": "CAR",
-     "proj": 180.2,
+     "proj": 187.9,
      "last": 88.4,
-     "adp": 124.7,
+     "adp": 110.5,
      "pick": 132,
      "round": 14,
-     "value": 7.3,
+     "value": 21.5,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1816,12 +1822,12 @@
      "name": "Cam Little",
      "pos": "K",
      "team": "JAX",
-     "proj": 117.1,
+     "proj": 98.0,
      "last": 162.0,
-     "adp": 126.6,
+     "adp": 130.7,
      "pick": 151,
      "round": 16,
-     "value": 24.4,
+     "value": 20.3,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -1829,9 +1835,9 @@
      "name": "Kirk Cousins",
      "pos": "QB",
      "team": "LV",
-     "proj": 93.0,
+     "proj": 75.6,
      "last": 123.7,
-     "adp": 163.6,
+     "adp": 165.8,
      "pick": null,
      "round": null,
      "value": null,
@@ -1842,1860 +1848,33 @@
      "name": "Aaron Rodgers",
      "pos": "QB",
      "team": "PIT",
-     "proj": 247.4,
+     "proj": 222.9,
      "last": 285.2,
-     "adp": 166.6,
+     "adp": 165.9,
      "pick": null,
      "round": null,
      "value": null,
      "injury": "ACTIVE",
      "starter": true
+    },
+    {
+     "name": "Tre Tucker",
+     "pos": "WR",
+     "team": "LV",
+     "proj": 107.8,
+     "last": 161.7,
+     "adp": 162.0,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
     }
    ],
-   "score": 0.535,
+   "score": 0.399,
    "modelRank": 4,
    "modelGrade": "A-",
-   "standing": 9
-  },
-  {
-   "id": 8,
-   "name": "Big Sham",
-   "abbrev": "PPT",
-   "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/16.svg",
-   "manager": {
-    "first": "Parker",
-    "last": "Shama",
-    "nick": "Big Sham",
-    "notes": "4-10 last year with the fewest points in the league (1456). Username ravens69420. Took Josh Allen at 1.04."
-   },
-   "draftSlot": 4,
-   "record": {
-    "w": 3,
-    "l": 2,
-    "pf": 735.2,
-    "pa": 681.1
-   },
-   "weekly": [
-    {
-     "wk": 1,
-     "pts": 180.0,
-     "opp": 11,
-     "oppPts": 119.2,
-     "win": true
-    },
-    {
-     "wk": 2,
-     "pts": 179.3,
-     "opp": 1,
-     "oppPts": 131.4,
-     "win": true
-    },
-    {
-     "wk": 3,
-     "pts": 123.5,
-     "opp": 2,
-     "oppPts": 149.5,
-     "win": false
-    },
-    {
-     "wk": 4,
-     "pts": 101.9,
-     "opp": 4,
-     "oppPts": 135.8,
-     "win": false
-    },
-    {
-     "wk": 5,
-     "pts": 150.5,
-     "opp": 3,
-     "oppPts": 145.2,
-     "win": true
-    }
-   ],
-   "trans": {
-    "acquisitions": 3,
-    "drops": 3,
-    "trades": 0,
-    "moveToActive": 13
-   },
-   "startPts": 1775.8,
-   "benchPts": 649.8,
-   "lastYearStarterPts": 2040.7,
-   "valueTotal": -144.7,
-   "starters": {
-    "QB": {
-     "name": "Josh Allen",
-     "pos": "QB",
-     "proj": 323.1
-    },
-    "RB1": {
-     "name": "Derrick Henry",
-     "pos": "RB",
-     "proj": 243.4
-    },
-    "RB2": {
-     "name": "Javonte Williams",
-     "pos": "RB",
-     "proj": 203.6
-    },
-    "WR1": {
-     "name": "Davante Adams",
-     "pos": "WR",
-     "proj": 181.9
-    },
-    "WR2": {
-     "name": "Carnell Tate",
-     "pos": "WR",
-     "proj": 139.0
-    },
-    "TE": {
-     "name": "Dalton Kincaid",
-     "pos": "TE",
-     "proj": 93.0
-    },
-    "OP": {
-     "name": "Jordan Love",
-     "pos": "QB",
-     "proj": 276.4
-    },
-    "FLEX": {
-     "name": "Chase Brown",
-     "pos": "RB",
-     "proj": 184.3
-    },
-    "K": {
-     "name": "Ka'imi Fairbairn",
-     "pos": "K",
-     "proj": 131.1
-    }
-   },
-   "steals": [
-    {
-     "name": "Dalton Kincaid",
-     "pos": "TE",
-     "pick": 157,
-     "round": 16,
-     "adp": 136.7,
-     "value": 20.3,
-     "proj": 93.0
-    },
-    {
-     "name": "Davante Adams",
-     "pos": "WR",
-     "pick": 57,
-     "round": 6,
-     "adp": 47.1,
-     "value": 9.9,
-     "proj": 181.9
-    },
-    {
-     "name": "Ka'imi Fairbairn",
-     "pos": "K",
-     "pick": 144,
-     "round": 15,
-     "adp": 136.3,
-     "value": 7.7,
-     "proj": 131.1
-    }
-   ],
-   "reaches": [
-    {
-     "name": "MarShawn Lloyd",
-     "pos": "RB",
-     "pick": 84,
-     "round": 9,
-     "adp": 134.6,
-     "value": -50.6,
-     "proj": 74.3
-    },
-    {
-     "name": "Jake Ferguson",
-     "pos": "TE",
-     "pick": 97,
-     "round": 10,
-     "adp": 142.9,
-     "value": -45.9,
-     "proj": 81.9
-    },
-    {
-     "name": "Ladd McConkey",
-     "pos": "WR",
-     "pick": 44,
-     "round": 5,
-     "adp": 79.4,
-     "value": -35.4,
-     "proj": 123.3
-    }
-   ],
-   "posCounts": {
-    "QB": 3,
-    "RB": 5,
-    "WR": 5,
-    "TE": 2,
-    "K": 1
-   },
-   "questionable": [
-    "Ladd McConkey",
-    "Adonai Mitchell"
-   ],
-   "rookies": [
-    "Carnell Tate"
-   ],
-   "qbs": [
-    {
-     "name": "Josh Allen",
-     "proj": 323.1,
-     "last": 417.9,
-     "round": 1
-    },
-    {
-     "name": "Jordan Love",
-     "proj": 276.4,
-     "last": 288.9,
-     "round": 11
-    },
-    {
-     "name": "Daniel Jones",
-     "proj": 175.3,
-     "last": 268.4,
-     "round": 14
-    }
-   ],
-   "firstPick": {
-    "name": "Josh Allen",
-    "pos": "QB",
-    "pick": 4
-   },
-   "kickerRound": 15,
-   "history": {
-    "2025": {
-     "id": 8,
-     "name": "Big Sham",
-     "w": 4,
-     "l": 10,
-     "pf": 1456.0,
-     "pa": 1767.6,
-     "seed": 10,
-     "rank": 7,
-     "acq": 9,
-     "trades": 0
-    },
-    "2024": {
-     "id": 8,
-     "name": "Big Sham",
-     "w": 8,
-     "l": 6,
-     "pf": 1698.3,
-     "pa": 1774.2,
-     "seed": 5,
-     "rank": 5,
-     "acq": 9,
-     "trades": 1
-    }
-   },
-   "roster": [
-    {
-     "name": "Josh Allen",
-     "pos": "QB",
-     "team": "BUF",
-     "proj": 323.1,
-     "last": 417.9,
-     "adp": 13.8,
-     "pick": 4,
-     "round": 1,
-     "value": -9.8,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Derrick Henry",
-     "pos": "RB",
-     "team": "BAL",
-     "proj": 243.4,
-     "last": 273.5,
-     "adp": 15.0,
-     "pick": 17,
-     "round": 2,
-     "value": 2.0,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Chase Brown",
-     "pos": "RB",
-     "team": "CIN",
-     "proj": 184.3,
-     "last": 282.6,
-     "adp": 25.2,
-     "pick": 24,
-     "round": 3,
-     "value": -1.2,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Javonte Williams",
-     "pos": "RB",
-     "team": "DAL",
-     "proj": 203.6,
-     "last": 238.8,
-     "adp": 32.2,
-     "pick": 37,
-     "round": 4,
-     "value": 4.8,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Ladd McConkey",
-     "pos": "WR",
-     "team": "LAC",
-     "proj": 123.3,
-     "last": 180.9,
-     "adp": 79.4,
-     "pick": 44,
-     "round": 5,
-     "value": -35.4,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Davante Adams",
-     "pos": "WR",
-     "team": "LAR",
-     "proj": 181.9,
-     "last": 222.9,
-     "adp": 47.1,
-     "pick": 57,
-     "round": 6,
-     "value": 9.9,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "D'Andre Swift",
-     "pos": "RB",
-     "team": "CHI",
-     "proj": 165.3,
-     "last": 224.6,
-     "adp": 62.7,
-     "pick": 64,
-     "round": 7,
-     "value": 1.3,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Carnell Tate",
-     "pos": "WR",
-     "team": "TEN",
-     "proj": 139.0,
-     "last": null,
-     "adp": 106.6,
-     "pick": 77,
-     "round": 8,
-     "value": -29.6,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "MarShawn Lloyd",
-     "pos": "RB",
-     "team": "GB",
-     "proj": 74.3,
-     "last": 0.0,
-     "adp": 134.6,
-     "pick": 84,
-     "round": 9,
-     "value": -50.6,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Jake Ferguson",
-     "pos": "TE",
-     "team": "DAL",
-     "proj": 81.9,
-     "last": 184.1,
-     "adp": 142.9,
-     "pick": 97,
-     "round": 10,
-     "value": -45.9,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Jordan Love",
-     "pos": "QB",
-     "team": "GB",
-     "proj": 276.4,
-     "last": 288.9,
-     "adp": 152.0,
-     "pick": 104,
-     "round": 11,
-     "value": -48.0,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Daniel Jones",
-     "pos": "QB",
-     "team": "IND",
-     "proj": 175.3,
-     "last": 268.4,
-     "adp": 167.8,
-     "pick": 137,
-     "round": 14,
-     "value": -30.8,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Ka'imi Fairbairn",
-     "pos": "K",
-     "team": "HOU",
-     "proj": 131.1,
-     "last": 190.0,
-     "adp": 136.3,
-     "pick": 144,
-     "round": 15,
-     "value": 7.7,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Dalton Kincaid",
-     "pos": "TE",
-     "team": "BUF",
-     "proj": 93.0,
-     "last": 126.1,
-     "adp": 136.7,
-     "pick": 157,
-     "round": 16,
-     "value": 20.3,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Adonai Mitchell",
-     "pos": "WR",
-     "team": "NYJ",
-     "proj": 104.0,
-     "last": 85.9,
-     "adp": 168.7,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "DOUBTFUL",
-     "starter": false
-    },
-    {
-     "name": "Kendrick Bourne",
-     "pos": "WR",
-     "team": "ARI",
-     "proj": 76.6,
-     "last": 92.1,
-     "adp": 169.7,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    }
-   ],
-   "score": -0.232,
-   "modelRank": 5,
-   "modelGrade": "B-",
-   "standing": 4
-  },
-  {
-   "id": 7,
-   "name": "The Slice Masters",
-   "abbrev": "SLCE",
-   "logo": "https://upload.wikimedia.org/wikipedia/commons/9/90/Magic8ball.jpg",
-   "manager": {
-    "first": "Jackson",
-    "last": "Wille",
-    "nick": "J Will",
-    "notes": "5-9 both years (8th, 9th). Logo is a Magic 8-Ball. Drafted the Jaylen Waddle that Ryan's team is named after."
-   },
-   "draftSlot": 6,
-   "record": {
-    "w": 2,
-    "l": 3,
-    "pf": 701.3,
-    "pa": 715.8
-   },
-   "weekly": [
-    {
-     "wk": 1,
-     "pts": 143.1,
-     "opp": 1,
-     "oppPts": 150.3,
-     "win": false
-    },
-    {
-     "wk": 2,
-     "pts": 108.2,
-     "opp": 2,
-     "oppPts": 179.9,
-     "win": false
-    },
-    {
-     "wk": 3,
-     "pts": 148.1,
-     "opp": 4,
-     "oppPts": 144.3,
-     "win": true
-    },
-    {
-     "wk": 4,
-     "pts": 117.1,
-     "opp": 3,
-     "oppPts": 126.9,
-     "win": false
-    },
-    {
-     "wk": 5,
-     "pts": 184.8,
-     "opp": 6,
-     "oppPts": 114.4,
-     "win": true
-    }
-   ],
-   "trans": {
-    "acquisitions": 5,
-    "drops": 4,
-    "trades": 0,
-    "moveToActive": 15
-   },
-   "startPts": 1751.6,
-   "benchPts": 560.1,
-   "lastYearStarterPts": 1273.9,
-   "valueTotal": -76.3,
-   "starters": {
-    "QB": {
-     "name": "Jayden Daniels",
-     "pos": "QB",
-     "proj": 303.8
-    },
-    "RB1": {
-     "name": "Bucky Irving",
-     "pos": "RB",
-     "proj": 191.1
-    },
-    "RB2": {
-     "name": "Jaylen Warren",
-     "pos": "RB",
-     "proj": 185.1
-    },
-    "WR1": {
-     "name": "CeeDee Lamb",
-     "pos": "WR",
-     "proj": 222.5
-    },
-    "WR2": {
-     "name": "Christian Watson",
-     "pos": "WR",
-     "proj": 184.7
-    },
-    "TE": {
-     "name": "Brock Bowers",
-     "pos": "TE",
-     "proj": 207.3
-    },
-    "OP": {
-     "name": "Michael Penix Jr.",
-     "pos": "QB",
-     "proj": 212.6
-    },
-    "FLEX": {
-     "name": "Jeremiyah Love",
-     "pos": "RB",
-     "proj": 143.3
-    },
-    "K": {
-     "name": "Eddy Pineiro",
-     "pos": "K",
-     "proj": 101.2
-    }
-   },
-   "steals": [
-    {
-     "name": "Christian Watson",
-     "pos": "WR",
-     "pick": 106,
-     "round": 11,
-     "adp": 72.6,
-     "value": 33.4,
-     "proj": 184.7
-    },
-    {
-     "name": "Brock Bowers",
-     "pos": "TE",
-     "pick": 35,
-     "round": 4,
-     "adp": 22.1,
-     "value": 12.9,
-     "proj": 207.3
-    },
-    {
-     "name": "CeeDee Lamb",
-     "pos": "WR",
-     "pick": 15,
-     "round": 2,
-     "adp": 12.2,
-     "value": 2.8,
-     "proj": 222.5
-    }
-   ],
-   "reaches": [
-    {
-     "name": "Quentin Johnston",
-     "pos": "WR",
-     "pick": 115,
-     "round": 12,
-     "adp": 155.5,
-     "value": -40.5,
-     "proj": 79.9
-    },
-    {
-     "name": "Tyler Allgeier",
-     "pos": "RB",
-     "pick": 135,
-     "round": 14,
-     "adp": 167.6,
-     "value": -32.6,
-     "proj": 84.4
-    },
-    {
-     "name": "Michael Pittman Jr.",
-     "pos": "WR",
-     "pick": 95,
-     "round": 10,
-     "adp": 124.0,
-     "value": -29.0,
-     "proj": 0.0
-    }
-   ],
-   "posCounts": {
-    "QB": 3,
-    "WR": 5,
-    "RB": 6,
-    "TE": 2,
-    "K": 1
-   },
-   "questionable": [
-    "Jeremiyah Love",
-    "Brock Bowers",
-    "Michael Pittman Jr.",
-    "Quentin Johnston",
-    "T.J. Hockenson"
-   ],
-   "rookies": [
-    "Jeremiyah Love"
-   ],
-   "qbs": [
-    {
-     "name": "Jayden Daniels",
-     "proj": 303.8,
-     "last": 128.8,
-     "round": 1
-    },
-    {
-     "name": "Michael Penix Jr.",
-     "proj": 212.6,
-     "last": 143.0,
-     "round": null
-    },
-    {
-     "name": "Jameis Winston",
-     "proj": 90.3,
-     "last": 46.6,
-     "round": null
-    }
-   ],
-   "firstPick": {
-    "name": "Jayden Daniels",
-    "pos": "QB",
-    "pick": 6
-   },
-   "kickerRound": 16,
-   "history": {
-    "2025": {
-     "id": 7,
-     "name": "The Slice Masters",
-     "w": 5,
-     "l": 9,
-     "pf": 1676.6,
-     "pa": 1884.3,
-     "seed": 9,
-     "rank": 9,
-     "acq": 11,
-     "trades": 0
-    },
-    "2024": {
-     "id": 7,
-     "name": "The Slice Masters",
-     "w": 5,
-     "l": 9,
-     "pf": 1546.2,
-     "pa": 1761.4,
-     "seed": 9,
-     "rank": 8,
-     "acq": 10,
-     "trades": 0
-    }
-   },
-   "roster": [
-    {
-     "name": "Jayden Daniels",
-     "pos": "QB",
-     "team": "WSH",
-     "proj": 303.8,
-     "last": 128.8,
-     "adp": 56.5,
-     "pick": 6,
-     "round": 1,
-     "value": -50.5,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "CeeDee Lamb",
-     "pos": "WR",
-     "team": "DAL",
-     "proj": 222.5,
-     "last": 200.9,
-     "adp": 12.2,
-     "pick": 15,
-     "round": 2,
-     "value": 2.8,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Jeremiyah Love",
-     "pos": "RB",
-     "team": "ARI",
-     "proj": 143.3,
-     "last": null,
-     "adp": 38.3,
-     "pick": 26,
-     "round": 3,
-     "value": -12.3,
-     "injury": "QUESTIONABLE",
-     "starter": true
-    },
-    {
-     "name": "Brock Bowers",
-     "pos": "TE",
-     "team": "LV",
-     "proj": 207.3,
-     "last": 176.2,
-     "adp": 22.1,
-     "pick": 35,
-     "round": 4,
-     "value": 12.9,
-     "injury": "QUESTIONABLE",
-     "starter": true
-    },
-    {
-     "name": "Cam Skattebo",
-     "pos": "RB",
-     "team": "NYG",
-     "proj": 131.1,
-     "last": 125.7,
-     "adp": 64.9,
-     "pick": 46,
-     "round": 5,
-     "value": -18.9,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Bucky Irving",
-     "pos": "RB",
-     "team": "TB",
-     "proj": 191.1,
-     "last": 136.5,
-     "adp": 55.6,
-     "pick": 55,
-     "round": 6,
-     "value": -0.6,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Jaylen Waddle",
-     "pos": "WR",
-     "team": "DEN",
-     "proj": 127.2,
-     "last": 193.8,
-     "adp": 81.9,
-     "pick": 66,
-     "round": 7,
-     "value": -15.9,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Jaylen Warren",
-     "pos": "RB",
-     "team": "PIT",
-     "proj": 185.1,
-     "last": 217.1,
-     "adp": 83.2,
-     "pick": 75,
-     "round": 8,
-     "value": -8.2,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Michael Pittman Jr.",
-     "pos": "WR",
-     "team": "PIT",
-     "proj": 0.0,
-     "last": 202.4,
-     "adp": 124.0,
-     "pick": 95,
-     "round": 10,
-     "value": -29.0,
-     "injury": "INJURY_RESERVE",
-     "starter": false
-    },
-    {
-     "name": "Christian Watson",
-     "pos": "WR",
-     "team": "GB",
-     "proj": 184.7,
-     "last": 132.4,
-     "adp": 72.6,
-     "pick": 106,
-     "round": 11,
-     "value": 33.4,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Quentin Johnston",
-     "pos": "WR",
-     "team": "LAC",
-     "proj": 79.9,
-     "last": 169.2,
-     "adp": 155.5,
-     "pick": 115,
-     "round": 12,
-     "value": -40.5,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Tyler Allgeier",
-     "pos": "RB",
-     "team": "ARI",
-     "proj": 84.4,
-     "last": 123.0,
-     "adp": 167.6,
-     "pick": 135,
-     "round": 14,
-     "value": -32.6,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "T.J. Hockenson",
-     "pos": "TE",
-     "team": "MIN",
-     "proj": 127.1,
-     "last": 112.8,
-     "adp": 155.8,
-     "pick": 146,
-     "round": 15,
-     "value": -9.8,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Eddy Pineiro",
-     "pos": "K",
-     "team": "SF",
-     "proj": 101.2,
-     "last": 139.0,
-     "adp": 154.1,
-     "pick": 155,
-     "round": 16,
-     "value": 0.9,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Michael Penix Jr.",
-     "pos": "QB",
-     "team": "ATL",
-     "proj": 212.6,
-     "last": 143.0,
-     "adp": 168.4,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Emanuel Wilson",
-     "pos": "RB",
-     "team": "SEA",
-     "proj": 23.3,
-     "last": 94.5,
-     "adp": 158.1,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Jameis Winston",
-     "pos": "QB",
-     "team": "NYG",
-     "proj": 90.3,
-     "last": 46.6,
-     "adp": 169.3,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    }
-   ],
-   "score": -0.385,
-   "modelRank": 6,
-   "modelGrade": "C+",
-   "standing": 6
-  },
-  {
-   "id": 5,
-   "name": "Fair Weather Fallows",
-   "abbrev": "FWF",
-   "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/837c1e50-a675-11f1-9537-5bd778d76252",
-   "manager": {
-    "first": "Nick",
-    "last": "Fallows",
-    "nick": "Nfatboy",
-    "notes": "2024 champ. 2025: 6-8, 8th, made THREE waiver moves all season. Only guy who trades (4 in 2024)."
-   },
-   "draftSlot": 3,
-   "record": {
-    "w": 3,
-    "l": 2,
-    "pf": 633.4,
-    "pa": 691.0
-   },
-   "weekly": [
-    {
-     "wk": 1,
-     "pts": 92.4,
-     "opp": 2,
-     "oppPts": 167.5,
-     "win": false
-    },
-    {
-     "wk": 2,
-     "pts": 121.4,
-     "opp": 4,
-     "oppPts": 72.1,
-     "win": true
-    },
-    {
-     "wk": 3,
-     "pts": 168.1,
-     "opp": 3,
-     "oppPts": 115.5,
-     "win": true
-    },
-    {
-     "wk": 4,
-     "pts": 117.1,
-     "opp": 6,
-     "oppPts": 202.9,
-     "win": false
-    },
-    {
-     "wk": 5,
-     "pts": 134.4,
-     "opp": 10,
-     "oppPts": 133.0,
-     "win": true
-    }
-   ],
-   "trans": {
-    "acquisitions": 6,
-    "drops": 5,
-    "trades": 0,
-    "moveToActive": 12
-   },
-   "startPts": 1691.7,
-   "benchPts": 708.3,
-   "lastYearStarterPts": 1440.3,
-   "valueTotal": -70.4,
-   "starters": {
-    "QB": {
-     "name": "Deshaun Watson",
-     "pos": "QB",
-     "proj": 232.3
-    },
-    "RB1": {
-     "name": "Bijan Robinson",
-     "pos": "RB",
-     "proj": 266.0
-    },
-    "RB2": {
-     "name": "Aaron Jones Sr.",
-     "pos": "RB",
-     "proj": 140.1
-    },
-    "WR1": {
-     "name": "Malik Nabers",
-     "pos": "WR",
-     "proj": 192.6
-    },
-    "WR2": {
-     "name": "Rashee Rice",
-     "pos": "WR",
-     "proj": 188.2
-    },
-    "TE": {
-     "name": "Sam LaPorta",
-     "pos": "TE",
-     "proj": 152.0
-    },
-    "OP": {
-     "name": "Bo Nix",
-     "pos": "QB",
-     "proj": 219.4
-    },
-    "FLEX": {
-     "name": "Garrett Wilson",
-     "pos": "WR",
-     "proj": 177.2
-    },
-    "K": {
-     "name": "Brandon Aubrey",
-     "pos": "K",
-     "proj": 123.9
-    }
-   },
-   "steals": [
-    {
-     "name": "Brandon Aubrey",
-     "pos": "K",
-     "pick": 123,
-     "round": 13,
-     "adp": 82.6,
-     "value": 40.4,
-     "proj": 123.9
-    },
-    {
-     "name": "Travis Kelce",
-     "pos": "TE",
-     "pick": 118,
-     "round": 12,
-     "adp": 94.7,
-     "value": 23.3,
-     "proj": 142.2
-    },
-    {
-     "name": "Garrett Wilson",
-     "pos": "WR",
-     "pick": 58,
-     "round": 6,
-     "adp": 38.6,
-     "value": 19.4,
-     "proj": 177.2
-    }
-   ],
-   "reaches": [
-    {
-     "name": "Stefon Diggs",
-     "pos": "WR",
-     "pick": 83,
-     "round": 9,
-     "adp": 126.1,
-     "value": -43.1,
-     "proj": 127.7
-    },
-    {
-     "name": "Rashee Rice",
-     "pos": "WR",
-     "pick": 18,
-     "round": 2,
-     "adp": 47.4,
-     "value": -29.4,
-     "proj": 188.2
-    },
-    {
-     "name": "Romeo Doubs",
-     "pos": "WR",
-     "pick": 138,
-     "round": 14,
-     "adp": 150.6,
-     "value": -12.6,
-     "proj": 114.4
-    }
-   ],
-   "posCounts": {
-    "RB": 3,
-    "WR": 8,
-    "QB": 3,
-    "TE": 2,
-    "K": 1
-   },
-   "questionable": [
-    "Rashee Rice",
-    "Baker Mayfield",
-    "Stefon Diggs",
-    "Tyreek Hill"
-   ],
-   "rookies": [],
-   "qbs": [
-    {
-     "name": "Deshaun Watson",
-     "proj": 232.3,
-     "last": 0.0,
-     "round": null
-    },
-    {
-     "name": "Bo Nix",
-     "proj": 219.4,
-     "last": 360.6,
-     "round": 5
-    },
-    {
-     "name": "Baker Mayfield",
-     "proj": 178.0,
-     "last": 324.2,
-     "round": 8
-    }
-   ],
-   "firstPick": {
-    "name": "Bijan Robinson",
-    "pos": "RB",
-    "pick": 3
-   },
-   "kickerRound": 13,
-   "history": {
-    "2025": {
-     "id": 5,
-     "name": "Fatboy Fallows",
-     "w": 6,
-     "l": 8,
-     "pf": 1812.8,
-     "pa": 1902.3,
-     "seed": 7,
-     "rank": 8,
-     "acq": 3,
-     "trades": 1
-    },
-    "2024": {
-     "id": 5,
-     "name": "Fatboy Fallows",
-     "w": 9,
-     "l": 5,
-     "pf": 1770.0,
-     "pa": 1573.6,
-     "seed": 3,
-     "rank": 1,
-     "acq": 21,
-     "trades": 4
-    }
-   },
-   "roster": [
-    {
-     "name": "Bijan Robinson",
-     "pos": "RB",
-     "team": "ATL",
-     "proj": 266.0,
-     "last": 364.8,
-     "adp": 3.1,
-     "pick": 3,
-     "round": 1,
-     "value": -0.1,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Rashee Rice",
-     "pos": "WR",
-     "team": "KC",
-     "proj": 188.2,
-     "last": 150.1,
-     "adp": 47.4,
-     "pick": 18,
-     "round": 2,
-     "value": -29.4,
-     "injury": "QUESTIONABLE",
-     "starter": true
-    },
-    {
-     "name": "Omarion Hampton",
-     "pos": "RB",
-     "team": "LAC",
-     "proj": 119.6,
-     "last": 135.7,
-     "adp": 35.4,
-     "pick": 23,
-     "round": 3,
-     "value": -12.4,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Malik Nabers",
-     "pos": "WR",
-     "team": "NYG",
-     "proj": 192.6,
-     "last": 57.1,
-     "adp": 40.7,
-     "pick": 38,
-     "round": 4,
-     "value": -2.7,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Bo Nix",
-     "pos": "QB",
-     "team": "DEN",
-     "proj": 219.4,
-     "last": 360.6,
-     "adp": 135.3,
-     "pick": 43,
-     "round": 5,
-     "value": -92.3,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Garrett Wilson",
-     "pos": "WR",
-     "team": "NYJ",
-     "proj": 177.2,
-     "last": 99.5,
-     "adp": 38.6,
-     "pick": 58,
-     "round": 6,
-     "value": 19.4,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Sam LaPorta",
-     "pos": "TE",
-     "team": "DET",
-     "proj": 152.0,
-     "last": 106.9,
-     "adp": 74.8,
-     "pick": 63,
-     "round": 7,
-     "value": -11.8,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Baker Mayfield",
-     "pos": "QB",
-     "team": "TB",
-     "proj": 178.0,
-     "last": 324.2,
-     "adp": 167.0,
-     "pick": 78,
-     "round": 8,
-     "value": -89.0,
-     "injury": "DOUBTFUL",
-     "starter": false
-    },
-    {
-     "name": "Stefon Diggs",
-     "pos": "WR",
-     "team": "WSH",
-     "proj": 127.7,
-     "last": 210.3,
-     "adp": 126.1,
-     "pick": 83,
-     "round": 9,
-     "value": -43.1,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Aaron Jones Sr.",
-     "pos": "RB",
-     "team": "MIN",
-     "proj": 140.1,
-     "last": 116.7,
-     "adp": 108.0,
-     "pick": 98,
-     "round": 10,
-     "value": -10.0,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "DK Metcalf",
-     "pos": "WR",
-     "team": "PIT",
-     "proj": 140.8,
-     "last": 187.2,
-     "adp": 106.6,
-     "pick": 103,
-     "round": 11,
-     "value": -3.6,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Travis Kelce",
-     "pos": "TE",
-     "team": "KC",
-     "proj": 142.2,
-     "last": 193.2,
-     "adp": 94.7,
-     "pick": 118,
-     "round": 12,
-     "value": 23.3,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Brandon Aubrey",
-     "pos": "K",
-     "team": "DAL",
-     "proj": 123.9,
-     "last": 184.6,
-     "adp": 82.6,
-     "pick": 123,
-     "round": 13,
-     "value": 40.4,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Romeo Doubs",
-     "pos": "WR",
-     "team": "NE",
-     "proj": 114.4,
-     "last": 165.4,
-     "adp": 150.6,
-     "pick": 138,
-     "round": 14,
-     "value": -12.6,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Deshaun Watson",
-     "pos": "QB",
-     "team": "CLE",
-     "proj": 232.3,
-     "last": 0.0,
-     "adp": 167.4,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Tyreek Hill",
-     "pos": "WR",
-     "team": "FA",
-     "proj": null,
-     "last": 53.5,
-     "adp": 166.6,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Keon Coleman",
-     "pos": "WR",
-     "team": "BUF",
-     "proj": 81.7,
-     "last": 100.4,
-     "adp": 166.1,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    }
-   ],
-   "score": -0.502,
-   "modelRank": 7,
-   "modelGrade": "C+",
-   "standing": 5
-  },
-  {
-   "id": 3,
-   "name": "Ball Sniffers",
-   "abbrev": "BALZ",
-   "logo": "https://media.tenor.com/jH4S_gEGVskAAAAM/spongebob-stink.gif",
-   "manager": {
-    "first": "Ian",
-    "last": "Sekol",
-    "nick": "EN",
-    "notes": "10-4 two years in a row, 3rd then 2nd. Never won it. Made 7 waiver moves all of 2025. Logo is a SpongeBob stink gif."
-   },
-   "draftSlot": 2,
-   "record": {
-    "w": 2,
-    "l": 3,
-    "pf": 586.6,
-    "pa": 654.3
-   },
-   "weekly": [
-    {
-     "wk": 1,
-     "pts": 101.4,
-     "opp": 10,
-     "oppPts": 82.4,
-     "win": true
-    },
-    {
-     "wk": 2,
-     "pts": 97.6,
-     "opp": 6,
-     "oppPts": 136.2,
-     "win": false
-    },
-    {
-     "wk": 3,
-     "pts": 115.5,
-     "opp": 5,
-     "oppPts": 168.1,
-     "win": false
-    },
-    {
-     "wk": 4,
-     "pts": 126.9,
-     "opp": 7,
-     "oppPts": 117.1,
-     "win": true
-    },
-    {
-     "wk": 5,
-     "pts": 145.2,
-     "opp": 8,
-     "oppPts": 150.5,
-     "win": false
-    }
-   ],
-   "trans": {
-    "acquisitions": 4,
-    "drops": 3,
-    "trades": 0,
-    "moveToActive": 12
-   },
-   "startPts": 1771.3,
-   "benchPts": 542.1,
-   "lastYearStarterPts": 2084.4,
-   "valueTotal": -166.6,
-   "starters": {
-    "QB": {
-     "name": "Drake Maye",
-     "pos": "QB",
-     "proj": 294.7
-    },
-    "RB1": {
-     "name": "Kyren Williams",
-     "pos": "RB",
-     "proj": 221.3
-    },
-    "RB2": {
-     "name": "Chuba Hubbard",
-     "pos": "RB",
-     "proj": 191.1
-    },
-    "WR1": {
-     "name": "Ja'Marr Chase",
-     "pos": "WR",
-     "proj": 257.6
-    },
-    "WR2": {
-     "name": "Michael Wilson",
-     "pos": "WR",
-     "proj": 177.5
-    },
-    "TE": {
-     "name": "Mark Andrews",
-     "pos": "TE",
-     "proj": 119.3
-    },
-    "OP": {
-     "name": "Jalen Hurts",
-     "pos": "QB",
-     "proj": 240.2
-    },
-    "FLEX": {
-     "name": "Terry McLaurin",
-     "pos": "WR",
-     "proj": 150.3
-    },
-    "K": {
-     "name": "Tyler Loop",
-     "pos": "K",
-     "proj": 119.3
-    }
-   },
-   "steals": [
-    {
-     "name": "Chuba Hubbard",
-     "pos": "RB",
-     "pick": 119,
-     "round": 12,
-     "adp": 79.3,
-     "value": 39.7,
-     "proj": 191.1
-    },
-    {
-     "name": "Kyren Williams",
-     "pos": "RB",
-     "pick": 39,
-     "round": 4,
-     "adp": 30.1,
-     "value": 8.9,
-     "proj": 221.3
-    },
-    {
-     "name": "Michael Wilson",
-     "pos": "WR",
-     "pick": 102,
-     "round": 11,
-     "adp": 95.2,
-     "value": 6.8,
-     "proj": 177.5
-    }
-   ],
-   "reaches": [
-    {
-     "name": "Rico Dowdle",
-     "pos": "RB",
-     "pick": 82,
-     "round": 9,
-     "adp": 136.1,
-     "value": -54.1,
-     "proj": 79.5
-    },
-    {
-     "name": "Terry McLaurin",
-     "pos": "WR",
-     "pick": 42,
-     "round": 5,
-     "adp": 89.9,
-     "value": -47.9,
-     "proj": 150.3
-    },
-    {
-     "name": "Courtland Sutton",
-     "pos": "WR",
-     "pick": 79,
-     "round": 8,
-     "adp": 122.3,
-     "value": -43.3,
-     "proj": 107.3
-    }
-   ],
-   "posCounts": {
-    "WR": 6,
-    "QB": 2,
-    "RB": 6,
-    "TE": 2,
-    "K": 1
-   },
-   "questionable": [
-    "David Montgomery",
-    "Rico Dowdle",
-    "Josh Downs",
-    "Tyjae Spears"
-   ],
-   "rookies": [],
-   "qbs": [
-    {
-     "name": "Drake Maye",
-     "proj": 294.7,
-     "last": 429.2,
-     "round": 2
-    },
-    {
-     "name": "Jalen Hurts",
-     "proj": 240.2,
-     "last": 355.1,
-     "round": 3
-    }
-   ],
-   "firstPick": {
-    "name": "Ja'Marr Chase",
-    "pos": "WR",
-    "pick": 2
-   },
-   "kickerRound": null,
-   "history": {
-    "2025": {
-     "id": 3,
-     "name": "Ball Sniffers",
-     "w": 10,
-     "l": 4,
-     "pf": 1942.9,
-     "pa": 1691.7,
-     "seed": 1,
-     "rank": 2,
-     "acq": 7,
-     "trades": 0
-    },
-    "2024": {
-     "id": 3,
-     "name": "Ball Sniffers",
-     "w": 10,
-     "l": 4,
-     "pf": 1779.9,
-     "pa": 1628.3,
-     "seed": 2,
-     "rank": 3,
-     "acq": 13,
-     "trades": 0
-    }
-   },
-   "roster": [
-    {
-     "name": "Ja'Marr Chase",
-     "pos": "WR",
-     "team": "CIN",
-     "proj": 257.6,
-     "last": 311.6,
-     "adp": 6.4,
-     "pick": 2,
-     "round": 1,
-     "value": -4.4,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Drake Maye",
-     "pos": "QB",
-     "team": "NE",
-     "proj": 294.7,
-     "last": 429.2,
-     "adp": 61.0,
-     "pick": 19,
-     "round": 2,
-     "value": -42.0,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Jalen Hurts",
-     "pos": "QB",
-     "team": "PHI",
-     "proj": 240.2,
-     "last": 355.1,
-     "adp": 83.3,
-     "pick": 22,
-     "round": 3,
-     "value": -61.3,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Kyren Williams",
-     "pos": "RB",
-     "team": "LAR",
-     "proj": 221.3,
-     "last": 259.3,
-     "adp": 30.1,
-     "pick": 39,
-     "round": 4,
-     "value": 8.9,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Terry McLaurin",
-     "pos": "WR",
-     "team": "WSH",
-     "proj": 150.3,
-     "last": 114.2,
-     "adp": 89.9,
-     "pick": 42,
-     "round": 5,
-     "value": -47.9,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Colston Loveland",
-     "pos": "TE",
-     "team": "CHI",
-     "proj": 103.8,
-     "last": 165.1,
-     "adp": 61.0,
-     "pick": 59,
-     "round": 6,
-     "value": -2.0,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "David Montgomery",
-     "pos": "RB",
-     "team": "HOU",
-     "proj": 122.4,
-     "last": 166.8,
-     "adp": 97.6,
-     "pick": 62,
-     "round": 7,
-     "value": -35.6,
-     "injury": "DOUBTFUL",
-     "starter": false
-    },
-    {
-     "name": "Courtland Sutton",
-     "pos": "WR",
-     "team": "DEN",
-     "proj": 107.3,
-     "last": 219.7,
-     "adp": 122.3,
-     "pick": 79,
-     "round": 8,
-     "value": -43.3,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Rico Dowdle",
-     "pos": "RB",
-     "team": "PIT",
-     "proj": 79.5,
-     "last": 214.3,
-     "adp": 136.1,
-     "pick": 82,
-     "round": 9,
-     "value": -54.1,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Michael Wilson",
-     "pos": "WR",
-     "team": "ARI",
-     "proj": 177.5,
-     "last": 220.6,
-     "adp": 95.2,
-     "pick": 102,
-     "round": 11,
-     "value": 6.8,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Jacory Croskey-Merritt",
-     "pos": "RB",
-     "team": "WSH",
-     "proj": 96.5,
-     "last": 136.3,
-     "adp": 148.7,
-     "pick": 114,
-     "round": 12,
-     "value": -34.7,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Chuba Hubbard",
-     "pos": "RB",
-     "team": "CAR",
-     "proj": 191.1,
-     "last": 123.4,
-     "adp": 79.3,
-     "pick": 119,
-     "round": 12,
-     "value": 39.7,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Mark Andrews",
-     "pos": "TE",
-     "team": "BAL",
-     "proj": 119.3,
-     "last": 131.0,
-     "adp": 141.3,
-     "pick": 122,
-     "round": 13,
-     "value": -19.3,
-     "injury": "ACTIVE",
-     "starter": true
-    },
-    {
-     "name": "Josh Downs",
-     "pos": "WR",
-     "team": "IND",
-     "proj": 108.1,
-     "last": 134.4,
-     "adp": 137.8,
-     "pick": 139,
-     "round": 14,
-     "value": 1.2,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Tyjae Spears",
-     "pos": "RB",
-     "team": "TEN",
-     "proj": 100.5,
-     "last": 111.7,
-     "adp": 163.1,
-     "pick": 142,
-     "round": 15,
-     "value": -21.1,
-     "injury": "QUESTIONABLE",
-     "starter": false
-    },
-    {
-     "name": "Keenan Allen",
-     "pos": "WR",
-     "team": "IND",
-     "proj": 99.4,
-     "last": 182.7,
-     "adp": 167.7,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": false
-    },
-    {
-     "name": "Tyler Loop",
-     "pos": "K",
-     "team": "BAL",
-     "proj": 119.3,
-     "last": 140.0,
-     "adp": 154.6,
-     "pick": null,
-     "round": null,
-     "value": null,
-     "injury": "ACTIVE",
-     "starter": true
-    }
-   ],
-   "score": -0.602,
-   "modelRank": 8,
-   "modelGrade": "C",
-   "standing": 8
+   "standing": 7
   },
   {
    "id": 4,
@@ -3710,10 +1889,10 @@
    },
    "draftSlot": 8,
    "record": {
-    "w": 2,
+    "w": 3,
     "l": 3,
-    "pf": 657.7,
-    "pa": 659.0
+    "pf": 802.4,
+    "pa": 740.7
    },
    "weekly": [
     {
@@ -3750,63 +1929,70 @@
      "opp": 11,
      "oppPts": 127.0,
      "win": true
+    },
+    {
+     "wk": 6,
+     "pts": 144.7,
+     "opp": 1,
+     "oppPts": 81.7,
+     "win": true
     }
    ],
    "trans": {
-    "acquisitions": 4,
-    "drops": 3,
+    "acquisitions": 5,
+    "drops": 4,
     "trades": 1,
-    "moveToActive": 36
+    "moveToActive": 42
    },
-   "startPts": 1678.1,
-   "benchPts": 636.0,
-   "lastYearStarterPts": 2259.2,
-   "valueTotal": -100.4,
+   "startPts": 1674.5,
+   "benchPts": 588.1,
+   "lastYearStarterPts": 2346.8,
+   "valueTotal": -93.3,
    "starters": {
     "QB": {
      "name": "Trevor Lawrence",
      "pos": "QB",
-     "proj": 277.2
+     "proj": 281.9
     },
     "RB1": {
      "name": "Travis Etienne Jr.",
      "pos": "RB",
-     "proj": 123.8
+     "proj": 133.6
     },
     "RB2": {
-     "name": "Keaton Mitchell",
+     "name": "Rachaad White",
      "pos": "RB",
-     "proj": 96.5
+     "proj": 127.9
     },
     "WR1": {
      "name": "Puka Nacua",
      "pos": "WR",
-     "proj": 258.3
+     "proj": 257.5
     },
     "WR2": {
      "name": "Matthew Golden",
      "pos": "WR",
-     "proj": 177.2
+     "proj": 173.8
     },
     "TE": {
      "name": "Trey McBride",
      "pos": "TE",
-     "proj": 213.0
+     "proj": 183.4
     },
     "OP": {
      "name": "Caleb Williams",
      "pos": "QB",
-     "proj": 247.4
+     "proj": 236.1
     },
     "FLEX": {
      "name": "Tee Higgins",
      "pos": "WR",
-     "proj": 175.3
+     "proj": 171.6
     },
     "K": {
      "name": "Jason Myers",
      "pos": "K",
-     "proj": 109.4
+     "proj": 108.7
     }
    },
    "steals": [
@@ -3815,27 +2001,27 @@
      "pos": "K",
      "pick": 148,
      "round": 15,
-     "adp": 123.9,
-     "value": 24.1,
-     "proj": 109.4
+     "adp": 121.1,
+     "value": 26.9,
+     "proj": 108.7
+    },
+    {
+     "name": "Matthew Golden",
+     "pos": "WR",
+     "pick": 108,
+     "round": 11,
+     "adp": 91.6,
+     "value": 16.4,
+     "proj": 173.8
     },
     {
      "name": "Trey McBride",
      "pos": "TE",
      "pick": 33,
      "round": 4,
-     "adp": 21.1,
-     "value": 11.9,
-     "proj": 213.0
-    },
-    {
-     "name": "Cameron Dicker",
-     "pos": "K",
-     "pick": 133,
-     "round": 14,
-     "adp": 123.3,
-     "value": 9.7,
-     "proj": 97.0
+     "adp": 21.2,
+     "value": 11.8,
+     "proj": 183.4
     }
    ],
    "reaches": [
@@ -3844,27 +2030,27 @@
      "pos": "RB",
      "pick": 93,
      "round": 10,
-     "adp": 129.3,
-     "value": -36.3,
-     "proj": 87.9
+     "adp": 130.7,
+     "value": -37.7,
+     "proj": 76.5
     },
     {
      "name": "Rome Odunze",
      "pos": "WR",
      "pick": 67,
      "round": 7,
-     "adp": 100.0,
-     "value": -33.0,
-     "proj": 127.4
+     "adp": 102.7,
+     "value": -35.7,
+     "proj": 112.1
     },
     {
      "name": "Kyle Pitts Sr.",
      "pos": "TE",
      "pick": 73,
      "round": 8,
-     "adp": 105.3,
-     "value": -32.3,
-     "proj": 96.7
+     "adp": 105.0,
+     "value": -32.0,
+     "proj": 107.4
     }
    ],
    "posCounts": {
@@ -3875,26 +2061,27 @@
     "K": 2
    },
    "questionable": [
-    "Caleb Williams",
-    "Travis Etienne Jr."
+    "Travis Etienne Jr.",
+    "Matthew Golden",
+    "Brian Robinson Jr."
    ],
    "rookies": [],
    "qbs": [
     {
      "name": "Trevor Lawrence",
-     "proj": 277.2,
+     "proj": 281.9,
      "last": 396.9,
      "round": 3
     },
     {
      "name": "Caleb Williams",
-     "proj": 247.4,
+     "proj": 236.1,
      "last": 387.5,
      "round": 5
     },
     {
      "name": "Geno Smith",
-     "proj": 213.2,
+     "proj": 194.2,
      "last": 199.9,
      "round": null
     }
@@ -3936,12 +2123,12 @@
      "name": "Puka Nacua",
      "pos": "WR",
      "team": "LAR",
-     "proj": 258.3,
+     "proj": 257.5,
      "last": 373.0,
-     "adp": 6.2,
+     "adp": 6.0,
      "pick": 8,
      "round": 1,
-     "value": 1.8,
+     "value": 2.0,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -3949,12 +2136,12 @@
      "name": "Trevor Lawrence",
      "pos": "QB",
      "team": "JAX",
-     "proj": 277.2,
+     "proj": 281.9,
      "last": 396.9,
-     "adp": 99.9,
+     "adp": 97.1,
      "pick": 28,
      "round": 3,
-     "value": -71.9,
+     "value": -69.1,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -3962,12 +2149,12 @@
      "name": "Trey McBride",
      "pos": "TE",
      "team": "ARI",
-     "proj": 213.0,
+     "proj": 183.4,
      "last": 315.9,
-     "adp": 21.1,
+     "adp": 21.2,
      "pick": 33,
      "round": 4,
-     "value": 11.9,
+     "value": 11.8,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -3975,25 +2162,25 @@
      "name": "Caleb Williams",
      "pos": "QB",
      "team": "CHI",
-     "proj": 247.4,
+     "proj": 236.1,
      "last": 387.5,
-     "adp": 114.5,
+     "adp": 101.3,
      "pick": 48,
      "round": 5,
-     "value": -66.5,
-     "injury": "QUESTIONABLE",
+     "value": -53.3,
+     "injury": "ACTIVE",
      "starter": true
     },
     {
      "name": "Travis Etienne Jr.",
      "pos": "RB",
      "team": "NO",
-     "proj": 123.8,
+     "proj": 133.6,
      "last": 253.9,
-     "adp": 76.3,
+     "adp": 79.0,
      "pick": 53,
      "round": 6,
-     "value": -23.3,
+     "value": -26.0,
      "injury": "INJURY_RESERVE",
      "starter": true
     },
@@ -4001,12 +2188,12 @@
      "name": "Rome Odunze",
      "pos": "WR",
      "team": "CHI",
-     "proj": 127.4,
+     "proj": 112.1,
      "last": 146.1,
-     "adp": 100.0,
+     "adp": 102.7,
      "pick": 67,
      "round": 7,
-     "value": -33.0,
+     "value": -35.7,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4014,12 +2201,12 @@
      "name": "Tee Higgins",
      "pos": "WR",
      "team": "CIN",
-     "proj": 175.3,
+     "proj": 171.6,
      "last": 211.6,
-     "adp": 59.1,
+     "adp": 60.1,
      "pick": 68,
      "round": 7,
-     "value": 8.9,
+     "value": 7.9,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -4027,12 +2214,12 @@
      "name": "Kyle Pitts Sr.",
      "pos": "TE",
      "team": "ATL",
-     "proj": 96.7,
+     "proj": 107.4,
      "last": 210.8,
-     "adp": 105.3,
+     "adp": 105.0,
      "pick": 73,
      "round": 8,
-     "value": -32.3,
+     "value": -32.0,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4040,12 +2227,12 @@
      "name": "Kenny Gainwell",
      "pos": "RB",
      "team": "TB",
-     "proj": 87.9,
+     "proj": 76.5,
      "last": 219.3,
-     "adp": 129.3,
+     "adp": 130.7,
      "pick": 93,
      "round": 10,
-     "value": -36.3,
+     "value": -37.7,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4053,38 +2240,38 @@
      "name": "Matthew Golden",
      "pos": "WR",
      "team": "GB",
-     "proj": 177.2,
+     "proj": 173.8,
      "last": 70.0,
-     "adp": 106.1,
+     "adp": 91.6,
      "pick": 108,
      "round": 11,
-     "value": 1.9,
-     "injury": "ACTIVE",
+     "value": 16.4,
+     "injury": "QUESTIONABLE",
      "starter": true
     },
     {
      "name": "Rachaad White",
      "pos": "RB",
      "team": "WSH",
-     "proj": 95.6,
+     "proj": 127.9,
      "last": 143.0,
-     "adp": 143.6,
+     "adp": 142.2,
      "pick": 128,
      "round": 13,
-     "value": -15.6,
+     "value": -14.2,
      "injury": "ACTIVE",
-     "starter": false
+     "starter": true
     },
     {
      "name": "Cameron Dicker",
      "pos": "K",
      "team": "LAC",
-     "proj": 97.0,
+     "proj": 84.8,
      "last": 167.0,
-     "adp": 123.3,
+     "adp": 128.8,
      "pick": 133,
      "round": 14,
-     "value": 9.7,
+     "value": 4.2,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4092,12 +2279,12 @@
      "name": "Jason Myers",
      "pos": "K",
      "team": "SEA",
-     "proj": 109.4,
+     "proj": 108.7,
      "last": 195.0,
-     "adp": 123.9,
+     "adp": 121.1,
      "pick": 148,
      "round": 15,
-     "value": 24.1,
+     "value": 26.9,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -4105,12 +2292,12 @@
      "name": "Khalil Shakir",
      "pos": "WR",
      "team": "BUF",
-     "proj": 103.1,
+     "proj": 97.9,
      "last": 164.4,
-     "adp": 143.6,
+     "adp": 144.1,
      "pick": 153,
      "round": 16,
-     "value": 9.4,
+     "value": 8.9,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4118,20 +2305,20 @@
      "name": "Brian Robinson Jr.",
      "pos": "RB",
      "team": "ATL",
-     "proj": 87.4,
+     "proj": 71.7,
      "last": 62.5,
-     "adp": 155.4,
+     "adp": 162.6,
      "pick": 158,
      "round": 16,
-     "value": 2.6,
-     "injury": "ACTIVE",
+     "value": -4.6,
+     "injury": "QUESTIONABLE",
      "starter": false
     },
     {
      "name": "Geno Smith",
      "pos": "QB",
      "team": "NYJ",
-     "proj": 213.2,
+     "proj": 194.2,
      "last": 199.9,
      "adp": 169.5,
      "pick": null,
@@ -4141,12 +2328,944 @@
      "starter": false
     },
     {
-     "name": "Keaton Mitchell",
+     "name": "Kendre Miller",
      "pos": "RB",
+     "team": "NO",
+     "proj": 9.2,
+     "last": 33.3,
+     "adp": 169.7,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    }
+   ],
+   "score": 0.046,
+   "modelRank": 5,
+   "modelGrade": "B",
+   "standing": 6
+  },
+  {
+   "id": 7,
+   "name": "The Slice Masters",
+   "abbrev": "SLCE",
+   "logo": "https://upload.wikimedia.org/wikipedia/commons/9/90/Magic8ball.jpg",
+   "manager": {
+    "first": "Jackson",
+    "last": "Wille",
+    "nick": "J Will",
+    "notes": "5-9 both years (8th, 9th). Logo is a Magic 8-Ball. Drafted the Jaylen Waddle that Ryan's team is named after."
+   },
+   "draftSlot": 6,
+   "record": {
+    "w": 2,
+    "l": 4,
+    "pf": 798.0,
+    "pa": 814.6
+   },
+   "weekly": [
+    {
+     "wk": 1,
+     "pts": 143.1,
+     "opp": 1,
+     "oppPts": 150.3,
+     "win": false
+    },
+    {
+     "wk": 2,
+     "pts": 108.2,
+     "opp": 2,
+     "oppPts": 179.9,
+     "win": false
+    },
+    {
+     "wk": 3,
+     "pts": 148.1,
+     "opp": 4,
+     "oppPts": 144.3,
+     "win": true
+    },
+    {
+     "wk": 4,
+     "pts": 117.1,
+     "opp": 3,
+     "oppPts": 126.9,
+     "win": false
+    },
+    {
+     "wk": 5,
+     "pts": 184.8,
+     "opp": 6,
+     "oppPts": 114.4,
+     "win": true
+    },
+    {
+     "wk": 6,
+     "pts": 96.7,
+     "opp": 5,
+     "oppPts": 98.8,
+     "win": false
+    }
+   ],
+   "trans": {
+    "acquisitions": 8,
+    "drops": 7,
+    "trades": 0,
+    "moveToActive": 19
+   },
+   "startPts": 1611.5,
+   "benchPts": 542.8,
+   "lastYearStarterPts": 1273.9,
+   "valueTotal": -84.3,
+   "starters": {
+    "QB": {
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "proj": 280.8
+    },
+    "RB1": {
+     "name": "Jaylen Warren",
+     "pos": "RB",
+     "proj": 173.0
+    },
+    "RB2": {
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "proj": 162.8
+    },
+    "WR1": {
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "proj": 207.2
+    },
+    "WR2": {
+     "name": "Christian Watson",
+     "pos": "WR",
+     "proj": 171.5
+    },
+    "TE": {
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "proj": 192.5
+    },
+    "OP": {
+     "name": "Michael Penix Jr.",
+     "pos": "QB",
+     "proj": 203.8
+    },
+    "FLEX": {
+     "name": "Jeremiyah Love",
+     "pos": "RB",
+     "proj": 129.6
+    },
+    "K": {
+     "name": "Eddy Pineiro",
+     "pos": "K",
+     "proj": 90.3
+    }
+   },
+   "steals": [
+    {
+     "name": "Christian Watson",
+     "pos": "WR",
+     "pick": 106,
+     "round": 11,
+     "adp": 63.4,
+     "value": 42.6,
+     "proj": 171.5
+    },
+    {
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "pick": 35,
+     "round": 4,
+     "adp": 21.5,
+     "value": 13.5,
+     "proj": 192.5
+    },
+    {
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "pick": 15,
+     "round": 2,
+     "adp": 12.1,
+     "value": 2.9,
+     "proj": 207.2
+    }
+   ],
+   "reaches": [
+    {
+     "name": "Quentin Johnston",
+     "pos": "WR",
+     "pick": 115,
+     "round": 12,
+     "adp": 155.8,
+     "value": -40.8,
+     "proj": 69.0
+    },
+    {
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "pick": 135,
+     "round": 14,
+     "adp": 167.6,
+     "value": -32.6,
+     "proj": 80.2
+    },
+    {
+     "name": "Michael Pittman Jr.",
+     "pos": "WR",
+     "pick": 95,
+     "round": 10,
+     "adp": 125.9,
+     "value": -30.9,
+     "proj": 0.0
+    }
+   ],
+   "posCounts": {
+    "QB": 3,
+    "WR": 5,
+    "RB": 6,
+    "TE": 2,
+    "K": 1
+   },
+   "questionable": [
+    "Jeremiyah Love",
+    "Brock Bowers",
+    "Bucky Irving",
+    "Jaylen Waddle",
+    "Michael Pittman Jr.",
+    "Christian Watson"
+   ],
+   "rookies": [
+    "Jeremiyah Love"
+   ],
+   "qbs": [
+    {
+     "name": "Jayden Daniels",
+     "proj": 280.8,
+     "last": 128.8,
+     "round": 1
+    },
+    {
+     "name": "Michael Penix Jr.",
+     "proj": 203.8,
+     "last": 143.0,
+     "round": null
+    },
+    {
+     "name": "Malik Willis",
+     "proj": 183.3,
+     "last": 58.3,
+     "round": 13
+    }
+   ],
+   "firstPick": {
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "pick": 6
+   },
+   "kickerRound": 16,
+   "history": {
+    "2025": {
+     "id": 7,
+     "name": "The Slice Masters",
+     "w": 5,
+     "l": 9,
+     "pf": 1676.6,
+     "pa": 1884.3,
+     "seed": 9,
+     "rank": 9,
+     "acq": 11,
+     "trades": 0
+    },
+    "2024": {
+     "id": 7,
+     "name": "The Slice Masters",
+     "w": 5,
+     "l": 9,
+     "pf": 1546.2,
+     "pa": 1761.4,
+     "seed": 9,
+     "rank": 8,
+     "acq": 10,
+     "trades": 0
+    }
+   },
+   "roster": [
+    {
+     "name": "Jayden Daniels",
+     "pos": "QB",
+     "team": "WSH",
+     "proj": 280.8,
+     "last": 128.8,
+     "adp": 55.2,
+     "pick": 6,
+     "round": 1,
+     "value": -49.2,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "CeeDee Lamb",
+     "pos": "WR",
+     "team": "DAL",
+     "proj": 207.2,
+     "last": 200.9,
+     "adp": 12.1,
+     "pick": 15,
+     "round": 2,
+     "value": 2.9,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Jeremiyah Love",
+     "pos": "RB",
+     "team": "ARI",
+     "proj": 129.6,
+     "last": null,
+     "adp": 47.4,
+     "pick": 26,
+     "round": 3,
+     "value": -21.4,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Brock Bowers",
+     "pos": "TE",
+     "team": "LV",
+     "proj": 192.5,
+     "last": 176.2,
+     "adp": 21.5,
+     "pick": 35,
+     "round": 4,
+     "value": 13.5,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Cam Skattebo",
+     "pos": "RB",
+     "team": "NYG",
+     "proj": 76.1,
+     "last": 125.7,
+     "adp": 70.7,
+     "pick": 46,
+     "round": 5,
+     "value": -24.7,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Bucky Irving",
+     "pos": "RB",
+     "team": "TB",
+     "proj": 162.8,
+     "last": 136.5,
+     "adp": 58.9,
+     "pick": 55,
+     "round": 6,
+     "value": -3.9,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Jaylen Waddle",
+     "pos": "WR",
+     "team": "DEN",
+     "proj": 116.2,
+     "last": 193.8,
+     "adp": 88.3,
+     "pick": 66,
+     "round": 7,
+     "value": -22.3,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Jaylen Warren",
+     "pos": "RB",
+     "team": "PIT",
+     "proj": 173.0,
+     "last": 217.1,
+     "adp": 74.3,
+     "pick": 75,
+     "round": 8,
+     "value": 0.7,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Michael Pittman Jr.",
+     "pos": "WR",
+     "team": "PIT",
+     "proj": 0.0,
+     "last": 202.4,
+     "adp": 125.9,
+     "pick": 95,
+     "round": 10,
+     "value": -30.9,
+     "injury": "INJURY_RESERVE",
+     "starter": false
+    },
+    {
+     "name": "Christian Watson",
+     "pos": "WR",
+     "team": "GB",
+     "proj": 171.5,
+     "last": 132.4,
+     "adp": 63.4,
+     "pick": 106,
+     "round": 11,
+     "value": 42.6,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Quentin Johnston",
+     "pos": "WR",
      "team": "LAC",
-     "proj": 96.5,
-     "last": 55.4,
-     "adp": 168.4,
+     "proj": 69.0,
+     "last": 169.2,
+     "adp": 155.8,
+     "pick": 115,
+     "round": 12,
+     "value": -40.8,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Malik Willis",
+     "pos": "QB",
+     "team": "MIA",
+     "proj": 183.3,
+     "last": 58.3,
+     "adp": 168.8,
+     "pick": 125,
+     "round": 13,
+     "value": -43.8,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Tyler Allgeier",
+     "pos": "RB",
+     "team": "ARI",
+     "proj": 80.2,
+     "last": 123.0,
+     "adp": 167.6,
+     "pick": 135,
+     "round": 14,
+     "value": -32.6,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Eddy Pineiro",
+     "pos": "K",
+     "team": "SF",
+     "proj": 90.3,
+     "last": 139.0,
+     "adp": 156.1,
+     "pick": 155,
+     "round": 16,
+     "value": -1.1,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Michael Penix Jr.",
+     "pos": "QB",
+     "team": "ATL",
+     "proj": 203.8,
+     "last": 143.0,
+     "adp": 168.9,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Emanuel Wilson",
+     "pos": "RB",
+     "team": "SEA",
+     "proj": 7.7,
+     "last": 94.5,
+     "adp": 164.3,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Michael Mayer",
+     "pos": "TE",
+     "team": "LV",
+     "proj": 87.0,
+     "last": 73.8,
+     "adp": 168.8,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    }
+   ],
+   "score": -0.509,
+   "modelRank": 6,
+   "modelGrade": "C+",
+   "standing": 8
+  },
+  {
+   "id": 3,
+   "name": "Ball Sniffers",
+   "abbrev": "BALZ",
+   "logo": "https://media.tenor.com/jH4S_gEGVskAAAAM/spongebob-stink.gif",
+   "manager": {
+    "first": "Ian",
+    "last": "Sekol",
+    "nick": "EN",
+    "notes": "10-4 two years in a row, 3rd then 2nd. Never won it. Made 7 waiver moves all of 2025. Logo is a SpongeBob stink gif."
+   },
+   "draftSlot": 2,
+   "record": {
+    "w": 2,
+    "l": 4,
+    "pf": 686.8,
+    "pa": 832.1
+   },
+   "weekly": [
+    {
+     "wk": 1,
+     "pts": 101.4,
+     "opp": 10,
+     "oppPts": 82.4,
+     "win": true
+    },
+    {
+     "wk": 2,
+     "pts": 97.6,
+     "opp": 6,
+     "oppPts": 136.2,
+     "win": false
+    },
+    {
+     "wk": 3,
+     "pts": 115.5,
+     "opp": 5,
+     "oppPts": 168.1,
+     "win": false
+    },
+    {
+     "wk": 4,
+     "pts": 126.9,
+     "opp": 7,
+     "oppPts": 117.1,
+     "win": true
+    },
+    {
+     "wk": 5,
+     "pts": 145.2,
+     "opp": 8,
+     "oppPts": 150.5,
+     "win": false
+    },
+    {
+     "wk": 6,
+     "pts": 100.2,
+     "opp": 11,
+     "oppPts": 177.8,
+     "win": false
+    }
+   ],
+   "trans": {
+    "acquisitions": 6,
+    "drops": 6,
+    "trades": 0,
+    "moveToActive": 21
+   },
+   "startPts": 1626.4,
+   "benchPts": 554.8,
+   "lastYearStarterPts": 1948.1,
+   "valueTotal": -140.5,
+   "starters": {
+    "QB": {
+     "name": "Drake Maye",
+     "pos": "QB",
+     "proj": 276.3
+    },
+    "RB1": {
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "proj": 198.9
+    },
+    "RB2": {
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "proj": 177.6
+    },
+    "WR1": {
+     "name": "Ja'Marr Chase",
+     "pos": "WR",
+     "proj": 262.9
+    },
+    "WR2": {
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "proj": 143.1
+    },
+    "TE": {
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "proj": 126.7
+    },
+    "OP": {
+     "name": "J.J. McCarthy",
+     "pos": "QB",
+     "proj": 227.4
+    },
+    "FLEX": {
+     "name": "David Montgomery",
+     "pos": "RB",
+     "proj": 116.5
+    },
+    "K": {
+     "name": "Tyler Loop",
+     "pos": "K",
+     "proj": 97.0
+    }
+   },
+   "steals": [
+    {
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "pick": 119,
+     "round": 12,
+     "adp": 75.6,
+     "value": 43.4,
+     "proj": 177.6
+    },
+    {
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "pick": 39,
+     "round": 4,
+     "adp": 28.1,
+     "value": 10.9,
+     "proj": 198.9
+    },
+    {
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "pick": 59,
+     "round": 6,
+     "adp": 60.0,
+     "value": -1.0,
+     "proj": 126.7
+    }
+   ],
+   "reaches": [
+    {
+     "name": "Rico Dowdle",
+     "pos": "RB",
+     "pick": 82,
+     "round": 9,
+     "adp": 137.0,
+     "value": -55.0,
+     "proj": 74.9
+    },
+    {
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "pick": 79,
+     "round": 8,
+     "adp": 125.2,
+     "value": -46.2,
+     "proj": 92.9
+    },
+    {
+     "name": "David Montgomery",
+     "pos": "RB",
+     "pick": 62,
+     "round": 7,
+     "adp": 107.2,
+     "value": -45.2,
+     "proj": 116.5
+    }
+   ],
+   "posCounts": {
+    "WR": 5,
+    "QB": 3,
+    "RB": 5,
+    "TE": 2,
+    "K": 1
+   },
+   "questionable": [
+    "David Montgomery",
+    "Rico Dowdle",
+    "Jacory Croskey-Merritt"
+   ],
+   "rookies": [],
+   "qbs": [
+    {
+     "name": "Drake Maye",
+     "proj": 276.3,
+     "last": 429.2,
+     "round": 2
+    },
+    {
+     "name": "J.J. McCarthy",
+     "proj": 227.4,
+     "last": 132.1,
+     "round": null
+    },
+    {
+     "name": "Tanner McKee",
+     "proj": 174.7,
+     "last": 15.8,
+     "round": null
+    }
+   ],
+   "firstPick": {
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "pick": 2
+   },
+   "kickerRound": null,
+   "history": {
+    "2025": {
+     "id": 3,
+     "name": "Ball Sniffers",
+     "w": 10,
+     "l": 4,
+     "pf": 1942.9,
+     "pa": 1691.7,
+     "seed": 1,
+     "rank": 2,
+     "acq": 7,
+     "trades": 0
+    },
+    "2024": {
+     "id": 3,
+     "name": "Ball Sniffers",
+     "w": 10,
+     "l": 4,
+     "pf": 1779.9,
+     "pa": 1628.3,
+     "seed": 2,
+     "rank": 3,
+     "acq": 13,
+     "trades": 0
+    }
+   },
+   "roster": [
+    {
+     "name": "Ja'Marr Chase",
+     "pos": "WR",
+     "team": "CIN",
+     "proj": 262.9,
+     "last": 311.6,
+     "adp": 6.2,
+     "pick": 2,
+     "round": 1,
+     "value": -4.2,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Drake Maye",
+     "pos": "QB",
+     "team": "NE",
+     "proj": 276.3,
+     "last": 429.2,
+     "adp": 51.3,
+     "pick": 19,
+     "round": 2,
+     "value": -32.3,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Kyren Williams",
+     "pos": "RB",
+     "team": "LAR",
+     "proj": 198.9,
+     "last": 259.3,
+     "adp": 28.1,
+     "pick": 39,
+     "round": 4,
+     "value": 10.9,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Colston Loveland",
+     "pos": "TE",
+     "team": "CHI",
+     "proj": 126.7,
+     "last": 165.1,
+     "adp": 60.0,
+     "pick": 59,
+     "round": 6,
+     "value": -1.0,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "David Montgomery",
+     "pos": "RB",
+     "team": "HOU",
+     "proj": 116.5,
+     "last": 166.8,
+     "adp": 107.2,
+     "pick": 62,
+     "round": 7,
+     "value": -45.2,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Courtland Sutton",
+     "pos": "WR",
+     "team": "DEN",
+     "proj": 92.9,
+     "last": 219.7,
+     "adp": 125.2,
+     "pick": 79,
+     "round": 8,
+     "value": -46.2,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Rico Dowdle",
+     "pos": "RB",
+     "team": "PIT",
+     "proj": 74.9,
+     "last": 214.3,
+     "adp": 137.0,
+     "pick": 82,
+     "round": 9,
+     "value": -55.0,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Michael Wilson",
+     "pos": "WR",
+     "team": "ARI",
+     "proj": 143.1,
+     "last": 220.6,
+     "adp": 106.8,
+     "pick": 102,
+     "round": 11,
+     "value": -4.8,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Jacory Croskey-Merritt",
+     "pos": "RB",
+     "team": "WSH",
+     "proj": 0.0,
+     "last": 136.3,
+     "adp": 152.4,
+     "pick": 114,
+     "round": 12,
+     "value": -38.4,
+     "injury": "INJURY_RESERVE",
+     "starter": false
+    },
+    {
+     "name": "Chuba Hubbard",
+     "pos": "RB",
+     "team": "CAR",
+     "proj": 177.6,
+     "last": 123.4,
+     "adp": 75.6,
+     "pick": 119,
+     "round": 12,
+     "value": 43.4,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Mark Andrews",
+     "pos": "TE",
+     "team": "BAL",
+     "proj": 94.0,
+     "last": 131.0,
+     "adp": 146.1,
+     "pick": 122,
+     "round": 13,
+     "value": -24.1,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Josh Downs",
+     "pos": "WR",
+     "team": "IND",
+     "proj": 98.6,
+     "last": 134.4,
+     "adp": 141.8,
+     "pick": 139,
+     "round": 14,
+     "value": -2.8,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Keenan Allen",
+     "pos": "WR",
+     "team": "IND",
+     "proj": 94.6,
+     "last": 182.7,
+     "adp": 165.3,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Tyler Loop",
+     "pos": "K",
+     "team": "BAL",
+     "proj": 97.0,
+     "last": 140.0,
+     "adp": 155.7,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Tanner McKee",
+     "pos": "QB",
+     "team": "PHI",
+     "proj": 174.7,
+     "last": 15.8,
+     "adp": 169.7,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "J.J. McCarthy",
+     "pos": "QB",
+     "team": "NYG",
+     "proj": 227.4,
+     "last": 132.1,
+     "adp": 167.9,
      "pick": null,
      "round": null,
      "value": null,
@@ -4154,10 +3273,954 @@
      "starter": true
     }
    ],
-   "score": -0.892,
-   "modelRank": 9,
+   "score": -0.551,
+   "modelRank": 7,
+   "modelGrade": "C+",
+   "standing": 9
+  },
+  {
+   "id": 5,
+   "name": "Fair Weather Fallows",
+   "abbrev": "FWF",
+   "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/837c1e50-a675-11f1-9537-5bd778d76252",
+   "manager": {
+    "first": "Nick",
+    "last": "Fallows",
+    "nick": "Nfatboy",
+    "notes": "2024 champ. 2025: 6-8, 8th, made THREE waiver moves all season. Only guy who trades (4 in 2024)."
+   },
+   "draftSlot": 3,
+   "record": {
+    "w": 4,
+    "l": 2,
+    "pf": 732.2,
+    "pa": 787.7
+   },
+   "weekly": [
+    {
+     "wk": 1,
+     "pts": 92.4,
+     "opp": 2,
+     "oppPts": 167.5,
+     "win": false
+    },
+    {
+     "wk": 2,
+     "pts": 121.4,
+     "opp": 4,
+     "oppPts": 72.1,
+     "win": true
+    },
+    {
+     "wk": 3,
+     "pts": 168.1,
+     "opp": 3,
+     "oppPts": 115.5,
+     "win": true
+    },
+    {
+     "wk": 4,
+     "pts": 117.1,
+     "opp": 6,
+     "oppPts": 202.9,
+     "win": false
+    },
+    {
+     "wk": 5,
+     "pts": 134.4,
+     "opp": 10,
+     "oppPts": 133.0,
+     "win": true
+    },
+    {
+     "wk": 6,
+     "pts": 98.8,
+     "opp": 7,
+     "oppPts": 96.7,
+     "win": true
+    }
+   ],
+   "trans": {
+    "acquisitions": 6,
+    "drops": 5,
+    "trades": 1,
+    "moveToActive": 17
+   },
+   "startPts": 1518.9,
+   "benchPts": 687.3,
+   "lastYearStarterPts": 1403.9,
+   "valueTotal": -73.2,
+   "starters": {
+    "QB": {
+     "name": "Baker Mayfield",
+     "pos": "QB",
+     "proj": 214.6
+    },
+    "RB1": {
+     "name": "Bijan Robinson",
+     "pos": "RB",
+     "proj": 220.8
+    },
+    "RB2": {
+     "name": "Aaron Jones Sr.",
+     "pos": "RB",
+     "proj": 136.9
+    },
+    "WR1": {
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "proj": 195.5
+    },
+    "WR2": {
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "proj": 159.4
+    },
+    "TE": {
+     "name": "Sam LaPorta",
+     "pos": "TE",
+     "proj": 152.8
+    },
+    "OP": {
+     "name": "Deshaun Watson",
+     "pos": "QB",
+     "proj": 193.7
+    },
+    "FLEX": {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "proj": 154.3
+    },
+    "K": {
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "proj": 90.9
+    }
+   },
+   "steals": [
+    {
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "pick": 123,
+     "round": 13,
+     "adp": 92.1,
+     "value": 30.9,
+     "proj": 90.9
+    },
+    {
+     "name": "Travis Kelce",
+     "pos": "TE",
+     "pick": 118,
+     "round": 12,
+     "adp": 95.4,
+     "value": 22.6,
+     "proj": 123.2
+    },
+    {
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "pick": 58,
+     "round": 6,
+     "adp": 40.9,
+     "value": 17.1,
+     "proj": 159.4
+    }
+   ],
+   "reaches": [
+    {
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "pick": 83,
+     "round": 9,
+     "adp": 123.2,
+     "value": -40.2,
+     "proj": 138.0
+    },
+    {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "pick": 18,
+     "round": 2,
+     "adp": 51.1,
+     "value": -33.1,
+     "proj": 154.3
+    },
+    {
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "pick": 138,
+     "round": 14,
+     "adp": 155.6,
+     "value": -17.6,
+     "proj": 0.0
+    }
+   ],
+   "posCounts": {
+    "RB": 3,
+    "WR": 8,
+    "QB": 3,
+    "TE": 2,
+    "K": 1
+   },
+   "questionable": [
+    "Rashee Rice",
+    "Baker Mayfield",
+    "Travis Kelce",
+    "Romeo Doubs",
+    "Tyreek Hill"
+   ],
+   "rookies": [],
+   "qbs": [
+    {
+     "name": "Baker Mayfield",
+     "proj": 214.6,
+     "last": 324.2,
+     "round": 8
+    },
+    {
+     "name": "Deshaun Watson",
+     "proj": 193.7,
+     "last": 0.0,
+     "round": null
+    },
+    {
+     "name": "Bo Nix",
+     "proj": 189.0,
+     "last": 360.6,
+     "round": 5
+    }
+   ],
+   "firstPick": {
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "pick": 3
+   },
+   "kickerRound": 13,
+   "history": {
+    "2025": {
+     "id": 5,
+     "name": "Fatboy Fallows",
+     "w": 6,
+     "l": 8,
+     "pf": 1812.8,
+     "pa": 1902.3,
+     "seed": 7,
+     "rank": 8,
+     "acq": 3,
+     "trades": 1
+    },
+    "2024": {
+     "id": 5,
+     "name": "Fatboy Fallows",
+     "w": 9,
+     "l": 5,
+     "pf": 1770.0,
+     "pa": 1573.6,
+     "seed": 3,
+     "rank": 1,
+     "acq": 21,
+     "trades": 4
+    }
+   },
+   "roster": [
+    {
+     "name": "Bijan Robinson",
+     "pos": "RB",
+     "team": "ATL",
+     "proj": 220.8,
+     "last": 364.8,
+     "adp": 3.5,
+     "pick": 3,
+     "round": 1,
+     "value": -0.5,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Rashee Rice",
+     "pos": "WR",
+     "team": "KC",
+     "proj": 154.3,
+     "last": 150.1,
+     "adp": 51.1,
+     "pick": 18,
+     "round": 2,
+     "value": -33.1,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Omarion Hampton",
+     "pos": "RB",
+     "team": "LAC",
+     "proj": 90.1,
+     "last": 135.7,
+     "adp": 39.0,
+     "pick": 23,
+     "round": 3,
+     "value": -16.0,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Malik Nabers",
+     "pos": "WR",
+     "team": "NYG",
+     "proj": 195.5,
+     "last": 57.1,
+     "adp": 33.2,
+     "pick": 38,
+     "round": 4,
+     "value": 4.8,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Bo Nix",
+     "pos": "QB",
+     "team": "DEN",
+     "proj": 189.0,
+     "last": 360.6,
+     "adp": 138.6,
+     "pick": 43,
+     "round": 5,
+     "value": -95.6,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Garrett Wilson",
+     "pos": "WR",
+     "team": "NYJ",
+     "proj": 159.4,
+     "last": 99.5,
+     "adp": 40.9,
+     "pick": 58,
+     "round": 6,
+     "value": 17.1,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Sam LaPorta",
+     "pos": "TE",
+     "team": "DET",
+     "proj": 152.8,
+     "last": 106.9,
+     "adp": 73.5,
+     "pick": 63,
+     "round": 7,
+     "value": -10.5,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Baker Mayfield",
+     "pos": "QB",
+     "team": "TB",
+     "proj": 214.6,
+     "last": 324.2,
+     "adp": 167.1,
+     "pick": 78,
+     "round": 8,
+     "value": -89.1,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Stefon Diggs",
+     "pos": "WR",
+     "team": "WSH",
+     "proj": 138.0,
+     "last": 210.3,
+     "adp": 123.2,
+     "pick": 83,
+     "round": 9,
+     "value": -40.2,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Aaron Jones Sr.",
+     "pos": "RB",
+     "team": "MIN",
+     "proj": 136.9,
+     "last": 116.7,
+     "adp": 110.1,
+     "pick": 98,
+     "round": 10,
+     "value": -12.1,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "DK Metcalf",
+     "pos": "WR",
+     "team": "PIT",
+     "proj": 147.0,
+     "last": 187.2,
+     "adp": 108.3,
+     "pick": 103,
+     "round": 11,
+     "value": -5.3,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Travis Kelce",
+     "pos": "TE",
+     "team": "KC",
+     "proj": 123.2,
+     "last": 193.2,
+     "adp": 95.4,
+     "pick": 118,
+     "round": 12,
+     "value": 22.6,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Brandon Aubrey",
+     "pos": "K",
+     "team": "DAL",
+     "proj": 90.9,
+     "last": 184.6,
+     "adp": 92.1,
+     "pick": 123,
+     "round": 13,
+     "value": 30.9,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Romeo Doubs",
+     "pos": "WR",
+     "team": "NE",
+     "proj": 0.0,
+     "last": 165.4,
+     "adp": 155.6,
+     "pick": 138,
+     "round": 14,
+     "value": -17.6,
+     "injury": "INJURY_RESERVE",
+     "starter": false
+    },
+    {
+     "name": "Deshaun Watson",
+     "pos": "QB",
+     "team": "CLE",
+     "proj": 193.7,
+     "last": 0.0,
+     "adp": 169.0,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Tyreek Hill",
+     "pos": "WR",
+     "team": "FA",
+     "proj": null,
+     "last": 53.5,
+     "adp": 168.0,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "QUESTIONABLE",
+     "starter": false
+    },
+    {
+     "name": "Keon Coleman",
+     "pos": "WR",
+     "team": "BUF",
+     "proj": 69.8,
+     "last": 100.4,
+     "adp": 167.0,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    }
+   ],
+   "score": -0.766,
+   "modelRank": 8,
    "modelGrade": "C",
-   "standing": 7
+   "standing": 3
+  },
+  {
+   "id": 8,
+   "name": "Big Sham",
+   "abbrev": "PPT",
+   "logo": "https://g.espncdn.com/lm-static/ffl/images/default_logos/16.svg",
+   "manager": {
+    "first": "Parker",
+    "last": "Shama",
+    "nick": "Big Sham",
+    "notes": "4-10 last year with the fewest points in the league (1456). Username ravens69420. Took Josh Allen at 1.04."
+   },
+   "draftSlot": 4,
+   "record": {
+    "w": 3,
+    "l": 3,
+    "pf": 851.9,
+    "pa": 800.8
+   },
+   "weekly": [
+    {
+     "wk": 1,
+     "pts": 180.0,
+     "opp": 11,
+     "oppPts": 119.2,
+     "win": true
+    },
+    {
+     "wk": 2,
+     "pts": 179.3,
+     "opp": 1,
+     "oppPts": 131.4,
+     "win": true
+    },
+    {
+     "wk": 3,
+     "pts": 123.5,
+     "opp": 2,
+     "oppPts": 149.5,
+     "win": false
+    },
+    {
+     "wk": 4,
+     "pts": 101.9,
+     "opp": 4,
+     "oppPts": 135.8,
+     "win": false
+    },
+    {
+     "wk": 5,
+     "pts": 150.5,
+     "opp": 3,
+     "oppPts": 145.2,
+     "win": true
+    },
+    {
+     "wk": 6,
+     "pts": 116.7,
+     "opp": 6,
+     "oppPts": 119.7,
+     "win": false
+    }
+   ],
+   "trans": {
+    "acquisitions": 5,
+    "drops": 4,
+    "trades": 1,
+    "moveToActive": 18
+   },
+   "startPts": 1559.2,
+   "benchPts": 591.4,
+   "lastYearStarterPts": 1998.7,
+   "valueTotal": -159.6,
+   "starters": {
+    "QB": {
+     "name": "Josh Allen",
+     "pos": "QB",
+     "proj": 291.0
+    },
+    "RB1": {
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "proj": 200.5
+    },
+    "RB2": {
+     "name": "Chase Brown",
+     "pos": "RB",
+     "proj": 182.1
+    },
+    "WR1": {
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "proj": 130.6
+    },
+    "WR2": {
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "proj": 116.8
+    },
+    "TE": {
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "proj": 93.1
+    },
+    "OP": {
+     "name": "Jordan Love",
+     "pos": "QB",
+     "proj": 246.5
+    },
+    "FLEX": {
+     "name": "Javonte Williams",
+     "pos": "RB",
+     "proj": 180.4
+    },
+    "K": {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "proj": 118.2
+    }
+   },
+   "steals": [
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "pick": 144,
+     "round": 15,
+     "adp": 128.5,
+     "value": 15.5,
+     "proj": 118.2
+    },
+    {
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "pick": 157,
+     "round": 16,
+     "adp": 142.2,
+     "value": 14.8,
+     "proj": 93.1
+    },
+    {
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "pick": 64,
+     "round": 7,
+     "adp": 56.0,
+     "value": 8.0,
+     "proj": 167.8
+    }
+   ],
+   "reaches": [
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "pick": 84,
+     "round": 9,
+     "adp": 134.0,
+     "value": -50.0,
+     "proj": 27.6
+    },
+    {
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "pick": 97,
+     "round": 10,
+     "adp": 144.0,
+     "value": -47.0,
+     "proj": 65.5
+    },
+    {
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "pick": 44,
+     "round": 5,
+     "adp": 82.5,
+     "value": -38.5,
+     "proj": 116.8
+    }
+   ],
+   "posCounts": {
+    "QB": 3,
+    "RB": 5,
+    "WR": 6,
+    "TE": 2,
+    "K": 1
+   },
+   "questionable": [
+    "Ladd McConkey",
+    "Davante Adams",
+    "Jordan Love"
+   ],
+   "rookies": [
+    "Carnell Tate"
+   ],
+   "qbs": [
+    {
+     "name": "Josh Allen",
+     "proj": 291.0,
+     "last": 417.9,
+     "round": 1
+    },
+    {
+     "name": "Jordan Love",
+     "proj": 246.5,
+     "last": 288.9,
+     "round": 11
+    },
+    {
+     "name": "Daniel Jones",
+     "proj": 154.7,
+     "last": 268.4,
+     "round": 14
+    }
+   ],
+   "firstPick": {
+    "name": "Josh Allen",
+    "pos": "QB",
+    "pick": 4
+   },
+   "kickerRound": 15,
+   "history": {
+    "2025": {
+     "id": 8,
+     "name": "Big Sham",
+     "w": 4,
+     "l": 10,
+     "pf": 1456.0,
+     "pa": 1767.6,
+     "seed": 10,
+     "rank": 7,
+     "acq": 9,
+     "trades": 0
+    },
+    "2024": {
+     "id": 8,
+     "name": "Big Sham",
+     "w": 8,
+     "l": 6,
+     "pf": 1698.3,
+     "pa": 1774.2,
+     "seed": 5,
+     "rank": 5,
+     "acq": 9,
+     "trades": 1
+    }
+   },
+   "roster": [
+    {
+     "name": "Josh Allen",
+     "pos": "QB",
+     "team": "BUF",
+     "proj": 291.0,
+     "last": 417.9,
+     "adp": 13.3,
+     "pick": 4,
+     "round": 1,
+     "value": -9.3,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Derrick Henry",
+     "pos": "RB",
+     "team": "BAL",
+     "proj": 200.5,
+     "last": 273.5,
+     "adp": 15.7,
+     "pick": 17,
+     "round": 2,
+     "value": 1.3,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Chase Brown",
+     "pos": "RB",
+     "team": "CIN",
+     "proj": 182.1,
+     "last": 282.6,
+     "adp": 27.2,
+     "pick": 24,
+     "round": 3,
+     "value": -3.2,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Javonte Williams",
+     "pos": "RB",
+     "team": "DAL",
+     "proj": 180.4,
+     "last": 238.8,
+     "adp": 33.6,
+     "pick": 37,
+     "round": 4,
+     "value": 3.4,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Ladd McConkey",
+     "pos": "WR",
+     "team": "LAC",
+     "proj": 116.8,
+     "last": 180.9,
+     "adp": 82.5,
+     "pick": 44,
+     "round": 5,
+     "value": -38.5,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Davante Adams",
+     "pos": "WR",
+     "team": "LAR",
+     "proj": 0.0,
+     "last": 222.9,
+     "adp": 57.1,
+     "pick": 57,
+     "round": 6,
+     "value": -0.1,
+     "injury": "INJURY_RESERVE",
+     "starter": false
+    },
+    {
+     "name": "D'Andre Swift",
+     "pos": "RB",
+     "team": "CHI",
+     "proj": 167.8,
+     "last": 224.6,
+     "adp": 56.0,
+     "pick": 64,
+     "round": 7,
+     "value": 8.0,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Carnell Tate",
+     "pos": "WR",
+     "team": "TEN",
+     "proj": 130.6,
+     "last": null,
+     "adp": 110.5,
+     "pick": 77,
+     "round": 8,
+     "value": -33.5,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "MarShawn Lloyd",
+     "pos": "RB",
+     "team": "GB",
+     "proj": 27.6,
+     "last": 0.0,
+     "adp": 134.0,
+     "pick": 84,
+     "round": 9,
+     "value": -50.0,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Jake Ferguson",
+     "pos": "TE",
+     "team": "DAL",
+     "proj": 65.5,
+     "last": 184.1,
+     "adp": 144.0,
+     "pick": 97,
+     "round": 10,
+     "value": -47.0,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Jordan Love",
+     "pos": "QB",
+     "team": "GB",
+     "proj": 246.5,
+     "last": 288.9,
+     "adp": 136.7,
+     "pick": 104,
+     "round": 11,
+     "value": -32.7,
+     "injury": "QUESTIONABLE",
+     "starter": true
+    },
+    {
+     "name": "Daniel Jones",
+     "pos": "QB",
+     "team": "IND",
+     "proj": 154.7,
+     "last": 268.4,
+     "adp": 167.6,
+     "pick": 137,
+     "round": 14,
+     "value": -30.6,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Ka'imi Fairbairn",
+     "pos": "K",
+     "team": "HOU",
+     "proj": 118.2,
+     "last": 190.0,
+     "adp": 128.5,
+     "pick": 144,
+     "round": 15,
+     "value": 15.5,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Dalton Kincaid",
+     "pos": "TE",
+     "team": "BUF",
+     "proj": 93.1,
+     "last": 126.1,
+     "adp": 142.2,
+     "pick": 157,
+     "round": 16,
+     "value": 14.8,
+     "injury": "ACTIVE",
+     "starter": true
+    },
+    {
+     "name": "Kendrick Bourne",
+     "pos": "WR",
+     "team": "ARI",
+     "proj": 90.0,
+     "last": 92.1,
+     "adp": 169.7,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "DeMario Douglas",
+     "pos": "WR",
+     "team": "NE",
+     "proj": 113.4,
+     "last": 95.8,
+     "adp": 168.2,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    },
+    {
+     "name": "Brandin Cooks",
+     "pos": "WR",
+     "team": "SF",
+     "proj": 12.1,
+     "last": 51.9,
+     "adp": 169.7,
+     "pick": null,
+     "round": null,
+     "value": null,
+     "injury": "ACTIVE",
+     "starter": false
+    }
+   ],
+   "score": -1.01,
+   "modelRank": 9,
+   "modelGrade": "C-",
+   "standing": 5
   },
   {
    "id": 10,
@@ -4173,9 +4236,9 @@
    "draftSlot": 7,
    "record": {
     "w": 0,
-    "l": 5,
-    "pf": 578.8,
-    "pa": 698.9
+    "l": 6,
+    "pf": 728.2,
+    "pa": 874.0
    },
    "weekly": [
     {
@@ -4212,63 +4275,70 @@
      "opp": 5,
      "oppPts": 134.4,
      "win": false
+    },
+    {
+     "wk": 6,
+     "pts": 149.4,
+     "opp": 2,
+     "oppPts": 175.1,
+     "win": false
     }
    ],
    "trans": {
     "acquisitions": 11,
-    "drops": 10,
+    "drops": 11,
     "trades": 1,
-    "moveToActive": 14
+    "moveToActive": 19
    },
-   "startPts": 1651.0,
-   "benchPts": 718.9,
-   "lastYearStarterPts": 2020.4,
-   "valueTotal": -182.2,
+   "startPts": 1538.8,
+   "benchPts": 660.4,
+   "lastYearStarterPts": 1889.6,
+   "valueTotal": -182.9,
    "starters": {
     "QB": {
      "name": "Bryce Young",
      "pos": "QB",
-     "proj": 294.7
+     "proj": 277.0
     },
     "RB1": {
      "name": "Jonathan Taylor",
      "pos": "RB",
-     "proj": 208.8
+     "proj": 193.9
     },
     "RB2": {
-     "name": "Saquon Barkley",
+     "name": "Ollie Gordon II",
      "pos": "RB",
-     "proj": 159.8
+     "proj": 148.5
     },
     "WR1": {
      "name": "A.J. Brown",
      "pos": "WR",
-     "proj": 174.7
+     "proj": 172.0
     },
     "WR2": {
-     "name": "George Pickens",
+     "name": "Emeka Egbuka",
      "pos": "WR",
-     "proj": 163.1
+     "proj": 156.5
     },
     "TE": {
      "name": "Dallas Goedert",
      "pos": "TE",
-     "proj": 126.4
+     "proj": 114.0
     },
     "OP": {
-     "name": "Jacoby Brissett",
+     "name": "Tyler Shough",
      "pos": "QB",
-     "proj": 251.1
+     "proj": 223.2
     },
     "FLEX": {
-     "name": "Ollie Gordon II",
-     "pos": "RB",
-     "proj": 151.7
+     "name": "George Pickens",
+     "pos": "WR",
+     "proj": 147.2
     },
     "K": {
-     "name": "Harrison Butker",
+     "name": "Jake Bates",
      "pos": "K",
-     "proj": 120.7
+     "proj": 106.5
     }
    },
    "steals": [
@@ -4277,27 +4347,27 @@
      "pos": "WR",
      "pick": 147,
      "round": 15,
-     "adp": 128.9,
-     "value": 18.1,
-     "proj": 104.9
+     "adp": 130.1,
+     "value": 16.9,
+     "proj": 100.4
     },
     {
-     "name": "Juwan Johnson",
-     "pos": "TE",
-     "pick": 140,
-     "round": 14,
-     "adp": 135.7,
-     "value": 4.3,
-     "proj": 117.0
+     "name": "Jonathan Taylor",
+     "pos": "RB",
+     "pick": 7,
+     "round": 1,
+     "adp": 9.4,
+     "value": -2.4,
+     "proj": 193.9
     },
     {
-     "name": "Harrison Butker",
-     "pos": "K",
-     "pick": 152,
-     "round": 16,
-     "adp": 150.9,
-     "value": 1.1,
-     "proj": 120.7
+     "name": "George Pickens",
+     "pos": "WR",
+     "pick": 34,
+     "round": 4,
+     "adp": 37.4,
+     "value": -3.4,
+     "proj": 147.2
     }
    ],
    "reaches": [
@@ -4306,39 +4376,39 @@
      "pos": "RB",
      "pick": 54,
      "round": 6,
-     "adp": 115.9,
-     "value": -61.9,
-     "proj": 113.1
+     "adp": 116.8,
+     "value": -62.8,
+     "proj": 109.7
     },
     {
      "name": "Dallas Goedert",
      "pos": "TE",
      "pick": 94,
      "round": 10,
-     "adp": 130.1,
-     "value": -36.1,
-     "proj": 126.4
+     "adp": 129.8,
+     "value": -35.8,
+     "proj": 114.0
     },
     {
      "name": "Blake Corum",
      "pos": "RB",
      "pick": 120,
      "round": 12,
-     "adp": 145.5,
-     "value": -25.5,
-     "proj": 94.4
+     "adp": 143.4,
+     "value": -23.4,
+     "proj": 100.7
     }
    ],
    "posCounts": {
     "RB": 6,
     "WR": 4,
     "TE": 2,
-    "K": 2,
+    "K": 1,
     "QB": 3
    },
    "questionable": [
     "Saquon Barkley",
-    "A.J. Brown",
+    "Emeka Egbuka",
     "Jadarian Price"
    ],
    "rookies": [
@@ -4347,21 +4417,21 @@
    "qbs": [
     {
      "name": "Bryce Young",
-     "proj": 294.7,
+     "proj": 277.0,
      "last": 256.6,
      "round": null
     },
     {
-     "name": "Jacoby Brissett",
-     "proj": 251.1,
-     "last": 277.8,
-     "round": null
-    },
-    {
      "name": "Tyler Shough",
-     "proj": 244.6,
+     "proj": 223.2,
      "last": 180.6,
      "round": 9
+    },
+    {
+     "name": "Jacoby Brissett",
+     "proj": 204.0,
+     "last": 277.8,
+     "round": null
     }
    ],
    "firstPick": {
@@ -4401,12 +4471,12 @@
      "name": "Jonathan Taylor",
      "pos": "RB",
      "team": "IND",
-     "proj": 208.8,
+     "proj": 193.9,
      "last": 360.3,
-     "adp": 8.6,
+     "adp": 9.4,
      "pick": 7,
      "round": 1,
-     "value": -1.6,
+     "value": -2.4,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -4414,38 +4484,38 @@
      "name": "Saquon Barkley",
      "pos": "RB",
      "team": "PHI",
-     "proj": 159.8,
+     "proj": 145.6,
      "last": 230.3,
-     "adp": 34.1,
+     "adp": 36.8,
      "pick": 14,
      "round": 2,
-     "value": -20.1,
+     "value": -22.8,
      "injury": "QUESTIONABLE",
-     "starter": true
+     "starter": false
     },
     {
      "name": "A.J. Brown",
      "pos": "WR",
      "team": "NE",
-     "proj": 174.7,
+     "proj": 172.0,
      "last": 220.3,
-     "adp": 46.9,
+     "adp": 41.2,
      "pick": 27,
      "round": 3,
-     "value": -19.9,
-     "injury": "INJURY_RESERVE",
+     "value": -14.2,
+     "injury": "ACTIVE",
      "starter": true
     },
     {
      "name": "George Pickens",
      "pos": "WR",
      "team": "DAL",
-     "proj": 163.1,
+     "proj": 147.2,
      "last": 291.9,
-     "adp": 33.8,
+     "adp": 37.4,
      "pick": 34,
      "round": 4,
-     "value": 0.2,
+     "value": -3.4,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -4453,25 +4523,25 @@
      "name": "Emeka Egbuka",
      "pos": "WR",
      "team": "TB",
-     "proj": 139.3,
+     "proj": 156.5,
      "last": 195.7,
-     "adp": 64.3,
+     "adp": 65.1,
      "pick": 47,
      "round": 5,
-     "value": -17.3,
-     "injury": "ACTIVE",
-     "starter": false
+     "value": -18.1,
+     "injury": "QUESTIONABLE",
+     "starter": true
     },
     {
      "name": "Jadarian Price",
      "pos": "RB",
      "team": "SEA",
-     "proj": 113.1,
+     "proj": 109.7,
      "last": null,
-     "adp": 115.9,
+     "adp": 116.8,
      "pick": 54,
      "round": 6,
-     "value": -61.9,
+     "value": -62.8,
      "injury": "INJURY_RESERVE",
      "starter": false
     },
@@ -4479,25 +4549,25 @@
      "name": "Tyler Shough",
      "pos": "QB",
      "team": "NO",
-     "proj": 244.6,
+     "proj": 223.2,
      "last": 180.6,
-     "adp": 131.6,
+     "adp": 144.7,
      "pick": 88,
      "round": 9,
-     "value": -43.6,
+     "value": -56.7,
      "injury": "ACTIVE",
-     "starter": false
+     "starter": true
     },
     {
      "name": "Dallas Goedert",
      "pos": "TE",
      "team": "PHI",
-     "proj": 126.4,
+     "proj": 114.0,
      "last": 185.1,
-     "adp": 130.1,
+     "adp": 129.8,
      "pick": 94,
      "round": 10,
-     "value": -36.1,
+     "value": -35.8,
      "injury": "ACTIVE",
      "starter": true
     },
@@ -4505,12 +4575,12 @@
      "name": "Blake Corum",
      "pos": "RB",
      "team": "LAR",
-     "proj": 94.4,
+     "proj": 100.7,
      "last": 122.2,
-     "adp": 145.5,
+     "adp": 143.4,
      "pick": 120,
      "round": 12,
-     "value": -25.5,
+     "value": -23.4,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4518,12 +4588,12 @@
      "name": "Juwan Johnson",
      "pos": "TE",
      "team": "NO",
-     "proj": 117.0,
+     "proj": 96.8,
      "last": 175.9,
-     "adp": 135.7,
+     "adp": 147.1,
      "pick": 140,
      "round": 14,
-     "value": 4.3,
+     "value": -7.1,
      "injury": "ACTIVE",
      "starter": false
     },
@@ -4531,48 +4601,35 @@
      "name": "Wan'Dale Robinson",
      "pos": "WR",
      "team": "TEN",
-     "proj": 104.9,
+     "proj": 100.4,
      "last": 217.9,
-     "adp": 128.9,
+     "adp": 130.1,
      "pick": 147,
      "round": 15,
-     "value": 18.1,
+     "value": 16.9,
      "injury": "ACTIVE",
      "starter": false
-    },
-    {
-     "name": "Harrison Butker",
-     "pos": "K",
-     "team": "KC",
-     "proj": 120.7,
-     "last": 144.0,
-     "adp": 150.9,
-     "pick": 152,
-     "round": 16,
-     "value": 1.1,
-     "injury": "ACTIVE",
-     "starter": true
     },
     {
      "name": "Jake Bates",
      "pos": "K",
      "team": "DET",
-     "proj": 106.3,
+     "proj": 106.5,
      "last": 145.0,
-     "adp": 159.4,
+     "adp": 161.1,
      "pick": 154,
      "round": 16,
-     "value": -5.4,
+     "value": -7.1,
      "injury": "ACTIVE",
-     "starter": false
+     "starter": true
     },
     {
      "name": "Bryce Young",
      "pos": "QB",
      "team": "CAR",
-     "proj": 294.7,
+     "proj": 277.0,
      "last": 256.6,
-     "adp": 118.8,
+     "adp": 122.7,
      "pick": null,
      "round": null,
      "value": null,
@@ -4583,9 +4640,9 @@
      "name": "Ollie Gordon II",
      "pos": "RB",
      "team": "MIA",
-     "proj": 151.7,
+     "proj": 148.5,
      "last": 54.1,
-     "adp": 144.4,
+     "adp": 137.7,
      "pick": null,
      "round": null,
      "value": null,
@@ -4596,9 +4653,9 @@
      "name": "Braelon Allen",
      "pos": "RB",
      "team": "NYJ",
-     "proj": 88.9,
+     "proj": 79.5,
      "last": 13.3,
-     "adp": 162.6,
+     "adp": 158.2,
      "pick": null,
      "round": null,
      "value": null,
@@ -4609,17 +4666,17 @@
      "name": "Jacoby Brissett",
      "pos": "QB",
      "team": "ARI",
-     "proj": 251.1,
+     "proj": 204.0,
      "last": 277.8,
-     "adp": 167.3,
+     "adp": 168.5,
      "pick": null,
      "round": null,
      "value": null,
      "injury": "ACTIVE",
-     "starter": true
+     "starter": false
     }
    ],
-   "score": -1.221,
+   "score": -1.051,
    "modelRank": 10,
    "modelGrade": "C-",
    "standing": 10
@@ -4628,49 +4685,25 @@
  "leagueFacts": {
   "biggestSteals": [
    {
-    "name": "Brandon Aubrey",
-    "pos": "K",
-    "pick": 123,
-    "round": 13,
-    "adp": 82.6,
-    "value": 40.4,
-    "proj": 123.9,
-    "last": 184.6,
-    "teamId": 5,
-    "teamName": "Fair Weather Fallows"
-   },
-   {
     "name": "Chuba Hubbard",
     "pos": "RB",
     "pick": 119,
     "round": 12,
-    "adp": 79.3,
-    "value": 39.7,
-    "proj": 191.1,
+    "adp": 75.6,
+    "value": 43.4,
+    "proj": 177.6,
     "last": 123.4,
     "teamId": 3,
     "teamName": "Ball Sniffers"
-   },
-   {
-    "name": "George Kittle",
-    "pos": "TE",
-    "pick": 92,
-    "round": 10,
-    "adp": 56.0,
-    "value": 36.0,
-    "proj": 165.3,
-    "last": 161.5,
-    "teamId": 11,
-    "teamName": "She's Jay-len on my Waddle"
    },
    {
     "name": "Christian Watson",
     "pos": "WR",
     "pick": 106,
     "round": 11,
-    "adp": 72.6,
-    "value": 33.4,
-    "proj": 184.7,
+    "adp": 63.4,
+    "value": 42.6,
+    "proj": 171.5,
     "last": 132.4,
     "teamId": 7,
     "teamName": "The Slice Masters"
@@ -4680,33 +4713,57 @@
     "pos": "K",
     "pick": 159,
     "round": 16,
-    "adp": 127.5,
-    "value": 31.5,
-    "proj": 134.8,
+    "adp": 119.4,
+    "value": 39.6,
+    "proj": 134.0,
     "last": 158.0,
     "teamId": 6,
     "teamName": "Your meat too much"
    },
    {
-    "name": "Cam Little",
-    "pos": "K",
-    "pick": 151,
-    "round": 16,
-    "adp": 126.6,
-    "value": 24.4,
-    "proj": 117.1,
-    "last": 162.0,
+    "name": "George Kittle",
+    "pos": "TE",
+    "pick": 92,
+    "round": 10,
+    "adp": 56.6,
+    "value": 35.4,
+    "proj": 166.2,
+    "last": 161.5,
     "teamId": 11,
     "teamName": "She's Jay-len on my Waddle"
+   },
+   {
+    "name": "Isaiah Likely",
+    "pos": "TE",
+    "pick": 111,
+    "round": 12,
+    "adp": 76.0,
+    "value": 35.0,
+    "proj": 157.0,
+    "last": 59.7,
+    "teamId": 2,
+    "teamName": "Soppin Wet"
+   },
+   {
+    "name": "Brandon Aubrey",
+    "pos": "K",
+    "pick": 123,
+    "round": 13,
+    "adp": 92.1,
+    "value": 30.9,
+    "proj": 90.9,
+    "last": 184.6,
+    "teamId": 5,
+    "teamName": "Fair Weather Fallows"
    },
    {
     "name": "Jason Myers",
     "pos": "K",
     "pick": 148,
     "round": 15,
-    "adp": 123.9,
-    "value": 24.1,
-    "proj": 109.4,
+    "adp": 121.1,
+    "value": 26.9,
+    "proj": 108.7,
     "last": 195.0,
     "teamId": 4,
     "teamName": "Coke Drinkers"
@@ -4716,9 +4773,9 @@
     "pos": "TE",
     "pick": 118,
     "round": 12,
-    "adp": 94.7,
-    "value": 23.3,
-    "proj": 142.2,
+    "adp": 95.4,
+    "value": 22.6,
+    "proj": 123.2,
     "last": 193.2,
     "teamId": 5,
     "teamName": "Fair Weather Fallows"
@@ -4730,9 +4787,9 @@
     "pos": "RB",
     "pick": 54,
     "round": 6,
-    "adp": 115.9,
-    "value": -61.9,
-    "proj": 113.1,
+    "adp": 116.8,
+    "value": -62.8,
+    "proj": 109.7,
     "last": null,
     "teamId": 10,
     "teamName": "Mutant Ninja Tweakers"
@@ -4742,9 +4799,9 @@
     "pos": "RB",
     "pick": 82,
     "round": 9,
-    "adp": 136.1,
-    "value": -54.1,
-    "proj": 79.5,
+    "adp": 137.0,
+    "value": -55.0,
+    "proj": 74.9,
     "last": 214.3,
     "teamId": 3,
     "teamName": "Ball Sniffers"
@@ -4754,33 +4811,21 @@
     "pos": "RB",
     "pick": 84,
     "round": 9,
-    "adp": 134.6,
-    "value": -50.6,
-    "proj": 74.3,
+    "adp": 134.0,
+    "value": -50.0,
+    "proj": 27.6,
     "last": 0.0,
     "teamId": 8,
     "teamName": "Big Sham"
-   },
-   {
-    "name": "Terry McLaurin",
-    "pos": "WR",
-    "pick": 42,
-    "round": 5,
-    "adp": 89.9,
-    "value": -47.9,
-    "proj": 150.3,
-    "last": 114.2,
-    "teamId": 3,
-    "teamName": "Ball Sniffers"
    },
    {
     "name": "Jake Ferguson",
     "pos": "TE",
     "pick": 97,
     "round": 10,
-    "adp": 142.9,
-    "value": -45.9,
-    "proj": 81.9,
+    "adp": 144.0,
+    "value": -47.0,
+    "proj": 65.5,
     "last": 184.1,
     "teamId": 8,
     "teamName": "Big Sham"
@@ -4790,36 +4835,48 @@
     "pos": "WR",
     "pick": 79,
     "round": 8,
-    "adp": 122.3,
-    "value": -43.3,
-    "proj": 107.3,
+    "adp": 125.2,
+    "value": -46.2,
+    "proj": 92.9,
     "last": 219.7,
     "teamId": 3,
     "teamName": "Ball Sniffers"
    },
    {
-    "name": "Stefon Diggs",
-    "pos": "WR",
-    "pick": 83,
-    "round": 9,
-    "adp": 126.1,
-    "value": -43.1,
-    "proj": 127.7,
-    "last": 210.3,
-    "teamId": 5,
-    "teamName": "Fair Weather Fallows"
+    "name": "David Montgomery",
+    "pos": "RB",
+    "pick": 62,
+    "round": 7,
+    "adp": 107.2,
+    "value": -45.2,
+    "proj": 116.5,
+    "last": 166.8,
+    "teamId": 3,
+    "teamName": "Ball Sniffers"
    },
    {
-    "name": "Marvin Harrison Jr.",
-    "pos": "WR",
-    "pick": 76,
+    "name": "TreVeyon Henderson",
+    "pos": "RB",
+    "pick": 72,
     "round": 8,
-    "adp": 116.5,
-    "value": -40.5,
-    "proj": 41.5,
-    "last": 127.8,
-    "teamId": 6,
-    "teamName": "Your meat too much"
+    "adp": 115.2,
+    "value": -43.2,
+    "proj": 78.6,
+    "last": 204.2,
+    "teamId": 11,
+    "teamName": "She's Jay-len on my Waddle"
+   },
+   {
+    "name": "Quentin Johnston",
+    "pos": "WR",
+    "pick": 115,
+    "round": 12,
+    "adp": 155.8,
+    "value": -40.8,
+    "proj": 69.0,
+    "last": 169.2,
+    "teamId": 7,
+    "teamName": "The Slice Masters"
    }
   ],
   "qbReaches": [
@@ -4828,9 +4885,9 @@
     "pos": "QB",
     "pick": 43,
     "round": 5,
-    "adp": 135.3,
-    "value": -92.3,
-    "proj": 219.4,
+    "adp": 138.6,
+    "value": -95.6,
+    "proj": 189.0,
     "last": 360.6,
     "teamId": 5,
     "teamName": "Fair Weather Fallows"
@@ -4840,9 +4897,9 @@
     "pos": "QB",
     "pick": 78,
     "round": 8,
-    "adp": 167.0,
-    "value": -89.0,
-    "proj": 178.0,
+    "adp": 167.1,
+    "value": -89.1,
+    "proj": 214.6,
     "last": 324.2,
     "teamId": 5,
     "teamName": "Fair Weather Fallows"
@@ -4852,22 +4909,10 @@
     "pos": "QB",
     "pick": 32,
     "round": 4,
-    "adp": 115.5,
-    "value": -83.5,
-    "proj": 258.1,
+    "adp": 113.8,
+    "value": -81.8,
+    "proj": 235.2,
     "last": 460.1,
-    "teamId": 11,
-    "teamName": "She's Jay-len on my Waddle"
-   },
-   {
-    "name": "Justin Herbert",
-    "pos": "QB",
-    "pick": 49,
-    "round": 5,
-    "adp": 127.1,
-    "value": -78.1,
-    "proj": 169.8,
-    "last": 340.8,
     "teamId": 11,
     "teamName": "She's Jay-len on my Waddle"
    },
@@ -4876,12 +4921,24 @@
     "pos": "QB",
     "pick": 74,
     "round": 8,
-    "adp": 151.8,
-    "value": -77.8,
-    "proj": 244.8,
+    "adp": 149.8,
+    "value": -75.8,
+    "proj": 240.6,
     "last": 90.3,
     "teamId": 6,
     "teamName": "Your meat too much"
+   },
+   {
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pick": 28,
+    "round": 3,
+    "adp": 97.1,
+    "value": -69.1,
+    "proj": 281.9,
+    "last": 396.9,
+    "teamId": 4,
+    "teamName": "Coke Drinkers"
    }
   ],
   "qbSteals": [
@@ -4890,9 +4947,9 @@
     "pos": "QB",
     "pick": 150,
     "round": 15,
-    "adp": 159.4,
-    "value": -9.4,
-    "proj": 228.4,
+    "adp": 153.2,
+    "value": -3.2,
+    "proj": 247.0,
     "last": 254.9,
     "teamId": 2,
     "teamName": "Soppin Wet"
@@ -4902,9 +4959,9 @@
     "pos": "QB",
     "pick": 4,
     "round": 1,
-    "adp": 13.8,
-    "value": -9.8,
-    "proj": 323.1,
+    "adp": 13.3,
+    "value": -9.3,
+    "proj": 291.0,
     "last": 417.9,
     "teamId": 8,
     "teamName": "Big Sham"
@@ -4914,9 +4971,9 @@
     "pos": "QB",
     "pick": 45,
     "round": 5,
-    "adp": 58.7,
-    "value": -13.7,
-    "proj": 298.3,
+    "adp": 56.7,
+    "value": -11.7,
+    "proj": 274.7,
     "last": 210.7,
     "teamId": 6,
     "teamName": "Your meat too much"
@@ -4926,9 +4983,9 @@
     "pos": "QB",
     "pick": 51,
     "round": 6,
-    "adp": 76.2,
-    "value": -25.2,
-    "proj": 298.6,
+    "adp": 80.0,
+    "value": -29.0,
+    "proj": 260.6,
     "last": 336.2,
     "teamId": 2,
     "teamName": "Soppin Wet"
@@ -4938,9 +4995,9 @@
     "pos": "QB",
     "pick": 137,
     "round": 14,
-    "adp": 167.8,
-    "value": -30.8,
-    "proj": 175.3,
+    "adp": 167.6,
+    "value": -30.6,
+    "proj": 154.7,
     "last": 268.4,
     "teamId": 8,
     "teamName": "Big Sham"
@@ -4969,172 +5026,172 @@
   },
   "qbCounts": {
    "1": 3,
-   "6": 3,
    "2": 3,
-   "11": 4,
-   "8": 3,
-   "7": 3,
-   "5": 3,
-   "3": 2,
+   "6": 3,
+   "11": 3,
    "4": 3,
+   "7": 3,
+   "3": 3,
+   "5": 3,
+   "8": 3,
    "10": 3
   },
   "kCounts": {
    "1": 1,
-   "6": 1,
    "2": 1,
+   "6": 1,
    "11": 1,
-   "8": 1,
-   "7": 1,
-   "5": 1,
-   "3": 1,
    "4": 2,
-   "10": 2
+   "7": 1,
+   "3": 1,
+   "5": 1,
+   "8": 1,
+   "10": 1
   },
   "rookieCounts": {
-   "1": 1,
-   "6": 1,
+   "1": 0,
    "2": 2,
+   "6": 1,
    "11": 0,
-   "8": 1,
-   "7": 1,
-   "5": 0,
-   "3": 0,
    "4": 0,
+   "7": 1,
+   "3": 0,
+   "5": 0,
+   "8": 1,
    "10": 1
   },
   "hurtCounts": {
-   "1": 3,
-   "6": 6,
-   "2": 3,
-   "11": 3,
-   "8": 2,
-   "7": 5,
-   "5": 4,
-   "3": 4,
-   "4": 2,
+   "1": 5,
+   "2": 2,
+   "6": 8,
+   "11": 0,
+   "4": 3,
+   "7": 6,
+   "3": 3,
+   "5": 5,
+   "8": 3,
    "10": 3
   },
   "topProjPlayers": [
-   {
-    "name": "Josh Allen",
-    "pos": "QB",
-    "pick": 4,
-    "round": 1,
-    "adp": 13.8,
-    "value": -9.8,
-    "proj": 323.1,
-    "last": 417.9,
-    "teamId": 8,
-    "teamName": "Big Sham"
-   },
    {
     "name": "Jahmyr Gibbs",
     "pos": "RB",
     "pick": 1,
     "round": 1,
-    "adp": 1.7,
-    "value": -0.7,
-    "proj": 312.1,
+    "adp": 1.8,
+    "value": -0.8,
+    "proj": 310.3,
     "last": 364.9,
     "teamId": 1,
     "teamName": "Pots and Pans"
-   },
-   {
-    "name": "Jayden Daniels",
-    "pos": "QB",
-    "pick": 6,
-    "round": 1,
-    "adp": 56.5,
-    "value": -50.5,
-    "proj": 303.8,
-    "last": 128.8,
-    "teamId": 7,
-    "teamName": "The Slice Masters"
    },
    {
     "name": "Joe Burrow",
     "pos": "QB",
     "pick": 20,
     "round": 2,
-    "adp": 54.9,
-    "value": -34.9,
-    "proj": 303.7,
+    "adp": 56.7,
+    "value": -36.7,
+    "proj": 309.1,
     "last": 173.1,
     "teamId": 1,
     "teamName": "Pots and Pans"
    },
    {
-    "name": "Patrick Mahomes",
+    "name": "Josh Allen",
     "pos": "QB",
-    "pick": 51,
-    "round": 6,
-    "adp": 76.2,
-    "value": -25.2,
-    "proj": 298.6,
-    "last": 336.2,
-    "teamId": 2,
-    "teamName": "Soppin Wet"
-   },
-   {
-    "name": "Brock Purdy",
-    "pos": "QB",
-    "pick": 45,
-    "round": 5,
-    "adp": 58.7,
-    "value": -13.7,
-    "proj": 298.3,
-    "last": 210.7,
-    "teamId": 6,
-    "teamName": "Your meat too much"
-   },
-   {
-    "name": "Drake Maye",
-    "pos": "QB",
-    "pick": 19,
-    "round": 2,
-    "adp": 61.0,
-    "value": -42.0,
-    "proj": 294.7,
-    "last": 429.2,
-    "teamId": 3,
-    "teamName": "Ball Sniffers"
-   },
-   {
-    "name": "Bryce Young",
-    "pos": "QB",
-    "pick": null,
-    "round": null,
-    "adp": 118.8,
-    "value": null,
-    "proj": 294.7,
-    "last": 256.6,
-    "teamId": 10,
-    "teamName": "Mutant Ninja Tweakers"
+    "pick": 4,
+    "round": 1,
+    "adp": 13.3,
+    "value": -9.3,
+    "proj": 291.0,
+    "last": 417.9,
+    "teamId": 8,
+    "teamName": "Big Sham"
    },
    {
     "name": "Jared Goff",
     "pos": "QB",
     "pick": 50,
     "round": 5,
-    "adp": 116.1,
-    "value": -66.1,
-    "proj": 287.1,
+    "adp": 111.0,
+    "value": -61.0,
+    "proj": 285.3,
     "last": 376.5,
     "teamId": 2,
     "teamName": "Soppin Wet"
    },
    {
-    "name": "Kenneth Walker III",
-    "pos": "RB",
-    "pick": 25,
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "pick": 28,
     "round": 3,
-    "adp": 12.9,
-    "value": 12.1,
-    "proj": 283.9,
-    "last": 191.9,
+    "adp": 97.1,
+    "value": -69.1,
+    "proj": 281.9,
+    "last": 396.9,
+    "teamId": 4,
+    "teamName": "Coke Drinkers"
+   },
+   {
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "pick": 6,
+    "round": 1,
+    "adp": 55.2,
+    "value": -49.2,
+    "proj": 280.8,
+    "last": 128.8,
+    "teamId": 7,
+    "teamName": "The Slice Masters"
+   },
+   {
+    "name": "Bryce Young",
+    "pos": "QB",
+    "pick": null,
+    "round": null,
+    "adp": 122.7,
+    "value": null,
+    "proj": 277.0,
+    "last": 256.6,
+    "teamId": 10,
+    "teamName": "Mutant Ninja Tweakers"
+   },
+   {
+    "name": "Drake Maye",
+    "pos": "QB",
+    "pick": 19,
+    "round": 2,
+    "adp": 51.3,
+    "value": -32.3,
+    "proj": 276.3,
+    "last": 429.2,
+    "teamId": 3,
+    "teamName": "Ball Sniffers"
+   },
+   {
+    "name": "Brock Purdy",
+    "pos": "QB",
+    "pick": 45,
+    "round": 5,
+    "adp": 56.7,
+    "value": -11.7,
+    "proj": 274.7,
+    "last": 210.7,
     "teamId": 6,
     "teamName": "Your meat too much"
+   },
+   {
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "pick": 2,
+    "round": 1,
+    "adp": 6.2,
+    "value": -4.2,
+    "proj": 262.9,
+    "last": 311.6,
+    "teamId": 3,
+    "teamName": "Ball Sniffers"
    }
   ],
   "lastYearTop": [
@@ -5143,9 +5200,9 @@
     "pos": "QB",
     "pick": 32,
     "round": 4,
-    "adp": 115.5,
-    "value": -83.5,
-    "proj": 258.1,
+    "adp": 113.8,
+    "value": -81.8,
+    "proj": 235.2,
     "last": 460.1,
     "teamId": 11,
     "teamName": "She's Jay-len on my Waddle"
@@ -5155,9 +5212,9 @@
     "pos": "QB",
     "pick": 19,
     "round": 2,
-    "adp": 61.0,
-    "value": -42.0,
-    "proj": 294.7,
+    "adp": 51.3,
+    "value": -32.3,
+    "proj": 276.3,
     "last": 429.2,
     "teamId": 3,
     "teamName": "Ball Sniffers"
@@ -5167,9 +5224,9 @@
     "pos": "QB",
     "pick": 4,
     "round": 1,
-    "adp": 13.8,
-    "value": -9.8,
-    "proj": 323.1,
+    "adp": 13.3,
+    "value": -9.3,
+    "proj": 291.0,
     "last": 417.9,
     "teamId": 8,
     "teamName": "Big Sham"
@@ -5179,9 +5236,9 @@
     "pos": "RB",
     "pick": 9,
     "round": 1,
-    "adp": 9.4,
-    "value": -0.4,
-    "proj": 243.5,
+    "adp": 9.1,
+    "value": -0.1,
+    "proj": 221.3,
     "last": 416.6,
     "teamId": 11,
     "teamName": "She's Jay-len on my Waddle"
@@ -5191,9 +5248,9 @@
     "pos": "QB",
     "pick": 28,
     "round": 3,
-    "adp": 99.9,
-    "value": -71.9,
-    "proj": 277.2,
+    "adp": 97.1,
+    "value": -69.1,
+    "proj": 281.9,
     "last": 396.9,
     "teamId": 4,
     "teamName": "Coke Drinkers"
@@ -5203,9 +5260,9 @@
     "pos": "QB",
     "pick": 40,
     "round": 4,
-    "adp": 87.6,
-    "value": -47.6,
-    "proj": 257.7,
+    "adp": 96.1,
+    "value": -56.1,
+    "proj": 227.0,
     "last": 387.7,
     "teamId": 1,
     "teamName": "Pots and Pans"
@@ -5215,9 +5272,9 @@
     "pos": "QB",
     "pick": 48,
     "round": 5,
-    "adp": 114.5,
-    "value": -66.5,
-    "proj": 247.4,
+    "adp": 101.3,
+    "value": -53.3,
+    "proj": 236.1,
     "last": 387.5,
     "teamId": 4,
     "teamName": "Coke Drinkers"
@@ -5227,9 +5284,9 @@
     "pos": "QB",
     "pick": 50,
     "round": 5,
-    "adp": 116.1,
-    "value": -66.1,
-    "proj": 287.1,
+    "adp": 111.0,
+    "value": -61.0,
+    "proj": 285.3,
     "last": 376.5,
     "teamId": 2,
     "teamName": "Soppin Wet"
@@ -5239,9 +5296,9 @@
     "pos": "WR",
     "pick": 8,
     "round": 1,
-    "adp": 6.2,
-    "value": 1.8,
-    "proj": 258.3,
+    "adp": 6.0,
+    "value": 2.0,
+    "proj": 257.5,
     "last": 373.0,
     "teamId": 4,
     "teamName": "Coke Drinkers"
@@ -5251,24 +5308,24 @@
     "pos": "RB",
     "pick": 1,
     "round": 1,
-    "adp": 1.7,
-    "value": -0.7,
-    "proj": 312.1,
+    "adp": 1.8,
+    "value": -0.8,
+    "proj": 310.3,
     "last": 364.9,
     "teamId": 1,
     "teamName": "Pots and Pans"
    }
   ],
-  "avgStart": 1776.1,
-  "currentWeek": 6,
-  "weeksPlayed": 5,
+  "avgStart": 1649.8,
+  "currentWeek": 7,
+  "weeksPlayed": 6,
   "topScorerLastWeek": [
-   2,
-   189.8
+   11,
+   177.8
   ],
   "lowScorerLastWeek": [
-   6,
-   114.4
+   1,
+   81.7
   ],
   "topScorerSeason": 2
  },
@@ -5477,41 +5534,41 @@
    "wk": 6,
    "home": 10,
    "away": 2,
-   "hs": 0.0,
-   "as": 0.0,
-   "winner": "UNDECIDED"
+   "hs": 149.4,
+   "as": 175.1,
+   "winner": "AWAY"
   },
   {
    "wk": 6,
    "home": 7,
    "away": 5,
-   "hs": 0.0,
-   "as": 0.0,
-   "winner": "UNDECIDED"
+   "hs": 96.7,
+   "as": 98.8,
+   "winner": "AWAY"
   },
   {
    "wk": 6,
    "home": 4,
    "away": 1,
-   "hs": 0.0,
-   "as": 0.0,
-   "winner": "UNDECIDED"
+   "hs": 144.7,
+   "as": 81.7,
+   "winner": "HOME"
   },
   {
    "wk": 6,
    "home": 8,
    "away": 6,
-   "hs": 0.0,
-   "as": 0.0,
-   "winner": "UNDECIDED"
+   "hs": 116.7,
+   "as": 119.7,
+   "winner": "AWAY"
   },
   {
    "wk": 6,
    "home": 3,
    "away": 11,
-   "hs": 0.0,
-   "as": 0.0,
-   "winner": "UNDECIDED"
+   "hs": 100.2,
+   "as": 177.8,
+   "winner": "AWAY"
   },
   {
    "wk": 7,

@@ -1,0 +1,94 @@
+{
+  "id": "2026-06-week-6",
+  "season": "2026",
+  "week": 6,
+  "title": "Week 6",
+  "subtitle": "Blind Resume",
+  "date": "Oct 21, 2026",
+  "theme": "costco",
+  "coverTitle": "We Bring the Boom",
+  "kicker": "Blind resume edition",
+  "ogDesc": "Blind resume week. 10 resumes, no names. Boom or doom them, then see how you stack up against the commish.",
+  "rain": ["🍗", "🍪", "🌭", "💥"],
+  "blindResume": true,
+  "blind": {
+    "introTitle": "Boom or doom?",
+    "introBody": "10 teams. No names, no players, just the resume. Pick the better one each time, about 20 picks, and it builds your power rankings. Then we pull the masks off and you see how you stack up against the commish."
+  },
+  "benchSlide": true,
+  "benchHeadline": "Left on the table",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {"rank": 1, "name": "Kenneth Walker III", "yds": 665},
+      {"rank": 2, "name": "Bijan Robinson", "yds": 641, "me": true},
+      {"rank": 3, "name": "James Cook", "yds": 627},
+      {"rank": 4, "name": "Derrick Henry", "yds": 534}
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "rankings": [
+    {
+      "rank": 10, "team": 10,
+      "good": "149.4 is his best score of the season. Tyler Shough had 34.2 and Bryce Young had 26.6.",
+      "bad": "0-6, the only team without a win. Juwan Johnson put up 0.0 at TE with Goedert's 12.1 on the bench.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 9, "team": 3,
+      "good": "Drake Maye had 31.4.",
+      "bad": "Lost by 77.6. Loveland (18.5) and Keenan Allen (16.2) sat on the bench while McLaurin (3.7) and Mark Andrews (1.4) started. Fewest points in the league and the worst all-play record (14-40).",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 8, "team": 7,
+      "good": "Jayden Daniels had 28.0.",
+      "bad": "Lost by 2.1 with Penix's 29.1 on the bench while Jameis started at OP and put up 5.4. Left 35.0 on the bench, the most in the league this week.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 7, "team": 5,
+      "good": "4-2. Won by 2.1. Nabers had 28.5.",
+      "bad": "8th in points. All-play record is 18-36, so this record is a gift. Bijan had 7.3 and Deshaun Watson started at OP.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 6, "team": 8,
+      "good": "Josh Allen (24.1) and D'Andre Swift (23.0) showed up.",
+      "bad": "Lost by 3.0 with Carnell Tate's 19.0 on the bench. Would have won. Henry had 3.0 and Ladd had 2.7.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 5, "team": 4,
+      "good": "Three straight wins. Trevor Lawrence put up 36.1, the best game by any starter this week, and they beat Tony by 63.",
+      "bad": "Kyle Pitts scored 23.0 on the bench. Geno sat with 13.9 too. The RBs are still Rachaad White and Kendre Miller.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 4, "team": 1,
+      "good": "3rd in points and a 33-21 all-play record. Gibbs and Burrow were on bye.",
+      "bad": "81.7, the lowest score of the week, and two straight losses. Has left 133 points on the bench this season.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 3, "team": 11,
+      "good": "177.8, the high score of the week, with a perfect lineup (0.0 left on the bench). 2nd in points with the 2nd best all-play record (34-20).",
+      "bad": "Still 2-4. Only one team has had more points scored against them.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 2, "team": 6,
+      "good": "5-1. Won by 3.0 with Jefferson and Kyler on bye and Lamar at 0.0. Kenneth Walker had 27.9 and is now the NFL rushing leader.",
+      "bad": "The Browns starters combined for 4.4 (Denzel Boston 2.5, Fannin 1.9). 29-25 all-play, so this team is lucky.",
+      "takeaway": "", "media": []
+    },
+    {
+      "rank": 1, "team": 2,
+      "good": "6-0, the only unbeaten team. Most points by 106 and a 47-7 all-play record. Germie Bernard came off waivers and put up 25.7.",
+      "bad": "Mahomes had 10.6 at OP. That's the whole list.",
+      "takeaway": "", "media": []
+    }
+  ],
+  "outro": "Week 7 rankings drop Tuesday."
+}
