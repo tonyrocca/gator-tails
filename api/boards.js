@@ -21,7 +21,7 @@ export default async function handler(req, res) {
       if (!EDITION.test(e) || !TEAMS.has(who) || !/^[A-J]{10}$/.test(order) || new Set(order).size !== 10)
         return res.status(400).json({ error: 'bad board' });
       const at = Date.now();
-      await put(`boards/${e}/${who}-${order}-${at}.json`, JSON.stringify({ e, who, order, at }), { access: 'public', addRandomSuffix: true, contentType: 'application/json', token });
+      await put(`boards/${e}/${who}-${order}-${at}.json`, JSON.stringify({ e, who, order, at }), { access: 'private', addRandomSuffix: true, contentType: 'application/json', token });
       return res.status(200).json({ ok: true });
     }
     const e = String(req.query.e || '');
