@@ -4,3 +4,4 @@ site/.vercel/
 .DS_Store
 __pycache__/
 .vercel
+node_modules/
