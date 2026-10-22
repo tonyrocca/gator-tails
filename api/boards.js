@@ -1,5 +1,6 @@
 // League board for blind resume weeks: everyone's submitted rankings, readable by everyone.
-// Storage: Vercel Blob (BLOB_READ_WRITE_TOKEN comes from connecting a Blob store to this project).
+// Storage: Vercel Blob. Connecting the store gives the project BLOB_STORE_ID (auth via Vercel OIDC, handled by the SDK)
+// or, on older setups, a *_READ_WRITE_TOKEN.
 // Each board is its own blob; who/order/time live in the pathname so a single list() call reads them all.
 import { put, list } from '@vercel/blob';
 
@@ -12,7 +13,7 @@ const tokenName = () => ('BLOB_READ_WRITE_TOKEN' in process.env ? 'BLOB_READ_WRI
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   const tn = tokenName(), token = tn && process.env[tn];
-  if (!token) return res.status(503).json({ error: 'league board not set up', v: 3, env: process.env.VERCEL_ENV, names: Object.keys(process.env).filter(k => /BLOB|STORE|STORAGE|READ_WRITE/i.test(k)) });
+  if (!token && !process.env.BLOB_STORE_ID) return res.status(503).json({ error: 'league board not set up' });
   try {
     if (req.method === 'POST') {
       const b = typeof req.body === 'string' ? JSON.parse(req.body || '{}') : req.body || {};
