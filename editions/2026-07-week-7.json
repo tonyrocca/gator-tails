@@ -55,7 +55,8 @@
         "l": "Record"
       },
       "line": "Would have won four of them with the right lineup.",
-      "media": []
+      "media": [],
+      "reveal": "tomb"
     },
     {
       "team": 3,
@@ -67,7 +68,8 @@
         "l": "Points"
       },
       "line": "Drake Maye is the whole offense.",
-      "media": []
+      "media": [],
+      "reveal": "web"
     },
     {
       "team": 7,
@@ -79,7 +81,8 @@
         "l": "Bench pts left"
       },
       "line": "Most points left on the bench. Three losses he should have won.",
-      "media": []
+      "media": [],
+      "reveal": "pumpkin"
     },
     {
       "team": 8,
@@ -91,7 +94,8 @@
         "l": "Javonte vs him"
       },
       "line": "Traded Javonte to Nick. Javonte dropped 21.5 on him that same week.",
-      "media": []
+      "media": [],
+      "reveal": "bats"
     },
     {
       "team": 11,
@@ -103,7 +107,8 @@
         "l": "Record"
       },
       "line": "2nd most points in the league. Losing record.",
-      "media": []
+      "media": [],
+      "reveal": "ghost"
     },
     {
       "team": 1,
@@ -115,7 +120,8 @@
         "l": "Pts against"
       },
       "line": "3rd most points in the league and still only 4-3.",
-      "media": []
+      "media": [],
+      "reveal": "coffin"
     },
     {
       "team": 6,
@@ -127,7 +133,8 @@
         "l": "In games within 10"
       },
       "line": "5-2 with the 6th most points. Pure miracles.",
-      "media": []
+      "media": [],
+      "reveal": "bats"
     },
     {
       "team": 5,
@@ -139,7 +146,8 @@
         "l": "Record"
       },
       "line": "8th in points, but nobody scores on him. 2nd fewest points against.",
-      "media": []
+      "media": [],
+      "reveal": "tomb"
     },
     {
       "team": 4,
@@ -151,7 +159,8 @@
         "l": "Straight wins"
       },
       "line": "Including D's first loss of the season.",
-      "media": []
+      "media": [],
+      "reveal": "ghost"
     },
     {
       "team": 2,
@@ -163,7 +172,8 @@
         "l": "Record"
       },
       "line": "Most points by 76. JSN has 195.6 by himself.",
-      "media": []
+      "media": [],
+      "reveal": "pumpkin"
     }
   ],
   "rankings": [],
