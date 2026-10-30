@@ -16,14 +16,16 @@ prev = {}
 hist_eds = eds[: (idx + 1)] if idx is not None else [Path(ed_path)]
 history, labels = {}, []
 for p_ in hist_eds:
-    J = json.load(open(p_)); labels.append(J.get("title", J["id"]).replace("Week ", "W"))
+    J = json.load(open(p_))
+    if not J.get("rankings"): continue
+    labels.append(J.get("title", J["id"]).replace("Week ", "W"))
     for r in J.get("rankings", []): history.setdefault(str(r["team"]), []).append(r["rank"])
 if idx:
-    P = json.load(open(eds[idx - 1]))
+    P = next((json.load(open(q)) for q in reversed(eds[:idx]) if json.load(open(q)).get("rankings")), {})
     prev = {str(r["team"]): r["rank"] for r in P.get("rankings", [])}
 C = json.load(open(ROOT / f"data/computed_{E['season']}.json"))
 tpl = open(ROOT / "scripts/template.html").read()
-title = f"{C['league']} {E['title']} Power Rankings {E['season']}"
+title = E.get("pageTitle") or f"{C['league']} {E['title']} Power Rankings {E['season']}"
 board = sorted(E["rankings"], key=lambda r: r["rank"])
 teams = {t["id"]: t for t in C["teams"]}
 KEEP = ("id", "name", "abbrev", "logo", "manager", "draftSlot", "startPts", "benchPts", "starters", "steals", "reaches", "modelRank", "modelGrade", "history", "qbs", "kickerRound", "record", "weekly", "standing")
@@ -97,12 +99,48 @@ if E.get("blindResume") and wk:
             {"l": "Streak", "d": ("W" if ws[-1]["win"] else "L") + str(stk), "v": stk if ws[-1]["win"] else -stk},
             {"l": "Bench pts left", "d": f"{left[tid]:.0f}", "v": -round(left[tid], 1)}]})
 C["leagueFacts"]["seasonHigh"] = season_high
+# playoff preview (edition.playoffPreview): seeds if the season ended today + simulated odds for the rest of the season
+playoffs = None
+if E.get("playoffPreview") and wk:
+    import numpy as np
+    LG = json.load(open(ROOT / f"data/league_{E['season']}.json"))
+    nreg, nplay = LG["sched"]["weeks"], LG["sched"]["playoffTeams"]
+    ids = [t["id"] for t in C["teams"]]
+    seedkey = lambda w, pf: sorted(ids, key=lambda i: (-w[i], -pf[i]))  # ESPN: wins, then total points scored
+    W0 = {t["id"]: t["record"]["w"] for t in C["teams"]}; PF0 = {t["id"]: t["record"]["pf"] for t in C["teams"]}
+    now = seedkey(W0, PF0)
+    pts = {t["id"]: np.array([w["pts"] for w in t["weekly"]]) for t in C["teams"]}
+    lg_mean = float(np.mean(np.concatenate(list(pts.values())))); lg_var = float(np.mean([v.var(ddof=1) for v in pts.values()]))
+    mu = {i: .65 * pts[i].mean() + .35 * lg_mean for i in ids}; sd = {i: float(np.sqrt(.5 * pts[i].var(ddof=1) + .5 * lg_var)) for i in ids}
+    rest = [g for g in LG["schedule"] if wk < g["wk"] <= nreg]
+    N = 20000; rng = np.random.default_rng(sum(map(ord, E["id"])))
+    col = {i: k for k, i in enumerate(ids)}
+    M = np.array([mu[i] for i in ids]); S = np.array([sd[i] for i in ids])
+    wins = np.tile(np.array([W0[i] for i in ids], float), (N, 1)); pf = np.tile(np.array([PF0[i] for i in ids]), (N, 1))
+    for g in rest:
+        h, a = col[g["home"]], col[g["away"]]
+        sh = rng.normal(M[h], S[h], N); sa = rng.normal(M[a], S[a], N)
+        wins[:, h] += sh > sa; wins[:, a] += sa > sh; pf[:, h] += sh; pf[:, a] += sa
+    order = np.lexsort((-pf, -wins), axis=1)  # per sim: team columns best to worst
+    made = np.zeros(len(ids)); bye = np.zeros(len(ids)); top = np.zeros(len(ids)); champ = np.zeros(len(ids)); last = np.zeros(len(ids)); wsum = wins.sum(0)
+    game = lambda x, y: x if rng.normal(M[x], S[x]) > rng.normal(M[y], S[y]) else y
+    for n in range(N):
+        sd_ = order[n][:nplay]
+        made[sd_] += 1; bye[sd_[:2]] += 1; top[sd_[0]] += 1; last[order[n][-1]] += 1
+        alive = [sd_[0], sd_[1], game(sd_[2], sd_[5]), game(sd_[3], sd_[4])]  # round 1: 3v6, 4v5
+        rank = {c: k for k, c in enumerate(sd_)}
+        a1, a2 = sorted(alive[2:], key=lambda c: rank[c])  # reseed: 1 plays the lowest seed left
+        f1, f2 = game(sd_[0], a2), game(sd_[1], a1)
+        champ[game(f1, f2)] += 1
+    pc = lambda x: round(float(x) / N * 100, 1)
+    playoffs = {"weeksLeft": nreg - wk, "regWeeks": nreg, "teams": nplay, "sims": N,
+                "seeds": now, "odds": {str(i): {"playoff": pc(made[col[i]]), "bye": pc(bye[col[i]]), "top": pc(top[col[i]]), "title": pc(champ[col[i]]), "last": pc(last[col[i]]), "projW": round(float(wsum[col[i]]) / N, 1)} for i in ids}}
 slim = {"season": C["season"], "league": C["league"], "teams": [{k: t[k] for k in KEEP if k in t} for t in C["teams"]], "leagueFacts": C["leagueFacts"]}
-desc = E.get("ogDesc") or (" · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …")
+desc = E.get("ogDesc") or ("" if not board else " · ".join(f"{r['rank']}. {teams[r['team']]['name']}" for r in board[:3]) + " …")
 html = (tpl.replace("__TITLE__", title).replace("__DESC__", desc)
         .replace("__DATA__", json.dumps({"edition": E, "computed": slim, "prev": prev, "history": history, "historyLabels": labels, "site": site_url,
     "archive": [{"id": json.load(open(p_))["id"], "title": json.load(open(p_)).get("title"), "date": json.load(open(p_)).get("date")} for p_ in eds],
-    "latest": json.load(open(eds[-1]))["id"], "resumes": resumes}, separators=(",", ":")).replace("</", "<\\/")))
+    "latest": json.load(open(eds[-1]))["id"], "resumes": resumes, "playoffs": playoffs}, separators=(",", ":")).replace("</", "<\\/")))
 out = ROOT / "site"; out.mkdir(exist_ok=True)
 if E["id"] == json.load(open(eds[-1]))["id"]: (out / "index.html").write_text(html)
 (out / E["id"]).mkdir(exist_ok=True); (out / E["id"] / "index.html").write_text(html)
