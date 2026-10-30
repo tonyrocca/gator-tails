@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#f7f5ef">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Creepster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Creepster&family=Graduate&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f7f5ef;--card:#ffffff;--ink:#1d3b2a;--mute:#6b7a70;--line:#e4e0d4;--green:#2f8f4e;--green2:#cfe9b0;--orange:#f4a640;--red:#d9534f;--gold:#e0b100;--font:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
@@ -213,7 +213,7 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 #phone.theme-halloween .slide.cover::before{content:"🦇";position:absolute;top:22%;left:12%;font-size:26px;animation:bat 7s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(255,122,26,.6))}
 #phone.theme-halloween .slide.cover::after{content:"🦇";position:absolute;top:10%;left:58%;font-size:18px;animation:bat 9s ease-in-out -3s infinite;opacity:.85}
 @keyframes bat{0%,100%{transform:translate(0,0) rotate(-6deg)}25%{transform:translate(40px,-14px) rotate(8deg)}50%{transform:translate(90px,10px) rotate(-4deg)}75%{transform:translate(30px,24px) rotate(6deg)}}
-#phone.theme-halloween .slide.cover .ct{font-family:"Creepster",var(--font);font-weight:400;font-size:58px;line-height:.95;letter-spacing:.02em;color:#ff8a1f;text-shadow:0 0 18px rgba(255,122,26,.55),0 3px 0 #3b0a00}
+#phone.theme-halloween .slide.cover .ct{font-family:"Graduate",var(--font);font-weight:400;font-size:44px;line-height:1.02;letter-spacing:0;text-transform:uppercase;color:#ff8a1f;text-shadow:0 0 18px rgba(255,122,26,.55),0 3px 0 #3b0a00}
 #phone.theme-halloween .slide.cover .cs{color:#f4ecff;margin-top:8px}
 #phone.theme-halloween .slide.cover .eyebrow{color:#c9b6ff}
 #phone.theme-halloween .slide.cover .mute{color:#c9b6ff}
@@ -258,6 +258,41 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 .od.out .od-p{color:var(--mute)}.od.in .od-p{color:var(--orange)}
 .legend{display:flex;gap:12px;font-size:11px;color:var(--mute);margin-top:8px;align-items:center}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:-1px}
 .book{margin-top:12px;background:#0b0812;border:1px solid var(--line);border-radius:16px;overflow:hidden}.bk{display:flex;align-items:center;gap:10px;padding:11px 14px;border-bottom:1px solid var(--line)}.bk:last-child{border-bottom:0}.bk:nth-child(odd){background:rgba(255,255,255,.025)}.bk-n{flex:1;min-width:0;font-weight:800;font-size:15px}.bk-n small{display:block;font-weight:600;font-size:11px;color:var(--mute);margin-top:2px}.bk-l{flex:none;min-width:92px;text-align:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:800;font-size:17px;padding:8px 10px;border-radius:10px;background:#152a1c;color:#5dff9a;border:1px solid #1f5a33;letter-spacing:.02em}.bk.off .bk-l{background:#2a1418;color:#ff6b81;border-color:#5a1f2a;font-size:11px;letter-spacing:.08em}.fav{display:inline-block;margin-right:6px;font-size:9.5px;font-weight:900;letter-spacing:.1em;background:var(--gold);color:#1a0b00;padding:2px 6px;border-radius:5px;vertical-align:2px}
+.aw{justify-content:flex-start;align-items:stretch;overflow-x:hidden}
+.aw-beams{position:absolute;inset:-20% -40% auto;height:120%;pointer-events:none;z-index:0;opacity:0;background:conic-gradient(from 180deg at 50% 0%,transparent 0deg,rgba(255,210,120,.0) 150deg,rgba(255,210,120,.22) 165deg,transparent 172deg,transparent 188deg,rgba(255,210,120,.22) 195deg,rgba(255,210,120,0) 210deg,transparent 360deg);transform-origin:50% 0;transition:opacity .4s}
+.aw.open .aw-beams{opacity:1;animation:sweep 3.5s ease-in-out infinite alternate}
+@keyframes sweep{from{transform:rotate(-14deg)}to{transform:rotate(14deg)}}
+.aw>*:not(.aw-beams){position:relative;z-index:1}
+.aw-t{font-family:"Graduate",var(--font);font-size:31px;line-height:1.08;text-align:center;margin-top:10px;color:var(--orange);text-transform:uppercase;text-shadow:0 0 18px rgba(255,122,26,.35)}
+.aw-for{font-size:14px;font-weight:700;text-align:center;margin-top:8px;color:var(--mute)}
+.flip{margin:26px auto 0;width:min(100%,300px);aspect-ratio:.82;perspective:1200px}
+.flip-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .9s cubic-bezier(.2,.9,.25,1.15)}
+.aw.drum .flip-in{animation:drum .55s linear}
+@keyframes drum{10%,50%,90%{transform:translateX(-5px) rotate(-1.5deg)}30%,70%{transform:translateX(5px) rotate(1.5deg)}}
+.aw.open .flip-in{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:22px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.face.front{background:radial-gradient(120% 80% at 50% 20%,#7a3b16,#3d1a08 70%);border:3px solid #a8582a;box-shadow:0 18px 40px rgba(0,0,0,.5),inset 0 0 0 6px rgba(0,0,0,.15)}
+.laces{position:absolute;top:18%;width:14px;height:44%;border-left:3px solid rgba(255,255,255,.85);border-right:3px solid rgba(255,255,255,.85);opacity:.55}
+.laces::before{content:"";position:absolute;left:-14px;right:-14px;top:0;bottom:0;background:repeating-linear-gradient(transparent 0 12px,rgba(255,255,255,.9) 12px 16px)}
+.q{font-family:"Graduate",var(--font);font-size:110px;color:#fff;line-height:1;text-shadow:0 6px 0 rgba(0,0,0,.35);position:relative;animation:qpulse 1.6s ease-in-out infinite}
+@keyframes qpulse{50%{transform:scale(1.07)}}
+.face .hint{position:absolute;bottom:16px;font-size:12px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:#ffd9b8}
+.face.back{transform:rotateY(180deg);background:linear-gradient(160deg,#2a1d40,#170f26);border:2px solid var(--gold);box-shadow:0 0 0 1px rgba(255,176,46,.3),0 0 50px rgba(255,176,46,.35);padding:16px;text-align:center}
+.w-ico{font-size:46px;line-height:1}
+.w-n{font-size:27px;font-weight:900;line-height:1.05;margin-top:10px;color:#fff}
+.w-o{font-size:14px;color:var(--mute);font-style:italic;margin-top:4px}
+.w-stat{font-family:"Graduate",var(--font);font-size:54px;line-height:1;margin-top:14px;color:var(--gold);text-shadow:0 0 22px rgba(255,176,46,.5)}
+.w-sl{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:4px}
+.aw.open .w-n{animation:slam .5s cubic-bezier(.2,.9,.3,1.4) .55s both}.aw.open .w-stat{animation:slam .5s cubic-bezier(.2,.9,.3,1.4) .75s both}
+@keyframes slam{from{transform:scale(2.2);opacity:0}to{transform:none;opacity:1}}
+.w-line{text-align:center;font-size:16px;font-weight:600;line-height:1.4;margin:18px auto 0;max-width:320px;visibility:hidden}
+.aw.open .w-line{visibility:visible;animation:up .5s ease 1s both}
+.band{position:absolute;left:0;right:0;height:12px;background:rgba(255,255,255,.85)}.band.t{top:14%}.band.b{bottom:14%}
+.w-media{display:none}.aw.open .w-media{display:block;animation:pop .5s ease-out 1.1s both}
+.flash{position:absolute;inset:0;z-index:44;pointer-events:none;background:radial-gradient(circle at 50% 45%,rgba(255,240,210,.95),rgba(255,200,120,.25) 40%,transparent 70%);animation:flash2 .6s ease-out forwards}
+@keyframes flash2{from{opacity:1}to{opacity:0}}
+.cf{position:absolute;top:-20px;z-index:45;pointer-events:none;width:8px;height:14px;border-radius:2px;animation:cf 1.8s cubic-bezier(.2,.6,.4,1) forwards}
+@keyframes cf{to{transform:translate(var(--dx),110vh) rotate(var(--r));opacity:.9}}
 .gb{margin-top:10px;display:flex;flex-direction:column;gap:6px}
 .gb>div{border-radius:12px;padding:9px 12px;font-size:13.5px;line-height:1.4}
 .gb b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
@@ -349,11 +384,10 @@ const AFTER_DY = slides.length;
 if (week && D.computed.leagueFacts.topScorerLastWeek) { const [wid, wpts] = D.computed.leagueFacts.topScorerLastWeek; const wt = T[wid]; const bills = Array.from({length: 26}, (_, k) => `<i style="left:${(k * 37) % 100}%;animation-delay:${(k * .37) % 4}s;animation-duration:${3 + (k % 5) * .6}s;font-size:${22 + (k % 4) * 8}px">${(E.rain || ['💵','💸','🤑','💰'])[k % (E.rain || [1,2,3,4]).length]}</i>`).join('');
   slides.push(`<div class="slide win"><div class="rain">${bills}</div><div class="grow"></div><div class="eyebrow" style="color:var(--gold)">High score of the week · $50</div><h1 style="margin-top:8px;font-size:40px">${esc(wt.name)}</h1><div style="font-size:16px;color:var(--mute);font-style:italic;margin-top:4px">${esc(wt.manager.nick)}</div><div class="bigpts">${Number(wpts).toFixed(1)}</div><div class="flagbig">${esc(E.topScorerLabel)}</div>${Number(wpts) >= (D.computed.leagueFacts.seasonHigh || 1e9) ? `<div class="sh">Highest score of the season</div>` : ''}<div class="grow"></div></div>`); }
 const AFTER_WIN = slides.length;
-// award show (edition.awards): program slide + one envelope per award (tap to open)
-if ((E.awards || []).length) { const AI = E.awardsIntro || {}, n = E.awards.length;
-  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · Midseason awards</div><h1 class="ghoul" style="font-size:46px;line-height:.95;margin-top:6px">${esc(AI.title || 'Midseason Awards')}</h1><p class="thoughts">${esc(AI.body || '')}</p><div class="eyebrow" style="margin-top:12px">Tonight's program</div><div class="prog">${E.awards.map((a, k) => `<div><b>${k + 1}</b><span>${esc(a.award)}</span><i>${esc(a.for)}</i></div>`).join('')}</div></div>`);
-  E.awards.forEach((a, k) => { const t = T[a.team];
-    slides.push(`<div class="slide aw"><div class="eyebrow">${esc(AI.title || 'Awards')} · ${k + 1} of ${n}</div><h1 class="aw-t">${esc(a.award)}</h1><div class="aw-for">${esc(a.for)}</div><div class="env"><div class="seal">${esc(a.icon || '🎃')}</div><div class="hint">Tap to open</div></div><div class="aw-win"><div class="aw-ico">${esc(a.icon || '🏆')}</div><div class="aw-goes">And the award goes to…</div><div class="aw-n">${esc(t.name)}${t.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div><div class="aw-o">${esc(t.manager.nick)} · ${esc(t.manager.first)} ${esc(t.manager.last)} · ${rec(t)}</div>${(a.stats || []).length ? `<div class="stats">${a.stats.map(x => `<div class="st"><div class="v">${esc(x.v)}</div><div class="l">${esc(x.l)}</div></div>`).join('')}</div>` : ''}<p class="thoughts" style="font-size:15px">${esc(a.text)}</p>${(a.media || []).map(media).join('')}</div></div>`); }); }
+// award show (edition.awards): one card per award, tap to flip and reveal the winner
+if ((E.awards || []).length) { const n = E.awards.length, AT = E.awardsTitle || 'Midseason Awards';
+  E.awards.forEach((a, k) => { const t = T[a.team], st = a.stat || (a.stats || [])[0];
+    slides.push(`<div class="slide aw"><div class="aw-beams"></div><div class="eyebrow" style="text-align:center">${esc(AT)} · ${k + 1} of ${n}</div><div class="aw-t">${esc(a.award)}</div><div class="aw-for">${esc(a.for)}</div><div class="flip"><div class="flip-in"><div class="face front"><div class="band t"></div><div class="band b"></div><div class="q">?</div><div class="hint">Tap to reveal</div></div><div class="face back"><div class="w-ico">${esc(a.icon || '🏆')}</div><div class="w-n">${esc(t.name)}</div><div class="w-o">${esc(t.manager.nick)}${t.id === topId ? ` <span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div>${st ? `<div class="w-stat">${esc(st.v)}</div><div class="w-sl">${esc(st.l)}</div>` : ''}</div></div></div><p class="w-line">${esc(a.line || a.text || '')}</p>${(a.media || []).length ? `<div class="w-media">${a.media.map(media).join('')}</div>` : ''}</div>`); }); }
 // 2 charts
 const byPts = [...D.computed.teams].sort((a, b) => (week ? b.record.pf - a.record.pf : b.startPts - a.startPts));
 const maxP = Math.max(...byPts.map(t => week ? t.record.pf : t.startPts));
@@ -450,7 +484,7 @@ if (E.playoffPreview && PO) {
   const od = Object.entries(PO.odds).map(([id, o]) => ({id: +id, ...o})).sort((a, b) => b.playoff - a.playoff || b.title - a.title);
   const pct = v => v >= 99.95 ? '>99.9%' : v > 0 && v < 0.1 ? '<0.1%' : v.toFixed(1).replace(/\.0$/, '') + '%';
   const worst = [...od].sort((a, b) => b.last - a.last).slice(0, 2);
-  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · Playoff odds</div><h2 style="margin-top:4px">Who's making it</h2><p class="mute" style="font-size:13px;margin-top:4px">The last ${PO.weeksLeft} weeks simulated ${PO.sims.toLocaleString()} times off each team's scoring this season.</p><div class="legend"><span><i style="background:var(--orange)"></i>Makes playoffs</span><span><i style="background:var(--gold)"></i>Gets a bye</span></div><div class="odds">${od.map((o, k) => `<div class="od ${k < PO.teams ? 'in' : 'out'}"><div class="od-top"><div class="od-n">${esc(nk(o.id))}${o.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}<small>${tm(o.id).record.w}-${tm(o.id).record.l}</small></div><div class="od-p">${pct(o.playoff)}</div></div><div class="od-trk"><div class="od-fil" style="width:${o.playoff}%"></div><div class="od-bye" style="width:${o.bye}%"></div></div><div class="od-s"><span>Bye <b>${pct(o.bye)}</b></span><span>Title <b>${pct(o.title)}</b></span><span>Proj <b>${o.projW.toFixed(1)}</b> wins</span></div></div>`).join('')}</div><div class="fact" style="margin-top:10px"><b>Odds of finishing dead last:</b> ${worst.map(o => `${esc(nk(o.id))} ${pct(o.last)}`).join(', ')}.</div></div>`);
+  slides.push(`<div class="slide"><div class="eyebrow">${esc(E.title)} · Playoff odds</div><h2 style="margin-top:4px">Who's making it</h2><p class="mute" style="font-size:13px;margin-top:4px">The last ${PO.weeksLeft} weeks simulated ${PO.sims.toLocaleString()} times off each team's scoring this season.</p><div class="legend"><span><i style="background:var(--orange)"></i>Makes playoffs</span><span><i style="background:var(--gold)"></i>Gets a bye</span></div><div class="odds">${od.map((o, k) => `<div class="od ${k < PO.teams ? 'in' : 'out'}"><div class="od-top"><div class="od-n">${esc(nk(o.id))}${o.id === topId ? `<span class="flag">${esc(E.topScorerLabel)}</span>` : ''}<small>${tm(o.id).record.w}-${tm(o.id).record.l}</small></div><div class="od-p">${pct(o.playoff)}</div></div><div class="od-trk"><div class="od-fil" style="width:${o.playoff}%"></div><div class="od-bye" style="width:${o.bye}%"></div></div></div>`).join('')}</div><div class="fact" style="margin-top:10px"><b>Odds of finishing dead last:</b> ${worst.map(o => `${esc(nk(o.id))} ${pct(o.last)}`).join(', ')}.</div></div>`);
   const byT = [...od].sort((a, b) => b.title - a.title || b.playoff - a.playoff);
   // American odds off the simulated title chance, rounded the way a book posts them
   const line = v => { const p = v / 100; if (p <= 0) return 'OFF THE BOARD'; if (p >= 1) return 'LOCK';
@@ -591,8 +625,10 @@ const loadYT = () => ytReady || (ytReady = new Promise(res => { if (window.YT &&
 const playYt = y => { if (y.dataset.playing) return; y.dataset.playing = '1'; const id = y.dataset.id; y.innerHTML = '<div class="ytp"></div>'; loadYT().then(() => { const p = new YT.Player(y.querySelector('.ytp'), { videoId: id, playerVars: { autoplay: 1, playsinline: 1, rel: 0, start: parseInt(y.dataset.start || 0) }, events: { onReady: e => { e.target.unMute(); e.target.setVolume(100); e.target.playVideo(); setTimeout(() => { if (e.target.getPlayerState && e.target.getPlayerState() !== 1) { e.target.mute(); e.target.playVideo(); } }, 1800); } } }); y._p = p; }); };
 const stopYt = y => { try { y._p && y._p.destroy(); } catch (e) {} y._p = null; delete y.dataset.playing; y.innerHTML = `<img src="${y.dataset.thumb}" alt=""><div class="play">▶</div>`; };
 function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) { s.scrollTop = 0; s.querySelectorAll('.yt[data-autoplay]').forEach(playYt); } else { s.querySelectorAll('.yt[data-playing]').forEach(stopYt); } }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} if (typeof onSlide === 'function') onSlide(i); }
-function openAward(sl) { sl.classList.add('open'); if (navigator.vibrate) try { navigator.vibrate([20, 40, 20]); } catch (x) {} const ph = document.getElementById('phone'), R = ph.getBoundingClientRect(), E2 = sl.querySelector('.env').getBoundingClientRect(); const cx = E2.left - R.left + E2.width / 2, cy = E2.top - R.top + E2.height / 2, em = E.rain || ['🎃', '🦇', '👻'];
-  for (let k = 0; k < 16; k++) { const b = document.createElement('i'); b.className = 'boo'; b.textContent = em[k % em.length]; const a = k / 16 * Math.PI * 2; b.style.left = cx + 'px'; b.style.top = cy + 'px'; b.style.setProperty('--dx', Math.cos(a) * (90 + k % 3 * 30) + 'px'); b.style.setProperty('--dy', Math.sin(a) * (90 + k % 4 * 25) + 'px'); b.style.setProperty('--r', (k * 47 % 360) + 'deg'); ph.appendChild(b); setTimeout(() => b.remove(), 1200); } }
+function openAward(sl) { if (sl.classList.contains('drum') || sl.classList.contains('open')) return; sl.classList.add('drum'); if (navigator.vibrate) try { navigator.vibrate([15, 60, 15, 60, 15]); } catch (x) {}
+  setTimeout(() => { sl.classList.remove('drum'); sl.classList.add('open'); const ph = document.getElementById('phone'); const f = document.createElement('div'); f.className = 'flash'; ph.appendChild(f); setTimeout(() => f.remove(), 700); if (navigator.vibrate) try { navigator.vibrate(40); } catch (x) {}
+    const cols = ['#ff7a1a', '#ffb02e', '#ffffff', '#b26bff', '#5dff9a'];
+    for (let k = 0; k < 42; k++) { const c = document.createElement('i'); c.className = 'cf'; c.style.left = (k * 23 % 100) + '%'; c.style.background = cols[k % cols.length]; c.style.animationDelay = (k % 7) * .05 + 's'; c.style.setProperty('--dx', ((k * 37 % 120) - 60) + 'px'); c.style.setProperty('--r', (k * 77 % 720) + 'deg'); ph.appendChild(c); setTimeout(() => c.remove(), 2200); } }, 550); }
 let swiped = false, sx = 0, sy = 0;
 S.addEventListener('click', e => { const y = e.target.closest('.yt'); if (y) { playYt(y); return; } if (swiped || e.target.closest('button,a,.slot,.noadv')) return; const r = S.getBoundingClientRect(); { const cur = all[i]; if (cur && cur.classList.contains('aw') && !cur.classList.contains('open') && (e.clientX - r.left) >= r.width * .3) { openAward(cur); return; } } show((e.clientX - r.left) < r.width * .3 ? i - 1 : i + 1); });
 document.addEventListener('keydown', e => { if ((e.key === 'ArrowRight' || e.key === ' ') && all[i].classList.contains('aw') && !all[i].classList.contains('open')) { openAward(all[i]); return; } if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });

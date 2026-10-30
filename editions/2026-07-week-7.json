@@ -6,13 +6,13 @@
   "subtitle": "Midseason Awards",
   "date": "Oct 29, 2026",
   "theme": "halloween",
-  "coverTitle": "The Ghoulden Globes",
+  "coverTitle": "The Gator Tails Honors",
   "kicker": "Awards + playoff preview",
-  "ogDesc": "The Ghoulden Globes: the Gator Tails midseason awards, the playoff bracket, and everybody's odds.",
+  "ogDesc": "The Gator Tails Honors: midseason awards, the playoff bracket, and championship odds.",
   "rain": [
+    "🏈",
     "🎃",
-    "🦇",
-    "👻",
+    "🏆",
     "🍬"
   ],
   "playoffPreview": true,
@@ -44,234 +44,131 @@
     ]
   },
   "topScorerLabel": "BIG PENIS! $50",
-  "awardsIntro": {
-    "title": "The Ghoulden Globes",
-    "body": "Seven weeks in. Ten awards, one for every team, all of them earned. Tap each envelope to see who won."
-  },
   "awards": [
     {
       "team": 10,
-      "award": "The R.I.P. Award",
-      "for": "Most dead team in the league",
-      "stats": [
-        {
-          "v": "0-7",
-          "l": "Record"
-        },
-        {
-          "v": "4",
-          "l": "Losses he'd have won"
-        },
-        {
-          "v": "1.4",
-          "l": "Closest loss"
-        }
-      ],
-      "text": "0-7. The only team without a win. Would have won FOUR of those with the right lineup, most in the league. Lost by 1.4 and 3.2. Even WON his trade (Shough has 120.3 for him since) and still can't find a W. This week Brissett put up 20.6 on the bench while Bryce Young gave him 2.9. Time of death: Week 7.",
-      "media": [],
-      "icon": "🪦"
+      "award": "The 2008 Lions Award",
+      "for": "Going winless",
+      "icon": "🦁",
+      "stat": {
+        "v": "0-7",
+        "l": "Record"
+      },
+      "line": "Would have won four of them with the right lineup.",
+      "media": []
     },
     {
       "team": 3,
-      "award": "The Skeleton Crew Award",
-      "for": "The team with no meat on it",
-      "stats": [
-        {
-          "v": "818.8",
-          "l": "Points (10th)"
-        },
-        {
-          "v": "19-44",
-          "l": "All-play"
-        },
-        {
-          "v": "183.4",
-          "l": "Bench pts left"
-        }
-      ],
-      "text": "818.8 points, dead last. 19-44 all-play, tied for the worst. Drake Maye has 158.1 and is the only meat on these bones. Somehow also left 183.4 on the bench, 2nd most in the league, which is impressive for a team with nothing on it.",
-      "media": [],
-      "icon": "💀"
+      "award": "The Three-and-Out Award",
+      "for": "Fewest points in the league",
+      "icon": "🥾",
+      "stat": {
+        "v": "818.8",
+        "l": "Points"
+      },
+      "line": "Drake Maye is the whole offense.",
+      "media": []
     },
     {
       "team": 7,
-      "award": "The Headless Horseman Award",
-      "for": "Coaching with no head",
-      "stats": [
-        {
-          "v": "184.3",
-          "l": "Bench pts left (1st)"
-        },
-        {
-          "v": "3",
-          "l": "Losses he'd have won"
-        },
-        {
-          "v": "1-3",
-          "l": "Games within 10"
-        }
-      ],
-      "text": "184.3 points left on the bench, the most in the league. Three losses he would have won with the right lineup. 1-3 in games decided by less than 10. Penix sat on the bench with 29.1 in Week 6 and he lost by 2.1. Bro is riding around with no head.",
-      "media": [],
-      "icon": "🎃"
+      "award": "The Pete Carroll Goal-Line Award",
+      "for": "Worst coaching",
+      "icon": "🤦",
+      "stat": {
+        "v": "184.3",
+        "l": "Bench pts left"
+      },
+      "line": "Most points left on the bench. Three losses he should have won.",
+      "media": []
     },
     {
       "team": 8,
-      "award": "The Trick-or-Trade Award",
+      "award": "The Herschel Walker Trade Award",
       "for": "Worst trade of the year",
-      "stats": [
-        {
-          "v": "21.5",
-          "l": "Javonte vs him"
-        },
-        {
-          "v": "4.6",
-          "l": "Garrett Wilson"
-        },
-        {
-          "v": "0.0",
-          "l": "Rashee Rice"
-        }
-      ],
-      "text": "Traded Javonte Williams and Carnell Tate to Nick for Garrett Wilson and Rashee Rice. Then played Nick THAT SAME WEEK. Javonte put up 21.5 against him. Garrett Wilson gave him 4.6. Rashee Rice gave him 0.0. Lost 124.2 to 78.9, the lowest score of the week (Josh Allen was on bye). All trick, no treat.",
-      "media": [],
-      "icon": "🍬"
+      "icon": "🤝",
+      "stat": {
+        "v": "21.5",
+        "l": "Javonte vs him"
+      },
+      "line": "Traded Javonte to Nick. Javonte dropped 21.5 on him that same week.",
+      "media": []
     },
     {
       "team": 11,
-      "award": "The Annabelle Award",
-      "for": "Most cursed team",
-      "stats": [
-        {
-          "v": "1,061.8",
-          "l": "Points (2nd)"
-        },
-        {
-          "v": "40-23",
-          "l": "All-play"
-        },
-        {
-          "v": "3-4",
-          "l": "Record"
-        }
-      ],
-      "text": "2nd most points in the league. 3rd best all-play record (40-23). Two $50 weeks. Fewest points left on the bench of anybody (74.3), so he's not even screwing up his lineup. Record: 3-4. Hanging onto the 6 seed by points. This team is haunted.",
-      "media": [],
-      "icon": "🪆"
+      "award": "The Dan Marino Award",
+      "for": "All the stats, none of the wins",
+      "icon": "🐬",
+      "stat": {
+        "v": "3-4",
+        "l": "Record"
+      },
+      "line": "2nd most points in the league. Losing record.",
+      "media": []
     },
     {
       "team": 1,
-      "award": "The Poltergeist Award",
-      "for": "Most haunted house",
-      "stats": [
-        {
-          "v": "1,066.7",
-          "l": "Pts against (most)"
-        },
-        {
-          "v": "42-21",
-          "l": "All-play (2nd)"
-        },
-        {
-          "v": "2",
-          "l": "$50 weeks"
-        }
-      ],
-      "text": "1,066.7 points scored against him, the most in the league. 2nd best all-play record and somehow only 4-3. Two $50s, including this week (179.2, Burrow 39.2), and the lowest score in the league in Week 6. Something in this house wants him dead.",
-      "media": [],
-      "icon": "👻"
+      "award": "The Swiss Cheese Defense Award",
+      "for": "Most points scored against",
+      "icon": "🧀",
+      "stat": {
+        "v": "1,066.7",
+        "l": "Pts against"
+      },
+      "line": "2nd best all-play record and still only 4-3.",
+      "media": []
     },
     {
       "team": 6,
-      "award": "The Exorcist Award",
-      "for": "Most possessed",
-      "stats": [
-        {
-          "v": "5-2",
-          "l": "Record"
-        },
-        {
-          "v": "30-33",
-          "l": "All-play"
-        },
-        {
-          "v": "3-0",
-          "l": "Games within 10"
-        }
-      ],
-      "text": "5-2 with a LOSING all-play record. 3-0 in games decided by less than 10. Something is pulling the strings. The one week he finally benched all three Browns, Judkins dropped 23.4 on his bench and he lost by 62. The Browns own his soul.",
-      "media": [],
-      "icon": "😈"
+      "award": "The Immaculate Reception Award",
+      "for": "Winning the close ones",
+      "icon": "🙏",
+      "stat": {
+        "v": "3-0",
+        "l": "In games within 10"
+      },
+      "line": "With a losing all-play record. Pure miracles.",
+      "media": []
     },
     {
       "team": 5,
-      "award": "The Grave Robber Award",
-      "for": "Stealing the most wins",
-      "stats": [
-        {
-          "v": "5-2",
-          "l": "Record"
-        },
-        {
-          "v": "8th",
-          "l": "In points"
-        },
-        {
-          "v": "22-41",
-          "l": "All-play"
-        }
-      ],
-      "text": "5-2 with the 8th most points in the league. 22-41 all-play. Won games by 1.4 and 2.1. Then traded Sham for Javonte Williams and used him to beat Sham the same week. Luckiest team in the league by a mile. Fair Weather Fallows is robbing graves.",
-      "media": [],
-      "icon": "⚰️"
+      "award": "The Tuck Rule Award",
+      "for": "Stealing wins",
+      "icon": "🤫",
+      "stat": {
+        "v": "5-2",
+        "l": "Record"
+      },
+      "line": "8th in points. Luckiest team in the league by a mile.",
+      "media": []
     },
     {
       "team": 4,
-      "award": "The Van Helsing Award",
-      "for": "Finally killing Dracula",
-      "stats": [
-        {
-          "v": "167.0",
-          "l": "vs D"
-        },
-        {
-          "v": "4",
-          "l": "Straight wins"
-        },
-        {
-          "v": "4-3",
-          "l": "Record"
-        }
-      ],
-      "text": "Drove a stake right through D. 167.0 to 121.0, D's first loss of the season. Started 0-3 and has won four straight since. Trevor Lawrence was on bye and Geno came in and dropped 30.0 like nothing happened.",
-      "media": [],
-      "icon": "🗡️"
+      "award": "Comeback Player of the Year",
+      "for": "0-3 to four straight",
+      "icon": "📈",
+      "stat": {
+        "v": "4",
+        "l": "Straight wins"
+      },
+      "line": "Including D's first loss of the season.",
+      "media": []
     },
     {
       "team": 2,
-      "award": "The Dracula Award",
-      "for": "Sucking the life out of the league",
-      "stats": [
-        {
-          "v": "6-1",
-          "l": "Record"
-        },
-        {
-          "v": "1,137.8",
-          "l": "Points (1st)"
-        },
-        {
-          "v": "50-13",
-          "l": "All-play"
-        }
-      ],
-      "text": "6-1. 1,137.8 points, 76 more than anybody else. 50-13 all-play. JSN has 195.6 points, the most by any starter in the league. Even the one loss came with 44.9 sitting on his bench. Still the scariest thing in this league.",
-      "media": [],
-      "icon": "🧛"
+      "award": "Midseason MVP",
+      "for": "Best team in the league",
+      "icon": "🏆",
+      "stat": {
+        "v": "6-1",
+        "l": "Record"
+      },
+      "line": "Most points by 76. JSN has 195.6 by himself.",
+      "media": []
     }
   ],
   "rankings": [],
   "outro": "Week 8 power rankings drop Tuesday.",
   "coverSub": "Week 7 Midseason Awards",
-  "pageTitle": "Gator Tails Ghoulden Globes 2026"
+  "pageTitle": "Gator Tails Honors 2026",
+  "awardsTitle": "Gator Tails Honors"
 }
