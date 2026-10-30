@@ -293,6 +293,27 @@ td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}td.
 @keyframes flash2{from{opacity:1}to{opacity:0}}
 .cf{position:absolute;top:-20px;z-index:45;pointer-events:none;width:8px;height:14px;border-radius:2px;animation:cf 1.8s cubic-bezier(.2,.6,.4,1) forwards}
 @keyframes cf{to{transform:translate(var(--dx),110vh) rotate(var(--r));opacity:.9}}
+.dr{align-items:center;text-align:center;overflow:hidden;animation:flicker 4.5s steps(1) infinite}
+@keyframes flicker{0%,100%{filter:brightness(1)}41%{filter:brightness(.55)}42%{filter:brightness(1)}43%{filter:brightness(.4)}44%,77%{filter:brightness(1)}78%{filter:brightness(.6)}79%{filter:brightness(1)}}
+.dr>*:not(.fog):not(.dr-ghost):not(.dr-bolt){position:relative;z-index:2}
+.fog{position:absolute;left:-50%;right:-50%;bottom:-6%;height:42%;z-index:1;pointer-events:none;background:radial-gradient(40% 55% at 30% 70%,rgba(200,190,230,.28),transparent 70%),radial-gradient(35% 50% at 70% 80%,rgba(200,190,230,.22),transparent 70%),radial-gradient(45% 45% at 50% 100%,rgba(180,170,220,.3),transparent 70%);filter:blur(6px);animation:fog 14s linear infinite}
+.fog.f2{bottom:-12%;opacity:.7;animation-duration:22s;animation-direction:reverse}
+@keyframes fog{from{transform:translateX(-12%)}to{transform:translateX(12%)}}
+.dr-ghost{position:absolute;top:16%;left:-15%;font-size:44px;z-index:1;opacity:.75;animation:ghost 9s ease-in-out infinite;filter:drop-shadow(0 0 12px rgba(255,255,255,.4))}
+@keyframes ghost{0%{transform:translate(0,0)}50%{transform:translate(70vw,-30px) scaleX(-1)}100%{transform:translate(140vw,10px)}}
+.dr-bolt{position:absolute;inset:0;z-index:3;pointer-events:none;background:rgba(230,225,255,.85);opacity:0;animation:bolt 6s linear infinite}
+@keyframes bolt{0%,88%,100%{opacity:0}89%{opacity:.9}90%{opacity:0}92%{opacity:.6}93%{opacity:0}}
+.dr.crash .dr-bolt{animation:bolt1 .5s linear}
+@keyframes bolt1{0%{opacity:1}30%{opacity:0}50%{opacity:.7}100%{opacity:0}}
+.dr-t{font-family:"Graduate",var(--font);font-size:30px;line-height:1.1;margin-top:8px;color:var(--orange);text-transform:uppercase;text-shadow:0 0 18px rgba(255,122,26,.4)}
+.dr-drum{font-size:96px;line-height:1;margin-top:18px;animation:drumhit .12s ease-in-out infinite alternate;filter:drop-shadow(0 8px 18px rgba(0,0,0,.6))}
+@keyframes drumhit{from{transform:rotate(-6deg) translateY(0)}to{transform:rotate(6deg) translateY(-4px)}}
+.dr-rrr{font-family:"Graduate",var(--font);font-size:22px;letter-spacing:.12em;color:var(--gold);margin-top:6px;animation:rrr .08s linear infinite}
+@keyframes rrr{0%{transform:translate(0,0)}25%{transform:translate(1px,-1px)}50%{transform:translate(-1px,1px)}75%{transform:translate(1px,1px)}}
+.dr-lines{margin-top:22px;display:flex;flex-direction:column;gap:10px;font-size:18px;font-weight:700;line-height:1.3;max-width:320px}
+.dr-lines div{opacity:0}.slide.on .dr-lines div{animation:up .5s ease-out both;animation-delay:inherit}
+.dr-cta{margin-top:24px;font-size:13px;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:#fff;background:var(--orange);color:#1a0b00;padding:10px 18px;border-radius:999px;opacity:0}
+.slide.on .dr-cta{animation:up .5s ease-out both,qpulse 1.4s ease-in-out 3.5s infinite}
 .gb{margin-top:10px;display:flex;flex-direction:column;gap:6px}
 .gb>div{border-radius:12px;padding:9px 12px;font-size:13.5px;line-height:1.4}
 .gb b{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
@@ -386,6 +407,7 @@ if (week && D.computed.leagueFacts.topScorerLastWeek) { const [wid, wpts] = D.co
 const AFTER_WIN = slides.length;
 // award show (edition.awards): one card per award, tap to flip and reveal the winner
 if ((E.awards || []).length) { const n = E.awards.length, AT = E.awardsTitle || 'Midseason Awards';
+  if (E.awardsDrumroll) { const DR = E.awardsDrumroll; slides.push(`<div class="slide dr"><div class="fog f1"></div><div class="fog f2"></div><div class="dr-ghost">👻</div><div class="dr-bolt"></div><div class="grow"></div><div class="eyebrow" style="text-align:center">${esc(AT)}</div><div class="dr-t">${esc(DR.title || 'Drumroll please…')}</div><div class="dr-drum">🥁</div><div class="dr-rrr">DRRRRRRRRR</div><div class="dr-lines">${(DR.lines || []).map((l, k) => `<div style="animation-delay:${(.6 + k * .9).toFixed(1)}s">${esc(l)}</div>`).join('')}</div><div class="dr-cta" style="animation-delay:${(.8 + (DR.lines || []).length * .9).toFixed(1)}s">${esc(DR.cta || 'Tap to start')}</div><div class="grow"></div></div>`); }
   E.awards.forEach((a, k) => { const t = T[a.team], st = a.stat || (a.stats || [])[0];
     slides.push(`<div class="slide aw"><div class="aw-beams"></div><div class="eyebrow" style="text-align:center">${esc(AT)} · ${k + 1} of ${n}</div><div class="aw-t">${esc(a.award)}</div><div class="aw-for">${esc(a.for)}</div><div class="flip"><div class="flip-in"><div class="face front"><div class="band t"></div><div class="band b"></div><div class="q">?</div><div class="hint">Tap to reveal</div></div><div class="face back"><div class="w-ico">${esc(a.icon || '🏆')}</div><div class="w-n">${esc(t.name)}</div><div class="w-o">${esc(t.manager.nick)}${t.id === topId ? ` <span class="flag">${esc(E.topScorerLabel)}</span>` : ''}</div>${st ? `<div class="w-stat">${esc(st.v)}</div><div class="w-sl">${esc(st.l)}</div>` : ''}</div></div></div><p class="w-line">${esc(a.line || a.text || '')}</p>${(a.media || []).length ? `<div class="w-media">${a.media.map(media).join('')}</div>` : ''}</div>`); }); }
 // 2 charts
@@ -559,7 +581,7 @@ function renderLeague() { const el = document.getElementById('bq-league'); if (!
   const chips = all.map(b => `<button data-lsel="${esc(b.name)}" class="${b.name === LSEL ? 'on' : ''}">${esc(b.name)} · ${bscore([...b.order])}%</button>`).join('');
   const rows = ppl.map(id => { const d = cr[id] - pr[id]; return `<tr><td class="r"><span class="rk">${pr[id]}</span></td><td class="t"><div class="n">${esc(nickOf(id))}${BIG(id)}</div><div class="o">avg ${(tot[id] / all.length).toFixed(1)}</div></td>${sr ? `<td class="num">#${sr[id]}</td>` : ''}<td class="num"><b>#${cr[id]}</b></td><td class="num" style="width:40px"><span class="mv ${d > 0 ? 'up' : d < 0 ? 'dn' : 'z'}" style="font-size:12px">${d > 0 ? '▲' + d : d < 0 ? '▼' + (-d) : '='}</span></td></tr>`; }).join('');
   el.innerHTML = head + `<p class="mute" style="font-size:13px;margin-top:4px">${all.length} board${all.length > 1 ? 's' : ''} in. The people are <b>${bscore(ppl.map(id => RT[id].letter))}% commish</b>. Tap a name to see their board.</p><div class="who">${chips}</div><div class="card" style="padding:4px 8px;margin-top:10px"><table><thead><tr><th>People</th><th>Team</th>${sr ? `<th style="text-align:right">${esc(sel.name)}</th>` : ''}<th style="text-align:right">Comm</th><th></th></tr></thead><tbody>${rows}</tbody></table></div><div class="mute" style="font-size:11px;margin-top:6px">▲ means the people had them higher than the commish.</div><button class="lnk" data-act="league-refresh" style="align-self:center">Refresh</button>`; }
-function onSlide(n) { if (BLIND && n === BIX.league) loadLeague(); }
+function onSlide(n) { if (BLIND && n === BIX.league) loadLeague(); const sl = document.getElementById('slides').children[n]; if (sl && sl.classList.contains('dr')) { drumroll(2.4, true); clearTimeout(sl._c); sl.classList.remove('crash'); sl._c = setTimeout(() => { sl.classList.add('crash'); if (navigator.vibrate) try { navigator.vibrate(60); } catch (x) {} }, 2420); } }
 const bqAll = () => { const r = bqRun(BQ.ans); renderQuiz(); renderIntro(r.order); renderSummary(r.order); };
 const toast = m => { const t = document.getElementById('toast'); t.textContent = m; t.classList.add('on'); clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 1800); };
 const blindUrl = ord => `${location.origin}/${E.id}?b=${ord.join('')}${BQ.who ? '&n=' + encodeURIComponent(BQ.who) : ''}`;
@@ -625,7 +647,14 @@ const loadYT = () => ytReady || (ytReady = new Promise(res => { if (window.YT &&
 const playYt = y => { if (y.dataset.playing) return; y.dataset.playing = '1'; const id = y.dataset.id; y.innerHTML = '<div class="ytp"></div>'; loadYT().then(() => { const p = new YT.Player(y.querySelector('.ytp'), { videoId: id, playerVars: { autoplay: 1, playsinline: 1, rel: 0, start: parseInt(y.dataset.start || 0) }, events: { onReady: e => { e.target.unMute(); e.target.setVolume(100); e.target.playVideo(); setTimeout(() => { if (e.target.getPlayerState && e.target.getPlayerState() !== 1) { e.target.mute(); e.target.playVideo(); } }, 1800); } } }); y._p = p; }); };
 const stopYt = y => { try { y._p && y._p.destroy(); } catch (e) {} y._p = null; delete y.dataset.playing; y.innerHTML = `<img src="${y.dataset.thumb}" alt=""><div class="play">▶</div>`; };
 function show(n) { i = Math.max(0, Math.min(slides.length - 1, n)); all.forEach((s, k) => { s.classList.toggle('on', k === i); if (k === i) { s.scrollTop = 0; s.querySelectorAll('.yt[data-autoplay]').forEach(playYt); } else { s.querySelectorAll('.yt[data-playing]').forEach(stopYt); } }); barEls.forEach((b, k) => { b.className = k < i ? 'done' : k === i ? 'cur' : ''; }); try { history.replaceState(null, '', '#' + i); } catch (e) {} if (typeof onSlide === 'function') onSlide(i); }
-function openAward(sl) { if (sl.classList.contains('drum') || sl.classList.contains('open')) return; sl.classList.add('drum'); if (navigator.vibrate) try { navigator.vibrate([15, 60, 15, 60, 15]); } catch (x) {}
+let AC = null;
+function drumroll(dur, crash) { try { AC = AC || new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === 'suspended') AC.resume(); const t0 = AC.currentTime + .02, sr = AC.sampleRate;
+  const hitB = AC.createBuffer(1, sr * .06, sr), hd = hitB.getChannelData(0); for (let k = 0; k < hd.length; k++) hd[k] = (Math.random() * 2 - 1) * Math.pow(1 - k / hd.length, 3);
+  let t = 0, gap = .075; while (t < dur) { const src = AC.createBufferSource(), f = AC.createBiquadFilter(), g = AC.createGain(); src.buffer = hitB; f.type = 'bandpass'; f.frequency.value = 1700 + Math.random() * 300; f.Q.value = .9; g.gain.value = .18 + .45 * (t / dur); src.connect(f); f.connect(g); g.connect(AC.destination); src.start(t0 + t); t += gap; gap = Math.max(.026, gap * .955); }
+  if (crash) { const cb = AC.createBuffer(1, sr * 1.8, sr), cd = cb.getChannelData(0); for (let k = 0; k < cd.length; k++) cd[k] = (Math.random() * 2 - 1) * Math.pow(1 - k / cd.length, 2.6);
+    const src = AC.createBufferSource(), hp = AC.createBiquadFilter(), g = AC.createGain(); src.buffer = cb; hp.type = 'highpass'; hp.frequency.value = 4500; g.gain.value = .45; src.connect(hp); hp.connect(g); g.connect(AC.destination); src.start(t0 + dur);
+    const o = AC.createOscillator(), og = AC.createGain(); o.type = 'sine'; o.frequency.setValueAtTime(130, t0 + dur); o.frequency.exponentialRampToValueAtTime(38, t0 + dur + .45); og.gain.setValueAtTime(.8, t0 + dur); og.gain.exponentialRampToValueAtTime(.001, t0 + dur + .55); o.connect(og); og.connect(AC.destination); o.start(t0 + dur); o.stop(t0 + dur + .6); } } catch (e) {} }
+function openAward(sl) { if (sl.classList.contains('drum') || sl.classList.contains('open')) return; sl.classList.add('drum'); drumroll(.55, true); if (navigator.vibrate) try { navigator.vibrate([15, 60, 15, 60, 15]); } catch (x) {}
   setTimeout(() => { sl.classList.remove('drum'); sl.classList.add('open'); const ph = document.getElementById('phone'); const f = document.createElement('div'); f.className = 'flash'; ph.appendChild(f); setTimeout(() => f.remove(), 700); if (navigator.vibrate) try { navigator.vibrate(40); } catch (x) {}
     const cols = ['#ff7a1a', '#ffb02e', '#ffffff', '#b26bff', '#5dff9a'];
     for (let k = 0; k < 42; k++) { const c = document.createElement('i'); c.className = 'cf'; c.style.left = (k * 23 % 100) + '%'; c.style.background = cols[k % cols.length]; c.style.animationDelay = (k % 7) * .05 + 's'; c.style.setProperty('--dx', ((k * 37 % 120) - 60) + 'px'); c.style.setProperty('--r', (k * 77 % 720) + 'deg'); ph.appendChild(c); setTimeout(() => c.remove(), 2200); } }, 550); }

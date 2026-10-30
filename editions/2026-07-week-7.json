@@ -114,7 +114,7 @@
         "v": "1,066.7",
         "l": "Pts against"
       },
-      "line": "2nd best all-play record and still only 4-3.",
+      "line": "3rd most points in the league and still only 4-3.",
       "media": []
     },
     {
@@ -126,7 +126,7 @@
         "v": "3-0",
         "l": "In games within 10"
       },
-      "line": "With a losing all-play record. Pure miracles.",
+      "line": "5-2 with the 6th most points. Pure miracles.",
       "media": []
     },
     {
@@ -138,7 +138,7 @@
         "v": "5-2",
         "l": "Record"
       },
-      "line": "8th in points. Luckiest team in the league by a mile.",
+      "line": "8th in points, but nobody scores on him. 2nd fewest points against.",
       "media": []
     },
     {
@@ -170,5 +170,14 @@
   "outro": "Week 8 power rankings drop Tuesday.",
   "coverSub": "Week 7 Midseason Awards",
   "pageTitle": "Gator Tails Honors 2026",
-  "awardsTitle": "Gator Tails Honors"
+  "awardsTitle": "Gator Tails Honors",
+  "awardsDrumroll": {
+    "title": "Ladies and gentlemen…",
+    "lines": [
+      "The votes have been counted.",
+      "By Dean. Be nice, he's 0-7.",
+      "Ten awards. Not everyone makes it out alive."
+    ],
+    "cta": "Tap if you dare"
+  }
 }
