@@ -187,5 +187,6 @@
       "The votes have been counted."
     ],
     "cta": "Tap if you dare"
-  }
+  },
+  "futures": true
 }
