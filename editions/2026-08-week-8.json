@@ -1,0 +1,39 @@
+{
+  "id": "2026-08-week-8",
+  "season": "2026",
+  "week": 8,
+  "title": "Week 8",
+  "subtitle": "Power Rankings",
+  "date": "Nov 4, 2026",
+  "theme": "sportsbook",
+  "coverTitle": "Gator Tails Sportsbook",
+  "coverSub": "Week 8 Power Rankings",
+  "kicker": "Lines are open",
+  "rain": ["💵", "💸", "🎟️", "🤑"],
+  "benchSlide": true,
+  "benchHeadline": "Left on the table",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {"rank": 1, "name": "Bijan Robinson", "yds": 780, "me": true},
+      {"rank": 2, "name": "Jahmyr Gibbs", "yds": 773},
+      {"rank": 3, "name": "Kenneth Walker III", "yds": 770},
+      {"rank": 4, "name": "Bucky Irving", "yds": 728}
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "rankings": [
+    {"rank": 10, "team": 10, "prop": {"text": "Dean goes 0-14", "odds": "+1850", "call": "bet", "why": "0-8. Scored 79.0 this week, lowest in the league."}, "takeaway": "", "media": []},
+    {"rank": 9, "team": 3, "prop": {"text": "EN wins two straight", "odds": "+175", "call": "fade", "why": "Just beat D with his best score of the year (158.2)."}, "takeaway": "", "media": []},
+    {"rank": 8, "team": 7, "prop": {"text": "J Will sets the right lineup", "odds": "+5000", "call": "fade", "why": "Left 59.4 on the bench. Started Penix at OP: -8.9."}, "takeaway": "", "media": []},
+    {"rank": 7, "team": 5, "prop": {"text": "Nick's luck runs out and he misses the playoffs", "odds": "+125", "call": "bet", "why": "5-3 with the 9th most points. Scored 85.0 this week."}, "takeaway": "", "media": []},
+    {"rank": 6, "team": 8, "prop": {"text": "Sham admits he won the trade", "odds": "+2000", "call": "fade", "why": "Rashee Rice 18.3, Garrett Wilson 14.3 this week."}, "takeaway": "", "media": []},
+    {"rank": 5, "team": 6, "prop": {"text": "Reece benches the one Brown who goes off", "odds": "-400", "call": "bet", "why": "Benched Fannin (21.4). Started Boston (9.7) and Judkins (6.9)."}, "takeaway": "", "media": []},
+    {"rank": 4, "team": 11, "prop": {"text": "Somebody explains the hyphen in Jay-len", "odds": "+10000", "call": "fade", "why": "Three straight wins. Still no answer on the hyphen."}, "takeaway": "", "media": []},
+    {"rank": 3, "team": 1, "prop": {"text": "Zay Flowers scores a point", "odds": "+150", "call": "bet", "why": "Zay gave him 0.0. Burrow gave him 48.0."}, "takeaway": "", "media": []},
+    {"rank": 2, "team": 4, "prop": {"text": "Nicky's win streak hits six", "odds": "-170", "call": "bet", "why": "Five straight wins and the $50 this week (181.0)."}, "takeaway": "", "media": []},
+    {"rank": 1, "team": 2, "prop": {"text": "D loses three straight", "odds": "+215", "call": "fade", "why": "Lost to EN with 20.4 on the bench. Still the most points in the league."}, "takeaway": "", "media": []}
+  ],
+  "outro": "Week 9 rankings drop Tuesday. Lines set off 40,000 simulated seasons where the math applies."
+}
