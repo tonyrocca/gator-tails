@@ -1186,7 +1186,12 @@ function musStep(A, s, t) { const f = m => 440 * Math.pow(2, (m - 69) / 12), bar
   if (ph === 15 && st === 0) noise(t, SD * 16, .24, 2500, [M.out, M.rev], .004);
   if (fill) noise(t, .07, .08 + (st - 8) * .03, 1800, [M.out, M.rev]);
   if (ph === 0 && st === 0 && bar > 0) noise(t, 1.4, .18, 5000, [M.out, M.rev]); }
-function musSet(on) { try { const A = AC = AC || new (window.AudioContext || window.webkitAudioContext)(), was = MUS.on && MUS.timer; if (!MUS.out) musBuild(A); MUS.on = on;
+// iPhone: the ringer switch mutes Web Audio unless the page is in the "playback" audio session; a looping silent <audio> forces that
+function musUnlock(on) { try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+  try { if (!MUS.sil) { const n = 4000, b = new Uint8Array(44 + n), v = new DataView(b.buffer), w = (o, t) => [...t].forEach((c, k) => b[o + k] = c.charCodeAt(0)); w(0, 'RIFF'); v.setUint32(4, 36 + n, true); w(8, 'WAVEfmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true); v.setUint16(34, 8, true); w(36, 'data'); v.setUint32(40, n, true); b.fill(128, 44);
+      const au = MUS.sil = new Audio(URL.createObjectURL(new Blob([b], {type: 'audio/wav'}))); au.loop = true; au.setAttribute('playsinline', ''); au.preload = 'auto'; }
+    if (on) { const pr = MUS.sil.play(); if (pr && pr.catch) pr.catch(() => {}); } else MUS.sil.pause(); } catch (e) {} }
+function musSet(on) { musUnlock(on); try { const A = AC = AC || new (window.AudioContext || window.webkitAudioContext)(), was = MUS.on && MUS.timer; if (!MUS.out) musBuild(A); MUS.on = on;
     if (on) { if (A.state !== 'running') A.resume(); MUS.out.gain.cancelScheduledValues(A.currentTime); MUS.out.gain.setTargetAtTime(.72, A.currentTime, .25);
       if (!was) { clearInterval(MUS.timer); MUS.t = A.currentTime + .08; MUS.timer = setInterval(() => { if (A.state !== 'running') return; if (MUS.t < A.currentTime) MUS.t = A.currentTime + .05; while (MUS.t < A.currentTime + .25) { musStep(A, MUS.step, MUS.t); MUS.t += MSD; MUS.step++; } }, 50); } }
     else { clearInterval(MUS.timer); MUS.timer = null; MUS.out.gain.setTargetAtTime(0, A.currentTime, .1); }
@@ -1199,7 +1204,7 @@ if (CYBER) { const mb = document.createElement('button'); mb.id = 'mus'; mb.setA
   const musTog = () => { if (Date.now() - MUS.autoAt < 700) return; MUS.want = !MUS.on; musSet(MUS.want); };
   mb.addEventListener('click', e => { e.stopPropagation(); musTog(); });
   S.addEventListener('click', e => { if (e.target.closest('[data-act="snd"]')) musTog(); });
-  document.addEventListener('visibilitychange', () => { if (AC && MUS.on) { if (document.hidden) AC.suspend(); else AC.resume(); } }); }
+  document.addEventListener('visibilitychange', () => { if (AC && MUS.on) { if (document.hidden) AC.suspend(); else { AC.resume(); musUnlock(true); } } }); }
 show(parseInt(location.hash.slice(1)) || 0);
 (function tick() { document.querySelectorAll('.cd').forEach(el => { const ms = new Date(el.dataset.to) - Date.now(); const b = el.querySelectorAll('b'); if (ms <= 0) { b.forEach(x => x.textContent = '00'); el.querySelector('.cdl').textContent = "TIME'S UP. DEAN IS A COWARD."; return; } const s = Math.floor(ms / 1000); const v = [Math.floor(s / 86400), Math.floor(s / 3600) % 24, Math.floor(s / 60) % 60, s % 60]; b.forEach((x, i) => x.textContent = String(v[i]).padStart(2, '0')); }); setTimeout(tick, 1000); })();
 
