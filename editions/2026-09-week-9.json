@@ -1,0 +1,549 @@
+{
+  "id": "2026-09-week-9",
+  "season": "2026",
+  "week": 9,
+  "title": "Week 9",
+  "subtitle": "Power Rankings",
+  "date": "Nov 12, 2026",
+  "theme": "cyber",
+  "coverTitle": "Gator City 2099",
+  "coverSub": "Week 9 Power Rankings",
+  "kicker": "A power rankings noir",
+  "ogDesc": "Gator City 2099. Ten floors, ten gators. Your rank is your floor.",
+  "rain": [
+    "💵",
+    "💸",
+    "🤑",
+    "🍩"
+  ],
+  "benchSlide": true,
+  "benchHeadline": "Left on the table",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {
+        "rank": 1,
+        "name": "Bijan Robinson",
+        "yds": 880,
+        "me": true
+      },
+      {
+        "rank": 2,
+        "name": "Kenneth Walker III",
+        "yds": 872
+      },
+      {
+        "rank": 3,
+        "name": "Jahmyr Gibbs",
+        "yds": 847
+      },
+      {
+        "rank": 4,
+        "name": "Bucky Irving",
+        "yds": 825
+      }
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "story": {
+    "title": "The Tower",
+    "intro": "Gator City, 2099. It always rains and nobody sets their lineup.<br><br><b>Ten floors. Your rank is your floor.</b>",
+    "cue": "Scroll · going up",
+    "outTitle": "Top of the tower",
+    "outro": "That's the climb. Full board next.",
+    "outBtn": "See the board"
+  },
+  "rankings": [
+    {
+      "rank": 10,
+      "team": 10,
+      "scene": {
+        "char": "dean",
+        "color": "#7dff8a",
+        "floor": "Sublevel 10",
+        "sign": "The Drain",
+        "emo": "🥃",
+        "narr": "The lowest bar in Gator City. Dean has had the same stool for nine weeks.",
+        "lines": [
+          {
+            "who": "Bartender",
+            "text": "That's 0-9, pal.",
+            "me": 0
+          },
+          {
+            "who": "Deanus",
+            "text": "Lost by 12. Left 18.2 on the bench. Pour another Henny.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "110.9",
+            "l": "Week 9"
+          },
+          {
+            "v": "18.2",
+            "l": "Left on bench"
+          },
+          {
+            "v": "0-9",
+            "l": "Record"
+          }
+        ],
+        "stamp": "Still winless",
+        "stampCls": ""
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 9,
+      "team": 3,
+      "scene": {
+        "char": "ian",
+        "color": "#c8e06a",
+        "floor": "Floor 9",
+        "sign": "Bayou Sector",
+        "emo": "🎣",
+        "narr": "Down in the bayou. Business in the front, 3-6 in the back.",
+        "lines": [
+          {
+            "who": "EN",
+            "text": "Caught a monster. Ja'Marr Chase, 31.5.",
+            "me": 1
+          },
+          {
+            "who": "Game warden",
+            "text": "And the rest of the boat?",
+            "me": 0
+          },
+          {
+            "who": "EN",
+            "text": "Catch and release.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "114.7",
+            "l": "Week 9"
+          },
+          {
+            "v": "31.5",
+            "l": "Ja'Marr Chase"
+          },
+          {
+            "v": "3-6",
+            "l": "Record"
+          }
+        ],
+        "stamp": "Lost by 28.6",
+        "stampCls": ""
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 8,
+      "team": 5,
+      "scene": {
+        "char": "nick",
+        "color": "#8fd3ff",
+        "floor": "Floor 8",
+        "sign": "Nursery Block",
+        "emo": "🍼",
+        "narr": "3 AM in the Nursery Block. Nobody on this floor is sleeping.",
+        "lines": [
+          {
+            "who": "Nfatboy",
+            "text": "Shh. I just got him down.",
+            "me": 1
+          },
+          {
+            "who": "The baby",
+            "text": "You benched Kelce. 17.3. You lost by 3.7.",
+            "me": 0
+          },
+          {
+            "who": "Nfatboy",
+            "text": "...he talks?",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "120.6",
+            "l": "Week 9"
+          },
+          {
+            "v": "17.3",
+            "l": "Kelce, benched"
+          },
+          {
+            "v": "7.2",
+            "l": "LaPorta, started"
+          }
+        ],
+        "stamp": "Two straight L's",
+        "stampCls": ""
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 7,
+      "team": 7,
+      "scene": {
+        "char": "jackson",
+        "color": "#ff2bd6",
+        "floor": "Floor 7",
+        "sign": "Financial District",
+        "emo": "🍩",
+        "narr": "Top score in the city this week. The $50 is already spoken for.",
+        "lines": [
+          {
+            "who": "J Will",
+            "text": "159.9. Fifty bucks. I know exactly where it's going.",
+            "me": 1
+          },
+          {
+            "who": "Officer",
+            "text": "Sir, there's something on your snout.",
+            "me": 0
+          },
+          {
+            "who": "J Will",
+            "text": "Powdered donut, officer.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "159.9",
+            "l": "Week 9"
+          },
+          {
+            "v": "31.5",
+            "l": "CeeDee Lamb"
+          },
+          {
+            "v": "4-5",
+            "l": "Record"
+          }
+        ],
+        "stamp": "High score · $50",
+        "stampCls": "g"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 6,
+      "team": 11,
+      "scene": {
+        "char": "ryan",
+        "color": "#9fb4ff",
+        "floor": "Floor 6",
+        "sign": "Seeberger Capital",
+        "emo": "💼",
+        "narr": "Corner office. The numbers are excellent. The record is not.",
+        "lines": [
+          {
+            "who": "Seeberger",
+            "text": "Second-most points in the league. Strong quarter.",
+            "me": 1
+          },
+          {
+            "who": "Shareholder",
+            "text": "You're 4-5. You just lost by 42.4.",
+            "me": 0
+          },
+          {
+            "who": "Seeberger",
+            "text": "No further questions.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "117.5",
+            "l": "Week 9"
+          },
+          {
+            "v": "1,325",
+            "l": "Pts, 2nd most"
+          },
+          {
+            "v": "4-5",
+            "l": "Record"
+          }
+        ],
+        "stamp": "Lost by 42.4",
+        "stampCls": ""
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 5,
+      "team": 8,
+      "scene": {
+        "char": "sham",
+        "color": "#7df9ff",
+        "floor": "Floor 5",
+        "sign": "The Slopes",
+        "emo": "🏂",
+        "narr": "Floor five is an indoor mountain. The tall guy runs it.",
+        "lines": [
+          {
+            "who": "Big Sham",
+            "text": "Jordan Love. 45.3. Best start in the city this week.",
+            "me": 1
+          },
+          {
+            "who": "Lift operator",
+            "text": "Sick. Who'd you beat?",
+            "me": 0
+          },
+          {
+            "who": "Big Sham",
+            "text": "...Dean.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "122.9",
+            "l": "Week 9"
+          },
+          {
+            "v": "45.3",
+            "l": "Jordan Love"
+          },
+          {
+            "v": "5-4",
+            "l": "Record"
+          }
+        ],
+        "stamp": "Two straight W's",
+        "stampCls": "w"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 4,
+      "team": 6,
+      "scene": {
+        "char": "reece",
+        "color": "#ffb347",
+        "floor": "Floor 4",
+        "sign": "The Skyport",
+        "emo": "✈️",
+        "narr": "Captain Reece, on final approach. It was not a smooth flight.",
+        "lines": [
+          {
+            "who": "REEEEECE",
+            "text": "This is your captain. We lost an engine. Carson Wentz, minus 8.",
+            "me": 1
+          },
+          {
+            "who": "Tower",
+            "text": "Cleared to land. Somehow.",
+            "me": 0
+          },
+          {
+            "who": "REEEEECE",
+            "text": "Kenneth Walker, 36.3. Wheels down.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "119.3",
+            "l": "Week 9"
+          },
+          {
+            "v": "36.3",
+            "l": "Kenneth Walker"
+          },
+          {
+            "v": "-8.0",
+            "l": "Carson Wentz"
+          }
+        ],
+        "stamp": "Beat D by 4.8",
+        "stampCls": "w"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 3,
+      "team": 2,
+      "scene": {
+        "char": "daniel",
+        "color": "#ff3b5c",
+        "floor": "Floor 3",
+        "sign": "Iron Swamp Gym",
+        "emo": "🏋️",
+        "narr": "Biggest arms in the tower. Biggest head too. He used to live in the penthouse.",
+        "lines": [
+          {
+            "who": "D",
+            "text": "Bro, I never skip bench.",
+            "me": 1
+          },
+          {
+            "who": "Spotter",
+            "text": "You left 67.4 on it. Stroud had 47. You started Goff for 4.5.",
+            "me": 0
+          },
+          {
+            "who": "D",
+            "text": "Still the most points in the league.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "114.5",
+            "l": "Week 9"
+          },
+          {
+            "v": "67.4",
+            "l": "Left on bench"
+          },
+          {
+            "v": "1,403",
+            "l": "Pts, most"
+          }
+        ],
+        "stamp": "Three straight L's",
+        "stampCls": ""
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 2,
+      "team": 1,
+      "scene": {
+        "char": "tony",
+        "color": "#ff7a1a",
+        "floor": "Floor 2",
+        "sign": "The Lodge",
+        "emo": "🐕",
+        "narr": "One floor from the top. A gator and his bird dog on a three-game heater.",
+        "lines": [
+          {
+            "who": "Tony",
+            "text": "What is it? What do you smell?",
+            "me": 1
+          },
+          {
+            "who": "The dog",
+            "text": "*points at Joe Burrow* 37.7.",
+            "me": 0
+          },
+          {
+            "who": "Tony",
+            "text": "Good dog. Won by 3.7.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "124.3",
+            "l": "Week 9"
+          },
+          {
+            "v": "37.7",
+            "l": "Joe Burrow"
+          },
+          {
+            "v": "6-3",
+            "l": "Record"
+          }
+        ],
+        "stamp": "Three straight W's",
+        "stampCls": "w l"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 1,
+      "team": 4,
+      "scene": {
+        "char": "nicky",
+        "color": "#fcee0a",
+        "floor": "Top floor",
+        "sign": "The Penthouse",
+        "emo": "🍷",
+        "narr": "The house sommelier started the year 0-3. Tonight he pours for the whole city.",
+        "lines": [
+          {
+            "who": "Nokia Wolson",
+            "text": "The 2026 Nicky. Rough open, 0-3. Then six straight.",
+            "me": 1
+          },
+          {
+            "who": "Guest",
+            "text": "Tasting notes?",
+            "me": 0
+          },
+          {
+            "who": "Nokia Wolson",
+            "text": "Puka up front, 33.0. A Matthew Golden finish, 32.4. Pairs well with the top floor.",
+            "me": 1
+          }
+        ],
+        "facts": [
+          {
+            "v": "143.3",
+            "l": "Week 9"
+          },
+          {
+            "v": "6",
+            "l": "Straight wins"
+          },
+          {
+            "v": "1,055",
+            "l": "Pts against, fewest"
+          }
+        ],
+        "stamp": "New #1",
+        "stampCls": "g"
+      },
+      "takeaway": "",
+      "media": []
+    }
+  ],
+  "outro": "Week 10 rankings drop Tuesday.",
+  "playoffPreview": true,
+  "deanOfWeek": {
+    "dean": "Daniel",
+    "char": "daniel",
+    "legs": [],
+    "status": "ON THE CLOCK",
+    "note": "You're up, D. Drop the pick in the chat.",
+    "last": {
+      "dean": "Tony",
+      "odds": "+155",
+      "result": "CASHED",
+      "record": "1-0",
+      "legs": [
+        {
+          "name": "Ja'Marr Chase",
+          "line": "TD ✓ · 10 for 155"
+        },
+        {
+          "name": "Bijan Robinson",
+          "line": "TD ✓ · 19 for 100"
+        }
+      ]
+    }
+  }
+}
