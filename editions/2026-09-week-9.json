@@ -92,7 +92,8 @@
           }
         ],
         "stamp": "Still winless",
-        "stampCls": ""
+        "stampCls": "",
+        "bg": "bar"
       },
       "takeaway": "",
       "media": []
@@ -139,7 +140,8 @@
           }
         ],
         "stamp": "Lost by 28.6",
-        "stampCls": ""
+        "stampCls": "",
+        "bg": "swamp"
       },
       "takeaway": "",
       "media": []
@@ -186,7 +188,8 @@
           }
         ],
         "stamp": "Two straight L's",
-        "stampCls": ""
+        "stampCls": "",
+        "bg": "nursery"
       },
       "takeaway": "",
       "media": []
@@ -233,7 +236,8 @@
           }
         ],
         "stamp": "High score · $50",
-        "stampCls": "g"
+        "stampCls": "g",
+        "bg": "street"
       },
       "takeaway": "",
       "media": []
@@ -280,7 +284,8 @@
           }
         ],
         "stamp": "Lost by 42.4",
-        "stampCls": ""
+        "stampCls": "",
+        "bg": "office"
       },
       "takeaway": "",
       "media": []
@@ -327,7 +332,8 @@
           }
         ],
         "stamp": "Two straight W's",
-        "stampCls": "w"
+        "stampCls": "w",
+        "bg": "slopes"
       },
       "takeaway": "",
       "media": []
@@ -374,7 +380,8 @@
           }
         ],
         "stamp": "Beat D by 4.8",
-        "stampCls": "w"
+        "stampCls": "w",
+        "bg": "skyport"
       },
       "takeaway": "",
       "media": []
@@ -421,7 +428,8 @@
           }
         ],
         "stamp": "Three straight L's",
-        "stampCls": ""
+        "stampCls": "",
+        "bg": "gym"
       },
       "takeaway": "",
       "media": []
@@ -433,24 +441,23 @@
         "char": "tony",
         "color": "#ff7a1a",
         "floor": "Floor 2",
-        "sign": "The Lodge",
-        "emo": "🐕",
-        "narr": "One floor from the top. A gator and his bird dog on a three-game heater.",
+        "sign": "Club Gator",
+        "emo": "🎧",
+        "narr": "One floor from the top. The club is bumping and the gator on the decks has won three straight.",
         "lines": [
           {
             "who": "Tony",
-            "text": "What is it? What do you smell?",
-            "me": 1
+            "me": true,
+            "text": "This one goes out to Joe Burrow. 37.7."
           },
           {
             "who": "The dog",
-            "text": "*points at Joe Burrow* 37.7.",
-            "me": 0
+            "text": "*points at the speaker*"
           },
           {
             "who": "Tony",
-            "text": "Good dog. Won by 3.7.",
-            "me": 1
+            "me": true,
+            "text": "Good dog. Won by 3.7."
           }
         ],
         "facts": [
@@ -468,7 +475,8 @@
           }
         ],
         "stamp": "Three straight W's",
-        "stampCls": "w l"
+        "stampCls": "w t l",
+        "bg": "club"
       },
       "takeaway": "",
       "media": []
@@ -515,7 +523,8 @@
           }
         ],
         "stamp": "New #1",
-        "stampCls": "g"
+        "stampCls": "g",
+        "bg": "penthouse"
       },
       "takeaway": "",
       "media": []
