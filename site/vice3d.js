@@ -5,7 +5,7 @@
 const V = window.V3D = {ok: false};
 let T, R, scene, cam, canvas, host = null, raf = 0, envTex, sky, sunM, moonM, stars, hemi, dl, pl1, pl2;
 const S = 46, ROADZ = -2, spots = {}, PI = Math.PI;
-let order = [], focus = 0, target = 0, mode = 'story', off = 0, offT = 0, tOrb = 0, built = 0;
+let order = [], focus = 0, target = 0, mode = 'story', off = 0, offT = 0, tOrb = 0, built = 0, fv = 0, hw = 1, hh = 1, pr = 0, slow = 0, rt = null, pcam = null;
 let seed = 7; const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280, pick = a => a[Math.floor(rnd() * a.length)];
 const ss = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 const hex = c => '#' + c.toString(16).padStart(6, '0');
@@ -440,8 +440,6 @@ const pickup = (g, e, c, x, y, z, k = 0) => { const q = new T.Group(), m = new T
   return t => { m.rotation.y = t * 2.6 + k; q.position.y = y + Math.sin(t * 2.2 + k * 2) * .09; }; };
 const rat = slice => { const q = new T.Group(), f = M(0x3a3640, {roughness: .9}); add(q, rot(cap(.06, .16, f, 0, .07, 0), 0, 0, PI / 2), sph(.055, f, -.16, .09, 0), sph(.025, M(0xd9a0a8), -.17, .15, .04), sph(.025, M(0xd9a0a8), -.17, .15, -.04), rot(cyl(.008, .012, .26, M(0xd9a0a8), .25, .06, 0, 4), 0, 0, PI / 2 - .3)); if (slice) add(q, rot(mesh(new T.ConeGeometry(.2, .4, 3), M(0xf2c14a, {roughness: .6}), -.38, .08, 0), PI / 2, 0, PI / 2), box(.06, .05, .34, M(0xb5713a), -.2, .09, 0), sph(.04, M(0xc0271f), -.36, .1, .04), sph(.04, M(0xc0271f), -.44, .1, -.03)); return q; };
 function dress(sp, key, idx, G) { const g = sp.g, A = sp.anims, n = order.indexOf('crew'), low = idx <= 3, hi = idx >= n - 4; seed = 2000 + idx * 37;
-  // Vice City mission marker under anyone standing on the street
-  if (G.p[1] === 0) { const mk = new T.Mesh(new T.CylinderGeometry(.62, .62, .5, 24, 1, true), new T.MeshBasicMaterial({color: 0xff4fa3, transparent: true, opacity: .3, side: T.DoubleSide, depthWrite: false, blending: T.AdditiveBlending, toneMapped: false})); mk.position.set(G.p[0], .27, G.p[2]); g.add(mk); A.push(t => { mk.material.opacity = .22 + Math.sin(t * 3) * .1; mk.scale.y = 1 + Math.sin(t * 3) * .15; }); }
   // pickups floating over the far lane: more cash the higher you rank
   const cash = idx >= n - 2 ? 3 : idx >= n - 5 ? 2 : idx >= 3 ? 1 : 0, own = {dean: ['❤️', 0xff3050], nick: ['⭐', 0xffd166], ian: ['🛡️', 0x4aa3ff], jackson: ['🍕', 0xffb040], sham: ['🛡️', 0x4aa3ff], tony: ['🏆', 0xffd166]}[key], ps = [2.7, 3.6, 4.5, -3.3]; let pk = 0;
   for (let k = 0; k < cash; k++) A.push(pickup(g, '💵', 0x3dff8a, XS(-3.3, ps[pk]), .85, -3.3, pk++)); if (own) A.push(pickup(g, own[0], own[1], XS(-3.3, ps[pk]), .85, -3.3, pk));
@@ -550,9 +548,11 @@ function world() { scene = new T.Scene(); scene.fog = new T.Fog(0xd96a9a, 40, 17
 const col = new (function () { this.a = null; })(), tmp = {};
 function lerpPal(A, B, f) { const o = {}; for (const k in A) o[k] = typeof A[k] === 'number' && k !== 'a' && k !== 'b' && k !== 'c' && k !== 'fog' && k !== 'hs' && k !== 'hg' && k !== 'sc' ? A[k] + (B[k] - A[k]) * f : (tmp[k] = tmp[k] || new T.Color()).set(A[k]).lerp(new T.Color(B[k]), f).clone(); return o; }
 const lerp = (a, b, f) => a + (b - a) * f;
-function frame(now) { raf = 0; if (!host) return; raf = requestAnimationFrame(frame); const t = now / 1000, dt = Math.min(.05, t - (frame.t || t)); frame.t = t; { const mb = V.beat && V.beat(); BEAT = mb == null ? t * 2 : mb; }
-  if (Math.abs(offT - off) > .0015) { off += (offT - off) * (1 - Math.exp(-dt * 7)); const w = host.clientWidth, h = host.clientHeight; if (w && h) { cam.setViewOffset(w, h, 0, off * h, w, h); cam.updateProjectionMatrix(); } }
-  const tx = target * S; focus += (tx - focus) * (1 - Math.exp(-dt * 3.4)); if (Math.abs(tx - focus) < .002) focus = tx;
+function frame(now) { raf = 0; if (!host) return; raf = requestAnimationFrame(frame); const t = now / 1000, rdt = t - (frame.t || t), dt = Math.min(.05, rdt); frame.t = t; { const mb = V.beat && V.beat(); BEAT = mb == null ? t * 2 : mb; }
+  if (Math.abs(offT - off) > .0015) { off += (offT - off) * (1 - Math.exp(-dt * 7)); const w = hw, h = hh; if (w > 1 && h > 1) { cam.setViewOffset(w, h, 0, off * h, w, h); cam.updateProjectionMatrix(); } }
+  const tx = target * S; { const om = 2 / .42, x = om * dt, e = 1 / (1 + x + .48 * x * x + .235 * x * x * x), ch = focus - tx, q = (fv + om * ch) * dt; fv = (fv - om * q) * e; focus = tx + (ch + q) * e; if (Math.abs(tx - focus) < .002 && Math.abs(fv) < .01) { focus = tx; fv = 0; } }
+  // drop resolution a notch if the phone can't hold 60
+  if (rdt < .1) { slow = rdt > .021 ? slow + 1 : Math.max(0, slow - 2); if (slow > 45 && pr > 1) { pr = Math.max(1, pr - .25); slow = 0; size(); } }
   const u = Math.max(0, Math.min(order.length - 1, focus / S)), i0 = Math.floor(u), i1 = Math.min(order.length - 1, i0 + 1), f = ss(0, 1, u - i0), A = META[order[i0]], B = META[order[i1]], p = lerpPal(PAL[A.pal], PAL[B.pal], f);
   sky.material.uniforms.a.value.copy(p.a); sky.material.uniforms.b.value.copy(p.b); sky.material.uniforms.c.value.copy(p.c); scene.fog.color.copy(p.fog); scene.fog.near = p.fn; scene.fog.far = p.ff; R.setClearColor(p.fog);
   hemi.color.copy(p.hs); hemi.groundColor.copy(p.hg); hemi.intensity = p.hi; dl.color.copy(p.sc); dl.intensity = p.si; sunM.material.opacity = p.sun; moonM.material.opacity = p.moon; stars.material.opacity = p.st * .9;
@@ -562,8 +562,8 @@ function frame(now) { raf = 0; if (!host) return; raf = requestAnimationFrame(fr
   const ca = A.cam, cb = B.cam, orbit = mode !== 'story'; tOrb += dt;
   let yaw = lerp(ca[0], cb[0], f), pitch = lerp(ca[1], cb[1], f), fit = lerp(ca[2], cb[2], f); const lx = lerp(ca[3], cb[3], f), ly = lerp(ca[4], cb[4], f);
   if (mode === 'orbit') { yaw = 44 + Math.sin(tOrb * .2) * 30; pitch = 7; fit *= 1.12; } else if (mode === 'card') { yaw = 42 + Math.sin(tOrb * .3) * 14; fit *= 1.1; } else yaw += Math.sin(t * .23) * 2.5;
-  const w = host.clientWidth || 1, h = host.clientHeight || 1, asp = w / h, th = Math.tan(cam.fov * PI / 360), d = Math.max(fit / 2 / (th * asp), (mode === 'card' ? 4.8 : 3.4) / 2 / th), yr = yaw * PI / 180, pr = pitch * PI / 180;
-  const speed = Math.min(1, Math.abs(tx - focus) / S);
+  const w = hw, h = hh, asp = w / h, th = Math.tan(cam.fov * PI / 360), d = Math.max(fit / 2 / (th * asp), (mode === 'card' ? 4.8 : 3.4) / 2 / th), yr = yaw * PI / 180, pr = pitch * PI / 180;
+  const speed = Math.sin(Math.min(1, Math.abs(tx - focus) / S) * PI) * .6;
   cam.position.set(focus + lx + d * Math.cos(pr) * Math.cos(yr), ly + d * Math.sin(pr) + speed * 2.5, d * Math.cos(pr) * Math.sin(yr) + speed * 2); cam.lookAt(focus + lx, ly, 0);
   sky.position.copy(cam.position); stars.position.copy(cam.position);
   const sa = (yr + PI) + .06, se = .075; sunM.position.set(cam.position.x + Math.cos(sa) * 380, cam.position.y * 0 + Math.sin(se) * 380 + 6, cam.position.z + Math.sin(sa) * 380); sunM.lookAt(cam.position);
@@ -572,7 +572,7 @@ function frame(now) { raf = 0; if (!host) return; raf = requestAnimationFrame(fr
   const nk = order[Math.round(focus / S)], solo = nk === 'beach' || nk === 'strip';
   for (const k in spots) { const s = spots[k], vis = solo ? k === nk : k !== 'beach' && k !== 'strip' && Math.abs(s.x - focus) < S * 1.7; s.g.visible = vis; if (vis && Math.abs(s.x - focus) < S * .8) s.anims.forEach(fn => fn(t, dt)); }
   R.render(scene, cam); }
-function size() { if (!host || !R) return; const w = host.clientWidth, h = host.clientHeight; if (!w || !h) return; R.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); R.setSize(w, h, false); cam.aspect = w / h; if (off) cam.setViewOffset(w, h, 0, off * h, w, h); else cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+function size() { if (!host || !R) return; const w = host.clientWidth, h = host.clientHeight; if (!w || !h) return; hw = w; hh = h; if (!pr) pr = Math.min(window.devicePixelRatio || 1, 2); R.setPixelRatio(pr); R.setSize(w, h, false); cam.aspect = w / h; if (off) cam.setViewOffset(w, h, 0, off * h, w, h); else cam.clearViewOffset(); cam.updateProjectionMatrix(); }
 
 V.init = function (o) { T = window.THREE; order = o.order.filter(k => SETS[k] && CARS[k]); order.push('crew', 'beach', 'strip');
   const fonts = document.fonts ? Promise.race([Promise.all([document.fonts.load('96px "Mr Dafoe"'), document.fonts.load('96px "Anton"')]), new Promise(r => setTimeout(r, 2500))]).catch(() => {}) : Promise.resolve();
@@ -581,14 +581,16 @@ V.init = function (o) { T = window.THREE; order = o.order.filter(k => SETS[k] &&
     world(); V.ok = true; window.addEventListener('resize', size);
     canvas.addEventListener('webglcontextlost', e => e.preventDefault()); }); };
 // queue the rest of the street so flying between spots never waits on a build
-function warm() { const k = order.find(k => !spots[k]); if (!k) return; buildSpot(k); setTimeout(warm, 120); }
+function prime(sp) { if (!sp || sp.primed) return; sp.primed = 1; try { rt = rt || new T.WebGLRenderTarget(32, 32); pcam = pcam || new T.PerspectiveCamera(110, 1, .1, 2500); const vis = {}; for (const k in spots) { vis[k] = spots[k].g.visible; spots[k].g.visible = spots[k] === sp; }
+    [[0, 30, 50, -12], [0, 12, -50, 0]].forEach(([x, y, z, lz]) => { pcam.position.set(sp.x + x, y, z); pcam.lookAt(sp.x, 0, lz); R.setRenderTarget(rt); R.render(scene, pcam); }); R.setRenderTarget(null); for (const k in spots) spots[k].g.visible = vis[k]; } catch (e) { R.setRenderTarget(null); } }
+function warm() { if (Math.abs(target * S - focus) > .05) return setTimeout(warm, 150); const k = order.find(k => !spots[k]) || order.find(k => !spots[k].primed); if (!k) return; if (!spots[k]) buildSpot(k); else prime(spots[k]); setTimeout(warm, 60); }
 V.attach = function (el) { if (!V.ok) return; host = el || null; if (!host) { if (raf) cancelAnimationFrame(raf); raf = 0; return; }
-  if (canvas.parentNode !== host) host.appendChild(canvas); mode = host.dataset.mode || 'story'; off = offT = parseFloat(host.dataset.off || 0); size();
+  if (canvas.parentNode !== host) { host.appendChild(canvas); canvas.style.transition = 'none'; canvas.style.opacity = 0; void canvas.offsetWidth; canvas.style.transition = ''; requestAnimationFrame(() => { canvas.style.opacity = 1; }); } mode = host.dataset.mode || 'story'; off = offT = parseFloat(host.dataset.off || 0); size();
   if (host.dataset.scene) V.go(host.dataset.scene, true); if (!raf) raf = requestAnimationFrame(frame); };
 V.off = function (f) { offT = f; };
 V.go = function (key, snap) { if (!V.ok || !SETS[key]) return; const sp = buildSpot(key), far = Math.abs(sp.idx * S - focus) > S * 2.5; [order[sp.idx - 1], order[sp.idx + 1]].forEach(k => k && buildSpot(k)); target = sp.idx;
-  if (snap || far) { if (snap) { focus = target * S; canvas.style.opacity = 1; } else { canvas.style.opacity = 0; setTimeout(() => { focus = target * S; canvas.style.opacity = 1; }, 230); } }
-  if (!V.warmed) { V.warmed = 1; setTimeout(warm, 600); } };
+  if (snap || far) { if (snap) { focus = target * S; fv = 0; } else { canvas.style.opacity = 0; setTimeout(() => { focus = target * S; fv = 0; prime(spots[order[target]]); canvas.style.opacity = 1; }, 240); } }
+  prime(sp); if (!V.warmed) { V.warmed = 1; setTimeout(warm, 300); } };
 V.mode = function (m) { mode = m; };
 V.grab = function () { if (!V.ok || !host) return null; R.render(scene, cam); return canvas; };
 })();
