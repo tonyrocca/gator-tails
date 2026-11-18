@@ -1,0 +1,416 @@
+{
+  "id": "2026-10-week-10",
+  "season": "2026",
+  "week": 10,
+  "title": "Week 10",
+  "subtitle": "Power Rankings",
+  "date": "Nov 17, 2026",
+  "theme": "vice",
+  "coverTitle": "Grand Theft Gator",
+  "coverScript": "Vice City",
+  "coverSub": "Week 10 Power Rankings",
+  "kicker": "",
+  "ogDesc": "Grand Theft Gator: Vice City. Ten cars, one street. Your rank is your parking spot.",
+  "rain": [
+    "💵",
+    "💸",
+    "🤑",
+    "🌴"
+  ],
+  "benchSlide": true,
+  "benchHeadline": "Left in the trunk",
+  "memo": {
+    "yearLabel": "Dean of the Year",
+    "yearText": "",
+    "yearTracker": [
+      {
+        "rank": 1,
+        "name": "Jahmyr Gibbs",
+        "yds": 1000
+      },
+      {
+        "rank": 2,
+        "name": "James Cook III",
+        "yds": 971
+      },
+      {
+        "rank": 3,
+        "name": "Bijan Robinson",
+        "yds": 951,
+        "me": true
+      },
+      {
+        "rank": 4,
+        "name": "Kenneth Walker III",
+        "yds": 872
+      }
+    ]
+  },
+  "topScorerLabel": "BIG PENIS! $50",
+  "story": {
+    "title": "Welcome to Vice City",
+    "intro": "Ten cars. One street.<br><br><b>We start at the impound lot and drive to Ocean Drive.</b>",
+    "cue": "Scroll · start driving",
+    "outTitle": "Family photo",
+    "outro": "Everybody say Big Penis.",
+    "outBtn": "See the board"
+  },
+  "rankings": [
+    {
+      "rank": 10,
+      "team": 10,
+      "scene": {
+        "char": "dean",
+        "color": "#7f9bff",
+        "zone": "Impound Lot",
+        "car": "Rustbucket · on cinder blocks",
+        "narr": "Pickens gave him 43.5 and he still lost by 21.6. Started Omar Cooper Jr. for 0.0 with Corum's 20.9 on the bench.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "43.5",
+            "l": "Pickens"
+          },
+          {
+            "v": "22.8",
+            "l": "Left on bench"
+          },
+          {
+            "v": "21.6",
+            "l": "Lost by"
+          }
+        ],
+        "stamp": "Busted",
+        "stampSub": "0-10",
+        "stampCls": "b",
+        "stars": 0,
+        "take": "On blocks. 0-10.",
+        "plate": "0-10"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 9,
+      "team": 5,
+      "scene": {
+        "char": "nick",
+        "color": "#ffb86b",
+        "zone": "Fallows Court",
+        "car": "Wood-panel minivan",
+        "narr": "Lost to D by 74.6. Started Carnell Tate for 0.0 with Hampton's 17.5 on the bench. Left 32.3 out there, most in the league.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "0.0",
+            "l": "Carnell Tate"
+          },
+          {
+            "v": "32.3",
+            "l": "Left on bench"
+          },
+          {
+            "v": "9th",
+            "l": "In points"
+          }
+        ],
+        "stamp": "Wasted",
+        "stampSub": "3 straight L's",
+        "stampCls": "l",
+        "take": "Three straight L's.",
+        "plate": "CARTER"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 8,
+      "team": 3,
+      "scene": {
+        "char": "ian",
+        "color": "#7dffb0",
+        "zone": "The Everglades",
+        "car": "Lifted swamp truck",
+        "narr": "Hubbard and Chase put up 68.3 together. Drake Maye rode in the truck bed and scored 3.1. A win is a win.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "34.2",
+            "l": "Hubbard"
+          },
+          {
+            "v": "34.1",
+            "l": "Chase"
+          },
+          {
+            "v": "3.1",
+            "l": "Drake Maye"
+          }
+        ],
+        "stamp": "Mission passed!",
+        "stampSub": "Beat the 0-10 guy",
+        "stampCls": "w",
+        "take": "Beat the 0-10 guy.",
+        "plate": "NOSTRIL"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 7,
+      "team": 7,
+      "scene": {
+        "char": "jackson",
+        "color": "#ff6a5a",
+        "zone": "Slice Masters Pizza",
+        "car": "Delivery hatchback",
+        "narr": "167.8 was the fourth-highest score this week. He drew the one guy with 199.1. His kicker had 19.0.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "35.1",
+            "l": "Emmett Johnson"
+          },
+          {
+            "v": "19.0",
+            "l": "Cam Little (K)"
+          },
+          {
+            "v": "4th",
+            "l": "In points"
+          }
+        ],
+        "stamp": "Wasted",
+        "stampSub": "167.8 and lost",
+        "stampCls": "l",
+        "take": "Wrong week to play Tony.",
+        "plate": "8BALL"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 6,
+      "team": 8,
+      "scene": {
+        "char": "sham",
+        "color": "#7fe3ff",
+        "zone": "Snow Dome",
+        "car": "Teal 4x4 · boards on the roof",
+        "narr": "Brought snowboards to Miami. Seeberger hung 189.4 on him. Chase Brown had 28.3 and it did not matter.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "64.0",
+            "l": "Lost by"
+          },
+          {
+            "v": "28.3",
+            "l": "Chase Brown"
+          },
+          {
+            "v": "6th",
+            "l": "In points"
+          }
+        ],
+        "stamp": "Wasted",
+        "stampSub": "Lost by 64.0",
+        "stampCls": "l",
+        "take": "Lost by 64.",
+        "plate": "RVNS420"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 5,
+      "team": 4,
+      "scene": {
+        "char": "nicky",
+        "color": "#ffd166",
+        "zone": "Casa Wolson",
+        "car": "Black convertible",
+        "narr": "Six straight wins, then 92.6. Lowest score in the league. Lawrence had 33.7. Nobody else in the lineup cracked 12.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "33.7",
+            "l": "T. Lawrence"
+          },
+          {
+            "v": "6",
+            "l": "Streak, dead"
+          },
+          {
+            "v": "1,189.5",
+            "l": "Pts against"
+          }
+        ],
+        "stamp": "Wasted",
+        "stampSub": "Streak dead at 6",
+        "stampCls": "l",
+        "take": "The streak is dead.",
+        "plate": "COKE"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 4,
+      "team": 6,
+      "scene": {
+        "char": "reece",
+        "color": "#b7e36a",
+        "zone": "Escobar International",
+        "car": "Camo Humvee",
+        "narr": "Purdy dropped 41.1 and the Humvee ran over Nicky's six-game streak. Left 26.0 on the bench anyway.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "41.1",
+            "l": "Purdy"
+          },
+          {
+            "v": "7th",
+            "l": "In points"
+          },
+          {
+            "v": "26.0",
+            "l": "Left on bench"
+          }
+        ],
+        "stamp": "Mission passed!",
+        "stampSub": "Ended Nicky's streak",
+        "stampCls": "w",
+        "take": "7-3 with the 7th most points.",
+        "plate": "MILITRY"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 3,
+      "team": 11,
+      "scene": {
+        "char": "ryan",
+        "color": "#19e6d2",
+        "zone": "Downtown",
+        "car": "Silver sedan · leased",
+        "narr": "CMC went for 46.3, the best game by any starter this week. Second most points in the league. The car is leased.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "46.3",
+            "l": "CMC"
+          },
+          {
+            "v": "3.8",
+            "l": "Left on bench"
+          },
+          {
+            "v": "2nd",
+            "l": "In points"
+          }
+        ],
+        "stamp": "Mission passed!",
+        "stampSub": "Won by 64.0",
+        "stampCls": "w",
+        "take": "189.4 and still 5-5.",
+        "plate": "JAY-LEN"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 2,
+      "team": 2,
+      "scene": {
+        "char": "daniel",
+        "color": "#ff8a3c",
+        "zone": "Muscle Beach",
+        "car": "Orange muscle car",
+        "narr": "Mahomes sat on the bench and outscored every starter in the league. Skid over. Still the most points.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "48.5",
+            "l": "Mahomes (bench)"
+          },
+          {
+            "v": "31.1",
+            "l": "JSN"
+          },
+          {
+            "v": "1,586.6",
+            "l": "Most points"
+          }
+        ],
+        "stamp": "Mission passed!",
+        "stampSub": "Skid over",
+        "stampCls": "w",
+        "take": "Benched 48.5. Won by 74.6.",
+        "plate": "CHAMP"
+      },
+      "takeaway": "",
+      "media": []
+    },
+    {
+      "rank": 1,
+      "team": 1,
+      "scene": {
+        "char": "tony",
+        "color": "#ff4fa3",
+        "zone": "Ocean Drive",
+        "car": "White Testarossa",
+        "narr": "199.1 and four straight wins. Dak 45.7, Burrow 44.8, Gibbs 44.2. I write the rankings. Coincidence.",
+        "lines": [],
+        "facts": [
+          {
+            "v": "134.7",
+            "l": "Dak + Burrow + Gibbs"
+          },
+          {
+            "v": "4",
+            "l": "Straight wins"
+          },
+          {
+            "v": "$50",
+            "l": "High score"
+          }
+        ],
+        "stamp": "Mission passed!",
+        "stampSub": "Respect +",
+        "stampCls": "w",
+        "take": "The plate says corrupt.",
+        "plate": "CORRUPT"
+      },
+      "takeaway": "",
+      "media": []
+    }
+  ],
+  "outro": "Week 11 rankings drop Tuesday.",
+  "playoffPreview": true,
+  "deanOfWeek": {
+    "dean": "Dean",
+    "char": "dean",
+    "legs": [],
+    "status": "ON THE CLOCK",
+    "note": "0-10 and holding the pick. You're up, Dean. Drop it in the chat.",
+    "last": {
+      "dean": "Daniel",
+      "result": "LOST",
+      "record": "1-1",
+      "note": "Two-leg parlay",
+      "legs": [
+        {
+          "name": "Ja'Marr Chase",
+          "line": "Over receptions ✓"
+        },
+        {
+          "name": "Jaylen Warren",
+          "line": "Over rush + rec yards ✗"
+        }
+      ]
+    }
+  }
+}
